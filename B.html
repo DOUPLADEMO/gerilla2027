@@ -90,6 +90,7 @@ html{scrollbar-width:thin;scrollbar-color:#63b6b7 #e9eeee}
     <div style="position:absolute;right:-60px;top:-60px;width:300px;height:300px;border-radius:50%;border:1px solid rgba(102,193,195,.15)"></div>
     <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:48px;align-items:center">
       <div>
+        <sc-if value="{{ hasTag }}"><div style="display:inline-flex;align-items:center;gap:6px;background:#f1a246;color:#0c181b;font:800 12px Poppins,sans-serif;letter-spacing:.04em;padding:6px 12px;border-radius:999px;margin-bottom:16px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-calendar"></use></svg>{{ c.hero.tag }}</div></sc-if>
         <h1 style="margin:0 0 22px;font:800 clamp(28px,3.8vw,48px)/1.1 Poppins,sans-serif;color:#fff;text-transform:uppercase;text-wrap:balance">{{ c.hero.h1a }}<span style="color:#5baeaf">{{ c.hero.h1b }}</span></h1>
         <p style="margin:0 0 10px;font:600 17px/1.55 Poppins,sans-serif;color:#d7dddf">{{ c.hero.sub1 }}</p>
         <p style="margin:0 0 24px;font-size:16px">{{ c.hero.sub2 }}</p>
@@ -113,7 +114,7 @@ html{scrollbar-width:thin;scrollbar-color:#63b6b7 #e9eeee}
 <section style="max-width:1280px;margin:24px auto 0;padding:0 24px">
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px">
     <sc-for list="{{ stories3 }}" as="s" hint-placeholder-count="3">
-      <div style="background:#fff;border-radius:24px;padding:20px;display:flex;gap:16px;align-items:center;border:1px solid #e3e8eb"><img src="{{ s.img }}" alt="" style="flex:none;width:64px;height:64px;border-radius:20px;object-fit:cover;background:#e3e8eb"/><div><div style="font:800 20px/1.15 Poppins,sans-serif;color:#2f7f80;margin-bottom:4px">{{ s.big }}</div><div style="font-size:13px;line-height:1.45">{{ s.x }}</div></div></div>
+      <div style="background:#fff;border-radius:24px;padding:20px;display:flex;gap:16px;align-items:center;border:1px solid #e3e8eb"><img src="{{ s.img }}" alt="" style="flex:none;width:64px;height:64px;border-radius:20px;object-fit:cover;background:#e3e8eb"/><div><sc-if value="{{ s.pend }}"><div style="display:inline-block;background:#f1a246;color:#0c181b;font:800 10px Poppins,sans-serif;letter-spacing:.06em;padding:3px 8px;border-radius:999px;margin-bottom:6px">{{ pendLbl }}</div></sc-if><div style="font:800 20px/1.15 Poppins,sans-serif;color:#2f7f80;margin-bottom:4px">{{ s.big }}</div><div style="font-size:13px;line-height:1.45">{{ s.x }}</div></div></div>
     </sc-for>
   </div>
 </section>
@@ -135,11 +136,13 @@ html{scrollbar-width:thin;scrollbar-color:#63b6b7 #e9eeee}
 <section style="background:linear-gradient(160deg,#16292f,#0c181b);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);color:#fff;border-radius:32px;padding:clamp(24px,3.4vw,48px);box-shadow:0 0 0 1px rgba(102,193,195,.45),0 0 40px rgba(91,174,175,.15)">
   <div style="font:700 13px ui-monospace,Menlo,monospace;color:#84e0db;margin-bottom:10px">02</div>
   <h2 style="margin:0 0 28px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif;text-wrap:balance">{{ c.imagine.h }}</h2>
+  <sc-if value="{{ imTheme }}"><p style="margin:0 0 20px;font:600 16px/1.5 Poppins,sans-serif">{{ c.imagine.close }}</p><button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 14px/1.2 Poppins,sans-serif;text-transform:uppercase;border-radius:12px;padding:14px 22px;min-height:48px;border:0;cursor:pointer;margin:0 0 28px" style-hover="filter:brightness(1.15)">{{ c.hero.cta }}</button></sc-if>
   <img src="assets/illu-05.png" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:24px;margin:0 0 24px"/>
   <div style="display:grid;gap:0;margin-bottom:24px">
-    <sc-for list="{{ imagine }}" as="i" hint-placeholder-count="5"><div style="display:grid;grid-template-columns:36px 1fr;gap:14px"><div style="display:flex;flex-direction:column;align-items:center"><span style="width:36px;height:36px;border-radius:50%;background:#84e0db;color:#0c181b;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="{{ i.ic }}"></use></svg></span><span style="flex:1;width:2px;background:rgba(132,224,219,.3);min-height:12px"></span></div><div style="padding:2px 0 22px;font-size:16px">{{ i.t }}</div></div></sc-for>
+    <sc-for list="{{ imagine }}" as="i" hint-placeholder-count="5"><div style="display:grid;grid-template-columns:36px 1fr;gap:14px"><div style="display:flex;flex-direction:column;align-items:center"><span style="width:36px;height:36px;border-radius:50%;background:#84e0db;color:#0c181b;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="{{ i.ic }}"></use></svg></span><span style="flex:1;width:2px;background:rgba(132,224,219,.3);min-height:12px"></span></div><div style="padding:2px 0 22px;font-size:16px"><sc-for list="{{ i.seg }}" as="g" hint-placeholder-count="1"><span style="font-weight:{{ g.w }}">{{ g.t }}</span></sc-for></div></div></sc-for>
   </div>
-  <p style="margin:0;padding:18px 22px;background:rgba(48,99,100,.45);border-radius:18px;font:600 16px/1.5 Poppins,sans-serif">{{ c.imagine.close }}</p>
+  <sc-if value="{{ imBase }}"><p style="margin:0;padding:18px 22px;background:rgba(48,99,100,.45);border-radius:18px;font:600 16px/1.5 Poppins,sans-serif">{{ c.imagine.close }}</p></sc-if>
+  <sc-if value="{{ hasQuote }}"><blockquote style="margin:0;padding:20px 24px;background:#84e0db;color:#0c181b;border-radius:18px;font:700 clamp(17px,1.8vw,20px)/1.45 Poppins,sans-serif">„{{ c.imagine.quote }}”</blockquote></sc-if>
 </section>
 
 <!-- 03 -->
@@ -149,14 +152,37 @@ html{scrollbar-width:thin;scrollbar-color:#63b6b7 #e9eeee}
   <h2 style="margin:0 0 20px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif;text-wrap:balance">{{ c.now.h }}</h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px;margin:0 0 24px"><img src="assets/illu-06.png" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:24px"/><img src="assets/illu-07.png" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:24px"/></div>
   <p style="margin:0 0 14px;font:700 clamp(18px,2vw,22px)/1.45 Poppins,sans-serif;color:#2f7f80">{{ c.now.lead }}</p>
-  <button onClick="{{ toggleNow }}" style="background:none;border:0;padding:0;font:700 14px Poppins,sans-serif;color:#2b302f;cursor:pointer;border-bottom:2px solid #63b6b7">Részletek <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-3px"><use href="{{ nowIco }}"></use></svg></button>
+  <sc-if value="{{ nowBtn }}"><button onClick="{{ toggleNow }}" style="background:none;border:0;padding:0;font:700 14px Poppins,sans-serif;color:#2b302f;cursor:pointer;border-bottom:2px solid #63b6b7">Részletek <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-3px"><use href="{{ nowIco }}"></use></svg></button></sc-if>
   <p style="display:{{ nowDisp }};margin:14px 0 0">{{ c.now.detail }}</p>
+  <div style="display:{{ tlDisp }}">
   <h3 style="margin:32px 0 16px;font:800 13px Poppins,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80">{{ c.now.boxH }}</h3>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px">
     <sc-for list="{{ nowSteps }}" as="t" hint-placeholder-count="3"><div style="background:{{ t.bg }};color:{{ t.fg }};border-radius:20px;padding:20px;position:relative"><div style="font:800 26px/1 Poppins,sans-serif;color:{{ t.yc }};margin-bottom:12px">{{ t.y }}</div><div style="font-size:12px;opacity:.75;margin-bottom:2px">Mi történik a cégeknél:</div><div style="font:600 14px/1.4 Poppins,sans-serif;margin-bottom:10px">{{ t.a }}</div><div style="font-size:12px;opacity:.75;margin-bottom:2px">Mit jelent neked:</div><div style="font:700 14px/1.4 Poppins,sans-serif">{{ t.b }}</div></div></sc-for>
   </div>
   <p style="margin:20px 0 0;padding:16px 20px;background:#f1a246;color:#0c181b;border-radius:16px;font:600 15px/1.5 Poppins,sans-serif">{{ c.now.box }}</p>
+  </div>
 </section>
+
+<!-- 03/B AZ ÚTVONAL LÉPÉSEI (tematikus) -->
+<sc-if value="{{ hasPath }}">
+<section id="utvonal-lepesei" style="background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-radius:32px;padding:clamp(24px,3.4vw,48px);border:1px solid rgba(255,255,255,.95);box-shadow:0 8px 32px rgba(48,99,100,.10)">
+  <div style="display:inline-flex;align-items:center;gap:6px;background:#f1a246;color:#0c181b;font:800 12px Poppins,sans-serif;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-calendar"></use></svg>{{ c.feb.tag }}</div>
+  <h2 style="margin:0 0 20px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif;text-wrap:balance">{{ path.h }}</h2>
+  <div style="font:700 12px Poppins,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:6px">{{ path.kinekL }}</div>
+  <p style="margin:0 0 28px;font:600 17px/1.45 Poppins,sans-serif">{{ path.kinek }}</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:28px">
+    <div>
+      <sc-for list="{{ path.s }}" as="s" hint-placeholder-count="5"><div style="display:grid;grid-template-columns:34px 1fr;gap:14px"><div style="display:flex;flex-direction:column;align-items:center"><span style="width:12px;height:12px;border-radius:50%;background:#2f7f80;margin-top:6px"></span><span style="flex:1;width:2px;background:rgba(47,127,128,.25)"></span></div><div style="padding-bottom:16px"><div style="font:700 13px Poppins,sans-serif;color:#2f7f80">{{ s.a }}</div><div style="font-size:15px"><b style="font-family:Poppins,sans-serif">{{ s.b }}</b> {{ s.c }}</div></div></div></sc-for>
+      <div style="background:#f4f7f7;border-radius:18px;padding:14px 18px;font-size:14px"><b style="font-family:Poppins,sans-serif">{{ path.vidL }}:</b> {{ path.vid }}</div>
+    </div>
+    <div style="display:grid;gap:14px;align-content:start">
+      <div style="background:linear-gradient(160deg,#16292f,#0c181b);color:#fff;border-radius:24px;padding:22px 24px;box-shadow:0 0 0 1px rgba(102,193,195,.45),0 0 40px rgba(91,174,175,.15)"><div style="display:flex;gap:8px;align-items:center;font:700 12px Poppins,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#84e0db;margin-bottom:8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-award"></use></svg>{{ path.finL }}</div><div style="font:600 16px/1.5 Poppins,sans-serif">{{ path.fin }}</div></div>
+      <div style="font-size:14px"><div style="font:700 12px Poppins,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:4px">{{ path.howL }}</div>{{ path.how }}</div>
+      <div><button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 14px/1.2 Poppins,sans-serif;text-transform:uppercase;border-radius:12px;padding:14px 22px;min-height:48px;border:0;cursor:pointer" style-hover="filter:brightness(1.15)">{{ path.cta }}</button></div>
+    </div>
+  </div>
+</section>
+</sc-if>
 
 <!-- 04 ÚTVONALAK -->
 <section id="utvonalak" style="background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-radius:32px;padding:clamp(24px,3.4vw,48px);border:1px solid rgba(255,255,255,.95);box-shadow:0 8px 32px rgba(48,99,100,.10)">
@@ -166,8 +192,8 @@ html{scrollbar-width:thin;scrollbar-color:#63b6b7 #e9eeee}
   <img src="assets/illu-08.png" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:16/8;object-fit:cover;object-position:50% 60%;border-radius:24px;margin:0 0 24px"/>
   <div style="display:grid;gap:12px">
     <sc-for list="{{ routes }}" as="r" hint-placeholder-count="4">
-      <div style="border:2px solid {{ r.bd }};border-radius:24px;overflow:hidden;background:#fff">
-        <button onClick="{{ r.onClick }}" style="width:100%;display:grid;grid-template-columns:48px 1fr 28px;gap:14px;align-items:center;text-align:left;background:{{ r.bg }};border:0;padding:18px 20px;cursor:pointer;font-family:Poppins,sans-serif;color:#2b302f"><span style="width:44px;height:44px;border-radius:14px;background:#14262b;color:#84e0db;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="{{ r.ic }}"></use></svg></span><span><span style="display:block;font:700 18px/1.3 Poppins,sans-serif">{{ r.t }}</span><span style="display:block;font-size:14px;color:#5b666b">{{ r.k }}</span></span><span style="color:#2f7f80;font-size:24px;line-height:1"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="{{ r.ico }}"></use></svg></span></button>
+      <div style="border:2px solid {{ r.bd }};border-top:6px solid {{ r.col }};border-radius:24px;overflow:hidden;background:#fff">
+        <button onClick="{{ r.onClick }}" style="width:100%;display:grid;grid-template-columns:48px 1fr 28px;gap:14px;align-items:center;text-align:left;background:{{ r.bg }};border:0;padding:18px 20px;cursor:pointer;font-family:Poppins,sans-serif;color:#2b302f"><span style="width:44px;height:44px;border-radius:14px;background:#14262b;color:{{ r.col }};display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="{{ r.ic }}"></use></svg></span><span><span style="display:block;font:600 13px/1.35 Poppins,sans-serif;color:{{ r.colD }};margin-bottom:2px">{{ r.kick }}</span><span style="display:block;font:700 18px/1.3 Poppins,sans-serif">{{ r.t }}</span><span style="display:block;font-size:14px;color:#5b666b">{{ r.k }}</span></span><span style="color:#2f7f80;font-size:24px;line-height:1"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="{{ r.ico }}"></use></svg></span></button>
         <div style="display:{{ r.disp }};padding:6px 20px 22px">
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:24px">
             <div><div style="font:700 12px Poppins,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:6px">{{ c.routes.mire }}</div><div style="font:600 17px/1.45 Poppins,sans-serif;margin-bottom:18px">{{ r.m }}</div><button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 14px/1.2 Poppins,sans-serif;text-transform:uppercase;border-radius:12px;padding:14px 22px;min-height:48px;border:0;cursor:pointer" style-hover="filter:brightness(1.15)">{{ c.hero.cta }}</button></div>
@@ -189,7 +215,7 @@ html{scrollbar-width:thin;scrollbar-color:#63b6b7 #e9eeee}
   <h2 style="margin:0 0 16px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif;color:#fff;text-wrap:balance">{{ c.feb.h }}</h2>
   <p style="margin:0 0 24px;font-size:16px">{{ c.feb.p }}</p>
   <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px"><sc-for list="{{ febTabs }}" as="t" hint-placeholder-count="3"><button onClick="{{ t.onClick }}" style="cursor:pointer;font:700 14px Poppins,sans-serif;padding:12px 20px;min-height:46px;border-radius:999px;background:{{ t.bg }};color:{{ t.fg }};border:1px solid {{ t.bd }}">{{ t.t }}</button></sc-for></div>
-  <div style="background:linear-gradient(160deg,#16292f,#0c181b);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);border-radius:28px;border:1px solid rgba(102,193,195,.5);padding:clamp(20px,3vw,32px);color:#fff">
+  <div style="background:linear-gradient(160deg,#16292f,#0c181b);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);border-radius:28px;border:1px solid {{ fbBd }};box-shadow:{{ fbSh }};padding:clamp(20px,3vw,32px);color:#fff">
     <h3 style="margin:0 0 20px;font:800 clamp(18px,2vw,24px)/1.3 Poppins,sans-serif">{{ fb.t }}</h3>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:32px">
       <div>
@@ -339,6 +365,7 @@ html{scrollbar-width:thin;scrollbar-color:#63b6b7 #e9eeee}
         <div style="background:#14262b;color:#84e0db;padding:20px 22px;min-height:96px;display:flex;align-items:flex-end;font:800 24px/1.15 Poppins,sans-serif">{{ s.bigT }}</div>
         <div style="padding:20px 22px;display:grid;gap:10px;flex:1">
           <div style="display:flex;gap:12px;align-items:center"><img src="{{ s.img }}" alt="" style="flex:none;width:44px;height:44px;border-radius:50%;object-fit:cover;background:#e3e8eb"/><div><div style="font:700 14px/1.25 Poppins,sans-serif">{{ s.nm }}</div><div style="font-size:12px;color:#5b666b;line-height:1.35">{{ s.w }}</div></div></div>
+          <sc-if value="{{ s.pend }}"><div><span style="display:inline-block;background:#f1a246;color:#0c181b;font:800 10px Poppins,sans-serif;letter-spacing:.06em;padding:3px 8px;border-radius:999px">{{ pendLbl }}</span></div></sc-if>
           <p style="margin:0;font-size:14px">{{ s.x }}</p>
           <div><span style="display:inline-block;background:#40454b;color:#fff;font:600 11px Poppins,sans-serif;border-radius:999px;padding:3px 10px">{{ s.t }}</span></div>
         </div>
@@ -494,6 +521,9 @@ html{scrollbar-width:thin;scrollbar-color:#63b6b7 #e9eeee}
   </div>
 </sc-if>
 
+<!-- DEMÓ TÉMAVÁLTÓ -->
+<sc-if value="{{ demo }}"><div style="position:fixed;left:16px;bottom:{{ noteBottom }};z-index:80;display:flex;gap:4px;flex-wrap:wrap;background:#0c181b;border:2px solid #66c1c3;border-radius:999px;padding:4px;box-shadow:0 4px 16px rgba(0,0,0,.25)"><sc-for list="{{ themes }}" as="t" hint-placeholder-count="4"><button onClick="{{ t.onClick }}" style="background:{{ t.bg }};color:{{ t.fg }};border:0;border-radius:999px;padding:8px 14px;min-height:36px;font:700 12px Poppins,sans-serif;cursor:pointer">{{ t.t }}</button></sc-for></div></sc-if>
+
 <!-- JEGYZET-KAPCSOLÓ -->
 <div style="position:fixed;right:16px;bottom:{{ noteBottom }};z-index:80;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end">
   <button onClick="{{ toggleNotes }}" style="background:{{ notesBg }};color:#0c181b;border:2px solid #f1a246;border-radius:999px;padding:10px 16px;min-height:44px;font:700 12px ui-monospace,Menlo,monospace;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.25)">Tervezői jegyzetek: {{ notesLbl }}</button>
@@ -511,7 +541,7 @@ class Component extends DCLogic {
     window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 84, behavior: 'smooth' });
   };
   componentDidMount() {
-    const init = () => { if (window.GMK) this.setState({ ready: true }); else setTimeout(init, 40); };
+    const init = () => { if (window.GMK) this.setState(window.GMK.febIdx >= 0 ? { ready: true, feb: window.GMK.febIdx } : { ready: true }); else setTimeout(init, 40); };
     init();
     setTimeout(() => window.GMKM && window.GMKM.init(), 300);
     this._sc = () => {
@@ -533,7 +563,7 @@ class Component extends DCLogic {
     if (!G || !this.state.ready) return { ready: false };
     const C = G.C, s = this.state, set = (o) => this.setState(o), go = this.go;
     const IC = { pains: ['search', 'clock', 'wallet', 'bot', 'compass', 'file-text'], imagine: ['compass', 'bot', 'graduation-cap', 'wallet', 'languages'], route: ['briefcase', 'compass', 'bot', 'trending-up'], pill: ['graduation-cap', 'briefcase', 'languages'], learn: ['video', 'users', 'calendar', 'smartphone', 'award'], steps: ['zap', 'smartphone', 'compass', 'clock', 'message-circle'], nums: ['video', 'calendar', 'graduation-cap', 'bot', 'languages', 'briefcase', 'users'], anums: ['users', 'graduation-cap', 'calendar', 'star'] };
-    const ic = (k, i) => '#i-' + IC[k][i];
+    const ic = (k, i) => '#i-' + (IC[k][i] || 'award');
     const FM = [32, 45, 52, 64, 75, 12, 22, 36, 41, 58, 67, 71], FW = [44, 65, 68, 26, 33, 17, 90, 79, 5, 21, 48, 12];
     const FEM = ['Alexandra', 'Mónika', 'Csilla', 'Zsuzsa', 'Réka', 'Adrienn', 'Zsuzsanna', 'Zita', 'Anita', 'Gabriella'];
     const faceOld = (name, i) => { const last = (name || '').trim().split(/\s+/).pop(); const w = name ? FEM.includes(last) : i % 2 === 1; const k = i + (w ? 3 : 0), pick = (a, o) => a[(k + (o || 0)) % a.length];
@@ -542,10 +572,10 @@ class Component extends DCLogic {
       const hp = w ? 'M31 46C28 22 42 17 50 17C62 17 72 24 69 48C70 58 68 66 64 72C66 56 64 38 50 34C38 36 34 56 36 72C32 66 30 56 31 46Z' : 'M33 42C31 24 42 20 50 20C60 20 69 25 67 42C64 34 60 31 50 31C41 31 36 34 33 42Z';
       const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="' + tint + '"/>' + (w ? '<path d="M30 50C28 70 32 80 40 84L60 84C68 80 72 70 70 50Z" fill="' + hair + '"/>' : '') + '<path d="M10 100C10 79 29 71 50 71C71 71 90 79 90 100Z" fill="' + suit + '"/><path d="M42 71L50 86L58 71Z" fill="#f4f6f6"/><rect x="43" y="57" width="14" height="17" rx="6" fill="' + skin + '"/><ellipse cx="50" cy="44" rx="16" ry="19" fill="' + skin + '"/><circle cx="34" cy="46" r="3" fill="' + skin + '"/><circle cx="66" cy="46" r="3" fill="' + skin + '"/><path d="' + hp + '" fill="' + hair + '"/><circle cx="44" cy="45" r="1.6" fill="#2b302f"/><circle cx="56" cy="45" r="1.6" fill="#2b302f"/><path d="M45 54Q50 58 55 54" stroke="#b5675a" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>';
       return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg); };
-    const face = (name, i) => { const last = (name || '').trim().split(/\s+/).pop(); const w = name ? FEM.includes(last) : i % 2 === 1; return 'assets/faces/' + (w ? 'w' : 'm') + String(((i * 3) % 10) + 1).padStart(2, '0') + '.png'; };
+    const face = (name, i) => { const last = (name || '').trim().split(/\s+/).pop(); const w = name ? FEM.includes(last) : i % 2 === 1; return G.face(w, i); };
     const on = (b, a, z) => (b ? a : z);
     const navItems = C.nav.map(x => { const [t, id] = x.split('|'); return { t, onClick: go(id) }; });
-    const routes = C.routes.items.map((r, i) => { const o = s.route === i; return { t: r.t, k: r.k, m: r.m, ic: ic('route', i), n: '0' + (i + 1), ico: on(o, '#i-minus', '#i-plus'), disp: on(o, 'block', 'none'), bg: on(o, '#e6f4f4', '#fff'), bd: on(o, '#63b6b7', '#e3e8eb'), g: r.g.map(g => ({ l: g.l, i: g.i.map(t => ({ t })) })), onClick: () => set({ route: o ? -1 : i }) }; });
+    const routes = C.routes.items.map((r, i) => { const o = s.route === i; return { t: r.t, k: r.k, m: r.m, kick: r.kick, col: r.col, colD: r.colD, ic: ic('route', i), n: '0' + (i + 1), ico: on(o, '#i-minus', '#i-plus'), disp: on(o, 'block', 'none'), bg: on(o, '#e6f4f4', '#fff'), bd: on(o, '#63b6b7', '#e3e8eb'), g: r.g.map(g => ({ l: g.l, i: g.i.map(t => ({ t })) })), onClick: () => set({ route: o ? -1 : i }) }; });
     const febTabs = C.feb.items.map((f, i) => { const o = i === s.feb; return { t: f.short, bg: on(o, '#63b6b7', 'transparent'), fg: on(o, '#0c181b', '#fff'), bd: on(o, '#63b6b7', 'rgba(102,193,195,.5)'), onClick: () => set({ feb: i }) }; });
     const f0 = C.feb.items[s.feb];
     const fb = { t: f0.t, k: f0.k, o: f0.o, f: f0.f, mk: f0.mk, s: f0.s.map(x => ({ a: x[0], b: x[1], c: x[2], hasC: !!x[2] })) };
@@ -572,18 +602,21 @@ class Component extends DCLogic {
     const whyCards = C.why.rows.map(r => ({ lab: r[0], mk: r[4], o: [1, 2, 3].map(i => ({ h: C.why.cols[i], v: r[i] })) }));
     const resTabs = C.res.filt.map((t, i) => { const o = i === s.filt; return { t, bg: on(o, '#14262b', '#fff'), fg: on(o, '#fff', '#2b302f'), bd: on(o, '#14262b', '#e3e8eb'), onClick: () => set({ filt: i }) }; });
     const fl = C.res.filt[s.filt];
-    const stories = C.res.s.filter(x => s.filt === 0 || x.t === fl).map(x => ({ img: face(x.n, C.res.s.indexOf(x) + 3), nm: x.n || 'Tagunk', w: x.w, m: x.n ? x.n.split(' ').map(z => z[0]).slice(0, 2).join('') : '–', bigT: x.big || x.t, x: x.x, t: x.t }));
+    const stories = C.res.s.filter(x => s.filt === 0 || x.t === fl).map(x => ({ img: face(x.n, C.res.s.indexOf(x) + 3), pend: x.pend, nm: x.n || 'Tagunk', w: x.w, m: x.n ? x.n.split(' ').map(z => z[0]).slice(0, 2).join('') : '–', bigT: x.big || x.t, x: x.x, t: x.t }));
     const faq = C.faq.items.map((q, i) => ({ q: q[0], a: q[1], i })).slice(0, s.faqAll ? 99 : 6).map(q => { const o = !!s.faq[q.i]; return { q: q.q, a: q.a, ico: on(o, '#i-minus', '#i-plus'), disp: on(o, 'block', 'none'), onClick: () => set({ faq: { ...s.faq, [q.i]: !o } }) }; });
     const showBar = s.scrolled && !s.barHide && !s.side;
     const row = (el) => document.getElementById('resRow');
     const sideCat = !s.narrow;
     return {
-      ready: true, c: C, s0: C.stories3[0], stories3: C.stories3.map((s, i) => ({ ...s, img: face(['Somogyi Zsigmond', 'Pálócziné Vitányi Alexandra', 'Otlecz Mónika'][i], i) })), wide: wideB, narrow: s.narrow, notes: s.notes, side: s.side, prog: s.prog,
+      ready: true, c: C, s0: C.stories3[0], stories3: C.stories3.map((x, i) => ({ ...x, img: face(x.n, i) })),
+      hasTag: !!C.hero.tag, pendLbl: G.pendLbl, hasQuote: !!C.imagine.quote, imTheme: !!G.theme, imBase: !G.theme, nowBtn: C.now.fold || !!C.now.detail, tlDisp: C.now.fold ? on(s.nowOpen, 'block', 'none') : 'block',
+      hasPath: !!C.path, path: C.path || { s: [] }, demo: G.demo, themes: G.themes.map(t => ({ ...t, bg: on(t.on, '#63b6b7', 'transparent'), fg: on(t.on, '#0c181b', '#fff') })),
+      fbBd: on(s.feb === G.febIdx, '#f1a246', 'rgba(102,193,195,.5)'), fbSh: on(s.feb === G.febIdx, '0 0 0 1px #f1a246,0 0 48px rgba(241,162,70,.25)', 'none'), wide: wideB, narrow: s.narrow, notes: s.notes, side: s.side, prog: s.prog,
       gridCols: on(s.side, 'minmax(0,1fr) 340px', 'minmax(0,1fr)'),
-      join: go('ar'), goWhat: go('mit-kapsz'), goVideo: go('kepzesek'),
+      join: go('ar'), goWhat: go(C.hero.go), goVideo: go('kepzesek'),
       showNav: s.scrolled && !s.narrow, showBar, navItems,
       heroBullets: C.hero.bullets.map(t => ({ t })), trust: C.hero.trust.map((t, i) => ({ t: i === 0 ? t.slice(1) : t, star: i === 0 ? '★' : '' })), trustFirst: C.hero.trust[0].slice(2),
-      imagine: C.imagine.items.map((t, i) => ({ t, ic: ic('imagine', i) })), pains: C.pain.items.map((p, i) => ({ ...p, ic: ic('pains', i), hasImg: false, img: 'assets/illu-0' + (i + 2) + '.png' })),
+      imagine: C.imagine.items.map((t, i) => ({ t, seg: G.seg(t), ic: ic('imagine', i) })), pains: C.pain.items.map((p, i) => ({ ...p, ic: ic('pains', i), hasImg: false, img: 'assets/illu-0' + (i + 2) + '.png' })),
       nowDisp: on(s.nowOpen, 'block', 'none'), nowIco: on(s.nowOpen, '#i-minus', '#i-plus'), toggleNow: () => set({ nowOpen: !s.nowOpen }), nowSteps,
       routes, febTabs, fb, febAll: C.feb.all.map(t => ({ t })),
       bentoCols: on(wideB, 'repeat(4,minmax(0,1fr))', 'minmax(0,1fr)'), bento, p0: s.pill === 0, p1: s.pill === 1, p2: s.pill === 2, pillTitle: [C.pillars.t1, C.pillars.t2, C.pillars.t3][s.pill], mods,
