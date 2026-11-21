@@ -1,0 +1,101 @@
+GMK sales oldal 2027 – design javaslatok Attilának
+Összefoglaló
+Attila C verziójú oldalával mennénk tovább, és Attila többi verziójú oldalából emelünk át elemeket, blokkokat a C verzióba. Lejjebb végigmegyünk blokkonként, hogy melyik blokkot vennénk át, milyen észrevételekkel, módosításokkal.A blokkok értékelésénél [4a86e8:az első javaslat AI által írt javaslat, ez kékkel fog látszani], majd az AI javaslatára [ff0000:reagál Viki piros színnel], [9900ff:Ede pedig lila színnel.]Attila, neked azt kéne majd csinálni, hogy az AI-ra való véleményezésünk alapján illeszd be az oldalba az adott blokkot. Tehát nem az AI javaslata a fontos, hanem, hogy az ő javaslatára mi mit véleményezünk. De majd látni fogod, egyértelmű lesz szerintem.(Az AI javaslatai úgy vannak sokszor megírva, hogy az Ede sales oldal tervéhez hasonlít. De ez csak részletkérdés.)A cél egy ügyfélbarátabb, 2027-es megjelenés, amely konverzióbarát, nem túl hosszú, és jól látszik rajta, mi mindent lehet elérni a GMK-ban. Ez a javaslat csak a kinézettel foglalkozik, a szövegekkel nem: a hat minta szövege azonos.
+Minták
+Jellemző
+Link
+Alap (Ede)
+Elementorban szerkeszthető, sötét hero, egyszerű türkiz blokkok
+[0000ee:gerillamentorklub.hu/sales-teszt] (jelszóval védett, a jelszó:Gerilla-11
+A
+Sötét hero árkártyával, átlógó eredménykártyák, ragadós alsó ársáv
+[0000ee:A változat]
+B
+Kártyába zárt hero, bento elrendezés, jobb oldali ragadós árpanel
+[0000ee:B változat]
+C
+Világos „papír” hero, útvonalválasztó kvíz a hero alatt
+[0000ee:C változat]
+D
+Az új Mentor Klub design system (DM Sans + Inter, grafit), C szerkezetével
+[0000ee:D változat]
+E
+D + képzési kategória-színrendszer és 3D kategóriaikonok
+[0000ee:E változat]
+Amit Attila változataiból átvennénk
+Tíz elemet / blokkot javaslok átemelni Attila C verziós oldalába, a konverzióra gyakorolt hatásuk szerinti sorrendben.
+1. Árkártya a hero-ban, alatta átlógó eredménykártyák
+[4a86e8:AI javaslatai és értékelése:Most:][4a86e8: Ede hero-jában van fotós kártya árral, de nincs rajta saját gomb és kedvezménycímke.]
+[4a86e8:Javaslat:][4a86e8: a kártyára kerüljön narancs „Kedvezményes csatlakozás” címke, áthúzott ár és saját gomb. Az eredménykártyák (+66% fizetés stb.) lógjanak bele a hero aljába.]
+[4a86e8:Miért jobb:][4a86e8: az ár, az ajánlat és a bizonyíték már az első képernyőn látszik, görgetés nélkül.]
+[4a86e8:Minta: ][4a86e8:A változat – hero]
+[ff0000:Viki véleménye: Ez jó ötlet mehet. ]
+[9900ff:Ede véleménye: Ez szerintem is jó. Csak a hero blokk jobb oldali részét (ahol András megjelenik) olyasmi látványosabbra csinálnám meg, mint amilyen most is a ][9900ff:főoldalon][9900ff:. Én ott Andrást jeleníteném meg, ahogy most is van a főoldalon.]
+2. Ragadós alsó sáv árral és gombbal
+[4a86e8:AI javaslatai és értékelése:Most:][4a86e8: Ede oldalán csak a horgonymenü (Útvonalak, Képzések…) ragad fent.]
+[4a86e8:Javaslat:][4a86e8: végig látszó alsó sáv: „Havi ][4a86e8:50 000 Ft][4a86e8: helyett 24 950 Ft/hó · Csatlakozom”. Felülre mehet egy vékony olvasási haladásjelző is (B). A B változat jobb oldali ragadós árpaneljét túl tolakodónak tartom.]
+[4a86e8:Miért jobb:][4a86e8: egy hosszú oldalon ez hozza a legtöbb konverziót, mert bárhol dönt az olvasó, egy kattintásra csatlakozhat.]
+[4a86e8:Minta: ][4a86e8:A változat – alsó sáv][4a86e8: · haladásjelző: ][4a86e8:B változat]
+[ff0000:Viki véleménye][ff0000:: A változattal mennék tovább itt, de legyen ilyen ragadós alsó sáv][9900ff:Ede véleménye: B változat jobb oldali ragadós panale szerintem is túl tolakodó, és túl sok böngészőfelületet vesz el az oldaltól. Ezt nem alkalmaznám semmiképp. Az A változat alsó, ragadós sávját használnám én is, de kicsit alacsonyabb verzióban, mint ahogy most az A verzióban látszik, hogy ne legyen túl zavaró, és ne vegyen el túl nagy területet az oldal olvasásától.A haladási csík jópofa, de nem feltétlen annyira fontos szerintem, de nem rossz.]
+3. Saját 3D illusztrációk
+[4a86e8:AI javaslatai és értékelése:Most:][4a86e8: Ede oldalán szinte nincs kép.]
+[4a86e8:Javaslat:][4a86e8: Attila egységes illusztrációsorának beemelése: a nagy „m” logóból épülő lépcsők, ajtó, ösvény, oszlopdiagramok, türkiz-zöld színekkel.]
+[4a86e8:Miért jobb:][4a86e8: 2027-es, márkás hatása van, megtöri a szövegfalat, és vizuálisan megérteti a „váltás” történetét. Elementorban egyszerű képként be lehet tenni.]
+[4a86e8:Minta: ][4a86e8:C változat][4a86e8: (a hero-ban) és ][4a86e8:A változat][4a86e8: (a „Milyen lenne, ha három hónap múlva…” és a „Munkaerőpiac kettévált” blokkban)]
+[ff0000:Viki véleménye: 3D illusztrációk helyett inkább az A változatban, de ezeket az illusztrációkat nem érzem elég erősnek, kicsit egyszerűbben kellene az ügyfélnél megértenie, hogy miről szól és ne legyen annyira AI szagú, inkább kép modern köntösben vagy emberi mosolygós, sikerült arc - hiányzik az emberi arc az oldalról, ami megragadja a tekintetet, de a témához passzol.  C változat felül mindenképpen András képe, nem 3D illusztráció][9900ff:Ede véleménye: Az én verziómban direkt nincsenek még képek, mert odáig még nem jutottam el. Én is András képét használnám a hero-ban felül. Ezek a 3D illusztrációk nem rosszak, sőt van ahol van helye és jó is, de valóban az emberi arc, és érzelmek is megjelenhetnének több helyen (ha tudonk olyat készíteni ami nem nagyon ai kinézetű). Ami szerintem fontos, hogy több olyan blokk legyen, aminek a hátterében van valami kép (hogy az adott blokk elüssön a többidől kicsit), ami feldobja a blokkot és az oldalt, de nem töri meg a blokk héttéren levő szöveg olvashatóságát. ][9900ff:Olyan képek legyenek betéve háttérnek, amikben nincsenek hosszú, egyenes vonalak, nagy téglalapok, nagy, egyenes vonalakat tartalmazó formák, stb... mert az bezavar a háttéren rajta levő dolgokba][9900ff:. Szerintem erre jó példa az ][9900ff:A verzió][9900ff: legalsó blokkja, vagy az A verzió ezen blokkja is (Februárban három tematikus útvonal indul. Csatlakozz most, és egy csoporttal haladj végig rajta) csak ott a háttérkép nagyon AI szagú (ilyen AI-s homályosodások vannak benne), de jó lenne más képpel a hatás.]
+4. „Melyik útvonal a tiéd?” kvíz a hero alatt
+[4a86e8:AI javaslatai és értékelése:Most:][4a86e8: négy nagy, szöveges útvonalkártya, mindegyiken külön gombbal, az oldal közepén.]
+[4a86e8:Javaslat:][4a86e8: rögtön a hero után egy kompakt, négy csempés választó, amelyben kattintásra nyílnak a részletek.]
+[4a86e8:Miért jobb:][4a86e8: az első döntés nem az, hogy „megveszem-e”, hanem hogy „melyik vagyok én”. Ez kisebb lépés a látogatónak, utána az ajánlat személyre szabottnak érződik.]
+[4a86e8:Jóváhagyás kell:][4a86e8: Attila itt az útvonalakat a februári indulásokhoz kötötte (Karrier Hack → adatelemzés + projektmenedzsment, AI-szakértő → AI-ügynökök, Szintlépő → projektmenedzsment).]
+[4a86e8:Minta: ][4a86e8:C változat – kvíz]
+[ff0000:Viki véleménye:][ff0000: ez jó, a sales oldal tetejére a hero blokk alá lenne érdemes tenni - az útvonalak egy dolog, de a teljes tréning és képzéslistából érdemes ajánlania ][0000ee:mager.ede@mentorklub.hu][ff0000: - adjunk egy ilyen listát a sales oldal készítéshez - A C változat megjelenés szuper][9900ff:Ede véleménye: Ez nagyon jó ötlet és jó is a hero alatt. Egyből irányba teszi a látogatót. Könnyebben elköteleződhet, ha látja, hogy specifikusan értjük ezáltal a problémáját és pontos megoldást is adunk neki egyből. A kinézetbeli megvalósítása is rendben van szerintem.]
+5. Februári útvonalak fülekkel, egy idővonalon
+[4a86e8:AI javaslatai és értékelése:Most:][4a86e8: három teljes idővonal egymás alatt, ez az oldal leghosszabb része.]
+[4a86e8:Javaslat:][4a86e8: három fül, és mindig csak egy idővonal-panel látszik.]
+[4a86e8:Miért jobb:][4a86e8: rövidebb lesz az oldal, és a három útvonal könnyebben összevethető.]
+[4a86e8:Minta: ][4a86e8:B változat – „Februárban három tematikus útvonal indul”]
+[ff0000:Viki véleménye: ][ff0000:ez a B változat szuper, de a 3 útvonal változott, ide küldök még infót, kidolgozás alatt - AI a mindennapi munkában képzés lesz][9900ff:Ede véleménye: Az átkattintgatós verziója tetszik nekem is, ami a ][9900ff:c verzióban][9900ff: látszik jól. Viki is erre gondolt szerintem, csak amit ő írt B verziót, ott a szűk oldal miatt nem látszik jól, de ott is az a verzió van. Esetleg valahogy megjeleníteném ott kicsit hangsúlyosabban, ahol kattintgatni kell, hogy válaszd ki az útvonaladat, vagy ilyesmi, hogy tudja, hogy neki ott kattintgatni kéne.]
+6. „Mit érhetsz el a GMK-ban”: tréningfal és kategóriarács
+[4a86e8:AI javaslatai és értékelése:Most:][4a86e8: statikus kártyarács a katalógusban, kategóriaszínek nélkül.]
+[4a86e8:Javaslat:][4a86e8: két sorban, ellentétes irányban lassan úszó képzésborítók (ha fölé viszed az egeret, megállnak), alattuk kategóriánként színkódolt csempék 3D ikonokkal (Álláskeresés, AI, IT, Projektmenedzsment, Angol…). Kattintásra az adott kategória képzései jelennek meg.]
+[4a86e8:Miért jobb:][4a86e8: azonnal átjön a mennyiség és a választék, olvasás nélkül. Szerintem ez az egész oldal legjobb eleme.]
+[4a86e8:Minta: ][4a86e8:E változat – „Nézd meg, mit tanulhatsz – név szerint”]
+[ff0000:Viki véleménye:][ff0000: ][ff0000:itt nézzük meg, hogy melyik a legjobb megoldás ][9900ff:Ede véleménye:][9900ff: Nekem itt az ][9900ff:A verziós][9900ff: megvalósítás tetszik.  Felül a számok felsorolásánál viszont ez nagyon kilóg a sorból, ezt máshogy kéne megjeleníteni: angol és német A1–C1][9900ff:Valamint Attila mutatott mintát is, hogy hogy néznének ki a kártyák][9900ff:. Szerintem nagyon szuperek, anynit módosítanék rajta, hogy ][9900ff:nem a tréner nevét írnám rájuk a legnagyobb betűvel, hanem a képzés nevét, mert a képzés neve a legfontossabb infó][9900ff:. A tréner neve elég kicsiben, mint ahogy most van rajtuk a képzés neve, olyan méretben. Az is szuper szerintem, hogy kategóriánként más a szín.]
+7. Eredménykártyák, amelyeken a szám az első
+[4a86e8:AI javaslatai és értékelése:Most:][4a86e8: a kártyákon a név és a szöveg van elöl.]
+[4a86e8:Javaslat:][4a86e8: a kártya tetején nagy, sötét sávon álljon a „+66%”, a „22 nap” vagy a „Dupla nettó fizetés”, és lehessen téma szerint szűrni.]
+[4a86e8:Miért jobb:][4a86e8: a látogató szeme a számot olvassa el először, a történetet csak utána.]
+[4a86e8:Minta: ][4a86e8:C változat – „Tagjaink eredményei”]
+[ff0000:Viki véleménye:][ff0000: szerintem itt nem szám kell, hanem egy kulcsszó, lehet szám az elején pl. 66%-os fizetésemelés, 3 hónap alatt sikerült, Gyes után egyszerűen, Pályaváltás okosan, 40 felett 25%-kal több bér, ]
+[ff0000:Ilyen előnyöket kiemelő kulcsző kell. jelenleg a trénerek fotói vannak fent, sajnos az emberekről ritkán van fotónk, ezt főlek a Google review-ből lehetne, de ott meg a Mentor Klubot emelik ki, hogy milyen jó volt, nem az elért eredményt. Valódi Google Review és csillagok Google logó vagy ahogy ott kinéz hitelesebb lesz, itt hozzuk be, hogy épp mennyi már közel 600 értékelés van, rá lehessen menni linken keresztül akár. Fontos a hitelesség! ][9900ff:Ede véleménye: Itt inkább a kinézetre reagálok, mert Viki mindent leírt ezzel kapcsolatban. Nekem az nem tetszik ezeken a kártyákon, hogy a kártya teteje nagyon fekete. Szeritnem szebben meg lehetne oldani ezeket a kártyákat, hogy a felső része ne legyen ennyire sötét, csak valami valami kicsit pasztellesebb, elütőbb színnel legyen a kártya felső része, mint az alsó.  ]
+8. Bento elrendezés a „Tudás · Állás · Nyelv” blokkban
+[4a86e8:AI javaslatai és értékelése:Most:][4a86e8: a három pillér és az „Így tanulsz” két külön szekció.]
+[4a86e8:Javaslat:][4a86e8: a három pillér nagy csempe, az „Így tanulsz” öt eleme kis csempe, egy blokkban.]
+[4a86e8:Miért jobb:][4a86e8: kifejezetten 2027-es elrendezés, és két szekcióból egyet csinál, ami rövidíti az oldalt.]
+[4a86e8:Minta: ][4a86e8:B változat – „Tudás, állás és nyelv”]
+[ff0000:Viki véleménye:][ff0000: nagyon jó a Tudás, állás, nyelv, de a ragacs miatt kis felület, ragacs nélkül nem tudom, hogy fog kinézni - de legyen ilyen, csak lehet ezt a hármat felül kell kiemelni és a többi blokkos dolgot az 5 db-ot meg alatta - hogy ahogy váltogatok a 3 között ez átlátható legyen][9900ff:Ede véleménye:][9900ff: Az ][9900ff:A változatban][9900ff: felül van a választási lehetőség az a jobb kinézet szerintem. Viszont a TUDÁS résznél alaphelyzetben nem nyitnám le az első lenyitható blokkját. Mindegyik maradjun zárva alaphelyzetben.]
+9. Oktatói portrésor valódi fotókkal
+[4a86e8:AI javaslatai és értékelése:Most:][4a86e8: szürke helyőrző körök.]
+[4a86e8:Javaslat:][4a86e8: egységes fotós portrék Attila képszerkesztő rendszeréből.]
+[4a86e8:Miért jobb:][4a86e8: valódi arcok nagyobb bizalmat ébresztenének, és látszódik, mekkora a csapat.]
+[4a86e8:Minta: ][4a86e8:D változat – „18 éve segítünk…” blokk][4a86e8: · képszerkesztő: ][4a86e8:editor.html]
+[ff0000:Viki véleménye:][ff0000: 120+ gyakorló tréner az 50+ helyett, - mennyi fotót rakjunk ki ide belőlük- nem lesz sok? :) Az AI nem találta el a tréner nevét és fotóját, mást rak be helyettük]
+[9900ff:Ede véleménye: ][9900ff:Nekem tetszik a ][9900ff:D verzióban][9900ff:, hogy ilyen sötét a háttere. Viszont a háttérképnek valami másnak kellene lennie, mert itt nagy, szögletes formák vannak a háttérben, amik bezavarnak a blokkban levő kártyák egységességébe. Ide valami olyan háttér kell, amiben nincsenek ilyen szövletes hosszú formák, hanem valami homogénebb kép. A trénerek nevei és képei gondolom most még csak ilyen minták, mert nem stimmelnek.]
+10. Szekciósorrend a döntés körül
+[4a86e8:AI javaslatai és értékelése:Most:][4a86e8: a „Kinek való?” blokk az ár után jön.]
+[4a86e8:Javaslat:][4a86e8: a „Kinek való?” kerüljön az ár elé. A „Mennyit érne külön-külön” és az árkártya legyen egy képernyőn, egymás mellett.]
+[4a86e8:Miért jobb:][4a86e8: a kételyek még az ár előtt tisztázódnak, és az ár a pontos értékösszesítés mellett jelenik meg.]
+[4a86e8:Minta: ][4a86e8:A változat – „Mennyit érne mindez külön-külön?”]
+[9900ff:Ede véleménye:][9900ff: Itt a ][9900ff:c verzió][9900ff: tetszik összességében jobban. Annyit emelnék csak be az ][9900ff:A verzió][9900ff:ból, hogy ott ott van az is felül, hogy mit kapsz / mit adnak máshol, ezáltal figyelemfelkeltőbb, és jobban átláthatóbb lesz, hogy felül az ott van.]
+11. [2b302f:Szakmát szereznél, államilag elismert bizonyítvánnyal?]
+[ff0000:Viki véleménye: Ez a minta tetszik: ][ff0000:https://gerilla2027.douplademo.com/A.html][9900ff:Ede véleménye: Az A verzió jó, csak valamit dolgoznék még rajta, hogy a bal és jobb oldali blokkja valahogy ugyan olyan magas legyen, mert így a jobb oldali blokk alatt nagy üres hely van. Akát az üres hely kitöltésére kép is lehetne ott.]
+Vizuális irány
+[ff0000:Viki véleménye: C változat legyen az alap a fenti javaslatokkal][9900ff:Ede véleménye: Én nem egy verzióban gondolkodtam, hogy azt válasszuk, hanem az egyes verziókból venném ki a jól megvalósított blokkokat. De egyébként a C és az A verzióból írtam a legtöbb dolgot, ami testszik. De a C lehet az alap, és abba tenném be a javaslataink alapján az egyes nekünk tetsző blokkokat.]
+Hogy szeretnénk publikálni majd az oldalunkon az elkészült sales oldalt?
+Fontos, hogy  ahogy korábban is beszéltük, ha kész az oldal, majd Elementorban szeretnénk feltenni az oldalunkra (Elementor Pro-t használunk), Elementor elemekkel elkészítve, hogy később, ha módosítani kell rajta, akkor egyszerűen meg lehessen oldani, valamint így nem iframe vagy egyéb megoldással lenne beillesztve az oldalunkba (ami mérési és egyéb hirdetéstechnikai problémákat okozna).
+Tehát majd ha minden elkészül az oldallal kapcsolatban, erre is figyelj kérlek, hogy majd minden, az oldalban használt kép és egyéb dolog valahogy egyszerűen át tudjon kerülni a mi WP-nkbe (mert elvileg képeket nem lehet Elementorba .json fájlban importálni).
+Tréningek, képzések adatai táblázat, ahol a képek vannak:Szilvi küldte korábban ezt:
+[1155cc:https://docs.google.com/spreadsheets/d/1qF83X3f2T4NWg7dF95MUVVO2Uk4FPcXI/edit?gid=1271608503#gid=1271608503]
+- A piros sorokhoz még jön trénernév, az automatikus frissítést Szilvi még nem kapcsolta be.
+- A táblázat mellett megosztotta Attilával a trénerek/képzések fotóinak mappáját is (a képek nem csatolmányként mentek, hanem a Drive-mappa megosztásával).- Megbeszéltük, hogy nem kell az összes, 2027 decemberig tartó képzést behúzni, elég a következő 2-3 hónap.
