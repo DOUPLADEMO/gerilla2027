@@ -226,7 +226,7 @@ class Component extends DCLogic {
     let arcSt = 'display:none';
     if (s.shape === 0) arcSt = `position:absolute;left:${cx}em;bottom:0;width:${pw * 1.12}em;height:${ph * .82}em;transform:translateX(-50%);border-radius:999em 999em 0 0;background:${A(arcC, .92)};z-index:1`;
     if (s.shape === 1) arcSt = `position:absolute;left:${cx}em;bottom:${ph * .2 + s.pY}em;width:${pw}em;height:${pw}em;transform:translateX(-50%);border-radius:50%;background:${A(arcC, .92)};z-index:1`;
-    const dir = s.casual ? 'assets/portre/casual/' : 'assets/portre/', custom = s.custom[T0.slug], portImg = custom || `${dir}${T0.slug}-lg.webp`;
+    const custom = s.custom[T0.slug], portImg = custom || (s.casual ? `assets/portre/casual/${T0.slug}-lg.webp` : `assets/portre-orig/${T0.slug}.webp`);
     const portSt = `position:absolute;left:${cx}em;bottom:${s.pY}em;height:${ph}em;width:${pw}em;object-fit:contain;object-position:50% 100%;transform:translateX(-50%) translate(${mx * 1.2}em,${my * .6}em);filter:drop-shadow(0 1.4em 2.2em rgba(0,0,0,.35));z-index:3;transition:transform .25s ease-out`;
     const i = s.inten / 100, dur = 60 - s.speed * .5, an = (n) => s.motion ? `animation:${n} ${dur}s ease-in-out infinite alternate;` : '';
     const blob = (l, t, d, c, a, n) => `position:absolute;width:${d}em;height:${d}em;left:${l}em;top:${t}em;border-radius:50%;background:radial-gradient(circle,${A(c, a)},transparent 65%);filter:blur(3em);${an(n)}`;

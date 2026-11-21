@@ -3,7 +3,7 @@ hero: {
   h1a: "Több interjú, jobb állás vagy új szakma", h1b: " – munka mellett, néhány hónap alatt, AI-tudással",
   sub1: "A Gerilla Mentor Klubban gyakorló szakemberektől tanulod meg azt a szakmai és AI-tudást, amit ma megfizetnek, és mellé egy 18 éve csiszolt álláskeresési módszert, amivel ezt el is tudod adni.",
   sub2: "Élő, online órákon munka után, vagy videón, amikor neked jó.",
-  bullets: ["Megtudod, milyen tudásért fizetnek most többet a cégek, és meg is tanulod.", "Olyan önéletrajzzal pályázol, ami átjut a szűrőn, és magabiztosan tárgyalsz a fizetésedről.", "Angolul vagy németül is megszólalsz az állásinterjún."],
+  bullets: ["Megtudod, milyen tudásért fizetnek most többet a cégek, és meg is tanulod.", "Olyan önéletrajzzal pályázol, ami átjut a szűrőn, és magabiztosan tárgyalsz bért.", "Angolul vagy németül is megszólalsz az állásinterjún."],
   oa: "Havi", old: "50 000 Ft", ob: "helyett most féláron:", price: "24 950 Ft/hó", oc: "Bármikor lemondható, nincs hűségidő.",
   cta: "Csatlakozom féláron →", cta2: "Megnézem, mit kapsz ↓".replace("kapsz", "kapok"),
   tag: "", go: "mit-kapsz", badge: "KEDVEZMÉNYES csatlakozási lehetőség!", founder: "Baráth András · alapító · mentor",
@@ -12,11 +12,13 @@ hero: {
 nav: ["Útvonalak|utvonalak", "Képzések|kepzesek", "Eredmények|eredmenyek", "Ár|ar", "GYIK|gyik"],
 stories3: [
   { n: "Somogyi Zsigmond", ok: true, m: "SZ", big: "+66% fizetés", x: "Somogyi Zsigmond zenész végzettségű adminisztrátorból lett üzleti elemző." },
+  { n: "", ok: true, big: "+51% béremelés", x: "Tagunk Excel és Power BI képzések után." },
+  { n: "", ok: true, big: "Új állás 22 nap alatt", x: "Tagunk a Mentor Klub módszerével, +30% fizetéssel és +56%-kal több interjúmeghívással." },
   { n: "Pálócziné Vitányi Alexandra", ok: false, m: "PA", big: "Dupla nettó fizetés", x: "Pálócziné Vitányi Alexandra két kisgyerek mellett adatelemzési képzések után lett adatelemző egy amerikai cégnél." },
   { n: "Otlecz Mónika", ok: false, m: "OM", big: "Új állás 5 nap alatt", x: "Otlecz Mónika 10 év közigazgatás után a Gerilla módszerrel váltott, nettó 120 000 Ft-tal magasabb fizetéssel." }],
 pain: { ic: ['search_off', 'hourglass_top', 'trending_flat', 'smart_toy', 'explore', 'description'], h: "Ismerős valamelyik helyzet? Nem vagy egyedül.", items: [
   { t: "Csend a pályázataidra.", x: "Egy átlagos hirdetésre ma 300–500 jelentkezés érkezik, és a HR-es 5–8 másodpercet szán egy önéletrajzra." },
-  { t: "„Ehhez már öreg vagyok.”", x: "40–50 fölött úgy érzed, a fiatalabbakat választják, pedig te vagy a tapasztaltabb." },
+  { t: "„Ehhez már öreg vagyok.”", x: "40–50 fölött úgy érzed, a fiatalabbakat választják, pedig a pályázatod mutat idősebbnek, nem te." },
   { t: "A fizetésed helyben jár.", x: "Évi 5–10% emelés mellett is lemaradsz: 2018 óta az átlagbér több mint duplájára nőtt." },
   { t: "Az AI mindenhol ott van.", x: "Az álláshirdetésekben már elvárás, és nem tudod, hol kezdd." },
   { t: "Nem tudod, merre tovább.", x: "Unod, amit csinálsz, de csak azt ismered, amiből jössz." },
@@ -36,13 +38,13 @@ now: { h: "A munkaerőpiac kettévált. Te döntöd el, melyik oldalon építkez
   box: "Az AI-t azok fogják a legjobban kihasználni, akik a saját szakmájukban tanulják meg. Ehhez programozónak sem kell lenned.", fold: false },
 routes: { h: "Négy útvonal, négy cél. Melyik a tiéd?", first: "Első lépések", items: [
   { t: "Állásszerző útvonal", kick: "Gyorsan, új állás kell?", col: "#5baeaf", colD: "#2f7f80", k: "Ha jobb állást keresel, és szeretnéd, hogy végre visszahívjanak", m: "Pozicionált CV két-három irányra, több interjúmeghívás, felkészült bértárgyalás",
-    g: [{ l: "negyedévente", i: ["Álláskeresés fejvadásszal", "Álláskeresés pszichológiája"] }, { l: "utánuk", i: ["csoportos konzultáció"] }, { l: "idegen nyelvű álláshoz", i: ["angol vagy német állásinterjú-felkészítő (6 hét)"] }] },
+    g: [{ l: "havonta induló álláskeresési tréningek", i: ["Önéletrajz és motivációs levélírás", "Pályaorientáció és álláskeresési stratégiák", "LinkedIn használata", "Állásinterjú és bértárgyalás"] }, { l: "negyedévente", i: ["Álláskeresés fejvadásszal", "Álláskeresés pszichológiája"] }, { l: "utánuk", i: ["csoportos konzultáció"] }, { l: "idegen nyelvű álláshoz", i: ["angol vagy német állásinterjú-felkészítő (6 hét)"] }] },
   { t: "Karrier Hack útvonal", kick: "Jobban akarsz keresni?", col: "#2bb673", colD: "#1b7f4f", k: "Ha új, jobban fizető szakmába váltanál, de nem a nulláról", m: "Egy kiválasztott irány, tanúsítványok a CV-be, 1–1,5 hónap után pályázásra kész alapok",
-    g: [{ l: "majd egy-két alapozó „kóstoló”", i: ["Hatékony irodai Excel", "Adatbázis és SQL alapjai", "SAP alapozó", "Online marketing alapozó", "Cloud alapozó – AWS vagy Azure", "Projektmenedzsment hatékonyan"] }, { l: "utána a választott tematikus hullám többhetes képzései:", i: ["Excel és Power BI (Dashboardok Excelben → Power BI kezdő → Haladó Power BI)", "SQL (SQL lekérdezések → SQL adatbáziskezelés → NoSQL)", "projektmenedzsment és agilis (PM hatékonyan → agilis működés → Scrum master, Jira, Product Owner)", "SAP-ciklus (MM, ABAP, SD, HR, FI)"] }] },
+    g: [{ l: "először", i: ["Pályaorientáció és álláskeresési stratégiák tréning"] }, { l: "majd egy-két alapozó „kóstoló”", i: ["Hatékony irodai Excel", "Adatbázis és SQL alapjai", "SAP alapozó", "Online marketing alapozó", "Cloud alapozó – AWS vagy Azure", "Projektmenedzsment hatékonyan"] }, { l: "utána a választott tematikus hullám többhetes képzései:", i: ["Excel és Power BI (Dashboardok Excelben → Power BI kezdő → Haladó Power BI)", "SQL (SQL lekérdezések → SQL adatbáziskezelés → NoSQL)", "projektmenedzsment és agilis (PM hatékonyan → agilis működés → Scrum master, Jira, Product Owner)", "SAP-ciklus (MM, ABAP, SD, HR, FI)"] }] },
   { t: "AI-szakértő útvonal", kick: "Nem akarsz lemaradni az AI-tól?", col: "#7c5cff", colD: "#5b3fd9", k: "Ha a saját munkádban használnád az AI-t, vagy AI-szerepkör felé mennél", m: "Saját munkafolyamataidban használt AI-eszközök, konkrét példák az interjúra",
     g: [{ l: "belépő (februártól)", i: ["AI a mindennapi munkában útvonal"] }, { l: "utána az AI és automatizáció hullám", i: ["AI ügynökök programozás nélkül", "Vibe Coding: saját app kód nélkül (6 hét)", "Programozás AI ügynökkel", "Claude Cowork", "AI automatizáció a gyakorlatban (N8N)", "Multi-agent rendszerek és MCP"] }, { l: "mellette", i: ["ChatGPT kezdő és haladó", "Copilot", "Gemini", "Claude Code", "Lovable"] }, { l: "haladóknak (6–6 hét)", i: ["AI Solution Analyst program", "Business Analyst képzés AI-jal"] }] },
   { t: "Szintlépő útvonal", kick: "Előléptetésre vágysz?", col: "#ff9f43", colD: "#b8610c", k: "Ha a mostani szakterületeden lépnél feljebb", m: "Erősebb pozíció belső előléptetéshez vagy bértárgyaláshoz",
-    g: [{ l: "vezetői és soft skill:", i: ["Csapatvezetés felsőfokon (7 hét)", "Önérvényesítés program", "Tárgyalástechnikák", "„Hogyan érd el, hogy előléptessenek?”"] }] }],
+    g: [{ l: "haladó szakmai képzések:", i: ["Excel középhaladó–haladó (8 hét)", "Excel trükkök", "Haladó Power BI", "Power Apps & Power Automate", "Python haladó", "Haladó Cloud – Azure", "Lean és Six Sigma", "Toborzás 2.0", "HR Business Partner", "HRBP Academy"] }, { l: "vezetői és soft skill:", i: ["Csapatvezetés felsőfokon (7 hét)", "Önérvényesítés program", "Tárgyalástechnikák", "„Hogyan érd el, hogy előléptessenek?”"] }] }],
   kinek: "Kinek", mire: "Mire juthatsz",
   age: "40 fölött vagy gyes után?", ageX: " Kezdd az Állásszerző útvonallal: megmutatjuk, hogyan lesz a CV-d „kortalan”, és hogyan mutasd be a kihagyást erősségként. Zsuzsa 60 évesen, Illés 56 évesen, Joób Réka 10 év gyes után talált így új állást." },
 feb: { h: "Februárban három tematikus útvonal indul. Csatlakozz most, és egy csoporttal haladj végig rajta.",
@@ -72,7 +74,7 @@ feb: { h: "Februárban három tematikus útvonal indul. Csatlakozz most, és egy
     "Minden elvégzett képzés után háromnyelvű tanúsítványt kapsz.",
     "Az utolsó lépés a Karrier Hack 3. lépése: az elvégzett képzéseket kiemeled az önéletrajzod elején és a LinkedIn-profilodon, ehhez a csoportos konzultáción segítünk.",
     "Benne van a tagdíjban, külön díj nélkül, és egyszerre több útvonalat is választhatsz."],
-  cta: "Csatlakozom, és februárban indulok →", later: "Később induló útvonalak: tavasz végén és ősszel újabb hullámok jönnek, például SQL-alapú adatelemzés vagy AI-ügynökök és automatizáció [időpont egyeztetendő], és a fenti három is új körben indul.", laterBtn: "Szólj, ha indul →" },
+  cta: "Csatlakozom, és februárban indulok →", later: "Később induló útvonalak: tavasz végén és ősszel újabb hullámok jönnek, például SQL-alapú adatelemzés vagy AI-ügynökök és automatizáció, és a fenti három is új körben indul.", laterBtn: "Szólj, ha indul →" },
 pillars: { h: "Tudás, állás és nyelv – egy tagságban, ami egy váltáshoz kell.", tabs: ["Tudás", "Állás", "Nyelv"],
   t1: "Tudás: megtanulod, amit ma megfizetnek", t2: "Állás: hogy a tudásodat meg is tudd mutatni", t3: "Nyelv: hogy ne kelljen átugranod a nyelvtudást kérő hirdetéseket",
   mods: [
@@ -92,11 +94,11 @@ pillars: { h: "Tudás, állás és nyelv – egy tagságban, ami egy váltáshoz
   lang: [{ h: "Angol", p: "Önálló „Beszélj angolul” tananyag hat szinten (0–A2-től B2–C1-ig, nyelvvizsga-felkészítővel), már az első szinten közel 1500 hangos kérdés-válasz gyakorlattal; 6 hetes angol állásinterjú-felkészítő a Gerilla módszer szerint; 4 hetes üzleti angol képzések (meeting, tárgyalás, prezentáció, írásbeli kommunikáció). Tanárok: Erdélyi László, Graning Steven, Horváth Ilona Ida, Moore Jennifer, Ruzicska Viktor, Udvarhelyi Hardi Angelika és Wenczel Judit, köztük anyanyelvi amerikai és brit trénerek." },
     { h: "Német", p: "Önálló tananyag öt szinten (A1–C1) a „Lupán Német Online” rendszerére építve, szintenként 26 beszédfejlesztő leckével és kb. 130 órányi videóval; élő kezdő, újrakezdő és középhaladó órák, német állásinterjú-felkészítés és 4 hetes üzleti német képzések. Tanárok: Bakos Zita, Egri Dorottya, Farkas Zita és Langner Kornélia. Egyik tagunk Bakos Zita német képzésével készült fel, és Bécsben helyezkedett el." }] },
 cat: { h: "Nézd meg, mit tanulhatsz – név szerint.", intro: "Minden képzés benne van a tagdíjban. Új anyagok havonta érkeznek, és a most csatlakozók ezeket is elérik.",
-  nums: [["112", "szakmai videós oktatóanyag"], ["228", "egynapos élő tréning 2027-ben"], ["253", "többhetes képzés-indulás 2027-ben"], ["54", "AI-tréning és -képzés"], ["168", "angol és német képzés"], ["43", "álláskeresési tréning"], ["83", "személyiségfejlesztő és kommunikációs anyag"]], lvl: "angol és német A1–C1",
+  nums: [["112", "szakmai videós oktatóanyag"], ["228", "egynapos élő tréning 2027-ben"], ["253", "többhetes képzés-indulás 2027-ben"], ["54", "AI-tréning és -képzés"], ["168", "angol és német képzés · A1–C1 szinteken"], ["43", "álláskeresési tréning"], ["83", "személyiségfejlesztő és kommunikációs anyag"]], lvl: "angol és német A1–C1",
   wall: [["Angol és német állásinterjú-felkészítő", "allas"], ["Excel kezdő–középhaladó", "it"], ["Haladó online marketing", "marketing"], ["Toborzás 2.0", "hr"], ["Vállalkozásindítás a gyakorlatban", "egyeb"], ["AI Solution Analyst program", "ai"], ["Scrum master", "pm"], ["AI-alapú design (Adobe Firefly, Canva, videószerkesztés)", "ai"], ["Önérvényesítés program", "soft"], ["Német állásinterjú-felkészítő", "nemet"], ["Pályaorientáció és álláskeresési stratégiák", "allas"], ["Excel trükkök", "it"], ["Vibe Coding: saját app kód nélkül", "ai"], ["Projektmenedzsment hatékonyan", "pm"], ["Szövegírás több csatornára", "marketing"], ["Csapatvezetés felsőfokon", "soft"], ["Önéletrajz és motivációslevél-írás", "allas"], ["Canva a közösségi médiában", "marketing"], ["HR Business Partner a gyakorlatban", "hr"], ["Angol állásinterjú-felkészítő", "angol"], ["Komplex pénzügyi alapozó", "egyeb"], ["Business Analyst képzés AI-jal", "ai"], ["Termékmenedzsment a Jira-ban", "pm"], ["AI és content", "ai"]],
   col: { allas: "#5baeaf", ai: "#7c5cff", it: "#2bb673", pm: "#ff9f43", marketing: "#ff5c8a", szak: "#9b51e0", hr: "#f2c94c", soft: "#00b3a6", angol: "#2f80ed", nemet: "#eb5757", egyeb: "#8a9ba8" },
   tint: { allas: "#e6f4f4", ai: "#efebff", it: "#e6f7ef", pm: "#fff2e5", marketing: "#ffeaf0", szak: "#f3eafc", hr: "#fdf7e2", soft: "#e2f6f4", angol: "#e7f0fd", nemet: "#fdeaea", egyeb: "#eff2f4" },
-  multiH: "Többhetes élő képzések", singleH: "Egynapos tréningek", when: "Mikor indul? Havonta",
+  whenBy: { allas: "Havonta", ai: "Évente több hullámban", it: "Évente 2–3 hullámban; SAP-modulok évente kétszer", pm: "Évente több hullámban", marketing: "Évente 1–2 alkalommal", hr: "Évente 1–2 alkalommal", angol: "Új csoportok kb. 6–7 hetente, üzleti angol folyamatosan", nemet: "Kezdő csoport kéthavonta, üzleti német folyamatosan", egyeb: "Évente 1–2 alkalommal" }, multiH: "Többhetes élő képzések", singleH: "Egynapos tréningek", when: "Mikor indul? Havonta",
   mods: [
   { n: "Álláskeresés / Karrierváltás", c: "allas", m: [["Angol és német állásinterjú-felkészítő", "6 hét"]], s: ["Önéletrajz és motivációslevél-írás", "Pályaorientáció és álláskeresési stratégiák", "LinkedIn használata az álláskeresésben és karrierváltásban", "Állásinterjú és bértárgyalás", "Álláskeresés fejvadásszal", "+1 további"] },
   { n: "AI / Digitális", c: "ai", m: [["Vibe Coding: saját app kód nélkül", "6 hét"], ["AI Solution Analyst program", "6 hét"]], s: ["AI ügynökök programozás nélkül", "Programozás AI ügynökkel", "Claude Cowork", "Claude Code alapozó és haladó", "AI automatizáció a gyakorlatban (N8N)", "+10 további"] },
@@ -114,7 +116,7 @@ cat: { h: "Nézd meg, mit tanulhatsz – név szerint.", intro: "Minden képzés
   learnH: "Így tanulsz – 100% online órák", learn: [["Videós oktatóanyagok", "219 tananyag, bármikor, a saját tempódban."], ["Élő egy- és félnapos tréningek", "jellemzően csütörtökön és pénteken; kérdezhetsz a trénertől; a felvétel 10 napig visszanézhető."], ["Többhetes élő képzések", "4–12 hét, heti egy-két alkalom munka után (jellemzően 17:00 vagy 17:30-tól); a felvétel az utolsó óra után egy hónapig elérhető."], ["Mobilapp", "a leckéket és a felvételeket telefonról is eléred, így a napi 30 perc tanulás bármelyik szabad félórádba belefér."], ["Tanúsítvány", "minden elvégzett képzés után háromnyelvű tanúsítványt kapsz, amit a CV-dbe és a LinkedInre is beírhatsz."]],
   vid: "Nézd meg 3 percben, mit kapsz, mielőtt csatlakozol.",
   d90: "Ha ma csatlakozol, ezek indulnak az első három hónapodban.", filt: ["Összes", "Állásszerző", "Karrier Hack", "AI-szakértő", "Szintlépő"], soon: "A következő 2–3 hónap indulásai. A teljes naptár a katalógusban.", d90cta: "Csatlakozom féláron, és kezdem az első lépéssel →", labels: ["Már indult – még becsatlakozhatsz", "Regisztrálható", "Új a Klubban"] },
-why: { h: "Miért nem „csak” egy újabb tanfolyam?", cols: ["", "Egyedi tanfolyam", "Nyelviskola", "Nemzetközi kurzusplatform", "Gerilla Mentor Klub"], rows: [
+why: { h: "Miért nem egy újabb tanfolyam?", cols: ["", "Egyedi tanfolyam", "Nyelviskola", "Nemzetközi kurzusplatform", "Gerilla Mentor Klub"], rows: [
   ["Mit kapsz", "Egy témát", "Egy nyelvet", "Sok videót, többnyire angolul", "Szakmai tudás, AI, nyelv és álláskeresés egy helyen"],
   ["Élő óra magyarul", "Igen", "Igen", "Ritkán", "Igen, munka után"],
   ["Ki választja ki, mit érdemes tanulni", "Te", "–", "Te", "Karrier-tanácsadók, a piaci kereslet alapján"],
@@ -122,6 +124,7 @@ why: { h: "Miért nem „csak” egy újabb tanfolyam?", cols: ["", "Egyedi tanf
   ["Éles SAP-gyakorlás", "Ritkán", "–", "Nincs", "Saját tesztrendszer"],
   ["Ár", "80 ezer – több százezer Ft képzésenként", "–", "–", "24 950 Ft/hó, bármikor lemondható"]],
   p1: "Mindez a ", p2: "Karrier Hack®", p3: " módszertan köré épül: egy olyan karriertervezési rendszerre, amellyel a meglévő tapasztalatodból kiindulva lépsz át egy jobban fizető, keresett területre." },
+reviews: { url: "", avg: "4,9", count: "közel 600" },
 res: { h: "Tagjaink eredményei", filt: ["Összes", "Adatelemzés", "Két lépcsős váltás", "SAP", "50 fölött", "Gyes után", "Nyelv", "Bértárgyalás"], full: "Teljes történet",
   s: [
   { t: "Adatelemzés", n: "Somogyi Zsigmond", w: "30 éves, zenész végzettségű adminisztrátor", big: "66%-os fizetésemelés, zenészből üzleti elemző", x: "Power BI, SQL, Power Apps és Excel képzések után üzleti elemzőként helyezkedett el, 66%-kal magasabb fizetéssel. Az SQL-t két hónappal korábban kezdte tanulni." },
@@ -151,8 +154,7 @@ steps: { h: "Mi történik, miután csatlakoztál?", items: [
   ["Megkapod a hozzáférést", "e-mailben azonnal; telefonon a mobilappban is eléred a Klubot."],
   ["Kiválasztod az útvonaladat", "menj el az első pályaorientációs tréningre, megmutatjuk, melyik két-három képzéssel érdemes kezdeni, beszéld át az élő csoportos konzultáción a te irányodat a karrier tanácsadó kollégánkkal."],
   ["Tanulsz a saját tempódban", "heti 2–3 óra már elég az elinduláshoz; az élő órák munka után vannak, a tréningek 10 napig, a képzések 1 hónapig visszanézhetőek, becsatlakozási lehetőség van menet közben is."],
-  ["Kérdezel, amikor elakadsz", "a csoportos konzultáción, a trénereknél és a zárt közösségben."],
-  ["Tanúsítványt szerzel", "– friss papírod lesz, ami a CV-dben és a LinkedIn-profilodon is jól mutat."]] },
+  ["Kérdezel, amikor elakadsz", "a csoportos konzultáción, a trénereknél és a zárt közösségben."]] },
 offer: { h: "Mennyit érne mindez külön-külön?", c1: "Mit kapsz", c2: "Mennyibe kerülne máshol", items: [
   ["AI Iskola – 54 élő AI-tréning és -képzés 2027-ben", "Egy 4 hónapos AI-képzés önmagában 350 000 Ft + áfa"],
   ["Adatelemzői útvonal Exceltől Pythonig", "Egyetlen jó Excel-tanfolyam 50–60 000 Ft"],
@@ -252,7 +254,7 @@ fin: { h: "Ugrás előtt kell felvenni az ejtőernyőt", p: "Több interjú, job
     stories3: [
       { n: "Baráth András", ok: true, m: "BA", big: "„Nem fejlesztő, mégis egy hónap alatt…”", x: "A kajakegyesületünk új elnöke egy hónap alatt új weboldalt, 150 fős tagsági rendszert és évkönyvet rakott össze AI-jal, pedig nem fejlesztő." },
       { n: "Somogyi Zsigmond", ok: true, m: "SZ", big: "+66% fizetés", x: "Somogyi Zsigmond (adatelemzés, Power Apps)." },
-      { n: "", ok: false, m: "", big: "[Helyőrző]", x: "AI-t a napi munkájában használó tag története." }],
+      { n: "", ok: false, m: "", big: "Helyőrző · AI-tag története", x: "AI-t a napi munkájában használó tag története." }],
     pain: { ic: ['content_copy', 'record_voice_over', 'code_off', 'campaign', 'shield'], items: [
       { t: "Napi órák mennek el ugyanarra.", x: "Másolás, beillesztés, e-mailek válogatása, táblázatok frissítése: munka, amit egy gép is elvégezhetne." },
       { t: "Mindenki az AI-ról beszél, a kollégád már használja is.", x: "Te pedig nem tudod, hol kezdd, és mire érdemes egyáltalán használni a saját munkádban." },
@@ -262,7 +264,7 @@ fin: { h: "Ugrás előtt kell felvenni az ejtőernyőt", p: "Több interjú, job
     imagine: { ic: ['mail', 'autorenew', 'groups', 'record_voice_over', 'school'], h: "Milyen lenne, ha májusban már napi rutinnal használnád az AI-t a munkádban?", close: lead2("Az AI a mindennapi munkában útvonalon mindkettőt megkapod."),
       items: ["A levelek, összefoglalók és jegyzőkönyvek első változatát percek alatt elkészíted, te csak átnézed és véglegesíted.", "Egy ismétlődő feladatodat, például a heti összefoglalót, részben az AI-ra bízod, emberi ellenőrzéssel.", "Te vagy a csapatban, aki tudja, mire jó az AI, mire nem, és milyen adatot nem szabad neki átadni.", "Az interjún konkrét példákkal mondod el, hogyan használod az AI-t, és mennyi időt nyersz vele.", "A CV-dben ott a ChatGPT, a Copilot, a Claude, az „ellenőrzött AI-használat a napi munkában” és a háromnyelvű tanúsítványok."],
       quote: "Az AI-t azok fogják a legjobban kihasználni, akik a saját szakmájukban tanulják meg. Ehhez programozónak sem kell lenned." },
-    now: { h: "Az AI-ablak most van nyitva", lead: "Az AI-eszközök használata ma már a legtöbb irodai és szellemi munkakör hirdetésében elvárás [forrás bekérendő], nem csak az informatikusoknál. A cégek most vezetik be az AI-t, ezért friss gyakorlati tudással is be lehet lépni; 2028–2029-re ez alapelvárás lesz, 2030 után pedig már senior tapasztalatot keresnek.", detail: "", fold: false },
+    now: { h: "Az AI-ablak most van nyitva", lead: "Az AI-eszközök használata ma már a legtöbb irodai és szellemi munkakör hirdetésében elvárás, nem csak az informatikusoknál. A cégek most vezetik be az AI-t, ezért friss gyakorlati tudással is be lehet lépni; 2028–2029-re ez alapelvárás lesz, 2030 után pedig már senior tapasztalatot keresnek.", detail: "", fold: false },
     path: { ...pathBase, h: "Így jutsz el az első prompttól a saját AI-asszisztensig, kb. 16 hét alatt",
       kinek: "átlagos irodai, szellemi munkát végzőknek – adminisztráció, ügyfélkapcsolat, pénzügy, HR, projektasszisztens, kisvállalkozó –, akik most ismerkednek az AI-jal. Előképzettség, AI-tapasztalat és programozói tudás nem kell; heti 2–3 óra elég.",
       s: [["1. hét", "„Hogyan érvényesülj munkavállalóként az AI által átalakított világban?” és ChatGPT alkalmazása szakmai feladatokra – kezdő", "(két félnapos tréning)"], ["2–3. hét", "AI és a kreativitás", "(félnapos tréning), majd Copilot a munkanapban (félnapos tréning, új) vagy az MS Copilot alapok videón"], ["4–5. hét", "AI-alapú kutatás és elemzés (új), Érvelés, döntés-előkészítés és prezentáció AI-val", "(egynapos tréning, új), majd ChatGPT szakmai feladatokra – haladó"], ["6–7. hét", "Claude – az AI mint munkatárs", "(félnapos tréning) és Projektmenedzsment AI-jal – Notion, Asana, Trello (egynapos tréning)"], ["8–11. hét", "Választható: Copilot", "(4×3 órás képzés) vagy AI asszisztens a PM napi munkájában (4 hetes élő képzés)"], ["12. hét", "AI-rendelet (EU AI Act) és céges AI-kézikönyv", "(félnapos tréning, új)"], close],
@@ -272,7 +274,7 @@ fin: { h: "Ugrás előtt kell felvenni az ejtőernyőt", p: "Több interjú, job
 
   const C = GMK.C, q = new URLSearchParams(location.search);
   const demo = q.get('demo') === '1', key = GMK.T[q.get('utvonal')] ? q.get('utvonal') : '';
-  GMK.demo = demo; GMK.theme = key; GMK.pendLbl = "ENGEDÉLYRE VÁR";
+  GMK.demo = demo; GMK.popupOn = q.get('popup') === '1'; GMK.theme = key; GMK.pendLbl = "ENGEDÉLYRE VÁR";
   C.path = null;
   if (key) {
     const T = GMK.T[key];

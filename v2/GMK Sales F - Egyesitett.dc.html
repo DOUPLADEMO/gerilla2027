@@ -30,10 +30,12 @@ html{scrollbar-width:thin;scrollbar-color:#63b6b7 #e9eeee}
 ::selection{background:#84e0db;color:#0c181b}
 @keyframes gmkL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes gmkR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes gmkBob{0%,100%{transform:translateY(-3px)}50%{transform:translateY(5px)}}
+.gmk-bob{animation:gmkBob 1.6s ease-in-out infinite}
 @keyframes gmkUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 @keyframes gmkDrift{from{transform:translate(0,0) scale(1)}to{transform:translate(90px,60px) scale(1.18)}}
 @keyframes gmkPulse{0%,100%{box-shadow:0 0 0 0 rgba(99,182,183,.5)}50%{box-shadow:0 0 0 12px rgba(99,182,183,0)}}
-@media (prefers-reduced-motion:reduce){[data-marq]{animation:none!important}[style*="gmkDrift"],[style*="gmkPulse"]{animation:none!important}}
+@media (prefers-reduced-motion:reduce){.gmk-bob{animation:none!important}[data-marq]{animation:none!important}[style*="gmkDrift"],[style*="gmkPulse"]{animation:none!important}}
 </style>
 </helmet>
 <sc-if value="{{ ready }}" hint-placeholder-val="{{ false }}">
@@ -81,14 +83,14 @@ html{scrollbar-width:thin;scrollbar-color:#63b6b7 #e9eeee}
 <!-- STORIES -->
 <section style="position:relative;z-index:3;margin-top:-92px;padding:0 0 8px">
   <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px">
-    <sc-for list="{{ stories3 }}" as="s" hint-placeholder-count="3"><div style="background:#fff;border:1px solid #e3e8eb;border-radius:24px;padding:20px;display:flex;gap:16px;align-items:center;box-shadow:0 8px 28px rgba(48,99,100,.1)"><sc-if value="{{ s.img }}" hint-placeholder-val="{{ false }}"><div style="flex:none;width:64px;height:64px;border-radius:50%;background:#e3e8eb;background-size:cover;background-position:50% 22%;background-repeat:no-repeat;background-image:{{ s.img }}"></div></sc-if><div><sc-if value="{{ s.pend }}"><div style="display:inline-block;background:#f1a246;color:#0c181b;font:800 10px Poppins,sans-serif;letter-spacing:.06em;padding:3px 8px;border-radius:999px;margin-bottom:6px">{{ pendLbl }}</div></sc-if><div style="font:800 20px/1.15 Poppins,sans-serif;color:#2f7f80;margin-bottom:4px">{{ s.big }}</div><div style="font-size:13px;line-height:1.45">{{ s.x }}</div></div></div></sc-for>
+    <sc-for list="{{ stories3 }}" as="s" hint-placeholder-count="3"><div style="background:#fff;border:1px solid #e3e8eb;border-radius:24px;padding:20px;display:flex;gap:16px;align-items:center;box-shadow:0 8px 28px rgba(48,99,100,.1)"><div style="flex:none;width:64px;height:64px;border-radius:50%;background:{{ s.mc }};color:#0c181b;display:flex;align-items:center;justify-content:center;font:800 20px Poppins,sans-serif"><sc-if value="{{ s.ini }}" hint-placeholder-val="{{ true }}">{{ s.ini }}</sc-if><sc-if value="{{ s.noIni }}" hint-placeholder-val="{{ false }}"><span class="ms" style="font-size:32px">person</span></sc-if></div><div><sc-if value="{{ s.pend }}"><div style="display:inline-block;background:#f1a246;color:#0c181b;font:800 10px Poppins,sans-serif;letter-spacing:.06em;padding:3px 8px;border-radius:999px;margin-bottom:6px">{{ pendLbl }}</div></sc-if><div style="font:800 20px/1.15 Poppins,sans-serif;color:#2f7f80;margin-bottom:4px">{{ s.big }}</div><div style="font-size:13px;line-height:1.45">{{ s.x }}</div></div></div></sc-for>
   </div>
 </section>
 
 <!-- KVÍZ-CSÍK -->
 <section id="kviz" style="position:relative;z-index:2;margin-top:32px">
   <div style="max-width:1200px;margin:0 auto;padding:0 24px">
-    <sc-if value="{{ notes }}"><div style="margin:0 0 12px;background:#fff;border:2px dashed #f1a246;color:#2b302f;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace;max-width:760px">ELTÉRÉS · A „Négy útvonal” blokk előrehozva és interaktív kvízzé alakítva (szöveg változatlan: cím, „Kinek”, „Mire juthatsz”, „Első lépések”). Új: az útvonal → februári útvonal megfeleltetés (Karrier Hack → adatelemzés + projektmenedzsment, AI-szakértő → AI-ügynökök, Szintlépő → projektmenedzsment). Ezt tartalmilag jóvá kell hagyni.</div></sc-if>
+    <sc-if value="{{ notes }}"><div style="margin:0 0 12px;background:#fff;border:2px dashed #f1a246;color:#2b302f;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace;max-width:760px">ELTÉRÉS · A „Négy útvonal” blokk előrehozva és interaktív kvízzé alakítva (szöveg változatlan: cím, „Kinek”, „Mire juthatsz”, „Első lépések”). Új: az útvonal → februári útvonal megfeleltetés (Karrier Hack → adatelemzés + projektmenedzsment, AI-szakértő → AI a mindennapi munkában, Szintlépő → projektmenedzsment). Ezt tartalmilag jóvá kell hagyni.</div></sc-if>
     <div style="background:linear-gradient(160deg,rgba(24,48,54,.9),rgba(12,24,27,.86));backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);border-radius:36px;border:1px solid rgba(102,193,195,.55);box-shadow:0 0 0 1px rgba(102,193,195,.3),0 24px 70px rgba(12,24,27,.35);padding:clamp(22px,3vw,40px);color:#fff">
       <h2 style="margin:0 0 24px;font:800 clamp(22px,2.8vw,34px)/1.2 Poppins,sans-serif;text-wrap:balance">{{ c.routes.h }}</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px;align-items:stretch">
@@ -183,7 +185,7 @@ html{scrollbar-width:thin;scrollbar-color:#63b6b7 #e9eeee}
     <div style="display:inline-flex;align-items:center;gap:6px;background:#f1a246;color:#0c181b;font:800 12px Poppins,sans-serif;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:14px"><span class="ms" style="font-size:14px;display:block">calendar_month</span>{{ c.feb.tag }}</div>
     <h2 style="margin:0 0 16px;font:800 clamp(26px,3.2vw,40px)/1.12 Poppins,sans-serif;color:#fff;text-wrap:balance;max-width:900px">{{ c.feb.h }}</h2>
     <p style="margin:0 0 26px;font-size:16px;max-width:860px">{{ c.feb.p }}</p>
-    <div style="font:700 14px Poppins,sans-serif;color:#84e0db;margin-bottom:10px">Kattints az útvonalra, és nézd meg a lépéseit ↓</div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px"><sc-for list="{{ febTabs }}" as="t" hint-placeholder-count="3"><button onClick="{{ t.onClick }}" style="cursor:pointer;font:700 14px Poppins,sans-serif;padding:14px 24px;min-height:52px;border-radius:999px;background:{{ t.bg }};color:{{ t.fg }};border:2px solid {{ t.bd }};box-shadow:0 0 0 4px rgba(132,224,219,.16)">{{ t.t }}</button></sc-for></div>
+    <div style="display:flex;align-items:center;gap:10px;font:800 clamp(18px,2.2vw,24px)/1.25 Poppins,sans-serif;color:#84e0db;margin-bottom:14px">Kattints az útvonalra, és nézd meg a lépéseit<span class="ms gmk-bob" style="font-size:30px">south</span></div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px"><sc-for list="{{ febTabs }}" as="t" hint-placeholder-count="3"><button onClick="{{ t.onClick }}" style="cursor:pointer;font:700 14px Poppins,sans-serif;padding:18px 32px;min-height:62px;font-size:16px;border-radius:999px;background:{{ t.bg }};color:{{ t.fg }};border:3px solid {{ t.bd }};box-shadow:{{ t.sh }};transition:all .15s">{{ t.t }}</button></sc-for></div>
     <div style="background:linear-gradient(160deg,#16292f,#0c181b);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);border-radius:28px;border:1px solid {{ fbBd }};box-shadow:{{ fbSh }};padding:clamp(20px,3vw,32px);color:#fff">
       <h3 style="margin:0 0 20px;font:800 clamp(18px,2vw,24px)/1.3 Poppins,sans-serif">{{ fb.t }}</h3>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:32px">
@@ -248,7 +250,7 @@ html{scrollbar-width:thin;scrollbar-color:#63b6b7 #e9eeee}
   <div style="max-width:1200px;margin:0 auto;padding:0 24px">
     <div style="display:grid;grid-template-columns:{{ browseCols }};gap:16px;align-items:start">
       <div style="display:flex;{{ catDir }};gap:6px;overflow:auto;max-height:{{ catMax }}"><sc-for list="{{ catTabs }}" as="t" hint-placeholder-count="10"><button onClick="{{ t.onClick }}" style="flex:none;display:flex;align-items:center;gap:10px;text-align:left;cursor:pointer;font:600 14px Poppins,sans-serif;padding:10px 14px;min-height:44px;border-radius:14px;background:{{ t.bg }};color:{{ t.fg }};border:0;white-space:nowrap"><span style="width:10px;height:10px;border-radius:50%;background:{{ t.dot }}"></span>{{ t.n }}</button></sc-for></div>
-      <div style="background:{{ sel.tint }};border-radius:24px;padding:clamp(18px,2.6vw,28px);min-height:260px"><div style="font:600 12px Poppins,sans-serif;margin-bottom:14px">{{ c.cat.when }}</div>
+      <div style="background:{{ sel.tint }};border-radius:24px;padding:clamp(18px,2.6vw,28px);min-height:260px"><sc-if value="{{ sel.when }}" hint-placeholder-val="{{ false }}"><div style="font:600 12px Poppins,sans-serif;margin-bottom:14px">{{ sel.when }}</div></sc-if>
         <sc-if value="{{ sel.hasM }}"><h3 style="margin:0 0 12px;font:800 16px Poppins,sans-serif">{{ c.cat.multiH }}</h3><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:12px;margin-bottom:22px"><sc-for list="{{ sel.multi }}" as="m" hint-placeholder-count="3"><div style="background:#fff;border-radius:16px;padding:16px;border-top:4px solid {{ sel.col }}"><div style="font:800 16px/1.3 Poppins,sans-serif;margin-bottom:8px">{{ m.t }}</div><div style="font-size:12px;color:#5b666b">{{ m.len }}</div></div></sc-for></div></sc-if>
         <sc-if value="{{ sel.hasS }}"><h3 style="margin:0 0 12px;font:800 16px Poppins,sans-serif">{{ c.cat.singleH }}</h3><div style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ sel.single }}" as="s" hint-placeholder-count="5"><span style="background:#fff;border-radius:999px;padding:8px 14px;font:600 13px Poppins,sans-serif">{{ s.t }}</span></sc-for></div></sc-if></div>
     </div>
@@ -300,12 +302,12 @@ html{scrollbar-width:thin;scrollbar-color:#63b6b7 #e9eeee}
   <div id="resRow" style="display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px max(24px,calc((100% - 1200px)/2 + 24px)) 16px">
     <sc-for list="{{ stories }}" as="s" hint-placeholder-count="5"><div style="flex:none;width:min(84%,330px);scroll-snap-align:start;border:1px solid #e3e8eb;border-radius:24px;overflow:hidden;background:#fff;display:flex;flex-direction:column;box-shadow:0 8px 28px rgba(48,99,100,.1)">
       <div style="background:linear-gradient(135deg,#d3efed,#e9f6e6);color:#17494a;padding:20px 22px;min-height:96px;display:flex;align-items:flex-end;font:800 24px/1.15 Poppins,sans-serif">{{ s.bigT }}</div>
-      <div style="padding:20px 22px;display:grid;gap:10px;flex:1"><div style="display:flex;gap:12px;align-items:center"><sc-if value="{{ s.img }}" hint-placeholder-val="{{ false }}"><div style="flex:none;width:44px;height:44px;border-radius:50%;background:#e3e8eb;background-size:cover;background-position:50% 22%;background-repeat:no-repeat;background-image:{{ s.img }}"></div></sc-if><div><div style="font:700 14px/1.25 Poppins,sans-serif">{{ s.nm }}</div><div style="font-size:12px;color:#5b666b;line-height:1.35">{{ s.w }}</div></div></div><sc-if value="{{ s.pend }}"><div><span style="display:inline-block;background:#f1a246;color:#0c181b;font:800 10px Poppins,sans-serif;letter-spacing:.06em;padding:3px 8px;border-radius:999px">{{ pendLbl }}</span></div></sc-if><p style="margin:0;font-size:14px">{{ s.x }}</p><div><span style="display:inline-block;background:#40454b;color:#fff;font:600 11px Poppins,sans-serif;border-radius:999px;padding:3px 10px">{{ s.t }}</span></div></div></div></sc-for>
+      <div style="padding:20px 22px;display:grid;gap:10px;flex:1"><div style="display:flex;gap:12px;align-items:center"><div style="flex:none;width:44px;height:44px;border-radius:50%;background:{{ s.mc }};color:#0c181b;display:flex;align-items:center;justify-content:center;font:800 15px Poppins,sans-serif"><sc-if value="{{ s.ini }}" hint-placeholder-val="{{ true }}">{{ s.ini }}</sc-if><sc-if value="{{ s.noIni }}" hint-placeholder-val="{{ false }}"><span class="ms" style="font-size:24px">person</span></sc-if></div><div><div style="font:700 14px/1.25 Poppins,sans-serif">{{ s.nm }}</div><div style="font-size:12px;color:#5b666b;line-height:1.35">{{ s.w }}</div></div></div><sc-if value="{{ s.pend }}"><div><span style="display:inline-block;background:#f1a246;color:#0c181b;font:800 10px Poppins,sans-serif;letter-spacing:.06em;padding:3px 8px;border-radius:999px">{{ pendLbl }}</span></div></sc-if><p style="margin:0;font-size:14px">{{ s.x }}</p><div><span style="display:inline-block;background:#40454b;color:#fff;font:600 11px Poppins,sans-serif;border-radius:999px;padding:3px 10px">{{ s.t }}</span></div></div></div></sc-for>
   </div>
   <div style="max-width:1200px;margin:0 auto;padding:24px 24px 0">
-    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;margin-bottom:18px"><div style="font:700 22px Poppins,sans-serif;letter-spacing:-.01em"><span style="color:#4285f4">G</span><span style="color:#ea4335">o</span><span style="color:#fbbc05">o</span><span style="color:#4285f4">g</span><span style="color:#34a853">l</span><span style="color:#ea4335">e</span> <span style="color:#2b302f">értékelések</span></div><div style="color:#f1a246;letter-spacing:3px;font-size:20px">★★★★★</div><div style="font:700 15px Poppins,sans-serif">közel 600 valódi értékelés</div><span style="display:inline-block;background:#f1a246;color:#0c181b;font:800 10px Poppins,sans-serif;letter-spacing:.06em;padding:3px 8px;border-radius:999px">ÁTLAG ÉS LINK EGYEZTETENDŐ</span></div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;margin-bottom:18px"><div style="font:700 22px Poppins,sans-serif;letter-spacing:-.01em"><span style="color:#4285f4">G</span><span style="color:#ea4335">o</span><span style="color:#fbbc05">o</span><span style="color:#4285f4">g</span><span style="color:#34a853">l</span><span style="color:#ea4335">e</span> <span style="color:#2b302f">értékelések</span></div><div style="color:#f1a246;letter-spacing:3px;font-size:20px">★★★★★</div><div style="font:700 15px Poppins,sans-serif">{{ c.reviews.avg }}/5 · {{ c.reviews.count }} valódi értékelés</div><sc-if value="{{ demo }}" hint-placeholder-val="{{ false }}"><span style="display:inline-block;background:#f1a246;color:#0c181b;font:800 10px Poppins,sans-serif;letter-spacing:.06em;padding:3px 8px;border-radius:999px">ÁTLAG ÉS LINK EGYEZTETENDŐ</span></sc-if></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:14px"><sc-for list="{{ c.res.rev }}" as="r" hint-placeholder-count="4"><div style="background:#f4f7f7;border-radius:24px;padding:22px"><div style="color:#f1a246;display:flex;gap:3px;margin-bottom:10px"><span class="ms" style="font-size:18px;display:block">star</span><span class="ms" style="font-size:18px;display:block">star</span><span class="ms" style="font-size:18px;display:block">star</span><span class="ms" style="font-size:18px;display:block">star</span><span class="ms" style="font-size:18px;display:block">star</span></div><p style="margin:0 0 10px;font-size:14px">{{ r.x }}</p><div style="font:700 13px Poppins,sans-serif;color:#2f7f80">{{ r.n }}</div></div></sc-for></div>
-    <div style="margin-top:16px"><a style="color:#2f7f80;font:700 14px Poppins,sans-serif;cursor:pointer">{{ c.res.revAll }}</a></div>
+    <sc-if value="{{ revUrl }}" hint-placeholder-val="{{ false }}"><div style="margin-top:16px"><a href="{{ revUrl }}" target="_blank" rel="noopener" style="color:#2f7f80;font:700 14px Poppins,sans-serif;cursor:pointer">{{ c.res.revAll }}</a></div></sc-if>
   </div>
 </section>
 
@@ -350,7 +352,7 @@ html{scrollbar-width:thin;scrollbar-color:#63b6b7 #e9eeee}
       <div style="font:700 13px ui-monospace,Menlo,monospace;color:#84e0db;margin-bottom:10px">11</div>
       <h2 style="margin:0 0 24px;font:800 clamp(26px,3.2vw,40px)/1.12 Poppins,sans-serif;color:#fff;text-wrap:balance">{{ c.offer.h }}</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:6px 20px;padding:0 18px;margin-bottom:10px;font:700 12px Poppins,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#84e0db"><div>{{ c.offer.c1 }}</div><div>{{ c.offer.c2 }}</div></div>
-      <div style="display:grid;gap:10px"><sc-for list="{{ offerRows }}" as="o" hint-placeholder-count="7"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:6px 20px;background:rgba(24,48,54,.6);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(102,193,195,.25);border-radius:16px;padding:14px 18px"><div style="display:flex;gap:10px;font:600 14px/1.4 Poppins,sans-serif;color:#fff"><span style="color:#84e0db"><span class="ms" style="font-size:16px;display:block;margin-top:3px">check</span></span><span>{{ o.a }}</span></div><div style="font-size:13px;color:#c9d4d6"><span style="font-weight:700;color:#fff">{{ c.offer.c2 }}: </span>{{ o.b }}</div></div></sc-for></div>
+      <div style="display:grid;gap:10px"><sc-for list="{{ offerRows }}" as="o" hint-placeholder-count="7"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:6px 20px;background:rgba(24,48,54,.6);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(102,193,195,.25);border-radius:16px;padding:14px 18px"><div style="display:flex;gap:10px;font:600 14px/1.4 Poppins,sans-serif;color:#fff"><span style="color:#84e0db"><span class="ms" style="font-size:16px;display:block;margin-top:3px">check</span></span><span>{{ o.a }}</span></div><div style="font-size:13px;color:#c9d4d6"><sc-if value="{{ o.showLbl }}" hint-placeholder-val="{{ false }}"><span style="font-weight:700;color:#fff">{{ c.offer.c2 }}: </span></sc-if>{{ o.bb }}</div></div></sc-for></div>
       <a onClick="{{ goVideo }}" style="margin-top:22px;display:flex;gap:14px;align-items:center;cursor:pointer;text-decoration:none;color:#fff"><span style="flex:none;width:120px;aspect-ratio:16/9;border-radius:12px;background:linear-gradient(rgba(12,24,27,.3),rgba(12,24,27,.5)),url(img-founder-wide.png) center/cover;display:flex;align-items:center;justify-content:center"><span style="width:34px;height:34px;border-radius:50%;background:#63b6b7;color:#0c181b;display:flex;align-items:center;justify-content:center"><span class="ms" style="font-size:14px;display:block">play_arrow</span></span></span><span style="font:700 15px Poppins,sans-serif;border-bottom:2px solid #66c1c3">{{ c.offer.vid }}</span></a>
     </div>
     <div style="position:{{ stickyPos }};top:92px;background:linear-gradient(160deg,#16292f,#0c181b);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);border-radius:36px;border:1px solid rgba(102,193,195,.6);box-shadow:0 0 48px rgba(91,174,175,.25);padding:clamp(24px,3vw,36px);color:#fff">
@@ -414,7 +416,7 @@ html{scrollbar-width:thin;scrollbar-color:#63b6b7 #e9eeee}
   <a onClick="{{ quizPop }}" style="display:inline-block;margin-top:16px;color:#66c1c3;font:700 14px Poppins,sans-serif;cursor:pointer">{{ c.routes.h }}</a></div></div></sc-if>
 
 <!-- JEGYZET-KAPCSOLÓ -->
-<div style="position:fixed;left:16px;bottom:{{ noteBottom }};z-index:80;display:flex;gap:8px;flex-wrap:wrap"><sc-if value="{{ demo }}"><div style="display:flex;gap:4px;flex-wrap:wrap;background:#14262b;border:2px solid #66c1c3;border-radius:999px;padding:4px;box-shadow:0 4px 16px rgba(0,0,0,.25)"><sc-for list="{{ themes }}" as="t" hint-placeholder-count="4"><button onClick="{{ t.onClick }}" style="background:{{ t.bg }};color:{{ t.fg }};border:0;border-radius:999px;padding:8px 14px;min-height:36px;font:700 12px Poppins,sans-serif;cursor:pointer">{{ t.t }}</button></sc-for></div></sc-if><button onClick="{{ toggleNotes }}" style="background:{{ notesBg }};color:#0c181b;border:2px solid #f1a246;border-radius:999px;padding:10px 16px;min-height:44px;font:700 12px ui-monospace,Menlo,monospace;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.25)">Tervezői jegyzetek: {{ notesLbl }}</button><button onClick="{{ openPopup }}" style="background:#fff;color:#0c181b;border:2px solid #2b302f;border-radius:999px;padding:10px 16px;min-height:44px;font:700 12px ui-monospace,Menlo,monospace;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.25)">Popup előnézet</button></div>
+<sc-if value="{{ demo }}" hint-placeholder-val="{{ false }}"><div style="position:fixed;right:16px;bottom:{{ demoBottom }};z-index:80;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;max-width:calc(100vw - 32px)"><div style="display:contents"><div style="display:flex;gap:4px;flex-wrap:wrap;background:#14262b;border:2px solid #66c1c3;border-radius:999px;padding:4px;box-shadow:0 4px 16px rgba(0,0,0,.25)"><sc-for list="{{ themes }}" as="t" hint-placeholder-count="4"><button onClick="{{ t.onClick }}" style="background:{{ t.bg }};color:{{ t.fg }};border:0;border-radius:999px;padding:8px 14px;min-height:36px;font:700 12px Poppins,sans-serif;cursor:pointer">{{ t.t }}</button></sc-for></div></sc-if><button onClick="{{ toggleNotes }}" style="background:{{ notesBg }};color:#0c181b;border:2px solid #f1a246;border-radius:999px;padding:10px 16px;min-height:44px;font:700 12px ui-monospace,Menlo,monospace;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.25)">Tervezői jegyzetek: {{ notesLbl }}</button><button onClick="{{ openPopup }}" style="background:#fff;color:#0c181b;border:2px solid #2b302f;border-radius:999px;padding:10px 16px;min-height:44px;font:700 12px ui-monospace,Menlo,monospace;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.25)">Popup előnézet</button></div></div></sc-if>
 
 </div>
 </sc-if>
@@ -431,11 +433,11 @@ class Component extends DCLogic {
       const y = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight, ar = document.getElementById('ar'); let hide = false;
       if (ar) { const r = ar.getBoundingClientRect(); hide = r.top < window.innerHeight * 0.8 && r.bottom > 0; }
       const o = { prog: h > 0 ? Math.round(y / h * 100) : 0, scrolled: y > 620, barHide: hide };
-      if (this.state.narrow && !this.state.seen && h > 0 && y / h > 0.6) { o.popup = true; o.seen = true; }
+      if (window.GMK && window.GMK.popupOn && this.state.narrow && !this.state.seen && h > 0 && y / h > 0.6) { o.popup = true; o.seen = true; }
       this.setState(o);
     };
     this._rs = () => this.setState({ narrow: window.innerWidth < 760, mid: window.innerWidth < 960 });
-    this._ml = (e) => { if (e.clientY <= 0 && !this.state.seen && !this.state.narrow && window.scrollY > 400) this.setState({ popup: true, seen: true }); };
+    this._ml = (e) => { if (window.GMK && window.GMK.popupOn && e.clientY <= 0 && !this.state.seen && !this.state.narrow && window.scrollY > 400) this.setState({ popup: true, seen: true }); };
     window.addEventListener('scroll', this._sc, { passive: true }); window.addEventListener('resize', this._rs); document.addEventListener('mouseleave', this._ml);
     this._rs(); this._sc();
   }
@@ -457,7 +459,7 @@ class Component extends DCLogic {
     const rt = C.routes.items[Math.max(s.route, 0)];
     const febMap = [[], [0, 1], [2], [1]][Math.max(s.route, 0)];
     const route = { m: rt.m, g: rt.g.map(g => ({ l: g.l, i: g.i.map(t => ({ t })) })), hasFeb: febMap.length > 0, feb: febMap.map(i => ({ t: C.feb.items[i].t })) };
-    const febTabs = C.feb.items.map((f, i) => { const o = i === s.feb; return { t: f.short, bg: on(o, '#63b6b7', 'transparent'), fg: on(o, '#0c181b', '#fff'), bd: on(o, '#63b6b7', 'rgba(102,193,195,.5)'), onClick: () => set({ feb: i }) }; });
+    const febTabs = C.feb.items.map((f, i) => { const o = i === s.feb; return { t: f.short, sh: on(o, '0 0 0 4px rgba(132,224,219,.45),0 10px 28px rgba(0,0,0,.3)', 'none'), bg: on(o, '#84e0db', 'transparent'), fg: on(o, '#0c181b', '#fff'), bd: on(o, '#fff', 'rgba(102,193,195,.5)'), onClick: () => set({ feb: i }) }; });
     const f0 = C.feb.items[s.feb];
     const fb = { t: f0.t, k: f0.k, o: f0.o, f: f0.f, mk: f0.mk, s: f0.s.map(x => ({ a: x[0], b: x[1], c: x[2], hasC: !!x[2] })) };
     const pillTabs = C.pillars.tabs.map((t, i) => { const o = i === s.pill; return { t, ic: ic('pill', i), bg: on(o, '#14262b', '#fff'), fg: on(o, '#fff', '#2b302f'), bd: on(o, '#63b6b7', '#e3e8eb'), onClick: () => set({ pill: i }) }; });
@@ -473,23 +475,25 @@ class Component extends DCLogic {
     upc.forEach(x => { if (seenT.has(x.t)) return; seenT.add(x.t); (x.f === 'képzés' ? mU : sU).push(x); });
     const mR = mU.length ? mU.slice(0, 8).map(x => ({ t: x.t, len: dl(x.d) + ' · ' + x.o })) : cm.m.map(x => ({ t: x[0], len: x[1] }));
     const sR = sU.length ? sU.slice(0, 16).map(x => ({ t: x.t })) : cm.s.map(t => ({ t }));
-    const sel = { tint: C.cat.tint[cm.c], col: C.cat.col[cm.c], hasM: mR.length > 0, hasS: sR.length > 0, multi: mR, single: sR };
+    const sel = { when: (C.cat.whenBy || {})[cm.c] ? 'Mikor indul? ' + C.cat.whenBy[cm.c] : '', tint: C.cat.tint[cm.c], col: C.cat.col[cm.c], hasM: mR.length > 0, hasS: sR.length > 0, multi: mR, single: sR };
     const f90 = C.cat.filt.map((t, i) => { const o = i === s.f90; return { t, bg: on(o, '#14262b', '#fff'), fg: on(o, '#fff', '#2b302f'), bd: on(o, '#14262b', '#e3e8eb'), onClick: () => set({ f90: i }) }; });
     const map90 = [null, ['allas'], ['it', 'pm'], ['ai'], ['soft', 'hr']][s.f90];
     const cards90 = CO.up.filter(w => !map90 || map90.includes(w.c)).slice(0, 6).map(w => ({ t: w.t, lab: dl(w.d), col: C.cat.col[w.c], sub: w.f + ' · ' + w.o }));
     const whyHead = [{ t: '', bg: '#fff', fg: '#2b302f' }, ...C.why.cols.slice(1).map((t, i) => ({ t, bg: on(i === 3, '#63b6b7', '#f4f7f7'), fg: '#0c181b' }))];
     const whyCells = []; C.why.rows.forEach(r => r.forEach((t, i) => whyCells.push(i === 0 ? { t, bg: '#fff', fw: 700 } : { t, bg: on(i === 4, '#e6f4f4', '#fff'), fw: on(i === 4, 700, 400) })));
     const whyCards = C.why.rows.map(r => ({ lab: r[0], mk: r[4], o: [1, 2, 3].map(i => ({ h: C.why.cols[i], v: r[i] })) }));
-    const resTabs = C.res.filt.map((t, i) => { const o = i === s.filt; return { t, bg: on(o, '#14262b', '#fff'), fg: on(o, '#fff', '#2b302f'), bd: on(o, '#14262b', '#e3e8eb'), onClick: () => set({ filt: i }) }; });
+    const resTabs = C.res.filt.map((t, i) => ({ t, i })).filter(x => x.i === 0 || C.res.s.some(y => y.t === x.t)).map(({ t, i }) => { const o = i === s.filt; return { t, bg: on(o, '#14262b', '#fff'), fg: on(o, '#fff', '#2b302f'), bd: on(o, '#14262b', '#e3e8eb'), onClick: () => set({ filt: i }) }; });
     const fl = C.res.filt[s.filt];
-    const stories = C.res.s.filter(x => s.filt === 0 || x.t === fl).map(x => ({ img: face(x.n, C.res.s.indexOf(x) + 3), pend: x.pend, nm: x.n || 'Tagunk', w: x.w, bigT: x.big || x.t, x: x.x, t: x.t }));
+    const MC = { 'Adatelemzés': '#6fdc9f', 'Két lépcsős váltás': '#bcaeff', 'SAP': '#9cc4ff', '50 fölött': '#8fdcd9', 'Gyes után': '#ffa8c2', 'Nyelv': '#ffc27a', 'Bértárgyalás': '#8fdcd9' };
+  const mono = (n) => { const p = (n || '').trim().split(/\s+/).filter(Boolean); return p.length ? (p[0][0] + (p.length > 1 ? p[p.length - 1][0] : '')).toUpperCase() : ''; };
+  const stories = C.res.s.filter(x => s.filt === 0 || x.t === fl).map(x => ({ ini: mono(x.n), noIni: !mono(x.n), mc: MC[x.t] || '#8fdcd9', pend: x.pend, nm: x.n || 'Tagunk', w: x.w, bigT: x.big || x.t, x: x.x, t: x.t }));
     const faq = C.faq.items.map((q, i) => ({ q: q[0], a: q[1], i })).slice(0, s.faqAll ? 99 : 6).map(q => { const o = !!s.faq[q.i]; return { q: q.q, a: q.a, ico: on(o, 'remove', 'add'), disp: on(o, 'block', 'none'), onClick: () => set({ faq: { ...s.faq, [q.i]: !o } }) }; });
     const showBar = s.scrolled && !s.barHide;
     const showPill = s.scrolled && s.route < 0 && !s.barHide;
     const scrollRow = (d) => () => { const e = document.getElementById('resRow'); if (e) e.scrollBy({ left: d, behavior: 'smooth' }); };
     return {
       ready: true, c: C,
-      hasTag: !!C.hero.tag, pendLbl: G.pendLbl, hasQuote: !!C.imagine.quote, nowBtn: C.now.fold || !!C.now.detail, tlDisp: C.now.fold ? on(s.nowOpen, 'block', 'none') : 'block',
+      hasTag: !!C.hero.tag, pendLbl: G.pendLbl, revUrl: (C.reviews && C.reviews.url) || '', hasQuote: !!C.imagine.quote, nowBtn: C.now.fold || !!C.now.detail, tlDisp: C.now.fold ? on(s.nowOpen, 'block', 'none') : 'block',
       hasPath: !!C.path, path: C.path || { s: [] }, demo: G.demo, themes: G.themes.map(t => ({ ...t, bg: on(t.on, '#63b6b7', 'transparent'), fg: on(t.on, '#0c181b', '#fff') })),
       heroSec: go(C.path ? 'utvonal-lepesei' : 'kviz'), heroSecT: C.path ? C.hero.cta2 : C.routes.h,
       fbBd: on(s.feb === G.febIdx, '#f1a246', 'rgba(102,193,195,.5)'), fbSh: on(s.feb === G.febIdx, '0 0 0 1px #f1a246,0 0 48px rgba(241,162,70,.25)', 'none'), wide, narrow: s.narrow, notes: s.notes, prog: s.prog,
@@ -498,29 +502,29 @@ class Component extends DCLogic {
       showNav: s.scrolled && wide, showBar, showPill, pillBottom: on(showBar, '68px', '16px'), navItems,
       heroBullets: C.hero.bullets.map(t => ({ t })), trust: C.hero.trust.map((t, i) => ({ t: i === 0 ? t.slice(1) : t, star: i === 0 ? '★' : '' })),
       tiles, picked: s.route >= 0, route,
-      stories3: C.stories3.map((x, i) => ({ ...x, img: face(x.n, i) })),
+      stories3: C.stories3.map(x => ({ ...x, ini: mono(x.n), noIni: !mono(x.n), mc: { adatelemzes: '#6fdc9f', projektmenedzsment: '#ffc27a', ai: '#bcaeff' }[G.theme] || '#8fdcd9' })),
       pains: C.pain.items.map((p, i) => ({ ...p, ic: (C.pain.ic || [])[i] || ic('pains', i), hasImg: false, img: U('assets/illu-0' + (i + 2) + '.png') })), imagine: C.imagine.items.map((t, i) => ({ t, seg: G.seg(t), ic: (C.imagine.ic || [])[i] || ic('imagine', i) })),
       nowDisp: on(s.nowOpen, 'block', 'none'), nowIco: on(s.nowOpen, 'remove', 'add'), toggleNow: () => set({ nowOpen: !s.nowOpen }),
       febTabs, fb, febAll: C.feb.all.map(t => ({ t })),
       pillTabs, p0: s.pill === 0, p1: s.pill === 1, p2: s.pill === 2, pillTitle: [C.pillars.t1, C.pillars.t2, C.pillars.t3][s.pill], mods, img1: U(P),
       jobB: C.pillars.job.b.map(t => ({ t })), jobP: C.pillars.job.pr.map(t => ({ t })),
-      nums: [...C.cat.nums, ['A1–C1', 'angol és német szinteken']].map((n, i) => ({ a: n[0], b: n[1], ic: ic('nums', i) })), anums: C.about.nums.map((n, i) => ({ a: n[0], b: n[1], ic: ic('anums', i) })), qitems: C.qual.items.map(n => ({ a: n[0], b: n[1] })),
+      nums: C.cat.nums.map((n, i) => ({ a: n[0], b: n[1], ic: ic('nums', i) })), anums: C.about.nums.map((n, i) => ({ a: n[0], b: n[1], ic: ic('anums', i) })), qitems: C.qual.items.map(n => ({ a: n[0], b: n[1] })),
       dur1: Math.round(Math.ceil(wall.length / 2) * 278 / 32), dur2: Math.round(Math.floor(wall.length / 2) * 278 / 28), row1: [...wall.slice(0, Math.ceil(wall.length / 2)), ...wall.slice(0, Math.ceil(wall.length / 2))], row2: [...wall.slice(Math.ceil(wall.length / 2)), ...wall.slice(Math.ceil(wall.length / 2))],
       browseCols: 'minmax(0,1fr)', catDir: 'flex-direction:row;padding-bottom:10px', catMax: 'none', catTabs, sel,
       learn: C.cat.learn.map((l, i) => ({ h: l[0], x: l[1], ic: ic('learn', i) })),
       toggle90: () => set({ d90: !s.d90 }), ico90: on(s.d90, 'remove', 'add'), disp90: on(s.d90, 'block', 'none'), f90, cards90,
       whyHead, whyCells, whyCards, resTabs, stories, scrollL: scrollRow(-340), scrollR: scrollRow(340),
       aboutDisp: on(s.aboutOpen, 'block', 'none'), aboutIco: on(s.aboutOpen, 'remove', 'add'), toggleAbout: () => set({ aboutOpen: !s.aboutOpen }),
-      trainers: [['bakos-zita', 'Bakos Zita', 'német üzleti kommunikáció'], ['balint-istvan', 'Bálint István', 'Claude Code'], ['biro-bence', 'Bíró Bence', 'álláskeresés pszichológiája'], ['biro-nora', 'Bíró Nóra', 'célkitűzés, tárgyalástechnika'], ['borbely-bence', 'Borbély Bence', 'Power BI'], ['buxbaum-barna', 'Buxbaum Barna', 'WordPress, Elementor'], ['csato-vanda', 'Csató Vanda', 'projektmenedzsment AI-jal'], ['csepanyi-tamas', 'Csépányi Tamás', 'projektmenedzsment'], ['debreczeni-ildiko', 'Debreczeni Ildikó', 'állásinterjú, bértárgyalás'], ['egri-dorottya', 'Egri Dorottya', 'német üzleti kommunikáció']].map(x => ({ img: U('assets/portre/' + x[0] + '-sq.webp'), n: x[1], r: x[2] })),
+      trainers: (CO.trainers || []).map(x => ({ img: U('assets/portre/' + x.s + '-sq.webp'), n: x.n, r: x.r })),
       steps: C.steps.items.map((x, i) => ({ n: i + 1, h: x[0], x: x[1], ic: ic('steps', i) })),
-      offerRows: C.offer.items.map(x => ({ a: x[0], b: x[1] })),
+      offerRows: C.offer.items.map(x => { const dash = x[1].trim() === '–'; return { a: x[0], bb: dash ? '' : x[1], showLbl: s.mid && !dash }; }),
       guar: C.price.g.map(g => ({ h: g[0], x: g[1] })),
       fitY: C.fit.y.map(t => ({ t })), fitN: C.fit.n.map(t => ({ t })),
       faq, faqLess: !s.faqAll, faqShow: () => set({ faqAll: true }),
       foot: C.fin.foot.map((t, i) => ({ t, hasIc: i < 2, ic: i === 0 ? 'mail' : 'call' })), footPad: on(showBar, '96px', '36px'),
       popup: s.popup, closePopup: () => set({ popup: false }), openPopup: () => set({ popup: true, seen: true }),
       joinPop: () => { set({ popup: false }); go('ar')(); }, quizPop: () => { set({ popup: false }); go('kviz')(); },
-      toggleNotes: () => set({ notes: !s.notes }), notesBg: on(s.notes, '#f1a246', '#fff'), notesLbl: on(s.notes, 'be', 'ki'), noteBottom: on(showBar, '64px', '16px')
+      toggleNotes: () => set({ notes: !s.notes }), notesBg: on(s.notes, '#f1a246', '#fff'), notesLbl: on(s.notes, 'be', 'ki'), noteBottom: on(showBar, '64px', '16px'), demoBottom: on(showBar, on(showPill, '128px', '72px'), on(showPill, '76px', '16px'))
     };
   }
 }
