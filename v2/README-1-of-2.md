@@ -1,0 +1,720 @@
+# Gerilla Mentor Klub redesign terv — entire project
+
+This project’s pages, files, and uploads as this browser tab had them at export.
+Anything left out is listed below.
+
+This is zip 1 of 2. Unpack all 2 into one folder to get the whole project: a page in
+one zip can need files from another.
+
+## Contents of all 2 zips
+
+- `GMK Banner Játszótér.dc.html`
+- `GMK Sales A - Lejtő.dc.html`
+- `GMK Sales B - Ragadós ajánlat.dc.html`
+- `GMK Sales C - Kviz.dc.html`
+- `GMK Sales D - Design System.dc.html`
+- `GMK Sales E - Kategoria szinek.dc.html`
+- `GMK Sales F - Egyesitett.dc.html`
+- `assets/2027/foto/foto-02-harom-honap-1280.webp`
+- `assets/2027/foto/foto-02-harom-honap-640.webp`
+- `assets/2027/foto/foto-02-harom-honap.webp`
+- `assets/2027/foto/foto-03-dashboard-1280.webp`
+- `assets/2027/foto/foto-03-dashboard-640.webp`
+- `assets/2027/foto/foto-03-dashboard.webp`
+- `assets/2027/foto/foto-05-nyelv-1280.webp`
+- `assets/2027/foto/foto-05-nyelv-640.webp`
+- `assets/2027/foto/foto-05-nyelv.webp`
+- `assets/2027/foto/foto-05-tudas-1280.webp`
+- `assets/2027/foto/foto-05-tudas-640.webp`
+- `assets/2027/foto/foto-05-tudas.webp`
+- `assets/2027/foto/foto-07-tanacsado-1280.webp`
+- `assets/2027/foto/foto-07-tanacsado-640.webp`
+- `assets/2027/foto/foto-07-tanacsado.webp`
+- `assets/2027/foto/foto-10-anya-mobil-1280.webp`
+- `assets/2027/foto/foto-10-anya-mobil-640.webp`
+- `assets/2027/foto/foto-10-anya-mobil.webp`
+- `assets/2027/foto/foto-13-tesztelo-1280.webp`
+- `assets/2027/foto/foto-13-tesztelo-640.webp`
+- `assets/2027/foto/foto-13-tesztelo.webp`
+- `assets/2027/foto/foto-14-kinek-valo-1280.webp`
+- `assets/2027/foto/foto-14-kinek-valo-640.webp`
+- `assets/2027/foto/foto-14-kinek-valo.webp`
+- `assets/2027/hatter/hatter-dune-tukor.webp`
+- `assets/2027/hatter/hatter-dune.webp`
+- `assets/2027/hatter/hatter-hullam.webp`
+- `assets/2027/illu/ejtoernyo.png`
+- `assets/2027/illu/ejtoernyo.webp`
+- `assets/2027/illu/feb-adatelemzes.png`
+- `assets/2027/illu/feb-adatelemzes.webp`
+- `assets/2027/illu/feb-ai-mindennapi.png`
+- `assets/2027/illu/feb-ai-mindennapi.webp`
+- `assets/2027/illu/feb-projektmenedzsment.png`
+- `assets/2027/illu/feb-projektmenedzsment.webp`
+- `assets/2027/illu/gyik.png`
+- `assets/2027/illu/gyik.webp`
+- `assets/2027/illu/kinek-valo.png`
+- `assets/2027/illu/kinek-valo.webp`
+- `assets/2027/illu/lepes-1-csatlakozol.png`
+- `assets/2027/illu/lepes-1-csatlakozol.webp`
+- `assets/2027/illu/lepes-2-hozzaferes.png`
+- `assets/2027/illu/lepes-2-hozzaferes.webp`
+- `assets/2027/illu/lepes-3-utvonal.png`
+- `assets/2027/illu/lepes-3-utvonal.webp`
+- `assets/2027/illu/lepes-4-tanulsz.png`
+- `assets/2027/illu/lepes-4-tanulsz.webp`
+- `assets/2027/illu/lepes-5-kerdezel.png`
+- `assets/2027/illu/lepes-5-kerdezel.webp`
+- `assets/2027/illu/piller-allas.png`
+- `assets/2027/illu/piller-allas.webp`
+- `assets/2027/illu/piller-nyelv.png`
+- `assets/2027/illu/piller-nyelv.webp`
+- `assets/2027/illu/piller-tudas.png`
+- `assets/2027/illu/piller-tudas.webp`
+- `assets/2027/illu/problema-1-csend.png`
+- `assets/2027/illu/problema-1-csend.webp`
+- `assets/2027/illu/problema-2-kor.png`
+- `assets/2027/illu/problema-2-kor.webp`
+- `assets/2027/illu/problema-3-fizetes.png`
+- `assets/2027/illu/problema-3-fizetes.webp`
+- `assets/2027/illu/problema-4-ai.png`
+- `assets/2027/illu/problema-4-ai.webp`
+- `assets/2027/illu/problema-5-merre.png`
+- `assets/2027/illu/problema-5-merre.webp`
+- `assets/2027/illu/problema-6-papir.png`
+- `assets/2027/illu/problema-6-papir.webp`
+- `assets/2027/illu/s192/kinek-valo.png`
+- `assets/2027/illu/s192/lepes-1-csatlakozol.png`
+- `assets/2027/illu/s192/lepes-2-hozzaferes.png`
+- `assets/2027/illu/s192/lepes-3-utvonal.png`
+- `assets/2027/illu/s192/lepes-4-tanulsz.png`
+- `assets/2027/illu/s192/lepes-5-kerdezel.png`
+- `assets/2027/illu/s192/problema-1-csend.png`
+- `assets/2027/illu/s192/problema-2-kor.png`
+- `assets/2027/illu/s192/problema-3-fizetes.png`
+- `assets/2027/illu/s192/problema-4-ai.png`
+- `assets/2027/illu/s192/problema-5-merre.png`
+- `assets/2027/illu/s192/problema-6-papir.png`
+- `assets/2027/illu/s192/tanulas-1-video.png`
+- `assets/2027/illu/s192/tanulas-2-elo-trening.png`
+- `assets/2027/illu/s192/tanulas-3-tobbhetes.png`
+- `assets/2027/illu/s192/tanulas-4-mobilapp.png`
+- `assets/2027/illu/s192/tanulas-5-tanusitvany.png`
+- `assets/2027/illu/s192/utvonal-ai-szakerto.png`
+- `assets/2027/illu/s192/utvonal-allasszerzo.png`
+- `assets/2027/illu/s192/utvonal-karrier-hack.png`
+- `assets/2027/illu/s192/utvonal-szintlepo.png`
+- `assets/2027/illu/s256/feb-adatelemzes.png`
+- `assets/2027/illu/s256/feb-ai-mindennapi.png`
+- `assets/2027/illu/s256/feb-projektmenedzsment.png`
+- `assets/2027/illu/s280/gyik.png`
+- `assets/2027/illu/s360/ejtoernyo.png`
+- `assets/2027/illu/s360/piller-allas.png`
+- `assets/2027/illu/s360/piller-nyelv.png`
+- `assets/2027/illu/s360/piller-tudas.png`
+- `assets/2027/illu/tanulas-1-video.png`
+- `assets/2027/illu/tanulas-1-video.webp`
+- `assets/2027/illu/tanulas-2-elo-trening.png`
+- `assets/2027/illu/tanulas-2-elo-trening.webp`
+- `assets/2027/illu/tanulas-3-tobbhetes.png`
+- `assets/2027/illu/tanulas-3-tobbhetes.webp`
+- `assets/2027/illu/tanulas-4-mobilapp.png`
+- `assets/2027/illu/tanulas-4-mobilapp.webp`
+- `assets/2027/illu/tanulas-5-tanusitvany.png`
+- `assets/2027/illu/tanulas-5-tanusitvany.webp`
+- `assets/2027/illu/utvonal-ai-szakerto.png`
+- `assets/2027/illu/utvonal-ai-szakerto.webp`
+- `assets/2027/illu/utvonal-allasszerzo.png`
+- `assets/2027/illu/utvonal-allasszerzo.webp`
+- `assets/2027/illu/utvonal-karrier-hack.png`
+- `assets/2027/illu/utvonal-karrier-hack.webp`
+- `assets/2027/illu/utvonal-szintlepo.png`
+- `assets/2027/illu/utvonal-szintlepo.webp`
+- `assets/andras-hero.webp`
+- `assets/brand-01.png`
+- `assets/brand-02.png`
+- `assets/brand-03.png`
+- `assets/brand-04.png`
+- `assets/brand-05.png`
+- `assets/brand-06.png`
+- `assets/brand-07.png`
+- `assets/brand-08.png`
+- `assets/brand-09.png`
+- `assets/brand-10.png`
+- `assets/ds/b01.png`
+- `assets/ds/b02.png`
+- `assets/ds/b03.png`
+- `assets/ds/b04.png`
+- `assets/ds/b05.png`
+- `assets/ds/b06.png`
+- `assets/ds/b07.png`
+- `assets/ds/b08.png`
+- `assets/ds/b09.png`
+- `assets/ds/b10.png`
+- `assets/ds/bars.png`
+- `assets/ds/cat-ai.png`
+- `assets/ds/cat-allas.png`
+- `assets/ds/cat-angol.png`
+- `assets/ds/cat-board.png`
+- `assets/ds/cat-egyeb.png`
+- `assets/ds/cat-hr.png`
+- `assets/ds/cat-it.png`
+- `assets/ds/cat-marketing.png`
+- `assets/ds/cat-nemet.png`
+- `assets/ds/cat-pm.png`
+- `assets/ds/cat-soft.png`
+- `assets/ds/cat-szak.png`
+- `assets/ds/hero-a.png`
+- `assets/ds/hero-b.png`
+- `assets/ds/i-learn-0.png`
+- `assets/ds/i-learn-1.png`
+- `assets/ds/i-learn-2.png`
+- `assets/ds/i-learn-3.png`
+- `assets/ds/i-learn-4.png`
+- `assets/ds/m-a.png`
+- `assets/ds/m-b.png`
+- `assets/ds/m-c.png`
+- `assets/ds/m-d.png`
+- `assets/ds/side.png`
+- `assets/ds/u01.png`
+- `assets/ds/u02.png`
+- `assets/ds/u03.png`
+- `assets/ds/u04.png`
+- `assets/ds/u05.png`
+- `assets/ds/u06.png`
+- `assets/ds/u07.png`
+- `assets/ds/u08.png`
+- `assets/ds/u10.png`
+- `assets/faces-grid.png`
+- `assets/faces/m01.png`
+- `assets/faces/m02.png`
+- `assets/faces/m03.png`
+- `assets/faces/m04.png`
+- `assets/faces/m05.png`
+- `assets/faces/m06.png`
+- `assets/faces/m07.png`
+- `assets/faces/m08.png`
+- `assets/faces/m09.png`
+- `assets/faces/m10.png`
+- `assets/faces/w01.png`
+- `assets/faces/w02.png`
+- `assets/faces/w03.png`
+- `assets/faces/w04.png`
+- `assets/faces/w05.png`
+- `assets/faces/w06.png`
+- `assets/faces/w07.png`
+- `assets/faces/w08.png`
+- `assets/faces/w09.png`
+- `assets/faces/w10.png`
+- `assets/illu-01.png`
+- `assets/illu-02.png`
+- `assets/illu-03.png`
+- `assets/illu-04.png`
+- `assets/illu-05.png`
+- `assets/illu-06.png`
+- `assets/illu-07.png`
+- `assets/illu-08.png`
+- `assets/illu-09.png`
+- `assets/illu-10.png`
+- `assets/portre-orig/bakos-zita.webp`
+- `assets/portre-orig/balint-istvan.webp`
+- `assets/portre-orig/biro-bence.webp`
+- `assets/portre-orig/biro-nora.webp`
+- `assets/portre-orig/borbely-bence.webp`
+- `assets/portre-orig/buxbaum-barna.webp`
+- `assets/portre-orig/csato-vanda.webp`
+- `assets/portre-orig/csepanyi-tamas.webp`
+- `assets/portre-orig/debreczeni-ildiko.webp`
+- `assets/portre-orig/egri-dorottya.webp`
+- `assets/portre-orig/erdelyi-laszlo.webp`
+- `assets/portre-orig/farkas-zita.webp`
+- `assets/portre-orig/gal-kristof.webp`
+- `assets/portre-orig/graning-steven.webp`
+- `assets/portre-orig/grunwald-peter.webp`
+- `assets/portre-orig/gyurina-gabor.webp`
+- `assets/portre-orig/halasz-dora.webp`
+- `assets/portre-orig/hargittai-eleonora.webp`
+- `assets/portre-orig/hegedus-istvan.webp`
+- `assets/portre-orig/hidvegi-laszlo.webp`
+- `assets/portre-orig/horvath-ilona-ida.webp`
+- `assets/portre-orig/jambor-istvan.webp`
+- `assets/portre-orig/katus-monika.webp`
+- `assets/portre-orig/kiss-tibor.webp`
+- `assets/portre-orig/kocsardi-attila.webp`
+- `assets/portre-orig/konyves-melinda.webp`
+- `assets/portre-orig/kovacs-hagyo-gabor.webp`
+- `assets/portre-orig/krajcso-nelli.webp`
+- `assets/portre-orig/langner-kornelia.webp`
+- `assets/portre-orig/laszlo-gyorgyi.webp`
+- `assets/portre-orig/levai-richard.webp`
+- `assets/portre-orig/limpar-imre.webp`
+- `assets/portre-orig/lorincz-attila.webp`
+- `assets/portre-orig/lukovics-dora.webp`
+- `assets/portre-orig/mate-istvan.webp`
+- `assets/portre-orig/moore-jennifer.webp`
+- `assets/portre-orig/nyiri-andrea.webp`
+- `assets/portre-orig/olah-daniel.webp`
+- `assets/portre-orig/pasztuhov-daniel.webp`
+- `assets/portre-orig/perjesi-zoltan.webp`
+- `assets/portre-orig/peszeki-gabriella.webp`
+- `assets/portre-orig/posa-kata.webp`
+- `assets/portre-orig/puskas-dora.webp`
+- `assets/portre-orig/rutai-gabor.webp`
+- `assets/portre-orig/ruzicska-viktor.webp`
+- `assets/portre-orig/santa-vilmos.webp`
+- `assets/portre-orig/schmidt-alex.webp`
+- `assets/portre-orig/sipos-zoltan.webp`
+- `assets/portre-orig/soltesz-barbara.webp`
+- `assets/portre-orig/soros-helga.webp`
+- `assets/portre-orig/szabados-levente.webp`
+- `assets/portre-orig/szel-peter.webp`
+- `assets/portre-orig/szephegyi-csaba.webp`
+- `assets/portre-orig/szeremi-peter.webp`
+- `assets/portre-orig/szlafkai-eva.webp`
+- `assets/portre-orig/teker-orsolya.webp`
+- `assets/portre-orig/temesvari-orsolya.webp`
+- `assets/portre-orig/ternovszky-csilla.webp`
+- `assets/portre-orig/tihanyi-gabriella.webp`
+- `assets/portre-orig/toth-gabor-laszlo.webp`
+- `assets/portre-orig/udvarhelyi-hardi-angelika.webp`
+- `assets/portre-orig/varadi-zoltan.webp`
+- `assets/portre-orig/vig-reka.webp`
+- `assets/portre-orig/volgyesi-viktor.webp`
+- `assets/portre-orig/wavrik-gabor.webp`
+- `assets/portre-orig/wenczel-judit.webp`
+- `assets/portre-orig/wittmann-norbert.webp`
+- `assets/portre/bakos-zita-sq.webp`
+- `assets/portre/bakos-zita.webp`
+- `assets/portre/balint-istvan-sq.webp`
+- `assets/portre/balint-istvan.webp`
+- `assets/portre/biro-bence-sq.webp`
+- `assets/portre/biro-bence.webp`
+- `assets/portre/biro-nora-sq.webp`
+- `assets/portre/biro-nora.webp`
+- `assets/portre/borbely-bence-sq.webp`
+- `assets/portre/borbely-bence.webp`
+- `assets/portre/buxbaum-barna-sq.webp`
+- `assets/portre/buxbaum-barna.webp`
+- `assets/portre/casual/bakos-zita-lg.webp`
+- `assets/portre/casual/bakos-zita-sq.webp`
+- `assets/portre/casual/balint-istvan-lg.webp`
+- `assets/portre/casual/balint-istvan-sq.webp`
+- `assets/portre/casual/biro-bence-lg.webp`
+- `assets/portre/casual/biro-bence-sq.webp`
+- `assets/portre/casual/biro-nora-lg.webp`
+- `assets/portre/casual/biro-nora-sq.webp`
+- `assets/portre/casual/borbely-bence-lg.webp`
+- `assets/portre/casual/borbely-bence-sq.webp`
+- `assets/portre/casual/buxbaum-barna-lg.webp`
+- `assets/portre/casual/buxbaum-barna-sq.webp`
+- `assets/portre/casual/csato-vanda-lg.webp`
+- `assets/portre/casual/csato-vanda-sq.webp`
+- `assets/portre/casual/csepanyi-tamas-lg.webp`
+- `assets/portre/casual/csepanyi-tamas-sq.webp`
+- `assets/portre/casual/debreczeni-ildiko-lg.webp`
+- `assets/portre/casual/debreczeni-ildiko-sq.webp`
+- `assets/portre/casual/egri-dorottya-lg.webp`
+- `assets/portre/casual/egri-dorottya-sq.webp`
+- `assets/portre/csato-vanda-sq.webp`
+- `assets/portre/csato-vanda.webp`
+- `assets/portre/csepanyi-tamas-sq.webp`
+- `assets/portre/csepanyi-tamas.webp`
+- `assets/portre/debreczeni-ildiko-sq.webp`
+- `assets/portre/debreczeni-ildiko.webp`
+- `assets/portre/egri-dorottya-sq.webp`
+- `assets/portre/egri-dorottya.webp`
+- `assets/portre/erdelyi-laszlo-sq.webp`
+- `assets/portre/farkas-zita-sq.webp`
+- `assets/portre/gal-kristof-sq.webp`
+- `assets/portre/graning-steven-sq.webp`
+- `assets/portre/grunwald-peter-sq.webp`
+- `assets/portre/gyurina-gabor-sq.webp`
+- `assets/portre/halasz-dora-sq.webp`
+- `assets/portre/hargittai-eleonora-sq.webp`
+- `assets/portre/hegedus-istvan-sq.webp`
+- `assets/portre/hidvegi-laszlo-sq.webp`
+- `assets/portre/horvath-ilona-ida-sq.webp`
+- `assets/portre/jambor-istvan-sq.webp`
+- `assets/portre/katus-monika-sq.webp`
+- `assets/portre/kiss-tibor-sq.webp`
+- `assets/portre/kocsardi-attila-sq.webp`
+- `assets/portre/konyves-melinda-sq.webp`
+- `assets/portre/kovacs-hagyo-gabor-sq.webp`
+- `assets/portre/krajcso-nelli-sq.webp`
+- `assets/portre/langner-kornelia-sq.webp`
+- `assets/portre/laszlo-gyorgyi-sq.webp`
+- `assets/portre/levai-richard-sq.webp`
+- `assets/portre/limpar-imre-sq.webp`
+- `assets/portre/lorincz-attila-sq.webp`
+- `assets/portre/lukovics-dora-sq.webp`
+- `assets/portre/mate-istvan-sq.webp`
+- `assets/portre/moore-jennifer-sq.webp`
+- `assets/portre/nyiri-andrea-sq.webp`
+- `assets/portre/olah-daniel-sq.webp`
+- `assets/portre/pasztuhov-daniel-sq.webp`
+- `assets/portre/perjesi-zoltan-sq.webp`
+- `assets/portre/peszeki-gabriella-sq.webp`
+- `assets/portre/posa-kata-sq.webp`
+- `assets/portre/puskas-dora-sq.webp`
+- `assets/portre/rutai-gabor-sq.webp`
+- `assets/portre/ruzicska-viktor-sq.webp`
+- `assets/portre/santa-vilmos-sq.webp`
+- `assets/portre/schmidt-alex-sq.webp`
+- `assets/portre/sipos-zoltan-sq.webp`
+- `assets/portre/soltesz-barbara-sq.webp`
+- `assets/portre/soros-helga-sq.webp`
+- `assets/portre/szabados-levente-sq.webp`
+- `assets/portre/szel-peter-sq.webp`
+- `assets/portre/szephegyi-csaba-sq.webp`
+- `assets/portre/szeremi-peter-sq.webp`
+- `assets/portre/szlafkai-eva-sq.webp`
+- `assets/portre/teker-orsolya-sq.webp`
+- `assets/portre/temesvari-orsolya-sq.webp`
+- `assets/portre/ternovszky-csilla-sq.webp`
+- `assets/portre/tihanyi-gabriella-sq.webp`
+- `assets/portre/toth-gabor-laszlo-sq.webp`
+- `assets/portre/udvarhelyi-hardi-angelika-sq.webp`
+- `assets/portre/varadi-zoltan-sq.webp`
+- `assets/portre/vig-reka-sq.webp`
+- `assets/portre/volgyesi-viktor-sq.webp`
+- `assets/portre/wavrik-gabor-sq.webp`
+- `assets/portre/wenczel-judit-sq.webp`
+- `assets/portre/wittmann-norbert-sq.webp`
+- `elementor-atadas/README.md`
+- `elementor-atadas/kepek/andras-hero.webp`
+- `elementor-atadas/kepek/brand-01.webp`
+- `elementor-atadas/kepek/brand-04.webp`
+- `elementor-atadas/kepek/brand-05.webp`
+- `elementor-atadas/kepek/brand-07.webp`
+- `elementor-atadas/kepek/brand-08.webp`
+- `elementor-atadas/kepek/brand-09.webp`
+- `elementor-atadas/kepek/illu-05.webp`
+- `elementor-atadas/kepek/illu-06.webp`
+- `elementor-atadas/kepek/illu-07.webp`
+- `elementor-atadas/kepek/illu-09.webp`
+- `elementor-atadas/kepek/illu-10.webp`
+- `elementor-atadas/kepek/logo-white.png`
+- `elementor-atadas/kepek/logo.png`
+- `elementor-atadas/kepek/portre/bakos-zita.webp`
+- `elementor-atadas/kepek/portre/balint-istvan.webp`
+- `elementor-atadas/kepek/portre/biro-bence.webp`
+- `elementor-atadas/kepek/portre/biro-nora.webp`
+- `elementor-atadas/kepek/portre/borbely-bence.webp`
+- `elementor-atadas/kepek/portre/buxbaum-barna.webp`
+- `elementor-atadas/kepek/portre/csato-vanda.webp`
+- `elementor-atadas/kepek/portre/csepanyi-tamas.webp`
+- `elementor-atadas/kepek/portre/debreczeni-ildiko.webp`
+- `elementor-atadas/kepek/portre/egri-dorottya.webp`
+- `gmk-content.js`
+- `gmk-courses.js`
+- `gmk-icons.js`
+- `gmk-motion.js`
+- `img-founder-arms.png`
+- `img-founder-right.png`
+- `img-founder-wide.png`
+- `img-glass.png`
+- `img-macro.png`
+- `logo-white.png`
+- `logo.png`
+- `support.js`
+- `uploads/ChatGPT Image Nov 8, 2026, 09_32_54 AM-1.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 09_32_55 AM-2.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 09_32_55 AM-3.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 09_32_56 AM-4.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 09_32_57 AM-5.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 09_32_58 AM-6.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 09_32_58 AM-7.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 09_32_59 AM-8.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 09_33_00 AM-10.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 09_33_00 AM-9.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 10_08_42 AM-1.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 10_08_43 AM-2.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 10_08_44 AM-3.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 10_08_44 AM-4.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 10_08_45 AM-5.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 10_08_46 AM-6.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 10_08_46 AM-7.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 10_08_47 AM-8.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 10_08_48 AM-10.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 10_08_48 AM-9.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_07 AM-1-e0ce9e45.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_07 AM-1.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_08 AM-2-f8b5431b.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_08 AM-2.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_08 AM-3-b21a0dac.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_08 AM-3.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_09 AM-4-54896739.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_09 AM-4.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_10 AM-5-68656300.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_10 AM-5.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_10 AM-6-6d27fefb.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_10 AM-6.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_11 AM-7-13f12fcf.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_11 AM-7.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_12 AM-8-d679d807.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_12 AM-8.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_13 AM-10-f5f6f264.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_13 AM-10.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_13 AM-9-d8c4c458.png`
+- `uploads/ChatGPT Image Nov 8, 2026, 11_56_13 AM-9.png`
+- `uploads/GMK sales oldal - új szöveg 2027-58cff0ac.docx`
+- `uploads/GMK sales oldal - új szöveg 2027.docx`
+- `uploads/GMK sales oldal 2027 - design javaslatok.docx`
+- `uploads/GMK_oktatok_kepzesek_2027.xlsx`
+- `uploads/GMK_trenerportrek_attekinto.jpg`
+- `uploads/Mentor Klub Brand Identity System Board-3.png`
+- `uploads/Mentor Klub Design System Board-1.png`
+- `uploads/Mentor Klub Design System Board-2.png`
+- `uploads/Mentor Klub Design System Board-8.png`
+- `uploads/Mentor Klub Design System Dashboard-5.png`
+- `uploads/Mentor Klub Design System Showcase-4.png`
+- `uploads/Mentor Klub Mini Brandbook Overview-7.png`
+- `uploads/Mentor Klub UI Design System Board-9.png`
+- `uploads/Mentor Klub brand identity system board-6.png`
+- `uploads/Mentor Klub márka- és designrendszer-10.png`
+- `uploads/MentorKlub-logo_Feher-1024x445-1.png`
+- `uploads/Professional Corporate Headshot Grid.png`
+- `uploads/bakos-zita.png`
+- `uploads/balint-istvan.png`
+- `uploads/biro-bence.png`
+- `uploads/biro-nora.png`
+- `uploads/borbely-bence.png`
+- `uploads/buxbaum-barna.png`
+- `uploads/character_ref-_mid-40s_man_salt-and-pepper_hair_beige_blazer_black_turtleneck_direct_confident_smil_cjlhpgyg7u5g2iwuqfyx_0.png`
+- `uploads/create_a_premium_abstract_hero_background_for_gerilla_mentor_klub_using_liquid_glass_and_frosted_gl_x16dpjqc1oif2ma0ois2_0.png`
+- `uploads/create_an_extreme_close-up_macro_branding_visual_for_gerilla_mentor_klub_showing_deconstructed_lowe_mi1ud8m4d4soxjsechma_0.png`
+- `uploads/csato-vanda.png`
+- `uploads/csepanyi-tamas.png`
+- `uploads/debreczeni-ildiko.png`
+- `uploads/dj.txt`
+- `uploads/docx-1794739890840-g0nj.docx`
+- `uploads/egri-dorottya.png`
+- `uploads/gmk-sales-kepek-2027 (1)/PROMPT.md`
+- `uploads/gmk-sales-kepek-2027 (1)/STYLE-GUIDE.md`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/foto/foto-02-harom-honap.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/foto/foto-03-dashboard.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/foto/foto-05-nyelv.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/foto/foto-05-tudas.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/foto/foto-07-tanacsado.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/foto/foto-10-anya-mobil.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/foto/foto-13-tesztelo.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/foto/foto-14-kinek-valo.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/hatter/hatter-dune-tukor.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/hatter/hatter-dune.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/hatter/hatter-hullam.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/ejtoernyo.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/ejtoernyo.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/feb-adatelemzes.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/feb-adatelemzes.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/feb-ai-mindennapi.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/feb-ai-mindennapi.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/feb-projektmenedzsment.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/feb-projektmenedzsment.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/gyik.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/gyik.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/kinek-valo.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/kinek-valo.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/lepes-1-csatlakozol.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/lepes-1-csatlakozol.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/lepes-2-hozzaferes.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/lepes-2-hozzaferes.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/lepes-3-utvonal.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/lepes-3-utvonal.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/lepes-4-tanulsz.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/lepes-4-tanulsz.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/lepes-5-kerdezel.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/lepes-5-kerdezel.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/piller-allas.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/piller-allas.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/piller-nyelv.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/piller-nyelv.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/piller-tudas.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/piller-tudas.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/problema-1-csend.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/problema-1-csend.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/problema-2-kor.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/problema-2-kor.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/problema-3-fizetes.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/problema-3-fizetes.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/problema-4-ai.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/problema-4-ai.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/problema-5-merre.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/problema-5-merre.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/problema-6-papir.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/problema-6-papir.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/tanulas-1-video.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/tanulas-1-video.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/tanulas-2-elo-trening.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/tanulas-2-elo-trening.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/tanulas-3-tobbhetes.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/tanulas-3-tobbhetes.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/tanulas-4-mobilapp.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/tanulas-4-mobilapp.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/tanulas-5-tanusitvany.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/tanulas-5-tanusitvany.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/utvonal-ai-szakerto.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/utvonal-ai-szakerto.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/utvonal-allasszerzo.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/utvonal-allasszerzo.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/utvonal-karrier-hack.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/utvonal-karrier-hack.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/utvonal-szintlepo.png`
+- `uploads/gmk-sales-kepek-2027 (1)/assets/2027/illu/utvonal-szintlepo.webp`
+- `uploads/gmk-sales-kepek-2027 (1)/elonezet.png`
+- `uploads/gmk-sales-kepek-2027/PROMPT.md`
+- `uploads/gmk-sales-kepek-2027/assets/2027/foto/foto-02-harom-honap.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/foto/foto-03-dashboard.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/foto/foto-05-nyelv.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/foto/foto-05-tudas.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/foto/foto-07-tanacsado.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/foto/foto-10-anya-mobil.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/foto/foto-13-tesztelo.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/hatter/hatter-dune-tukor.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/hatter/hatter-dune.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/hatter/hatter-hullam.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/feb-adatelemzes.png`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/feb-adatelemzes.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/feb-ai-mindennapi.png`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/feb-ai-mindennapi.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/feb-projektmenedzsment.png`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/feb-projektmenedzsment.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/lepes-1-csatlakozol.png`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/lepes-1-csatlakozol.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/lepes-2-hozzaferes.png`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/lepes-2-hozzaferes.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/lepes-3-utvonal.png`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/lepes-3-utvonal.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/lepes-4-tanulsz.png`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/lepes-4-tanulsz.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/lepes-5-kerdezel.png`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/lepes-5-kerdezel.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/piller-allas.png`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/piller-allas.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/piller-nyelv.png`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/piller-nyelv.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/piller-tudas.png`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/piller-tudas.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/utvonal-ai-szakerto.png`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/utvonal-ai-szakerto.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/utvonal-allasszerzo.png`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/utvonal-allasszerzo.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/utvonal-karrier-hack.png`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/utvonal-karrier-hack.webp`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/utvonal-szintlepo.png`
+- `uploads/gmk-sales-kepek-2027/assets/2027/illu/utvonal-szintlepo.webp`
+- `uploads/gmk-sales-kepek-2027/elonezet.png`
+- `uploads/pasted-1794125030567-0.png`
+- `uploads/pasted-1794129724280-0.png`
+- `uploads/pasted-1794130376988-0.png`
+- `uploads/pasted-1794130409870-0.png`
+- `uploads/pasted-1794130413443-0.png`
+- `uploads/pasted-1794130634797-0.png`
+- `uploads/pasted-1794135481989-0.png`
+- `uploads/pasted-1794135505215-0.png`
+- `uploads/pasted-1794135646099-0.png`
+- `uploads/pasted-1794743178353-0.png`
+- `uploads/pasted-1794743903568-0.png`
+- `uploads/pasted-1795264712335-0.png`
+- `uploads/pasted-1795266163804-0.png`
+- `uploads/pasted-1795266197980-0.png`
+- `uploads/pasted-1795267907776-0.png`
+- `uploads/pasted-1795269401614-0.png`
+- `uploads/pasted-1795269411298-0.png`
+- `uploads/pasted-1795269443434-0.png`
+- `uploads/pasted-1795269514764-0.png`
+- `uploads/pasted-1795269661971-0.png`
+- `uploads/pasted-1795269977035-0.png`
+- `uploads/portraits-1794742314634-b1je.png`
+- `uploads/portraits-1794742315888-pp88.png`
+- `uploads/portraits-1794742317218-71om.png`
+- `uploads/portraits-1794742318580-o5nw.png`
+- `uploads/portraits-1794742320688-yqmo.png`
+- `uploads/portraits-1794742322244-o80p.png`
+- `uploads/portraits-1794742323647-9843.png`
+- `uploads/portraits-1794742325085-8rv0.png`
+- `uploads/portraits-1794742326612-myc1.png`
+- `uploads/portraits-1794742327967-a8e6.png`
+- `uploads/portre_webp/bakos-zita.webp`
+- `uploads/portre_webp/balint-istvan.webp`
+- `uploads/portre_webp/biro-bence.webp`
+- `uploads/portre_webp/biro-nora.webp`
+- `uploads/portre_webp/borbely-bence.webp`
+- `uploads/portre_webp/buxbaum-barna.webp`
+- `uploads/portre_webp/csato-vanda.webp`
+- `uploads/portre_webp/csepanyi-tamas.webp`
+- `uploads/portre_webp/debreczeni-ildiko.webp`
+- `uploads/portre_webp/egri-dorottya.webp`
+- `uploads/portre_webp/erdelyi-laszlo.webp`
+- `uploads/portre_webp/farkas-zita.webp`
+- `uploads/portre_webp/gal-kristof.webp`
+- `uploads/portre_webp/graning-steven.webp`
+- `uploads/portre_webp/grunwald-peter.webp`
+- `uploads/portre_webp/gyurina-gabor.webp`
+- `uploads/portre_webp/halasz-dora.webp`
+- `uploads/portre_webp/hargittai-eleonora.webp`
+- `uploads/portre_webp/hegedus-istvan.webp`
+- `uploads/portre_webp/hidvegi-laszlo.webp`
+- `uploads/portre_webp/horvath-ilona-ida.webp`
+- `uploads/portre_webp/jambor-istvan.webp`
+- `uploads/portre_webp/katus-monika.webp`
+- `uploads/portre_webp/kiss-tibor.webp`
+- `uploads/portre_webp/kocsardi-attila.webp`
+- `uploads/portre_webp/konyves-melinda.webp`
+- `uploads/portre_webp/kovacs-hagyo-gabor.webp`
+- `uploads/portre_webp/krajcso-nelli.webp`
+- `uploads/portre_webp/langner-kornelia.webp`
+- `uploads/portre_webp/laszlo-gyorgyi.webp`
+- `uploads/portre_webp/levai-richard.webp`
+- `uploads/portre_webp/limpar-imre.webp`
+- `uploads/portre_webp/lorincz-attila.webp`
+- `uploads/portre_webp/lukovics-dora.webp`
+- `uploads/portre_webp/mate-istvan.webp`
+- `uploads/portre_webp/moore-jennifer.webp`
+- `uploads/portre_webp/nyiri-andrea.webp`
+- `uploads/portre_webp/olah-daniel.webp`
+- `uploads/portre_webp/pasztuhov-daniel.webp`
+- `uploads/portre_webp/perjesi-zoltan.webp`
+- `uploads/portre_webp/peszeki-gabriella.webp`
+- `uploads/portre_webp/posa-kata.webp`
+- `uploads/portre_webp/puskas-dora.webp`
+- `uploads/portre_webp/rutai-gabor.webp`
+- `uploads/portre_webp/ruzicska-viktor.webp`
+- `uploads/portre_webp/santa-vilmos.webp`
+- `uploads/portre_webp/schmidt-alex.webp`
+- `uploads/portre_webp/sipos-zoltan.webp`
+- `uploads/portre_webp/soltesz-barbara.webp`
+- `uploads/portre_webp/soros-helga.webp`
+- `uploads/portre_webp/szabados-levente.webp`
+- `uploads/portre_webp/szel-peter.webp`
+- `uploads/portre_webp/szephegyi-csaba.webp`
+- `uploads/portre_webp/szeremi-peter.webp`
+- `uploads/portre_webp/szlafkai-eva.webp`
+- `uploads/portre_webp/teker-orsolya.webp`
+- `uploads/portre_webp/temesvari-orsolya.webp`
+- `uploads/portre_webp/ternovszky-csilla.webp`
+- `uploads/portre_webp/tihanyi-gabriella.webp`
+- `uploads/portre_webp/toth-gabor-laszlo.webp`
+- `uploads/portre_webp/udvarhelyi-hardi-angelika.webp`
+- `uploads/portre_webp/varadi-zoltan.webp`
+- `uploads/portre_webp/vig-reka.webp`
+- `uploads/portre_webp/volgyesi-viktor.webp`
+- `uploads/portre_webp/wavrik-gabor.webp`
+- `uploads/portre_webp/wenczel-judit.webp`
+- `uploads/portre_webp/wittmann-norbert.webp`
+- `uploads/remove_the_text_and_the_logo_sso8cuq1v5ihb0hqmejv_0.png`
+- `uploads/style_ref-_macro_fintech_brand_visual_with_gunmetal_lowercase_m_letterform_and_teal_14b8a6_frosted__v5bhkf3ucnh43fq3lm8n_1.png`
+- `uploads/ujszoveg.docx`
+- `uploads/ujszoveg.txt`
+- `uploads/ujszoveg2.docx`
+- `uploads/ujszoveg2.txt`
+- `uploads/xlsx.json`
+
+## Viewing
+
+To view a page, start a local web server in this folder (for example `python3 -m http.server`), then open a page through it. These are the project’s own files, so a page that relies on the editor may not run from a folder.
+
+## Left out of this export
+
+This export leaves out files the editor keeps for its own use. It also leaves out hidden files
+(files whose names start with a dot), except the ones a page saves for itself.
+
+This list may not be complete. The README in the last zip has the full list.
