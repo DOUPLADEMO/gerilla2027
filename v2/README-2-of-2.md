@@ -220,6 +220,7 @@ one zip can need files from another.
 - `assets/portre-orig/biro-bence.webp`
 - `assets/portre-orig/biro-nora.webp`
 - `assets/portre-orig/borbely-bence.webp`
+- `assets/portre-orig/braun-katalin.webp`
 - `assets/portre-orig/buxbaum-barna.webp`
 - `assets/portre-orig/csato-vanda.webp`
 - `assets/portre-orig/csepanyi-tamas.webp`
@@ -237,6 +238,7 @@ one zip can need files from another.
 - `assets/portre-orig/hidvegi-laszlo.webp`
 - `assets/portre-orig/horvath-ilona-ida.webp`
 - `assets/portre-orig/jambor-istvan.webp`
+- `assets/portre-orig/kato-tamas.webp`
 - `assets/portre-orig/katus-monika.webp`
 - `assets/portre-orig/kiss-tibor.webp`
 - `assets/portre-orig/kocsardi-attila.webp`
@@ -250,6 +252,7 @@ one zip can need files from another.
 - `assets/portre-orig/lorincz-attila.webp`
 - `assets/portre-orig/lukovics-dora.webp`
 - `assets/portre-orig/mate-istvan.webp`
+- `assets/portre-orig/molnar-tamas.webp`
 - `assets/portre-orig/moore-jennifer.webp`
 - `assets/portre-orig/nyiri-andrea.webp`
 - `assets/portre-orig/olah-daniel.webp`
@@ -292,6 +295,7 @@ one zip can need files from another.
 - `assets/portre/biro-nora.webp`
 - `assets/portre/borbely-bence-sq.webp`
 - `assets/portre/borbely-bence.webp`
+- `assets/portre/braun-katalin-sq.webp`
 - `assets/portre/buxbaum-barna-sq.webp`
 - `assets/portre/buxbaum-barna.webp`
 - `assets/portre/casual/bakos-zita-lg.webp`
@@ -334,6 +338,7 @@ one zip can need files from another.
 - `assets/portre/hidvegi-laszlo-sq.webp`
 - `assets/portre/horvath-ilona-ida-sq.webp`
 - `assets/portre/jambor-istvan-sq.webp`
+- `assets/portre/kato-tamas-sq.webp`
 - `assets/portre/katus-monika-sq.webp`
 - `assets/portre/kiss-tibor-sq.webp`
 - `assets/portre/kocsardi-attila-sq.webp`
@@ -347,6 +352,7 @@ one zip can need files from another.
 - `assets/portre/lorincz-attila-sq.webp`
 - `assets/portre/lukovics-dora-sq.webp`
 - `assets/portre/mate-istvan-sq.webp`
+- `assets/portre/molnar-tamas-sq.webp`
 - `assets/portre/moore-jennifer-sq.webp`
 - `assets/portre/nyiri-andrea-sq.webp`
 - `assets/portre/olah-daniel-sq.webp`

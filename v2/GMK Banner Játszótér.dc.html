@@ -26,7 +26,7 @@ a{color:#2f7f80}a:hover{color:#12908d}
   <div style="max-width:1700px;margin:0 auto">
     <div style="display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between;margin-bottom:18px">
       <div><div style="font:800 24px/1.15 'DM Sans',sans-serif;color:#0c181b">Banner játszótér</div><div style="font-size:14px;color:#4a5558">Egységes portrés banner, thumbnail és borító. Próbálgasd az elrendezést, a betűt, a színt és a hátteret; nem ment semmit.</div></div>
-      <div style="font-size:13px;color:#4a5558">Teszt: 10 oktatói portré</div>
+      <div style="font-size:13px;color:#4a5558">Teszt: 13 oktatói portré</div>
     </div>
     <div style="display:grid;grid-template-columns:{{ gridCols }};gap:20px;align-items:start">
 
@@ -59,10 +59,10 @@ a{color:#2f7f80}a:hover{color:#12908d}
               <sc-if value="{{ b1 }}"><div style="{{ dotsSt }}"></div></sc-if>
               <sc-if value="{{ b2 }}"><div style="{{ stripeSt }}"></div></sc-if>
               <div style="{{ arcSt }}"></div>
-              <sc-if value="{{ lC }}"><div style="{{ boxC }}"><sc-if value="{{ cTwo }}"><div style="{{ n1 }}">{{ t.vez }}</div><div style="{{ n2 }}">{{ t.ker }}</div></sc-if><sc-if value="{{ cOne }}"><div style="{{ nC1 }}"><span>{{ t.vez }} </span><span style="{{ nB2 }}">{{ t.ker }}</span></div></sc-if></div></sc-if>
+              <sc-if value="{{ lC }}"><div style="{{ boxC }}"><sc-for list="{{ ttl }}" as="l" hint-placeholder-count="2"><div style="{{ l.st }}">{{ l.t }}</div></sc-for></div></sc-if>
               <sc-if value="{{ portImg }}" hint-placeholder-val="{{ false }}"><img src="{{ portImg }}" alt="" style="{{ portSt }}"/></sc-if>
-              <sc-if value="{{ lA }}"><div style="{{ boxA }}"><div style="{{ n1 }}">{{ t.vez }}</div><div style="{{ n2 }}">{{ t.ker }}</div><div style="{{ areaSt }}">{{ area }}</div><sc-if value="{{ hasSub }}"><div style="{{ subSt }}">{{ sub }}</div></sc-if></div></sc-if>
-              <sc-if value="{{ lBC }}"><div style="{{ barSt }}"><sc-if value="{{ lB }}"><div style="{{ nB }}"><span>{{ t.vez }} </span><span style="{{ nB2 }}">{{ t.ker }}</span></div></sc-if><div style="{{ areaSt }}">{{ area }}</div><sc-if value="{{ hasSub }}"><div style="{{ subSt }}">{{ sub }}</div></sc-if></div></sc-if>
+              <sc-if value="{{ lA }}"><div style="{{ boxA }}"><sc-for list="{{ ttl }}" as="l" hint-placeholder-count="2"><div style="{{ l.st }}">{{ l.t }}</div></sc-for><sc-if value="{{ hasWho }}"><div style="{{ nameSt }}">{{ who }}</div></sc-if><sc-if value="{{ hasSub }}"><div style="{{ subSt }}">{{ sub }}</div></sc-if></div></sc-if>
+              <sc-if value="{{ lBC }}"><div style="{{ barSt }}"><sc-if value="{{ lB }}"><sc-for list="{{ ttl }}" as="l" hint-placeholder-count="2"><div style="{{ l.st }}">{{ l.t }}</div></sc-for></sc-if><sc-if value="{{ hasWho }}"><div style="{{ nameSt }}">{{ who }}</div></sc-if><sc-if value="{{ hasSub }}"><div style="{{ subSt }}">{{ sub }}</div></sc-if></div></sc-if>
               <div style="position:absolute;left:6em;right:6em;top:6em;z-index:6;display:flex;align-items:center;justify-content:space-between;gap:3em"><sc-if value="{{ hasLabel }}"><div style="{{ pillSt }}">{{ label }}</div></sc-if>
               <sc-if value="{{ logoRow }}" hint-placeholder-val="{{ false }}"><img src="{{ logoSrc }}" alt="Mentor Klub" style="height:8em;width:auto;display:block;margin-left:auto"/></sc-if></div>
               <sc-if value="{{ logoBottom }}" hint-placeholder-val="{{ false }}"><img src="{{ logoSrc }}" alt="Mentor Klub" style="position:absolute;left:6em;bottom:6em;height:8em;width:auto;display:block;z-index:6"/></sc-if>
@@ -109,9 +109,9 @@ a{color:#2f7f80}a:hover{color:#12908d}
           <div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{ fontsB }}" as="o" hint-placeholder-count="4"><button onClick="{{ o.onClick }}" style="cursor:pointer;border-radius:10px;padding:7px 11px;min-height:38px;font:600 14px {{ o.ff }};background:{{ o.bg }};color:{{ o.fg }};border:1px solid {{ o.bd }}">{{ o.t }}</button></sc-for></div>
           <div style="font-size:12px;color:#4a5558;margin:10px 0 4px">Vastagság</div>
           <div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{ weights }}" as="o" hint-placeholder-count="4"><button onClick="{{ o.onClick }}" style="cursor:pointer;border-radius:10px;padding:7px 12px;min-height:38px;font:{{ o.t }} 14px 'DM Sans',sans-serif;background:{{ o.bg }};color:{{ o.fg }};border:1px solid {{ o.bd }}">{{ o.t }}</button></sc-for></div>
-          <button onClick="{{ toggleUpper }}" style="margin-top:10px;cursor:pointer;display:flex;align-items:center;gap:8px;background:none;border:0;padding:0;font:600 13px 'DM Sans',sans-serif;color:#2b302f"><span style="width:20px;height:20px;border-radius:6px;border:2px solid #14262b;background:{{ upperBg }};display:inline-block"></span>NAGYBETŰS név</button>
-          <button onClick="{{ toggleAccName }}" style="margin-top:8px;cursor:pointer;display:flex;align-items:center;gap:8px;background:none;border:0;padding:0;font:600 13px 'DM Sans',sans-serif;color:#2b302f"><span style="width:20px;height:20px;border-radius:6px;border:2px solid #14262b;background:{{ accNameBg }};display:inline-block"></span>Keresztnév akcentszínnel</button>
-          <label style="display:block;margin-top:10px;font-size:13px">Név mérete: {{ s.nameScale }}%<input type="range" min="50" max="140" value="{{ s.nameScale }}" onChange="{{ setNameScale }}" style="display:block;width:100%"/></label>
+          <button onClick="{{ toggleUpper }}" style="margin-top:10px;cursor:pointer;display:flex;align-items:center;gap:8px;background:none;border:0;padding:0;font:600 13px 'DM Sans',sans-serif;color:#2b302f"><span style="width:20px;height:20px;border-radius:6px;border:2px solid #14262b;background:{{ upperBg }};display:inline-block"></span>NAGYBETŰS cím</button>
+          <button onClick="{{ toggleAccName }}" style="margin-top:8px;cursor:pointer;display:flex;align-items:center;gap:8px;background:none;border:0;padding:0;font:600 13px 'DM Sans',sans-serif;color:#2b302f"><span style="width:20px;height:20px;border-radius:6px;border:2px solid #14262b;background:{{ accNameBg }};display:inline-block"></span>Cím utolsó sora akcentszínnel</button>
+          <label style="display:block;margin-top:10px;font-size:13px">Cím mérete: {{ s.nameScale }}%<input type="range" min="50" max="140" value="{{ s.nameScale }}" onChange="{{ setNameScale }}" style="display:block;width:100%"/></label>
           <label style="display:block;margin-top:6px;font-size:13px">Betűköz: {{ s.ls }}<input type="range" min="-4" max="8" value="{{ s.ls }}" onChange="{{ setLs }}" style="display:block;width:100%"/></label>
         </div>
         <div>
@@ -131,11 +131,11 @@ a{color:#2f7f80}a:hover{color:#12908d}
         </div>
         <div>
           <div style="font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:8px">Szöveg</div>
+          <label style="display:block;font-size:12px;color:#4a5558;margin-bottom:8px">Képzés neve<input type="text" value="{{ area }}" onChange="{{ setArea }}" style="display:block;width:100%;box-sizing:border-box;margin-top:3px;border:1px solid #c9d3d6;border-radius:10px;padding:9px 10px;min-height:40px;font:500 14px 'DM Sans',sans-serif"/></label>
           <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:8px">
             <label style="font-size:12px;color:#4a5558">Vezetéknév<input type="text" value="{{ t.vez }}" onChange="{{ setVez }}" style="display:block;width:100%;box-sizing:border-box;margin-top:3px;border:1px solid #c9d3d6;border-radius:10px;padding:9px 10px;min-height:40px;font:500 14px 'DM Sans',sans-serif"/></label>
             <label style="font-size:12px;color:#4a5558">Keresztnév<input type="text" value="{{ t.ker }}" onChange="{{ setKer }}" style="display:block;width:100%;box-sizing:border-box;margin-top:3px;border:1px solid #c9d3d6;border-radius:10px;padding:9px 10px;min-height:40px;font:500 14px 'DM Sans',sans-serif"/></label>
           </div>
-          <label style="display:block;font-size:12px;color:#4a5558;margin-bottom:8px">Terület<input type="text" value="{{ area }}" onChange="{{ setArea }}" style="display:block;width:100%;box-sizing:border-box;margin-top:3px;border:1px solid #c9d3d6;border-radius:10px;padding:9px 10px;min-height:40px;font:500 14px 'DM Sans',sans-serif"/></label>
           <label style="display:block;font-size:12px;color:#4a5558;margin-bottom:8px">Alcím<input type="text" value="{{ sub }}" onChange="{{ setSub }}" style="display:block;width:100%;box-sizing:border-box;margin-top:3px;border:1px solid #c9d3d6;border-radius:10px;padding:9px 10px;min-height:40px;font:500 14px 'DM Sans',sans-serif"/></label>
           <label style="display:block;font-size:12px;color:#4a5558">Címke<input type="text" value="{{ label }}" onChange="{{ setLabel }}" style="display:block;width:100%;box-sizing:border-box;margin-top:3px;border:1px solid #c9d3d6;border-radius:10px;padding:9px 10px;min-height:40px;font:500 14px 'DM Sans',sans-serif"/></label>
         </div>
@@ -159,7 +159,10 @@ class Component extends DCLogic {
     { slug: 'csato-vanda', vez: 'Csató', ker: 'Vanda', col: '#ff9f43', area: 'Projektmenedzsment AI-jal', sub: '', label: 'Következő: 2027. febr. 26.' },
     { slug: 'csepanyi-tamas', vez: 'Csépányi', ker: 'Tamás', col: '#ff9f43', area: 'Projektmenedzsment hatékonyan', sub: '', label: 'Következő: 2027. febr. 5.' },
     { slug: 'debreczeni-ildiko', vez: 'Debreczeni', ker: 'Ildikó', col: '#5baeaf', area: 'Állásinterjú és bértárgyalás', sub: '', label: 'Következő: 2026. nov. 19.' },
-    { slug: 'egri-dorottya', vez: 'Egri', ker: 'Dorottya', col: '#eb5757', area: 'Német üzleti kommunikáció', sub: '', label: 'Következő: 2026. dec. 10.' }
+    { slug: 'egri-dorottya', vez: 'Egri', ker: 'Dorottya', col: '#eb5757', area: 'Német üzleti kommunikáció', sub: '', label: 'Következő: 2026. dec. 10.' },
+    { slug: 'braun-katalin', vez: 'Braun', ker: 'Katalin', col: '#00b3a6', area: 'Változáskezelés', sub: '', label: 'Következő: 2027. febr. 18.', nc: true },
+    { slug: 'molnar-tamas', vez: 'Molnár', ker: 'Tamás', col: '#2bb673', area: 'Haladó Power BI', sub: '', label: 'Következő: 2026. nov. 23.', nc: true },
+    { slug: 'kato-tamas', vez: 'Kató', ker: 'Tamás', col: '#9b51e0', area: 'A vevőszerzés rejtett útvonalai', sub: '', label: 'Következő: 2027. jan. 14.', nc: true }
   ];
   F = [
     { t: 'Weboldal-kártya 4:5', k: 'kartya', w: 800, h: 1000, mode: 'stack', ph: 68, base: 12.5, top: 17, ar: 3.4, bB: 8.2, ct: 20 },
@@ -197,36 +200,49 @@ class Component extends DCLogic {
     const A = (h, a) => h + Math.round(Math.max(0, Math.min(1, a)) * 255).toString(16).padStart(2, '0');
     const lum = (h) => { const n = parseInt(h.slice(1, 7), 16), c = [n >> 16, (n >> 8) & 255, n & 255].map(v => { v /= 255; return v <= .03928 ? v / 12.92 : Math.pow((v + .055) / 1.055, 2.4); }); return .2126 * c[0] + .7152 * c[1] + .0722 * c[2]; };
     const cw = (s.upper ? .68 : .57) * (1 + s.ls / 100) * (s.wgt >= 800 ? 1.03 : 1);
-    const ml = Math.max(T.vez.length, T.ker.length, 1), ns = s.nameScale / 100, pS = s.pScale / 100;
+    const ns = s.nameScale / 100, pS = s.pScale / 100;
     const mx = s.par ? s.mx : 0, my = s.par ? s.my : 0;
     let ph, cx;
     if (s.lay === 0) { ph = f.ph * pS; cx = 100 - ph * .8 / 2 + 3 + s.pX; }
     else if (s.lay === 1) { ph = Math.min(H * .84, 90) * pS; cx = 50 + s.pX; }
     else { ph = (H < 70 ? H * .64 : Math.min(H * .72, 90)) * pS; cx = 50 + s.pX; }
     const pw = ph * .8;
-    const nm = (e, st) => `font:${s.wgt} ${e}em/.92 ${fH};letter-spacing:${s.ls / 100}em;text-transform:${s.upper ? 'uppercase' : 'none'};color:${st};white-space:nowrap`;
-    const availA = f.mode === 'side' ? f.txtW : 86, nmA = Math.min(f.base * ns, availA / (ml * cw));
+    const lA = s.lay === 0, lB = s.lay === 1, lC = s.lay === 2, cOne = H < 70, arS = f.ar;
+    const lh = s.upper ? .96 : 1.04, who = (T.vez + ' ' + T.ker).trim(), ta = lA ? 'left' : 'center';
+    const words = String(area || '').trim().split(/\s+/).filter(Boolean);
+    const split = (k) => {
+      let best = null;
+      const rec = (i, left, got) => {
+        if (left === 1) { const ls = got.concat([words.slice(i).join(' ')]), m = Math.max(...ls.map(x => x.length)), q = ls.reduce((a, x) => a + x.length * x.length, 0); if (!best || m < best.m || (m === best.m && q < best.q)) best = { m, q, ls }; return; }
+        for (let j = i + 1; j <= words.length - (left - 1); j++) rec(j, left - 1, got.concat([words.slice(i, j).join(' ')]));
+      };
+      rec(0, k, []);
+      return best;
+    };
+    const fit = (maxL, w, cap, maxH, floor) => {
+      let best = { e: cap, lines: [] };
+      for (let k = 1; k <= Math.min(maxL, words.length); k++) {
+        const sp = split(k), e = Math.min(cap, w / (Math.max(sp.m, 1) * cw), Math.max(floor, maxH / (k * lh)));
+        if (k === 1 || e > best.e * 1.04) best = { e, lines: sp.ls };
+      }
+      return best;
+    };
+    const headTop = H - ph - s.pY + ph * .05, under = arS * 1.9 + (sub ? arS * 1.5 : 0);
+    const availA = f.mode === 'side' ? f.txtW : 86;
+    const tt = lA ? fit(3, availA, f.base * ns, Math.max(4, f.mode === 'side' ? H - 30 - under : headTop + ph * .1 - f.top - under), 0)
+      : lB ? fit(cOne ? 1 : 2, 88, f.bB * ns, 999, 0)
+      : fit(cOne ? 1 : 3, 94, f.base * 1.45 * ns, (headTop - 17) / .82, 4);
+    const ttl = tt.lines.map((t, k) => ({ t, st: `font:${s.wgt} ${tt.e}em/${lh} ${fH};letter-spacing:${s.ls / 100}em;text-transform:${s.upper ? 'uppercase' : 'none'};color:${s.accName && tt.lines.length > 1 && k === tt.lines.length - 1 ? acc : txt};white-space:nowrap;text-align:${ta}` }));
     const boxA = f.mode === 'side' ? `position:absolute;left:6em;top:50%;transform:translateY(-50%);width:${availA}em;z-index:4` : `position:absolute;left:6em;top:${f.top}em;width:86em;z-index:4`;
-    const full = T.vez + ' ' + T.ker, nmB = Math.min(f.bB * ns, 88 / (full.length * cw));
-    const cOne = H < 70;
-    const headTop = H - ph - s.pY + ph * .05, nmMax = Math.max(4, (headTop - 17) / .82 / ((cOne ? 1 : 2) * .92));
-    const nmC = Math.min(nmMax, cOne ? Math.min(f.base * 1.45 * ns, 94 / (full.length * cw)) : Math.min(f.base * 1.45 * ns, 94 / (ml * cw)));
-    const lA = s.lay === 0, lB = s.lay === 1, lC = s.lay === 2;
-    const nameE = lA ? nmA : nmC, ta = lA ? 'left' : 'center';
-    const n1 = nm(nameE, txt) + ';text-align:' + ta, n2 = nm(nameE, s.accName ? acc : txt) + ';text-align:' + ta;
-    const nB = nm(nmB, txt) + ';text-align:center;margin-bottom:.5em', nB2 = `color:${s.accName ? acc : txt}`;
-    const nameH = (cOne ? 1 : 2) * nmC * .92, topC = Math.max(17, headTop - nameH * .82);
-    const boxC = `position:absolute;left:0;right:0;top:${topC}em;text-align:center;z-index:2`;
-    const nC1 = nm(nmC, txt) + ';text-align:center';
-    const arS = f.ar;
-    const areaSt = `font:700 ${arS}em/1.25 ${fB};color:${acc};margin-top:${lA ? arS * .6 : 0}em;text-align:${ta}`;
+    const boxC = `position:absolute;left:0;right:0;top:${Math.max(17, headTop - tt.lines.length * tt.e * lh * .82)}em;text-align:center;z-index:2`;
+    const nameSt = `font:700 ${arS}em/1.25 ${fB};color:${acc};margin-top:${lC ? 0 : arS * .6}em;text-align:${ta}`;
     const subSt = `font:500 ${arS * .85}em/1.3 ${fB};color:${txt};margin-top:.35em;text-align:${ta}`;
-    const barSt = `position:absolute;left:0;right:0;bottom:0;z-index:5;text-align:center;padding:${Math.max(nmB * 1.6, 10)}em 6em 4.5em;background:linear-gradient(to top,${bg} 58%,${A(bg, 0)})`;
+    const barSt = `position:absolute;left:0;right:0;bottom:0;z-index:5;text-align:center;padding:${Math.max((lB ? tt.e : f.bB) * 1.6, 10)}em 6em 4.5em;background:linear-gradient(to top,${bg} 58%,${A(bg, 0)})`;
     const pillSt = `background:${acc};color:${lum(acc) > .4 ? '#0c181b' : '#ffffff'};font:700 ${arS * .8}em/1 ${fB};padding:.7em 1.1em;border-radius:99em;white-space:nowrap`;
     let arcSt = 'display:none';
     if (s.shape === 0) arcSt = `position:absolute;left:${cx}em;bottom:0;width:${pw * 1.12}em;height:${ph * .82}em;transform:translateX(-50%);border-radius:999em 999em 0 0;background:${A(arcC, .92)};z-index:1`;
     if (s.shape === 1) arcSt = `position:absolute;left:${cx}em;bottom:${ph * .2 + s.pY}em;width:${pw}em;height:${pw}em;transform:translateX(-50%);border-radius:50%;background:${A(arcC, .92)};z-index:1`;
-    const custom = s.custom[T0.slug], portImg = custom || (s.casual ? `assets/portre/casual/${T0.slug}-lg.webp` : `assets/portre-orig/${T0.slug}.webp`);
+    const custom = s.custom[T0.slug], portImg = custom || (s.casual && !T0.nc ? `assets/portre/casual/${T0.slug}-lg.webp` : `assets/portre-orig/${T0.slug}.webp`);
     const portSt = `position:absolute;left:${cx}em;bottom:${s.pY}em;height:${ph}em;width:${pw}em;object-fit:contain;object-position:50% 100%;transform:translateX(-50%) translate(${mx * 1.2}em,${my * .6}em);filter:drop-shadow(0 1.4em 2.2em rgba(0,0,0,.35));z-index:3;transition:transform .25s ease-out`;
     const i = s.inten / 100, dur = 60 - s.speed * .5, an = (n) => s.motion ? `animation:${n} ${dur}s ease-in-out infinite alternate;` : '';
     const blob = (l, t, d, c, a, n) => `position:absolute;width:${d}em;height:${d}em;left:${l}em;top:${t}em;border-radius:50%;background:radial-gradient(circle,${A(c, a)},transparent 65%);filter:blur(3em);${an(n)}`;
@@ -244,11 +260,11 @@ class Component extends DCLogic {
     const rawArc = s.arcCat ? T.col : s.arc;
     return {
       ready: true, s, t: T, oList: wide ? 0 : 2, area, sub, label, hasSub: !!sub, hasLabel: !!label,
-      gridCols: wide ? '240px minmax(0,1fr) 330px' : 'minmax(0,1fr)', listCols: wide ? '1fr 1fr' : 'repeat(10,84px)', listOverflow: wide ? 'visible' : 'auto', stickyPos: wide ? 'sticky' : 'static',
-      people: this.T.map((p, k) => ({ n: p.vez + ' ' + p.ker, c: p.col + '33', img: `${s.casual ? 'assets/portre/casual/' : 'assets/portre/'}${p.slug}-sq.webp`, bd: k === s.sel ? '#12908d' : '#e6ebed', onClick: () => set({ sel: k }) })),
+      gridCols: wide ? '240px minmax(0,1fr) 330px' : 'minmax(0,1fr)', listCols: wide ? '1fr 1fr' : `repeat(${this.T.length},84px)`, listOverflow: wide ? 'visible' : 'auto', stickyPos: wide ? 'sticky' : 'static',
+      people: this.T.map((p, k) => ({ n: p.vez + ' ' + p.ker, c: p.col + '33', img: `${s.casual && !p.nc ? 'assets/portre/casual/' : 'assets/portre/'}${p.slug}-sq.webp`, bd: k === s.sel ? '#12908d' : '#e6ebed', onClick: () => set({ sel: k }) })),
       styleTabs: seg(['Elegáns (blézer)', 'Casual'], s.casual ? 1 : 0, k => set({ casual: k === 1 })),
       fmtTabs: seg(this.F.map(x => x.t), s.fmt, k => set({ fmt: k })),
-      layTabs: seg(['A · Portré jobbra, szöveg balra', 'B · Portré középen, név alul', 'C · Név a portré mögött'], s.lay, k => set({ lay: k })),
+      layTabs: seg(['A · Portré jobbra, szöveg balra', 'B · Portré középen, cím alul', 'C · Cím a portré mögött'], s.lay, k => set({ lay: k })),
       presets: this.PRE.map((p, k) => ({ t: p.t, c1: p.bg, c2: p.acc || T.col, bd: k === s.preset ? '#12908d' : '#e6ebed', onClick: () => set({ preset: k, bg: p.bg, acc: p.acc || s.acc, txt: p.txt }) })),
       fontsH: seg(this.FH.map(x => x[0]), s.fontH, k => set({ fontH: k }), this.FH.map(x => x[1])),
       fontsB: seg(this.FB.map(x => x[0]), s.fontB, k => set({ fontB: k }), this.FB.map(x => x[1])),
@@ -256,8 +272,8 @@ class Component extends DCLogic {
       shapes: seg(['Ív', 'Korong', 'Nincs'], s.shape, k => set({ shape: k })),
       bgTypes: seg(['Foltok', 'Pontrács', 'Csíkok', 'Egyszínű'], s.bgType, k => set({ bgType: k })),
       st: { w: f.w, h: f.h, u, bg, txt, fB }, scale, wrapW: Math.round(f.w * scale), wrapH: Math.round(f.h * scale), pct: Math.round(scale * 100),
-      cOne, cTwo: !cOne, nC1, lA, lB, lC, lBC: lB || lC, b0: s.bgType === 0, b1: s.bgType === 1, b2: s.bgType === 2,
-      blob1, blob2, blob3, dotsSt, stripeSt, arcSt, portSt, portImg, boxA, boxC, n1, n2, nB, nB2, areaSt, subSt, barSt, pillSt,
+      ttl, who, hasWho: !!who, nameSt, lA, lB, lC, lBC: lB || lC, b0: s.bgType === 0, b1: s.bgType === 1, b2: s.bgType === 2,
+      blob1, blob2, blob3, dotsSt, stripeSt, arcSt, portSt, portImg, boxA, boxC, subSt, barSt, pillSt,
       logoSrc: lum(bg) > .55 ? 'logo.png' : 'logo-white.png', logoBottom: lA && f.mode === 'side', logoRow: !(lA && f.mode === 'side'),
       accV: acc, arcV: rawArc, arcCatBg: ck(s.arcCat), upperBg: ck(s.upper), accNameBg: ck(s.accName), motionBg: ck(s.motion),
       setBg: (e) => set({ bg: e.target.value, preset: -1 }), setAcc: (e) => set({ acc: e.target.value, preset: s.preset === 4 ? -1 : s.preset }), setTxt: (e) => set({ txt: e.target.value, preset: -1 }), setArc: (e) => set({ arc: e.target.value, arcCat: false }),
