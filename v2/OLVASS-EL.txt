@@ -1,0 +1,16 @@
+GMK Sales F verzió – frissítés (2026. nov. 23.)
+
+Mit kell cserélni a szerveren:
+1. A F verzió oldalfájlját erre: "GMK Sales F - Egyesitett.dc.html"
+   (ha a szerveren más néven fut, pl. f.html, akkor nevezd át arra)
+2. gmk-content.js  – közös tartalom (új Google-vélemények link)
+3. gmk-courses.js  – közös képzés- és oktatóadat (Braun Katalin, Molnár Tamás, Kató Tamás most már képpel)
+4. assets/portre/ és assets/portre-orig/ – a három új portré, a meglévők mellé másolandó
+
+Figyelem: a gmk-content.js és a gmk-courses.js közös fájl, a többi verzió (A–E) is ezt olvassa,
+így ott is a Google-linkre mutat a vélemények gomb, és ott is megjelenik a három új portré.
+
+Mi változott az F verzióban:
+- Képzésfal: portrés kártyák a Banner játszótér stílusában, a képzés neve nagyban, a tréner neve kicsiben
+- "Összes Google-vélemény" gomb: a Google-értékelésekre visz
+- Molnár Tamás, Kató Tamás, Braun Katalin: monogram helyett fotó
