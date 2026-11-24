@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Outfit:wght@500;600;700;800;900&family=Archivo:wght@600;700;800;900&display=swap" rel="stylesheet"/>
+<script src="https://unpkg.com/html-to-image@1.11.11/dist/html-to-image.js"></script>
+<style>
+body{margin:0;background:#eef2f3}
+a{color:#2f7f80}a:hover{color:#12908d}
+@keyframes gmkB1{from{transform:translate(0,0) scale(1)}to{transform:translate(18%,14%) scale(1.15)}}
+@keyframes gmkB2{from{transform:translate(0,0) scale(1.1)}to{transform:translate(-16%,-12%) scale(.92)}}
+@keyframes gmkB3{from{transform:translate(-8%,6%)}to{transform:translate(10%,-8%)}}
+@keyframes gmkDots{to{background-position:3em 3em}}
+@keyframes gmkStr{to{background-position:6em 6em}}
+</style>
+</helmet>
+<sc-if value="{{ ready }}" hint-placeholder-val="{{ true }}">
+<div style="min-height:100vh;background:#eef2f3;color:#2b302f;font:400 14px/1.45 'DM Sans',sans-serif;padding:20px 24px 40px;box-sizing:border-box">
+  <div style="max-width:1700px;margin:0 auto">
+    <div style="display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between;margin-bottom:18px">
+      <div><div style="font:800 24px/1.15 'DM Sans',sans-serif;color:#0c181b">Banner játszótér</div><div style="font-size:14px;color:#4a5558">Egységes portrés banner, thumbnail és borító. Próbálgasd az elrendezést, a betűt, a színt és a hátteret; nem ment semmit.</div></div>
+      <div style="font-size:13px;color:#4a5558">Teszt: 13 oktatói portré</div>
+    </div>
+    <div style="display:grid;grid-template-columns:{{ gridCols }};gap:20px;align-items:start">
+
+      <!-- OKTATÓK -->
+      <div style="background:#fff;border:1px solid #dfe5e7;border-radius:20px;padding:14px;min-width:0;order:{{ oList }}">
+        <div style="font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:10px">Oktatók</div>
+        <div style="display:grid;grid-template-columns:{{ listCols }};gap:8px;overflow-x:{{ listOverflow }};padding-bottom:16px">
+          <sc-for list="{{ people }}" as="p" hint-placeholder-count="10">
+            <button onClick="{{ p.onClick }}" style="cursor:pointer;text-align:left;border:2px solid {{ p.bd }};border-radius:14px;background:#fff;padding:0;overflow:hidden;font-family:'DM Sans',sans-serif">
+              <div style="aspect-ratio:1/1;background:{{ p.c }};overflow:hidden"><sc-if value="{{ p.img }}" hint-placeholder-val="{{ false }}"><img src="{{ p.img }}" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:50% 20%"/></sc-if></div>
+              <div style="padding:6px 8px;font:600 12px/1.25 'DM Sans',sans-serif;color:#0c181b">{{ p.n }}</div>
+            </button>
+          </sc-for>
+        </div>
+        <div style="margin-top:14px;border-top:1px solid #e6ebed;padding-top:12px">
+          <div style="font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:8px">Saját kép</div>
+          <label style="display:flex;align-items:center;justify-content:center;text-align:center;min-height:48px;border:1.5px dashed #9fb3b6;border-radius:12px;font:600 13px 'DM Sans',sans-serif;color:#2b302f;cursor:pointer;padding:8px">Kép feltöltése<input type="file" accept="image/*" onChange="{{ pickFile }}" style="display:none"/></label>
+          <div style="font-size:12px;color:#4a5558;margin-top:6px">Átlátszó hátterű PNG vagy WebP a legjobb. A kiválasztott oktató képe helyére kerül.</div>
+          <sc-if value="{{ hasCustom }}"><button onClick="{{ clearFile }}" style="margin-top:8px;cursor:pointer;background:none;border:0;padding:0;color:#2f7f80;font:700 13px 'DM Sans',sans-serif;text-decoration:underline">Eredeti portré vissza</button></sc-if>
+        </div>
+      </div>
+
+      <!-- ELŐNÉZET -->
+      <div style="min-width:0;position:{{ stickyPos }};top:16px;order:1">
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px"><sc-for list="{{ fmtTabs }}" as="o" hint-placeholder-count="6"><button onClick="{{ o.onClick }}" style="cursor:pointer;border-radius:10px;padding:8px 12px;min-height:40px;font:600 13px 'DM Sans',sans-serif;background:{{ o.bg }};color:{{ o.fg }};border:1px solid {{ o.bd }}">{{ o.t }}</button></sc-for></div>
+        <div style="background:#d9e0e2;border-radius:20px;padding:16px;display:flex;justify-content:center;align-items:flex-start;overflow:hidden">
+          <div onMouseMove="{{ onMove }}" onMouseLeave="{{ onLeave }}" style="width:{{ wrapW }}px;height:{{ wrapH }}px;flex:none;box-shadow:0 12px 40px rgba(12,24,27,.22);border-radius:4px;overflow:hidden">
+            <div id="gmk-stage" style="position:relative;width:{{ st.w }}px;height:{{ st.h }}px;font-size:{{ st.u }}px;overflow:hidden;background:{{ st.bg }};color:{{ st.txt }};font-family:{{ st.fB }};transform:scale({{ scale }});transform-origin:top left">
+              <sc-if value="{{ b0 }}"><div style="{{ blob1 }}"></div><div style="{{ blob2 }}"></div><div style="{{ blob3 }}"></div></sc-if>
+              <sc-if value="{{ b1 }}"><div style="{{ dotsSt }}"></div></sc-if>
+              <sc-if value="{{ b2 }}"><div style="{{ stripeSt }}"></div></sc-if>
+              <div style="{{ arcSt }}"></div>
+              <sc-if value="{{ lC }}"><div style="{{ boxC }}"><sc-for list="{{ ttl }}" as="l" hint-placeholder-count="2"><div style="{{ l.st }}">{{ l.t }}</div></sc-for></div></sc-if>
+              <sc-if value="{{ portImg }}" hint-placeholder-val="{{ false }}"><img src="{{ portImg }}" alt="" style="{{ portSt }}"/></sc-if>
+              <sc-if value="{{ lA }}"><div style="{{ boxA }}"><sc-for list="{{ ttl }}" as="l" hint-placeholder-count="2"><div style="{{ l.st }}">{{ l.t }}</div></sc-for><sc-if value="{{ hasWho }}"><div style="{{ nameSt }}">{{ who }}</div></sc-if><sc-if value="{{ hasSub }}"><div style="{{ subSt }}">{{ sub }}</div></sc-if></div></sc-if>
+              <sc-if value="{{ lBC }}"><div style="{{ barSt }}"><sc-if value="{{ lB }}"><sc-for list="{{ ttl }}" as="l" hint-placeholder-count="2"><div style="{{ l.st }}">{{ l.t }}</div></sc-for></sc-if><sc-if value="{{ hasWho }}"><div style="{{ nameSt }}">{{ who }}</div></sc-if><sc-if value="{{ hasSub }}"><div style="{{ subSt }}">{{ sub }}</div></sc-if></div></sc-if>
+              <div style="position:absolute;left:6em;right:6em;top:6em;z-index:6;display:flex;align-items:center;justify-content:space-between;gap:3em"><sc-if value="{{ hasLabel }}"><div style="{{ pillSt }}">{{ label }}</div></sc-if>
+              <sc-if value="{{ logoRow }}" hint-placeholder-val="{{ false }}"><img src="{{ logoSrc }}" alt="Mentor Klub" style="height:8em;width:auto;display:block;margin-left:auto"/></sc-if></div>
+              <sc-if value="{{ logoBottom }}" hint-placeholder-val="{{ false }}"><img src="{{ logoSrc }}" alt="Mentor Klub" style="position:absolute;left:6em;bottom:6em;height:8em;width:auto;display:block;z-index:6"/></sc-if>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;margin-top:12px">
+          <div style="font-size:13px;color:#4a5558">{{ st.w }}×{{ st.h }} px · előnézet {{ pct }}%</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button onClick="{{ randomize }}" style="cursor:pointer;background:#fff;color:#0c181b;border:1px solid #c9d3d6;border-radius:12px;padding:10px 16px;min-height:44px;font:700 13px 'DM Sans',sans-serif">Véletlen kombináció</button>
+            <button onClick="{{ reset }}" style="cursor:pointer;background:#fff;color:#0c181b;border:1px solid #c9d3d6;border-radius:12px;padding:10px 16px;min-height:44px;font:700 13px 'DM Sans',sans-serif">Alaphelyzet</button>
+            <button onClick="{{ exportPng }}" style="cursor:pointer;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;border:0;border-radius:12px;padding:10px 18px;min-height:44px;font:700 13px 'DM Sans',sans-serif">PNG letöltése (2×)</button>
+          </div>
+        </div>
+        <sc-if value="{{ hasToast }}"><div style="margin-top:8px;font-size:13px;color:#8a4b00">{{ toast }}</div></sc-if>
+      </div>
+
+      <!-- VEZÉRLŐK -->
+      <div style="background:#fff;border:1px solid #dfe5e7;border-radius:20px;padding:16px;min-width:0;display:grid;gap:18px;order:2">
+        <div>
+          <div style="font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:8px">Portré stílusa</div>
+          <div style="display:flex;gap:6px"><sc-for list="{{ styleTabs }}" as="o" hint-placeholder-count="2"><button onClick="{{ o.onClick }}" style="flex:1;cursor:pointer;border-radius:10px;padding:9px 12px;min-height:40px;font:600 13px 'DM Sans',sans-serif;background:{{ o.bg }};color:{{ o.fg }};border:1px solid {{ o.bd }}">{{ o.t }}</button></sc-for></div>
+        </div>
+        <div>
+          <div style="font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:8px">Elrendezés</div>
+          <div style="display:grid;gap:6px"><sc-for list="{{ layTabs }}" as="o" hint-placeholder-count="3"><button onClick="{{ o.onClick }}" style="cursor:pointer;text-align:left;border-radius:10px;padding:9px 12px;min-height:40px;font:600 13px 'DM Sans',sans-serif;background:{{ o.bg }};color:{{ o.fg }};border:1px solid {{ o.bd }}">{{ o.t }}</button></sc-for></div>
+        </div>
+        <div>
+          <div style="font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:8px">Színtéma</div>
+          <div style="display:grid;gap:6px"><sc-for list="{{ presets }}" as="o" hint-placeholder-count="5"><button onClick="{{ o.onClick }}" style="cursor:pointer;display:flex;align-items:center;gap:10px;text-align:left;border-radius:10px;padding:8px 12px;min-height:40px;font:600 13px 'DM Sans',sans-serif;background:#fff;color:#2b302f;border:2px solid {{ o.bd }}"><span style="display:inline-flex;border-radius:6px;overflow:hidden;border:1px solid #c9d3d6"><span style="width:16px;height:20px;background:{{ o.c1 }}"></span><span style="width:16px;height:20px;background:{{ o.c2 }}"></span></span>{{ o.t }}</button></sc-for></div>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px">
+            <label style="display:flex;align-items:center;gap:8px;font-size:13px">Háttér<input type="color" value="{{ st.bg }}" onChange="{{ setBg }}" style="width:36px;height:30px;border:1px solid #c9d3d6;border-radius:8px;padding:0;background:none"/></label>
+            <label style="display:flex;align-items:center;gap:8px;font-size:13px">Akcent<input type="color" value="{{ accV }}" onChange="{{ setAcc }}" style="width:36px;height:30px;border:1px solid #c9d3d6;border-radius:8px;padding:0;background:none"/></label>
+            <label style="display:flex;align-items:center;gap:8px;font-size:13px">Szöveg<input type="color" value="{{ st.txt }}" onChange="{{ setTxt }}" style="width:36px;height:30px;border:1px solid #c9d3d6;border-radius:8px;padding:0;background:none"/></label>
+            <label style="display:flex;align-items:center;gap:8px;font-size:13px">Ív<input type="color" value="{{ arcV }}" onChange="{{ setArc }}" style="width:36px;height:30px;border:1px solid #c9d3d6;border-radius:8px;padding:0;background:none"/></label>
+          </div>
+          <button onClick="{{ toggleArcCat }}" style="margin-top:10px;cursor:pointer;display:flex;align-items:center;gap:8px;background:none;border:0;padding:0;font:600 13px 'DM Sans',sans-serif;color:#2b302f"><span style="width:20px;height:20px;border-radius:6px;border:2px solid #14262b;background:{{ arcCatBg }};display:inline-block"></span>Ív: oktató kategóriaszíne</button>
+        </div>
+        <div>
+          <div style="font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:8px">Betű</div>
+          <div style="font-size:12px;color:#4a5558;margin-bottom:4px">Cím</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{ fontsH }}" as="o" hint-placeholder-count="6"><button onClick="{{ o.onClick }}" style="cursor:pointer;border-radius:10px;padding:7px 11px;min-height:38px;font:700 14px {{ o.ff }};background:{{ o.bg }};color:{{ o.fg }};border:1px solid {{ o.bd }}">{{ o.t }}</button></sc-for></div>
+          <div style="font-size:12px;color:#4a5558;margin:10px 0 4px">Szöveg</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{ fontsB }}" as="o" hint-placeholder-count="4"><button onClick="{{ o.onClick }}" style="cursor:pointer;border-radius:10px;padding:7px 11px;min-height:38px;font:600 14px {{ o.ff }};background:{{ o.bg }};color:{{ o.fg }};border:1px solid {{ o.bd }}">{{ o.t }}</button></sc-for></div>
+          <div style="font-size:12px;color:#4a5558;margin:10px 0 4px">Vastagság</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{ weights }}" as="o" hint-placeholder-count="4"><button onClick="{{ o.onClick }}" style="cursor:pointer;border-radius:10px;padding:7px 12px;min-height:38px;font:{{ o.t }} 14px 'DM Sans',sans-serif;background:{{ o.bg }};color:{{ o.fg }};border:1px solid {{ o.bd }}">{{ o.t }}</button></sc-for></div>
+          <button onClick="{{ toggleUpper }}" style="margin-top:10px;cursor:pointer;display:flex;align-items:center;gap:8px;background:none;border:0;padding:0;font:600 13px 'DM Sans',sans-serif;color:#2b302f"><span style="width:20px;height:20px;border-radius:6px;border:2px solid #14262b;background:{{ upperBg }};display:inline-block"></span>NAGYBETŰS cím</button>
+          <button onClick="{{ toggleAccName }}" style="margin-top:8px;cursor:pointer;display:flex;align-items:center;gap:8px;background:none;border:0;padding:0;font:600 13px 'DM Sans',sans-serif;color:#2b302f"><span style="width:20px;height:20px;border-radius:6px;border:2px solid #14262b;background:{{ accNameBg }};display:inline-block"></span>Cím utolsó sora akcentszínnel</button>
+          <label style="display:block;margin-top:10px;font-size:13px">Cím mérete: {{ s.nameScale }}%<input type="range" min="50" max="140" value="{{ s.nameScale }}" onChange="{{ setNameScale }}" style="display:block;width:100%"/></label>
+          <label style="display:block;margin-top:6px;font-size:13px">Betűköz: {{ s.ls }}<input type="range" min="-4" max="8" value="{{ s.ls }}" onChange="{{ setLs }}" style="display:block;width:100%"/></label>
+        </div>
+        <div>
+          <div style="font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:8px">Portré</div>
+          <div style="display:flex;gap:6px;margin-bottom:8px"><sc-for list="{{ shapes }}" as="o" hint-placeholder-count="3"><button onClick="{{ o.onClick }}" style="cursor:pointer;border-radius:10px;padding:7px 12px;min-height:38px;font:600 13px 'DM Sans',sans-serif;background:{{ o.bg }};color:{{ o.fg }};border:1px solid {{ o.bd }}">{{ o.t }}</button></sc-for></div>
+          <label style="display:block;font-size:13px">Méret: {{ s.pScale }}%<input type="range" min="60" max="130" value="{{ s.pScale }}" onChange="{{ setPScale }}" style="display:block;width:100%"/></label>
+          <label style="display:block;margin-top:6px;font-size:13px">Vízszintes eltolás: {{ s.pX }}<input type="range" min="-30" max="30" value="{{ s.pX }}" onChange="{{ setPX }}" style="display:block;width:100%"/></label>
+          <label style="display:block;margin-top:6px;font-size:13px">Függőleges eltolás: {{ s.pY }}<input type="range" min="-20" max="20" value="{{ s.pY }}" onChange="{{ setPY }}" style="display:block;width:100%"/></label>
+        </div>
+        <div>
+          <div style="font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:8px">Háttér</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{ bgTypes }}" as="o" hint-placeholder-count="4"><button onClick="{{ o.onClick }}" style="cursor:pointer;border-radius:10px;padding:7px 12px;min-height:38px;font:600 13px 'DM Sans',sans-serif;background:{{ o.bg }};color:{{ o.fg }};border:1px solid {{ o.bd }}">{{ o.t }}</button></sc-for></div>
+          <label style="display:block;margin-top:10px;font-size:13px">Intenzitás: {{ s.inten }}<input type="range" min="0" max="100" value="{{ s.inten }}" onChange="{{ setInten }}" style="display:block;width:100%"/></label>
+          <label style="display:block;margin-top:6px;font-size:13px">Sebesség: {{ s.speed }}<input type="range" min="0" max="100" value="{{ s.speed }}" onChange="{{ setSpeed }}" style="display:block;width:100%"/></label>
+          <button onClick="{{ toggleMotion }}" style="margin-top:10px;cursor:pointer;display:flex;align-items:center;gap:8px;background:none;border:0;padding:0;font:600 13px 'DM Sans',sans-serif;color:#2b302f"><span style="width:20px;height:20px;border-radius:6px;border:2px solid #14262b;background:{{ motionBg }};display:inline-block"></span>Háttér mozgása</button>
+          <button onClick="{{ togglePar }}" style="margin-top:8px;cursor:pointer;display:flex;align-items:center;gap:8px;background:none;border:0;padding:0;font:600 13px 'DM Sans',sans-serif;color:#2b302f"><span style="width:20px;height:20px;border-radius:6px;border:2px solid #14262b;background:{{ parBg }};display:inline-block"></span>Portré követi az egeret</button>
+        </div>
+        <div>
+          <div style="font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:8px">Szöveg</div>
+          <label style="display:block;font-size:12px;color:#4a5558;margin-bottom:8px">Képzés neve<input type="text" value="{{ area }}" onChange="{{ setArea }}" style="display:block;width:100%;box-sizing:border-box;margin-top:3px;border:1px solid #c9d3d6;border-radius:10px;padding:9px 10px;min-height:40px;font:500 14px 'DM Sans',sans-serif"/></label>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:8px">
+            <label style="font-size:12px;color:#4a5558">Vezetéknév<input type="text" value="{{ t.vez }}" onChange="{{ setVez }}" style="display:block;width:100%;box-sizing:border-box;margin-top:3px;border:1px solid #c9d3d6;border-radius:10px;padding:9px 10px;min-height:40px;font:500 14px 'DM Sans',sans-serif"/></label>
+            <label style="font-size:12px;color:#4a5558">Keresztnév<input type="text" value="{{ t.ker }}" onChange="{{ setKer }}" style="display:block;width:100%;box-sizing:border-box;margin-top:3px;border:1px solid #c9d3d6;border-radius:10px;padding:9px 10px;min-height:40px;font:500 14px 'DM Sans',sans-serif"/></label>
+          </div>
+          <label style="display:block;font-size:12px;color:#4a5558;margin-bottom:8px">Alcím<input type="text" value="{{ sub }}" onChange="{{ setSub }}" style="display:block;width:100%;box-sizing:border-box;margin-top:3px;border:1px solid #c9d3d6;border-radius:10px;padding:9px 10px;min-height:40px;font:500 14px 'DM Sans',sans-serif"/></label>
+          <label style="display:block;font-size:12px;color:#4a5558">Címke<input type="text" value="{{ label }}" onChange="{{ setLabel }}" style="display:block;width:100%;box-sizing:border-box;margin-top:3px;border:1px solid #c9d3d6;border-radius:10px;padding:9px 10px;min-height:40px;font:500 14px 'DM Sans',sans-serif"/></label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { ready: true, sel: 8, fmt: 0, lay: 0, preset: 0, bg: '#0c181b', acc: '#84e0db', txt: '#ffffff', arcCat: true, arc: '#306364', fontH: 0, fontB: 0, wgt: 800, upper: true, ls: 0, nameScale: 100, accName: true, pScale: 100, pX: 0, pY: 0, shape: 0, bgType: 0, inten: 60, speed: 50, motion: true, ed: {}, custom: {}, casual: false, par: false, mx: 0, my: 0, vw: 1400, vh: 900, toast: '' };
+  T = [
+    { slug: 'bakos-zita', vez: 'Bakos', ker: 'Zita', col: '#eb5757', area: 'Német üzleti kommunikáció', sub: '', label: 'Következő: 2026. dec. 9.' },
+    { slug: 'balint-istvan', vez: 'Bálint', ker: 'István', col: '#7c5cff', area: 'Claude Code', sub: '', label: 'Következő: 2027. jún. 11.' },
+    { slug: 'biro-bence', vez: 'Bíró', ker: 'Bence', col: '#00b3a6', area: 'Álláskeresés pszichológiája', sub: '', label: 'Következő: 2027. febr. 26.' },
+    { slug: 'biro-nora', vez: 'Bíró', ker: 'Nóra', col: '#00b3a6', area: 'Célkitűzés és tárgyalástechnikák', sub: '', label: 'Következő: 2027. jan. 21.' },
+    { slug: 'borbely-bence', vez: 'Borbély', ker: 'Bence', col: '#2bb673', area: 'Power BI a gyakorlatban', sub: '', label: 'Következő: 2027. febr. 23.' },
+    { slug: 'buxbaum-barna', vez: 'Buxbaum', ker: 'Barna', col: '#ff5c8a', area: 'WordPress és Elementor', sub: '', label: 'Következő: 2027. márc. 11.' },
+    { slug: 'csato-vanda', vez: 'Csató', ker: 'Vanda', col: '#ff9f43', area: 'Projektmenedzsment AI-jal', sub: '', label: 'Következő: 2027. febr. 26.' },
+    { slug: 'csepanyi-tamas', vez: 'Csépányi', ker: 'Tamás', col: '#ff9f43', area: 'Projektmenedzsment hatékonyan', sub: '', label: 'Következő: 2027. febr. 5.' },
+    { slug: 'debreczeni-ildiko', vez: 'Debreczeni', ker: 'Ildikó', col: '#5baeaf', area: 'Állásinterjú és bértárgyalás', sub: '', label: 'Következő: 2026. nov. 19.' },
+    { slug: 'egri-dorottya', vez: 'Egri', ker: 'Dorottya', col: '#eb5757', area: 'Német üzleti kommunikáció', sub: '', label: 'Következő: 2026. dec. 10.' },
+    { slug: 'braun-katalin', vez: 'Braun', ker: 'Katalin', col: '#00b3a6', area: 'Változáskezelés', sub: '', label: 'Következő: 2027. febr. 18.', nc: true },
+    { slug: 'molnar-tamas', vez: 'Molnár', ker: 'Tamás', col: '#2bb673', area: 'Haladó Power BI', sub: '', label: 'Következő: 2026. nov. 23.', nc: true },
+    { slug: 'kato-tamas', vez: 'Kató', ker: 'Tamás', col: '#9b51e0', area: 'A vevőszerzés rejtett útvonalai', sub: '', label: 'Következő: 2027. jan. 14.', nc: true }
+  ];
+  F = [
+    { t: 'Weboldal-kártya 4:5', k: 'kartya', w: 800, h: 1000, mode: 'stack', ph: 68, base: 12.5, top: 17, ar: 3.4, bB: 8.2, ct: 20 },
+    { t: 'Instagram 1:1', k: 'ig', w: 1080, h: 1080, mode: 'side', ph: 84, base: 9, txtW: 50, ar: 3.2, bB: 7.6, ct: 12 },
+    { t: 'Story 9:16', k: 'story', w: 1080, h: 1920, mode: 'stack', ph: 78, base: 16, top: 18, ar: 3.8, bB: 9.6, ct: 24 },
+    { t: 'LinkedIn / Facebook', k: 'linkedin', w: 1200, h: 628, mode: 'side', ph: 52.3, base: 6.2, txtW: 52, ar: 2.6, bB: 5.4, ct: 7 },
+    { t: 'Képzési borító 16:9', k: 'boritok', w: 1600, h: 900, mode: 'side', ph: 56.25, base: 6.6, txtW: 52, ar: 2.6, bB: 5.6, ct: 7 },
+    { t: 'YouTube thumbnail', k: 'youtube', w: 1280, h: 720, mode: 'side', ph: 56.25, base: 6.8, txtW: 52, ar: 2.8, bB: 5.8, ct: 7 }
+  ];
+  FH = [['DM Sans', "'DM Sans',sans-serif"], ['Poppins', "Poppins,sans-serif"], ['Sora', "Sora,sans-serif"], ['Space Grotesk', "'Space Grotesk',sans-serif"], ['Outfit', "Outfit,sans-serif"], ['Archivo', "Archivo,sans-serif"]];
+  FB = [['Inter', "Inter,sans-serif"], ['DM Sans', "'DM Sans',sans-serif"], ['Poppins', "Poppins,sans-serif"], ['Sora', "Sora,sans-serif"]];
+  PRE = [
+    { t: 'Sötét teal', bg: '#0c181b', acc: '#84e0db', txt: '#ffffff' },
+    { t: 'Menta világos', bg: '#e6f4f4', acc: '#2f7f80', txt: '#0c181b' },
+    { t: 'Narancs kiemelés', bg: '#14262b', acc: '#f1a246', txt: '#ffffff' },
+    { t: 'Fehér papír', bg: '#ffffff', acc: '#2f7f80', txt: '#0c181b' },
+    { t: 'Kategóriaszín szerint', bg: '#0c181b', acc: null, txt: '#ffffff' }
+  ];
+  D = { lay: 0, preset: 0, bg: '#0c181b', acc: '#84e0db', txt: '#ffffff', arcCat: true, arc: '#306364', fontH: 0, fontB: 0, wgt: 800, upper: true, ls: 0, nameScale: 100, accName: true, pScale: 100, pX: 0, pY: 0, shape: 0, bgType: 0, inten: 60, speed: 50, motion: true, par: false, mx: 0, my: 0 };
+  componentDidMount() {
+    this._rs = () => { const de = document.documentElement; this.setState({ vw: Math.max(de.clientWidth, 320), vh: Math.max(de.clientHeight, 400) }); };
+    window.addEventListener('resize', this._rs); this._rs();
+    setTimeout(this._rs, 120); setTimeout(this._rs, 600);
+    if (window.ResizeObserver) { this._ro = new ResizeObserver(this._rs); this._ro.observe(document.documentElement); }
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) this.setState({ motion: false });
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this._rs); if (this._ro) this._ro.disconnect(); }
+  renderVals() {
+    const s = this.state, set = (o) => this.setState(o), T0 = this.T[s.sel], ed = s.ed[T0.slug] || {};
+    const T = { ...T0, vez: ed.vez !== undefined ? ed.vez : T0.vez, ker: ed.ker !== undefined ? ed.ker : T0.ker };
+    const area = ed.area !== undefined ? ed.area : T0.area, sub = ed.sub !== undefined ? ed.sub : T0.sub, label = ed.label !== undefined ? ed.label : T0.label;
+    const f = this.F[s.fmt], u = f.w / 100, H = f.h / u;
+    const acc = s.preset === 4 ? T.col : s.acc, bg = s.bg, txt = s.txt, arcC = s.arcCat ? T.col : s.arc;
+    const fH = this.FH[s.fontH][1], fB = this.FB[s.fontB][1];
+    const A = (h, a) => h + Math.round(Math.max(0, Math.min(1, a)) * 255).toString(16).padStart(2, '0');
+    const lum = (h) => { const n = parseInt(h.slice(1, 7), 16), c = [n >> 16, (n >> 8) & 255, n & 255].map(v => { v /= 255; return v <= .03928 ? v / 12.92 : Math.pow((v + .055) / 1.055, 2.4); }); return .2126 * c[0] + .7152 * c[1] + .0722 * c[2]; };
+    const cw = (s.upper ? .68 : .57) * (1 + s.ls / 100) * (s.wgt >= 800 ? 1.03 : 1);
+    const ns = s.nameScale / 100, pS = s.pScale / 100;
+    const mx = s.par ? s.mx : 0, my = s.par ? s.my : 0;
+    let ph, cx;
+    if (s.lay === 0) { ph = f.ph * pS; cx = 100 - ph * .8 / 2 + 3 + s.pX; }
+    else if (s.lay === 1) { ph = Math.min(H * .84, 90) * pS; cx = 50 + s.pX; }
+    else { ph = (H < 70 ? H * .64 : Math.min(H * .72, 90)) * pS; cx = 50 + s.pX; }
+    const pw = ph * .8;
+    const lA = s.lay === 0, lB = s.lay === 1, lC = s.lay === 2, cOne = H < 70, arS = f.ar;
+    const lh = s.upper ? .96 : 1.04, who = (T.vez + ' ' + T.ker).trim(), ta = lA ? 'left' : 'center';
+    const words = String(area || '').trim().split(/\s+/).filter(Boolean);
+    const split = (k) => {
+      let best = null;
+      const rec = (i, left, got) => {
+        if (left === 1) { const ls = got.concat([words.slice(i).join(' ')]), m = Math.max(...ls.map(x => x.length)), q = ls.reduce((a, x) => a + x.length * x.length, 0); if (!best || m < best.m || (m === best.m && q < best.q)) best = { m, q, ls }; return; }
+        for (let j = i + 1; j <= words.length - (left - 1); j++) rec(j, left - 1, got.concat([words.slice(i, j).join(' ')]));
+      };
+      rec(0, k, []);
+      return best;
+    };
+    const fit = (maxL, w, cap, maxH, floor) => {
+      let best = { e: cap, lines: [] };
+      for (let k = 1; k <= Math.min(maxL, words.length); k++) {
+        const sp = split(k), e = Math.min(cap, w / (Math.max(sp.m, 1) * cw), Math.max(floor, maxH / (k * lh)));
+        if (k === 1 || e > best.e * 1.04) best = { e, lines: sp.ls };
+      }
+      return best;
+    };
+    const headTop = H - ph - s.pY + ph * .05, under = arS * 1.9 + (sub ? arS * 1.5 : 0);
+    const availA = f.mode === 'side' ? f.txtW : 86;
+    const tt = lA ? fit(3, availA, f.base * ns, Math.max(4, f.mode === 'side' ? H - 30 - under : headTop + ph * .1 - f.top - under), 0)
+      : lB ? fit(cOne ? 1 : 2, 88, f.bB * ns, 999, 0)
+      : fit(cOne ? 1 : 3, 94, f.base * 1.45 * ns, (headTop - 17) / .82, 4);
+    const ttl = tt.lines.map((t, k) => ({ t, st: `font:${s.wgt} ${tt.e}em/${lh} ${fH};letter-spacing:${s.ls / 100}em;text-transform:${s.upper ? 'uppercase' : 'none'};color:${s.accName && tt.lines.length > 1 && k === tt.lines.length - 1 ? acc : txt};white-space:nowrap;text-align:${ta}` }));
+    const boxA = f.mode === 'side' ? `position:absolute;left:6em;top:50%;transform:translateY(-50%);width:${availA}em;z-index:4` : `position:absolute;left:6em;top:${f.top}em;width:86em;z-index:4`;
+    const boxC = `position:absolute;left:0;right:0;top:${Math.max(17, headTop - tt.lines.length * tt.e * lh * .82)}em;text-align:center;z-index:2`;
+    const nameSt = `font:700 ${arS}em/1.25 ${fB};color:${acc};margin-top:${lC ? 0 : arS * .6}em;text-align:${ta}`;
+    const subSt = `font:500 ${arS * .85}em/1.3 ${fB};color:${txt};margin-top:.35em;text-align:${ta}`;
+    const barSt = `position:absolute;left:0;right:0;bottom:0;z-index:5;text-align:center;padding:${Math.max((lB ? tt.e : f.bB) * 1.6, 10)}em 6em 4.5em;background:linear-gradient(to top,${bg} 58%,${A(bg, 0)})`;
+    const pillSt = `background:${acc};color:${lum(acc) > .4 ? '#0c181b' : '#ffffff'};font:700 ${arS * .8}em/1 ${fB};padding:.7em 1.1em;border-radius:99em;white-space:nowrap`;
+    let arcSt = 'display:none';
+    if (s.shape === 0) arcSt = `position:absolute;left:${cx}em;bottom:0;width:${pw * 1.12}em;height:${ph * .82}em;transform:translateX(-50%);border-radius:999em 999em 0 0;background:${A(arcC, .92)};z-index:1`;
+    if (s.shape === 1) arcSt = `position:absolute;left:${cx}em;bottom:${ph * .2 + s.pY}em;width:${pw}em;height:${pw}em;transform:translateX(-50%);border-radius:50%;background:${A(arcC, .92)};z-index:1`;
+    const custom = s.custom[T0.slug], portImg = custom || (s.casual && !T0.nc ? `assets/portre/casual/${T0.slug}-lg.webp` : `assets/portre-orig/${T0.slug}.webp`);
+    const portSt = `position:absolute;left:${cx}em;bottom:${s.pY}em;height:${ph}em;width:${pw}em;object-fit:contain;object-position:50% 100%;transform:translateX(-50%) translate(${mx * 1.2}em,${my * .6}em);filter:drop-shadow(0 1.4em 2.2em rgba(0,0,0,.35));z-index:3;transition:transform .25s ease-out`;
+    const i = s.inten / 100, dur = 60 - s.speed * .5, an = (n) => s.motion ? `animation:${n} ${dur}s ease-in-out infinite alternate;` : '';
+    const blob = (l, t, d, c, a, n) => `position:absolute;width:${d}em;height:${d}em;left:${l}em;top:${t}em;border-radius:50%;background:radial-gradient(circle,${A(c, a)},transparent 65%);filter:blur(3em);${an(n)}`;
+    const blob1 = blob(-15, -20, 70, acc, i * .7, 'gmkB1'), blob2 = blob(55, H - 50, 65, arcC, i * .65, 'gmkB2'), blob3 = blob(30, H * .3, 45, acc, i * .35, 'gmkB3');
+    const dotsSt = `position:absolute;inset:0;background-image:radial-gradient(circle,${A(acc, i * .7)} .22em,transparent .27em);background-size:3em 3em;${s.motion ? `animation:gmkDots ${dur * .4}s linear infinite;` : ''}`;
+    const stripeSt = `position:absolute;inset:0;background-image:linear-gradient(135deg,${A(acc, i * .45)} 25%,transparent 25%,transparent 50%,${A(acc, i * .45)} 50%,${A(acc, i * .45)} 75%,transparent 75%);background-size:6em 6em;${s.motion ? `animation:gmkStr ${dur * .5}s linear infinite;` : ''}`;
+    const wide = s.vw >= 1100;
+    const availW = wide ? s.vw - 240 - 330 - 120 : s.vw - 80, availH = wide ? Math.max(s.vh - 190, 360) : 99999;
+    const scale = Math.max(.15, Math.min(1, availW / f.w, availH / f.h));
+    const seg = (list, cur, fn, ff) => list.map((t, k) => ({ t, ff: ff ? ff[k] : "'DM Sans',sans-serif", bg: k === cur ? '#14262b' : '#fff', fg: k === cur ? '#fff' : '#2b302f', bd: k === cur ? '#14262b' : '#d6dde0', onClick: () => fn(k) }));
+    const sl = (k) => (e) => set({ [k]: +e.target.value });
+    const tx = (k) => (e) => set({ ed: { ...s.ed, [T0.slug]: { ...ed, [k]: e.target.value } } });
+    const rnd = (a) => a[Math.floor(Math.random() * a.length)];
+    const ck = (b) => b ? '#14262b' : '#fff';
+    const rawArc = s.arcCat ? T.col : s.arc;
+    return {
+      ready: true, s, t: T, oList: wide ? 0 : 2, area, sub, label, hasSub: !!sub, hasLabel: !!label,
+      gridCols: wide ? '240px minmax(0,1fr) 330px' : 'minmax(0,1fr)', listCols: wide ? '1fr 1fr' : `repeat(${this.T.length},84px)`, listOverflow: wide ? 'visible' : 'auto', stickyPos: wide ? 'sticky' : 'static',
+      people: this.T.map((p, k) => ({ n: p.vez + ' ' + p.ker, c: p.col + '33', img: `${s.casual && !p.nc ? 'assets/portre/casual/' : 'assets/portre/'}${p.slug}-sq.webp`, bd: k === s.sel ? '#12908d' : '#e6ebed', onClick: () => set({ sel: k }) })),
+      styleTabs: seg(['Elegáns (blézer)', 'Casual'], s.casual ? 1 : 0, k => set({ casual: k === 1 })),
+      fmtTabs: seg(this.F.map(x => x.t), s.fmt, k => set({ fmt: k })),
+      layTabs: seg(['A · Portré jobbra, szöveg balra', 'B · Portré középen, cím alul', 'C · Cím a portré mögött'], s.lay, k => set({ lay: k })),
+      presets: this.PRE.map((p, k) => ({ t: p.t, c1: p.bg, c2: p.acc || T.col, bd: k === s.preset ? '#12908d' : '#e6ebed', onClick: () => set({ preset: k, bg: p.bg, acc: p.acc || s.acc, txt: p.txt }) })),
+      fontsH: seg(this.FH.map(x => x[0]), s.fontH, k => set({ fontH: k }), this.FH.map(x => x[1])),
+      fontsB: seg(this.FB.map(x => x[0]), s.fontB, k => set({ fontB: k }), this.FB.map(x => x[1])),
+      weights: seg(['600', '700', '800', '900'], [600, 700, 800, 900].indexOf(s.wgt), k => set({ wgt: [600, 700, 800, 900][k] })),
+      shapes: seg(['Ív', 'Korong', 'Nincs'], s.shape, k => set({ shape: k })),
+      bgTypes: seg(['Foltok', 'Pontrács', 'Csíkok', 'Egyszínű'], s.bgType, k => set({ bgType: k })),
+      st: { w: f.w, h: f.h, u, bg, txt, fB }, scale, wrapW: Math.round(f.w * scale), wrapH: Math.round(f.h * scale), pct: Math.round(scale * 100),
+      ttl, who, hasWho: !!who, nameSt, lA, lB, lC, lBC: lB || lC, b0: s.bgType === 0, b1: s.bgType === 1, b2: s.bgType === 2,
+      blob1, blob2, blob3, dotsSt, stripeSt, arcSt, portSt, portImg, boxA, boxC, subSt, barSt, pillSt,
+      logoSrc: lum(bg) > .55 ? 'logo.png' : 'logo-white.png', logoBottom: lA && f.mode === 'side', logoRow: !(lA && f.mode === 'side'),
+      accV: acc, arcV: rawArc, arcCatBg: ck(s.arcCat), upperBg: ck(s.upper), accNameBg: ck(s.accName), motionBg: ck(s.motion),
+      setBg: (e) => set({ bg: e.target.value, preset: -1 }), setAcc: (e) => set({ acc: e.target.value, preset: s.preset === 4 ? -1 : s.preset }), setTxt: (e) => set({ txt: e.target.value, preset: -1 }), setArc: (e) => set({ arc: e.target.value, arcCat: false }),
+      toggleArcCat: () => set({ arcCat: !s.arcCat }), toggleUpper: () => set({ upper: !s.upper }), toggleAccName: () => set({ accName: !s.accName }), toggleMotion: () => set({ motion: !s.motion }), togglePar: () => set({ par: !s.par, mx: 0, my: 0 }), parBg: ck(s.par),
+      setNameScale: sl('nameScale'), setLs: sl('ls'), setPScale: sl('pScale'), setPX: sl('pX'), setPY: sl('pY'), setInten: sl('inten'), setSpeed: sl('speed'),
+      setVez: tx('vez'), setKer: tx('ker'), setArea: tx('area'), setSub: tx('sub'), setLabel: tx('label'),
+      onMove: (e) => { if (!s.par) return; const r = e.currentTarget.getBoundingClientRect(); this.setState({ mx: ((e.clientX - r.left) / r.width - .5) * 2, my: ((e.clientY - r.top) / r.height - .5) * 2 }); },
+      onLeave: () => set({ mx: 0, my: 0 }),
+      pickFile: (e) => { const fl = e.target.files && e.target.files[0]; if (!fl) return; set({ custom: { ...s.custom, [T0.slug]: URL.createObjectURL(fl) } }); },
+      hasCustom: !!custom, clearFile: () => { const c = { ...s.custom }; delete c[T0.slug]; set({ custom: c }); },
+      randomize: () => { const p = rnd([0, 1, 2, 3, 4]), P = this.PRE[p]; set({ lay: rnd([0, 1, 2]), preset: p, bg: P.bg, acc: P.acc || s.acc, txt: P.txt, fontH: rnd([0, 1, 2, 3, 4, 5]), fontB: rnd([0, 1, 2, 3]), wgt: rnd([700, 800, 900]), upper: rnd([true, false]), shape: rnd([0, 1]), bgType: rnd([0, 1, 2, 3]), accName: rnd([true, false]) }); },
+      reset: () => set({ ...this.D, ed: {}, custom: {} }),
+      hasToast: !!s.toast, toast: s.toast,
+      exportPng: async () => {
+        const node = document.getElementById('gmk-stage');
+        if (!node || !window.htmlToImage) { set({ toast: 'A PNG-exportáló nem töltődött be, próbáld újra.' }); return; }
+        set({ toast: 'Készül a PNG…' });
+        try {
+          const url = await window.htmlToImage.toPng(node, { width: f.w, height: f.h, pixelRatio: 2, cacheBust: true, style: { transform: 'none', transformOrigin: 'top left' } });
+          const a = document.createElement('a'); a.href = url; a.download = T0.slug + '_' + f.k + '.png'; a.click(); set({ toast: '' });
+        } catch (err) { set({ toast: 'A PNG-készítés nem sikerült. Feltöltött képnél vagy a betűk betöltése után próbáld újra.' }); }
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

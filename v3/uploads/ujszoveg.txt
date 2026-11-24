@@ -1,0 +1,851 @@
+GMK sales oldal – új szöveg 2027
+A Gerilla Mentor Klub sales oldalának teljes, újraírt szövege blokkról blokkra, Zsolt sales oldalas és ajánlatkészítési szempontjai szerint: konkrét fő ígéret, pozitív jövőkép, elnevezett útvonalak, három pillérbe rendezett tartalom, valós értékekkel felépített ajánlat, kifogáskezelő bónuszok, garancia és hiteles határidő. Ár: havi 50 000 Ft helyett féláron, 24 950 Ft/hó.
+Jelölések: a [szögletes zárójelben] lévő számokat élesítés előtt ellenőrizni kell; a [DÖNTENDŐ] jelű elemekről a csapatnak kell döntenie. A dőlt sorok szerkesztői vagy UX-megjegyzések, nem kerülnek az oldalra.
+1. Hero
+Kampányoldalon egyszerűsített fejléc: logó és egy gomb, menü nélkül.
+<b>Főcím:</b> Több interjú, jobb állás vagy új szakma – munka mellett, néhány hónap alatt, AI-tudással.
+<b>Alcím:</b> A Gerilla Mentor Klubban gyakorló szakemberektől tanulod meg azt a szakmai és AI-tudást, amit ma megfizetnek, és mellé egy 18 éve csiszolt álláskeresési módszert, amivel ezt el is tudod adni. Élő órákon munka után, vagy videón, amikor neked jó.
+Megtudod, milyen tudásért fizetnek most többet a cégek, és meg is tanulod.
+Olyan önéletrajzzal pályázol, ami átjut a szűrőn, és magabiztosan tárgyalsz bért.
+Angolul vagy németül is megszólalsz az állásinterjún.
+<b>Ajánlat:</b> Havi 50 000 Ft helyett most féláron: <b>24 950 Ft/hó</b>. Bármikor lemondható, nincs hűségidő.
+<b>[Csatlakozom féláron →]</b> (meleg forgalomnak) · <b>[Megnézem, mit kapok ↓]</b> (hideg kampányoldalon ez az elsődleges gomb)
+<b>Bizalmi sáv:</b> ★ [4,9]/5 · [570+] Google-vélemény · [9000+] tag · 480+ élő tréning és képzés 2027-ben · 18 év karrier-tanácsadói tapasztalat · Nyilvántartott felnőttképző
+2. Sikertörténet-csík (közvetlenül a hero alatt)
+Három kis kártya fotóval vagy monogrammal, egy-egy mondattal; engedély szükséges.
+<b>+66% fizetés</b> – [Somogyi Zsigmond] zenész végzettségű adminisztrátorból lett üzleti elemző.
+<b>Dupla nettó fizetés</b> – Pálócziné Vitányi Alexandra két kisgyerek mellett adatelemzési képzések után lett adatelemző egy amerikai cégnél. [engedély ellenőrizendő]
+<b>Új állás 5 nap alatt</b> – Otlecz Mónika 10 év közigazgatás után a Gerilla módszerrel váltott, nettó 120 000 Ft-tal magasabb fizetéssel. [engedély ellenőrizendő]
+Alternatív kártyák a friss referenciákból: „A nettó fizetése duplájáért lett Sales Business Analyst” – M. Csilla · „4 pályázatból 4 behívás 56 évesen” – Illés · „Bruttó 900 000 Ft-os ajánlat gyes után” – Pólya-Makovics Adrienn (részletek a 9. blokkban).
+3. Ismerős valamelyik?
+<b>Cím:</b> Ismerős valamelyik helyzet? Nem vagy egyedül.
+<b>Csend a pályázataidra.</b> Egy átlagos hirdetésre ma 300–500 jelentkezés érkezik, és a HR-es 5–8 másodpercet szán egy önéletrajzra.
+<b>„Ehhez már öreg vagyok.”</b> 40–50 fölött úgy érzed, a fiatalabbakat választják, pedig a pályázatod mutat idősebbnek, nem te.
+<b>A fizetésed helyben jár.</b> Évi 5–10% emelés mellett is lemaradsz: 2018 óta az átlagbér több mint duplájára nőtt.
+<b>Az AI mindenhol ott van.</b> Az álláshirdetésekben már elvárás, és nem tudod, hol kezdd.
+<b>Nem tudod, merre tovább.</b> Unod, amit csinálsz, de csak azt ismered, amiből jössz.
+<b>Tudásod van, papírod kevés.</b> Diploma, nyelvvizsga vagy friss tanúsítvány nélkül alulárazod magad.
+4. Képzeld el három hónap múlva
+<b>Cím:</b> Milyen lenne, ha három hónap múlva már másképp néznél a karrieredre?
+Pontosan tudod, <b>melyik két-három irányba érdemes pályáznod</b>, és mindegyikhez van egy rászabott önéletrajzod.
+<b>Visszahívnak</b>, és az interjún konkrét példát mondasz arra, hogyan használod az AI-t a munkádban.
+A CV-dben <b>friss, keresett tudás</b> szerepel: Excel, Power BI, SQL, SAP, online marketing vagy AI.
+<b>Bértárgyaláskor egy konkrét összeget mondasz</b>, és az ajánlatot írásban kéred.
+Már nem ugrod át<b> </b>azokat a hirdetéseket, ahol <b>angol vagy német tudást </b>kérnek.
+Ehhez két dolog kell: célzott tanulás és egy bevált álláskeresési módszer. A Mentor Klubban mindkettőt megkapod.
+5. Miért most?
+<b>Cím:</b> A munkaerőpiac kettévált. Te döntöd el, melyik oldalon építkezel.
+A hagyományos, „statikus” munkakörökben évek óta beragadtak a bérek. A modern, digitális szakértői szerepekben (adatelemzés, automatizáció, online marketing, SAP, projektmenedzsment, AI) a cégek kevés jó szakembert találnak, ezért ott pályakezdőként is többet fizetnek. Vegyünk két ugyanolyan szorgalmas pénzügyest: az egyik csak Excelben dolgozik, a másik Power BI-ban riportot is épít, és AI-jal automatizál. A második többet keres, mert ebből a tudásból kevés van a piacon. <b>A cégek nem azt fizetik meg, ki dolgozik többet, hanem azt, amit kevesen tudnak.</b>
+<b>Kiemelt doboz – az AI-ablak most van nyitva:</b>
+Év
+Mi történik a cégeknél
+Mit jelent neked
+2027
+Most vezetik be az AI-t, mindenki tanu.
+Friss gyakorlati tudással is beléphetsz.
+2028–2029
+Az AI-tudás alapelvárás lesz.
+Bizonyított használat kell.
+2030 után
+Senior AI-tapasztalatot keresnek.
+A váltók ablaka szűkül.
+Az AI-t azok fogják a legjobban kihasználni, akik a saját szakmájukban tanulják meg. Ehhez programozónak sem kell lenned.
+6. Válaszd ki a saját útvonaladat
+<b>Cím:</b> Négy útvonal, négy cél. Melyik a tiéd?
+UX: négy kártya, kattintásra lenyílva; minden kártya alján ugyanaz a csatlakozó gomb.
+Útvonal
+Kinek
+Első lépések a Klubban
+Mire juthatsz
+<b>Állásszerző útvonal</b>
+Ha jobb állást keresel, és szeretnéd, hogy végre visszahívjanak
+Havonta induló álláskeresési tréningek: Önéletrajz és motivációs levélírás, Pályaorientáció és álláskeresési stratégiák, LinkedIn használata, Állásinterjú és bértárgyalás; negyedévente Álláskeresés fejvadásszal és Álláskeresés pszichológiája; utánuk csoportos konzultáció; idegen nyelvű álláshoz angol vagy német állásinterjú-felkészítő (6 hét) [időpontok: 2027-es naptár]
+Pozicionált CV két-három irányra, több interjúmeghívás, felkészült bértárgyalás
+<b>Karrier Hack útvonal</b>
+Ha új, jobban fizető szakmába váltanál, de nem a nulláról
+Pályaorientáció és álláskeresési stratégiák tréning, majd egy-két alapozó „kóstoló” (Hatékony irodai Excel, Adatbázis és SQL alapjai, SAP alapozó, Online marketing alapozó, Cloud alapozó – AWS vagy Azure, Projektmenedzsment hatékonyan), utána a választott tematikus hullám többhetes képzései: Excel és Power BI (Dashboardok Excelben → Power BI kezdő → Haladó Power BI), SQL (SQL lekérdezések → SQL adatbáziskezelés → NoSQL), projektmenedzsment és agilis (PM hatékonyan → agilis működés → Scrum master, Jira, Product Owner), SAP-ciklus (MM, ABAP, SD, HR, FI) [hullámok indulása: 2027-es naptár]
+Egy kiválasztott irány, tanúsítványok a CV-be, 1–1,5 hónap után pályázásra kész alapok
+<b>AI-szakértő útvonal</b>
+Ha a saját munkádban használnád az AI-t, vagy AI-szerepkör felé mennél
+Belépő: AI a mindennapi munkában útvonal (februártól); utána az AI és automatizáció hullám: AI ügynökök programozás nélkül → Vibe Coding: saját app kód nélkül (6 hét) → Programozás AI ügynökkel → Claude Cowork → AI automatizáció a gyakorlatban (N8N) → Multi-agent rendszerek és MCP; mellette ChatGPT kezdő és haladó, Copilot, Gemini, Claude Code, Lovable; haladóknak AI Solution Analyst program és Business Analyst képzés AI-jal (6–6 hét) [időpontok: 2027-es naptár]
+Saját munkafolyamataidban használt AI-eszközök, konkrét példák az interjúra
+<b>Szintlépő útvonal</b>
+Ha a mostani szakterületeden lépnél feljebb
+Haladó szakmai képzések: Excel középhaladó–haladó (8 hét), Excel trükkök, Haladó Power BI, Power Apps & Power Automate, Python haladó, Haladó Cloud – Azure, Lean és Six Sigma, Toborzás 2.0, HR Business Partner, HRBP Academy; vezetői és soft skill: Csapatvezetés felsőfokon (7 hét), Önérvényesítés program, Tárgyalástechnikák, „Hogyan érd el, hogy előléptessenek?” [időpontok: 2027-es naptár]
+Erősebb pozíció belső előléptetéshez vagy bértárgyaláshoz
+<b>40 fölött vagy gyes után?</b> Kezdd az Állásszerző útvonallal: megmutatjuk, hogyan lesz a CV-d „kortalan”, és hogyan mutasd be a kihagyást erősségként. Zsuzsa 60 évesen, Illés 56 évesen, Joób Réka 10 év gyes után talált így új állást.
+6/B. Februárban induló tematikus tanulási útvonalak
+UX: három egymás melletti kártya „Februárban indul” címkével; kattintásra lenyílik a lépéssor. A pontos kezdési dátumok a képzési adatbázisból töltődnek, amint a naptár végleges. Hideg kampányoldalon ez a blokk közvetlenül a hero után is állhat, mert konkrét, időhöz kötött indulást ad.
+<b>Cím:</b> Februárban három tematikus útvonal indul. Csatlakozz most, és egy csoporttal haladj végig rajta.
+Nem kell a több száz képzés közül egyedül összeválogatnod, mit tanulj. Februárban három, egymásra épülő tanulási útvonal indul: adatelemzés, projektmenedzsment és AI a mindennapi munkában. Mindegyik néhány egynapos tréningből és egy-két többhetes élő képzésből áll, nagyjából 3 hónap alatt végigjárható, és a végére lesz egy bemutatható munkád, amit az önéletrajzodba és a LinkedIn-profilodba is beírhatsz. Mindhárom benne van a tagdíjban, és egyszerre többet is választhatsz.
+1. Adatelemzés és üzleti intelligencia: Excelből Power BI-ig
+<b>Kinek:</b> kontrollereknek, pénzügyi és üzleti elemzőknek, HR-es, marketinges és irodai munkatársaknak, akik naponta Excelben riportolnak, és adatvezéreltebb, jobban fizetett szerepbe lépnének.
+<b>Mit old meg:</b> órákig tartó kézi Excel-munka és havi riportgyártás helyett gyors, automatikusan frissülő dashboardokat készítesz, és te leszel az, akihez a vezetők döntéstámogatásért fordulnak.
+<b>Az útvonal lépései:</b>
+<b>1. hét:</b> Hatékony irodai Excel (egynapos tréning) – az Excel-alapok rendbetétele
+<b>2. hét:</b> Dashboardok készítése Excelben (egynapos tréning) – a Klub egyik legnépszerűbb képzése
+<b>3–8. hét:</b> Power BI kezdő (6 hetes élő képzés), vagy elmélyítésként a Dashboardok Excelben 8 hetes változata
+<b>3–4. hónap:</b> Haladó Power BI (6 hetes élő képzés)
+<b>Mellé videón:</b> Power Query, Power BI Desktop, adatvizualizáció, AI az adatelemzésben
+<b>Amit a végén felmutatsz:</b> egy saját Power BI- vagy Excel-dashboard valós vagy minta üzleti adatokon, amit 10 percben be tudsz mutatni a vezetődnek, és feltölthetsz a LinkedIn-profilodra.
+<b>Piaci háttér:</b> BI-fejlesztő, adatelemző és kontroller pozíciókban [bruttó 1,1–2,0 millió Ft/hó] a bérsáv. [Forrás: Karrier Hack prezentáció; ellenőrizendő]
+2. Projektmenedzsment és agilis működés: a projektvezetéstől a szakosodásig
+<b>Kinek:</b> projektvezetőknek, csapatvezetőknek és mindenkinek, aki papíron nem projektvezető, de valójában projekteket koordinál, és piacképes projektmenedzsment- és agilis tudást szeretne.
+<b>Mit old meg:</b> csúszó határidők és improvizáció helyett átlátható projekttervezést tanulsz, és valódi tudást kapsz az „agilis” szavak mögé.
+<b>Az útvonal lépései:</b>
+<b>1. hét:</b> Projektmenedzsment hatékonyan (egynapos tréning)
+<b>2. hét:</b> Bevezetés az agilis működésbe (egynapos tréning)
+<b>2–5. hét:</b> Projektmenedzsment hatékonyan (4 hetes élő képzés)
+<b>4–7. hét:</b> eszköztár AI-jal – Projektmenedzsment AI-jal (Notion, Asana, Trello), Asana a gyakorlatban, Monday.com középhaladóknak
+<b>3–4. hónap, szakosodás:</b> Termékmenedzsment a Jira-ban (egynapos tréning és 4 hetes képzés); a Scrum master és az Agilis Product Owner irány a következő indulásnál [időpont]
+<b>Mellé videón:</b> Agilis iránytű, Bevezetés a KanBan-ba, IT projektmenedzsment szerepkörök
+<b>Amit a végén felmutatsz:</b> egy valós vagy szimulált projekt teljes projektterve, ütemterve és utóértékelése a választott eszközben (Asana, Monday.com vagy Jira). Ez az esettanulmány projektvezetői, Scrum Master vagy Product Owner pályázathoz is jó.
+<b>Piaci háttér:</b> IT projektmenedzser, Business Analyst, Scrum Master és Product Owner pozíciókban [bruttó 1,1–1,7 millió Ft/hó] a bérsáv. [Forrás: Karrier Hack prezentáció; ellenőrizendő]
+3. AI a mindennapi munkában: az első prompttól a saját AI-asszisztensig
+<b>Kinek:</b> átlagos irodai, szellemi munkát végzőknek – adminisztráció, ügyfélkapcsolat, pénzügy, HR, projektasszisztens, kisvállalkozó –, akik most ismerkednek az AI-jal. Előképzettség, AI-tapasztalat és programozói tudás nem kell; heti 2–3 óra elég.
+<b>Mit old meg:</b> a „hallottam már az AI-ról, de fogalmam sincs, hol kezdjem” helyett a saját valós feladataidon (levél, összefoglaló, kutatás, döntési anyag, prezentáció) tanulod meg biztonságosan és ellenőrzötten használni az AI-t, az első promptoktól a rutinszerű használatig.
+<b>Az útvonal lépései:</b>
+<b>1. hét:</b> „Hogyan érvényesülj munkavállalóként az AI által átalakított világban?” és ChatGPT alkalmazása szakmai feladatokra – kezdő (két félnapos tréning)
+<b>2–3. hét:</b> AI és a kreativitás (félnapos tréning), majd Copilot a munkanapban (félnapos tréning, új) vagy az MS Copilot alapok videón
+<b>4–5. hét:</b> AI-alapú kutatás és elemzés (új), Érvelés, döntés-előkészítés és prezentáció AI-val (egynapos tréning, új), majd ChatGPT szakmai feladatokra – haladó
+<b>6–7. hét:</b> Claude – az AI mint munkatárs (félnapos tréning) [végleges név egyeztetendő] és Projektmenedzsment AI-jal – Notion, Asana, Trello (egynapos tréning)
+<b>8–11. hét (választható):</b> Copilot (4×3 órás képzés) vagy AI asszisztens a PM napi munkájában (4 hetes élő képzés)
+<b>12. hét:</b> AI-rendelet (EU AI Act) és céges AI-kézikönyv (félnapos tréning, új)
+<b>Mellé videón:</b> Prompt Engineering, AI és content, MS Copilot alapok, Lokális AI – szenzitív adatok kezelése, Mesterséges intelligencia az üzleti élet gyakorlatában
+<b>Amit a végén felmutatsz:</b> egy saját „AI-munkafüzet”: legalább 10 saját feladaton kipróbált prompt, 3 feladat előtte–utána összevetése idő és minőség szerint, egy részben AI-ra bízott munkafolyamat emberi ellenőrzési ponttal és egy egyoldalas személyes AI-használati szabály. Ez kerül a CV-dbe, és ebből hozol példát az interjún.
+<b>Piaci háttér:</b> az AI-eszközök használata ma már a legtöbb irodai és szellemi munkakör hirdetésében megjelenik az elvárások között, ezért belépő szinten is versenyelőny. [Forrás és adat bekérendő]
+<b>Mindhárom útvonal így működik:</b>
+Csoporttal indulsz: februárban egyszerre kezdtek, így ugyanott tartotok, és a zárt Facebook-csoportban egymást is segítitek. (eldöntendő még)
+Az élő órák felvételről is visszanézhetők, a többhetes képzések munka után vannak.
+Minden elvégzett képzés után háromnyelvű tanúsítványt kapsz.
+Az utolsó lépés a Karrier Hack 3. lépése: az elvégzett képzéseket kiemeled az önéletrajzod elején és a LinkedIn-profilodon, ehhez a csoportos konzultáción segítünk.
+Benne van a tagdíjban, külön díj nélkül, és egyszerre több útvonalat is választhatsz.
+<b>[Csatlakozom, és februárban indulok →]</b>
+<b>Később induló útvonalak:</b> tavasz végén és ősszel újabb hullámok jönnek, például SQL-alapú adatelemzés vagy AI-ügynökök és automatizáció [időpont egyeztetendő], és a fenti három is új körben indul [hónapok a végleges naptár szerint]. [Szólj, ha indul →]
+Forrás: Mentor Klub – Tematikus tanulási blokkok (2026. szept.) és az Oktatási naptár 2027 februári hullámai (ADATBI, PMAGIL), valamint a Mindennapi produktivitás AI-jal tematikus blokk (pilot). A hetek a hullám kezdetétől számítanak; a pontos dátumok a végleges naptárból kerülnek a kártyákra. Kapcsolódás a 6. blokkhoz: az adatelemzés és a projektmenedzsment a Karrier Hack és a Szintlépő útvonalat, az AI a mindennapi munkában az AI-szakértő útvonal belépő lépcsője.
+7. Mit kapsz a tagsággal? Három pillér
+<b>Cím:</b> Tudás, állás és nyelv – egy tagságban, ami egy váltáshoz kell.
+UX: három fül vagy kártya (Tudás · Állás · Nyelv). Mindegyik egy vevői eredménnyel nyit, alatta a részletek lenyíló elemekben.
+1. pillér – Tudás: megtanulod, amit ma megfizetnek
+<b>AI Iskola – hogy a saját szakmádban te legyél, aki érti az AI-t.</b> 2027-ben 54 élő AI-tréning és -képzés, melléjük videós anyagok, a ChatGPT-, Claude- és Gemini-alapoktól a munkahelyi alkalmazáson át (adatelemzés, marketing, sales, projektmenedzsment, pénzügy) a legfrissebb irányokig: vibe coding, Lovable, Claude Code, AI-ügynökök, automatizáció. A 6 hetes AI Solution Analyst program külön út az AI-szerepkörök felé.
+Melyik szinten vagy most?
+Ismerkedsz: kérdezgeted a ChatGPT-t.
+AI-val dolgozol: a napi feladataid egy részét rábízod.
+Összekötöd a rendszereket: automatizálsz, ügynököket építesz.
+A szakterületed AI-szakértője vagy: tudod, hol és hogyan vezesd be.
+Sztori-doboz (András hangján): „A kajakegyesületünk új elnöke egy hónap alatt új weboldalt, 150 fős tagsági rendszert és évkönyvet rakott össze AI-jal, pedig nem fejlesztő. Ha a felét megtanulod annak, amit ma az AI tud, a céged AI-gurujává válhatsz.”
+<b>Adatelemzés – hogy az Excel, a Power BI és az SQL a CV-dben is ott legyen.</b> Egyre több hirdetés kér adatkezelési tudást pénzügyben, kontrollingban, HR-ben, logisztikában és marketingben is. Lépésről lépésre jutsz el az Excel-alapoktól a Power BI-riportokon és az SQL-en át a Pythonig és az automatizálásig, gyakorló elemzőktől.
+Élő képzések például (2027-es terv): Excel kezdő–középhaladó (12 hét), Excel középhaladó–haladó (8 hét), Excel trükkök (6 hét), Dashboardok Excelben (8 hét), Power BI kezdő és haladó (6–6 hét), Power BI a gyakorlatban (3 hetes kihívás), Power Query és Power Pivot (3 hét), SQL lekérdezések (8 hét), SQL adatbáziskezelés (4 hét), NoSQL (8 hét), Python (12 hét) és Python haladó (6 hét), Power Apps és Power Automate (6 hét).
+Bizonyíték a blokkban: [Somogyi Zsigmond] Power BI, SQL és Excel képzések után lett üzleti elemző, 66%-kal magasabb fizetéssel. Egy másik tagunk 7 év közszféra után 10–12 Data Analyst képzéssel lett adatelemző, 1,4-szeres fizetéssel.
+<b>Digitális marketing – hogy bármit el tudj adni, akár saját magadat is.</b> A vevő döntési logikájától a hirdetésen és a tartalmon át az eredmények méréséig: Google Ads, Meta-hirdetések, Google Analytics 4, SEO és AI SEO, szövegírás, közösségi média, e-mail marketing, WordPress, Canva, Photoshop, UX/UI, marketingtartalom AI-jal. Olyan trénerektől, akik évente több tucat kampányt visznek és százmilliós büdzséket kezelnek. Humán beállítottságúaknak az egyik legjobb belépő egy kreatív, rugalmas szakmába.
+<b>SAP saját tesztrendszerrel – hogy a CV-dbe valódi rendszerhasználatot írhass.</b> A nagyvállalati pozíciókban elvárás az SAP-tudás, magánszemélyként viszont szinte lehetetlen éles rendszeren gyakorolni. Mi vásároltunk egy saját, adatokkal feltöltött tesztrendszert [kb. 10 millió Ft-os beruházással], amit a tagdíjon felül nem kell megfizetned. Modulok: FI, CO, SD, MM, HR, QM, EWM, AA, BW és ABAP-alapok, 6–10 hetes élő képzésekkel. Egyik tagunk közel 40 évesen a Mentor Klub SAP MM képzése után váltott SAP-tanácsadói pályára.
+<b>További modulok:</b> IT és webfejlesztés, felhő (AWS, Azure), projektmenedzsment és Scrum, Lean és Six Sigma, HR és toborzás, irodai IT, személyiségfejlesztés, kommunikáció és vezetés. (A teljes kínálat lent, a Képzési katalógus és tréningfal blokkban, valamint a külön Képzéskatalógus oldalon látható.)
+2. pillér – Állás: hogy a tudásodat meg is tudd mutatni
+A Gerilla önéletrajz-módszer 18 év karrier-tanácsadásból született. Megtanulod, hogyan jut át a CV-d az ATS-szűrőn és a HR-es 5–8 másodpercén, hogyan pozicionáld magad két-három irányra, és hogyan tárgyalj bért úgy, hogy az ajánlat írásban is úgy szerepeljen, ahogy megbeszéltétek.
+6 elhelyezkedést segítő tréning: CV, LinkedIn, pályaorientáció, interjú, bértárgyalás
+[3] tapasztalt karrier-tanácsadó
+Kéthetente élő, online csoportos konzultáció önéletrajz, LinkedIn és pályaorientáció témában: ha részt veszel az élő álláskeresési tréningen, két héttel később a konzultáción visszajelzést kapsz a CV-dre, és élőben kérdezhetsz a karrier-tanácsadóinktól
+Zárt Facebook-csoport a Mentor Klub tagjainak, ahol a karrier-tanácsadóink rövid időn belül válaszolnak a kérdéseidre
+<b>Nem hagyunk magadra:</b> az álláskeresési élő tréningeken, a csoportos konzultációkon és a zárt csoportban is kérdezhetsz.
+<b>Bizonyíték:</b> egyik tagunk a Gerilla módszerrel két hónap alatt 29 pályázatból 14%-os interjúbehívási arányt ért el, az interjúk felét ajánlat követte, és 50%-kal magasabb alapbérrel helyezkedett el. Egy másik tagunk a zárt Facebook-csoportban ismerte meg azt a klubtársát, aki beajánlotta maga helyett a cégéhez. [Nagy Dóra; Bartok Emese – engedély ellenőrizendő]
+3. pillér – Nyelv: hogy ne kelljen átugranod a nyelvtudást kérő hirdetéseket
+<b>Angol:</b> önálló “Beszélj angolul” tananyag hat szinten (0–A2-től B2–C1-ig, nyelvvizsga-felkészítővel), már az első szinten közel 1500 hangos kérdés-válasz gyakorlattal; 6 hetes angol állásinterjú-felkészítő a Gerilla módszer szerint; 4 hetes üzleti angol képzések (meeting, tárgyalás, prezentáció, írásbeli kommunikáció). Tanárok: Erdélyi László, Graning Steven, Horváth Ilona Ida, Moore Jennifer, Ruzicska Viktor, Udvarhelyi Hardi Angelika és Wenczel Judit, köztük anyanyelvi amerikai és brit trénerek [a kezdő csoportok új trénere keresés alatt].
+<b>Német:</b> önálló tananyag öt szinten (A1–C1) a “Lupán Német Online” rendszerére építve, szintenként 26 beszédfejlesztő leckével és kb. 130 órányi videóval; élő kezdő, újrakezdő és középhaladó órák, német állásinterjú-felkészítés és 4 hetes üzleti német képzések. Tanárok: Bakos Zita, Egri Dorottya, Farkas Zita és Langner Kornélia. Egyik tagunk Bakos Zita német képzésével készült fel, és Bécsben helyezkedett el.
+Képzési katalógus és tréningfal
+Minták:
+https://www.skillshare.com/en/
+https://www.coursera.org/
+https://www.udemy.com/
+<b>Cím:</b> Nézd meg, mit tanulhatsz – név szerint.
+<b>Bevezető:</b> Minden képzés benne van a tagdíjban. Új anyagok havonta érkeznek, és a most csatlakozók ezeket is elérik.
+<b>Számsor:</b> [112] szakmai videós oktatóanyag · 2027-ben 228 egynapos élő tréning és 253 többhetes képzés-indulás, ebből 54 AI-tréning és -képzés, 168 angol és német képzés, 43 álláskeresési tréning · [83] személyiségfejlesztő és kommunikációs anyag · angol és német A1–C1
+<b>Tréningtábla 2027 – kategóriák az Oktatási naptár 2027 szerint (ez a modulfülek tartalma; az időpontok még nem véglegesek):</b>
+<b>Kategória</b>
+<b>Többhetes élő képzések (2027)</b>
+<b>Egynapos és félnapos tréningek (2027)</b>
+<b>Mikor indul?</b>
+<b>Álláskeresés / Karrierváltás</b>
+Angol és német állásinterjú-felkészítő (6 hét)
+Önéletrajz és motivációs levélírás · Pályaorientáció és álláskeresési stratégiák · LinkedIn használata az álláskeresésben és karrierváltásban · Állásinterjú és bértárgyalás · Álláskeresés fejvadásszal · Álláskeresés pszichológiája
+Havonta [időpont]
+<b>AI / Digitális</b>
+Vibe Coding: saját app kód nélkül (6 hét) · AI Solution Analyst program (6 hét) · Business Analyst képzés AI-jal (6 hét) · Kép- és videóalkotás AI segítségével (6 hét) · Designer 2.0: AI-first workflow UI/UX designereknek (8 hét) · AI-támogatott tananyagfejlesztés és gamifikáció (12 hét)
+AI ügynökök programozás nélkül · Programozás AI ügynökkel · Claude Cowork · Claude Code alapozó és haladó · AI automatizáció a gyakorlatban (N8N) · Multi-agent rendszerek és MCP · ChatGPT szakmai feladatokra (kezdő, haladó) · Copilot · Google Gemini AI alapok · Lovable: weboldal és app kód nélkül · OpenClaw · AI vállalati bevezetés · RAG alapok kezdőknek · Projektmenedzsment AI-jal · Marketing képek és videók AI-jal
+Évente több hullámban [időpont]
+<b>IT / Technológia</b>
+Excel kezdő–középhaladó (12 hét) · Excel középhaladó–haladó (8 hét) · Excel trükkök (6 hét) · Dashboardok Excelben (8 hét) · Power BI kezdő és haladó (6–6 hét) · Power BI a gyakorlatban (3 hét) · Power Query és Power Pivot (3 hét) · Power Apps & Power Automate (6 hét) · SQL lekérdezések (8 hét) · SQL adatbáziskezelés (4 hét) · NoSQL (8 hét) · Python (12 hét) és Python haladó (6 hét) · Haladó Cloud – Azure (7 hét) · CRM-automatizálás Salesforce-szal (8 hét) · SAP MM (8 hét), ABAP (10 hét), SD (6 hét), HR (10 hét), FI (6 hét)
+Hatékony irodai Excel · Excel pénzügyeseknek · Dashboardok Excelben · Adatbázis és SQL alapjai · SAP alapozó · SAP SD, QM és EWM modul · Cloud alapozó – AWS és Azure · ITIL 4 · SharePoint alapismeretek · Kiberbiztonsági alapok
+Évente 2–3 hullámban; SAP-modulok évente kétszer [időpont]
+<b>Projektmenedzsment / Agilis</b>
+Projektmenedzsment hatékonyan (4 hét) · Scrum master (8 hét) · Termékmenedzsment a Jira-ban (4 hét) · Lean a gyakorlatban (6 hét) · Six Sigma (5 hét)
+Projektmenedzsment hatékonyan · Projektmenedzsment alapjai – a tervtől a kontrollig · Bevezetés az agilis működésbe · Agilis Product Owner · Asana a gyakorlatban · Monday.com középhaladóknak · Notion · Lean tréning · Six Sigma tréning · FMEA
+Évente több hullámban [időpont]
+<b>Marketing / Online</b>
+Haladó online marketing (6 hét) · Canva a közösségi médiában (6 hét) · MailerLite – építsd fel az e-mail-rendszered (6 hét) · Közösségi kommunikáció az AI korában (6 hét)
+Online marketing alapozó · Az online vevőszerzés alapjai · Google Ads alapozó és haladó · Facebook hirdetéskezelő (alapozó, haladó) · Canva · WordPress és Elementor alapozó · Mailchimp · Közösségi kommunikáció több platformon · Hogyan adjunk el írásban? · Hatásvadász short videók · Videó online platformokon
+Évente 1–2 alkalommal [időpont]
+<b>Szakképesítést adó képzések </b>
+–
+Szövegírás több csatornára · AI-alapú design (Adobe Firefly, Canva, videószerkesztés) · AI és content · Marketing szövegírás AI-jal · Minőségi tartalom az online marketingben · Hogyan döntenek a vásárlók? · GDPR alapok influenszereknek · Etikus promóció I–II. · AI és kreativitás
+[időpont]
+<b>HR</b>
+Toborzás 2.0 (7 hét) · HR Business Partner a gyakorlatban (8 hét) · HRBP Academy (10 hét)
+–
+Évente 1–2 alkalommal [időpont]
+<b>Soft skill / Személyes fejlődés</b>
+Csapatvezetés felsőfokon (7 hét) · Önérvényesítés program (6 hét) · Értékes vagyok – önbecsülés 6 lépésben (6 hét) · A-B-be program (6 hét) · Kreatív Life Hack (5 hét)
+Célkitűzés · Halogatás · Változáskezelés · Asszertív kommunikáció · Konfliktuskezelés a munkahelyen · Tárgyalástechnikák · Prezentációs technikák · Storytelling alapú pitch · „Hogyan érd el, hogy előléptessenek?” · „Hogyan add el önmagad?” · Kiégés vagy álommunka? · DISC · Growth mindset · Mindfulness-sorozat (5 téma) és további témák
+Havonta több téma [időpont]
+<b>Angol</b>
+Kezdő 1–2, Újrakezdő 1–2, Középhaladó 1–2 (6–6 hét) · Angol állásinterjú-felkészítő (6 hét) · Üzleti angol (4–4 hét): mindennapi kommunikáció, meeting, prezentáció, tárgyalástechnika, írásbeli kommunikáció, társalgás és kapcsolatépítés
+–
+Új csoportok kb. 6–7 hetente, üzleti angol folyamatosan [időpont]
+<b>Német</b>
+Kezdő 1–2, Középhaladó (6–6 hét) · Német állásinterjú-felkészítő (6 hét) · Üzleti német (4–4 hét): mindennapi kommunikáció, írásbeli, meeting, prezentáció, tárgyalástechnika, társalgás
+–
+Kezdő csoport kéthavonta, üzleti német folyamatosan [időpont]
+<b>Egyéb</b>
+Vállalkozásindítás a gyakorlatban (8 hét) · Komplex pénzügyi alapozó (6 hét)
+–
+Évente 1–2 alkalommal [időpont]
+A videós könyvtár további anyagai (például Frontend, Full-Stack, RPA, Tableau, Excel VBA, KanBan, 5S, 8D, APQP) a katalógusoldalon a megfelelő kategóriában jelennek meg.
+<b>Mikrocopy a modulok alá:</b> Nem találod, amit keresel? Írj nekünk – a tagok kérései alapján indítjuk az új képzéseket.
+[Megnézem a teljes képzéskatalógust →] (a külön Képzéskatalógus oldalra visz)
+<b>UX és Lovable-útmutató a designernek:</b>
+<b>Felépítés felülről lefelé:</b> cím és számsor; kétsoros tréningfal; modulfülek kiemelt kártyákkal; trénerportré-rács; gomb a katalógusoldalra.
+<b>Tréningfal:</b> két sor képzésborító (kb. 20–30 darab), lassan, ellentétes irányba úszó végtelen sávban (marquee, kb. 40–60 másodperc egy kör). Egérrel fölé állva megáll, kattintásra a képzés rövid leírása nyílik. Ha a látogató kikapcsolta az animációkat (prefers-reduced-motion), statikus rács jelenik meg. A fal a mennyiséget érzékelteti, nem kell róla választani.
+<b>Modulfülek:</b> vízszintesen görgethető címkesor a fenti tréningtábla kategóriáival; fülenként 3–4 kiemelt képzéskártya és egy „Mind a [X] képzés ebben a modulban →” link a katalógusoldal megfelelő szűrésére.
+<b>Trénerportré-rács:</b> 8–12 tréner egységes kivágású fotóval, névvel és egy sornyi szakterülettel; kattintásra a tréner képzései jelennek meg. Ha a 10. blokk trénerkártyáival ismétlésnek hatna, a kettő összevonható.
+<b>Mobil:</b> a fal egy sorra csökken és ujjal húzható; a fülek vízszintesen görgethetők; a kártyák vízszintes sávban jelennek meg, az első kártya mindig teljesen látszik; a gombok legalább 44 px magasak.
+<b>Adatforrás:</b> ugyanaz a képzés-adatbázis (JSON vagy képzés-API), amiből a 90 napos naptár és a katalógusoldal is dolgozik, így egy új képzés mindhárom helyen automatikusan megjelenik. Mezők: cím, modul, formátum, hossz, nap és időpont, kezdés, szint, tréner (név, fotó), borítókép, állapotcímke, rövid leírás, link.
+Adatforrás: az Oktatási naptár 2027 „Naptár 2027” főlapja; a dátumok még módosulhatnak. 
+<b>Vizuális szabályok:</b> nyugodt, semleges háttér, a színt a borítók és a trénerfotók adják; kiemelt szín csak a csatlakozó gombon; hoverre enyhe nagyítás a kártyán, nehéz árnyékok, színátmenetek és villogó animáció nélkül. A képek késleltetve (lazy load) és fix mérettel töltődjenek, hogy a sorok ne ugráljanak.
+<b>Lovable-prompt kiindulásnak:</b> „Készíts egy teljes szélességű »Képzési katalógus« szekciót. Felül cím és számsor, alatta két sorban, ellentétes irányba lassan úszó képzésborító-sáv (marquee), ami hoverre megáll, és prefers-reduced-motion esetén statikus rácsra vált. Alatta vízszintesen görgethető modulfül-sor; a kiválasztott modulnál 4 képzéskártya (16:9 borító a modul színével, cím, tréner neve kis portréval, formátum, hossz, szint, állapotcímke) és egy »Mind a X képzés« link. Ezután 8–12 fős trénerportré-rács névvel és szakterülettel, végül egy »Megnézem a teljes képzéskatalógust« gomb. Az adatokat egy közös courses JSON-ból töltsd. Mobilon a sávok egysorosak és ujjal húzhatók.”
+Így tanulsz 
+<b>Videós oktatóanyagok</b> – [219] tananyag, bármikor, a saját tempódban.
+<b>Élő egy- és félnapos tréningek</b> – jellemzően csütörtökön és pénteken; kérdezhetsz a trénertől; a felvétel 10 napig visszanézhető.
+<b>Többhetes élő képzések</b> – 4–12 hét, heti egy-két alkalom munka után (jellemzően 17:00 vagy 17:30-tól); a felvétel az utolsó óra után egy hónapig elérhető.
+<b>Mobilapp</b> – a leckéket és a felvételeket telefonról is eléred, így a napi 30 perc tanulás bármelyik szabad félórádba belefér. [App Store és Google Play linkek ellenőrizendők]
+<b>Tanúsítvány</b> – minden elvégzett képzés után háromnyelvű tanúsítványt kapsz, amit a CV-dbe és a LinkedInre is beírhatsz.
+Nézz be a Klubba: kulisszák mögött videó
+UX: 2–3 perces videó kiemelt helyen, bélyegképpel és lejátszás gombbal; a hero „Megnézem, mit kapok ↓” gombja ide is vezethet. Legyen feliratozva, mert sokan hang nélkül nézik.
+<b>Cím:</b> Nézd meg 3 percben, mit kapsz, mielőtt csatlakozol.
+<b>Mit mutasson a videó (javasolt sorrend):</b>
+Belépés a Klubba és a kezdőfelület, ahol az útvonalak és a képzések vannak.
+A képzéskatalógus és egy képzés oldala: leírás, időpontok, tréner.
+Részlet egy élő óráról és a felvétel visszanézése.
+Az álláskeresési modul: önéletrajz-tréning és a csoportos konzultáció.
+A zárt Facebook-csoport, ahol a karrier-tanácsadók válaszolnak a kérdésekre.
+A mobilapp és egy háromnyelvű tanúsítvány.
+A videót András vagy egy kolléga narrálja, a valódi felületről, saját hangon: bemutató legyen, ne reklámfilm.
+A következő 90 nap a Klubban (lenyíló elem)
+<b>Cím:</b> Ha ma csatlakozol, ezek indulnak az első három hónapodban.
+Az első 30 napodban <b>[X] többhetes élő képzés</b> és <b>[Y] egynapos tréning</b> indul.
+Gördülő naptár a mai naptól számított 90 napra, hónap-fülekkel és útvonal szerinti szűrővel; képzéskártyán név, hossz, nap, kezdés, szint, tréner. Valós címkék: „Már indult – még becsatlakozhatsz”, „Regisztrálható”, „Új a Klubban”. Alatta „Érkezik 2027-ben” sáv a tervezett képzésekkel és egy „Szólj, ha indul” gombbal. Adatforrás: a képzési terv vagy a képzés-API, automatikusan.
+<b>[Csatlakozom féláron, és kezdem az első lépéssel →]</b>
+8. Miben más a Mentor Klub?
+<b>Cím:</b> Miért nem egy újabb tanfolyam?
+Egyedi tanfolyam
+Nyelviskola
+Nemzetközi kurzusplatform
+Gerilla Mentor Klub
+<b>Mit kapsz</b>
+Egy témát
+Egy nyelvet
+Sok videót, többnyire angolul
+Szakmai tudás, AI, nyelv és álláskeresés egy helyen
+<b>Élő óra magyarul</b>
+Igen
+Igen
+Ritkán
+Igen, munka után
+<b>Ki választja ki, mit érdemes tanulni</b>
+Te
+–
+Te
+Karrier-tanácsadók, a piaci kereslet alapján
+<b>Segítség az állásszerzésben</b>
+Nincs
+Nincs
+Nincs
+Álláskeresési modul és élő konzultáció
+<b>Éles SAP-gyakorlás</b>
+Ritkán
+–
+Nincs
+Saját tesztrendszer
+<b>Ár</b>
+[80 ezer – több százezer Ft] képzésenként
+[X Ft] félévente
+[X Ft]
+24 950 Ft/hó, bármikor lemondható
+Mindez a <b>Karrier Hack®</b> módszertan köré épül: egy olyan karriertervezési rendszerre, amellyel a meglévő tapasztalatodból kiindulva lépsz át egy jobban fizető, keresett területre.
+9. Akik már végigmentek rajta
+<b>Cím:</b> Tagjaink eredményei
+<b>[Somogyi Zsigmond], 30 éves, zenész végzettségű adminisztrátor</b> – Power BI, SQL, Power Apps és Excel képzések után üzleti elemzőként helyezkedett el, 66%-kal magasabb fizetéssel. Az SQL-t két hónappal korábban kezdte tanulni.
+<b>[Tag neve]</b> – Excel és Power BI képzések után +51% béremelés.
+<b>[Tag neve]</b> – a Mentor Klub módszerével 22 nap alatt új állás, +30% fizetés, +56%-kal több interjúmeghívás.
+<b>[Tag neve], 25 év munkaviszony után váltott</b> – a Gerilla módszerrel készült fel; pontosan azt a bruttó bért kapta, amit kért, 10 percre az otthonától.
+<b>Friss sikertörténetek a referenciamappából (2023–2026), témák szerint:</b>
+<b>Adatelemzés – M. Csilla, 8 év sales után:</b> Data Analyst, Power BI, Power Pivot és Power Query képzések után Sales Business Analyst lett, az addigi nettó fizetése duplájáért. [M. Csilla néven közzétehető]
+<b>Adatelemzés – [név nélkül], 7 év közszféra után:</b> korábban 100–120 jelentkezésből egyetlen interjúig jutott; 10–12 Data Analyst képzés és az álláskeresési tréningek után adatelemző lett, 1,4-szeres fizetéssel. [név nélkül közzétehető]
+<b>Két lépcsős váltás – [név nélkül], 13 év raktári munka után:</b> 50 tanúsítványt szerzett, előbb beszerző, majd termelési kontroller lett; Power BI-automatizálással évi kb. 1,7 millió Ft-ot spórolt a cégének, és 28%-os emelést ért el. [név nélkül közzétehető]
+<b>SAP – Dániel, közel 40 évesen operatív menedzserből:</b> a Mentor Klub SAP MM képzése megerősítette az irányt, Gerilla önéletrajzzal két SAP-tanácsadó cégtől kapott ajánlatot. [keresztnévvel közzétehető]
+<b>50 fölött – Illés, 56 évesen, 20 év lean-tapasztalattal:</b> a régi önéletrajzával 25 pályázatból egy behívást sem kapott, a Gerilla önéletrajzzal 4 pályázatból 4 behívást és egy folyamatmérnöki állást. [keresztnévvel; engedély ellenőrizendő]
+<b>50 fölött – Zsuzsa, 60 évesen, egyik napról a másikra elbocsátva:</b> klubtagként három hónap alatt a szakmáján belül kapott ajánlatot. [keresztnévvel; engedély ellenőrizendő]
+<b>50 fölött – [Baukó Zoltán], 62 évesen Németországban:</b> közel 400 eredménytelen pályázat után a Gerilla módszerrel megháromszorozódtak a behívásai, és a harmadik hónapban elhelyezkedett. [engedély ellenőrizendő]
+<b>Gyes után – [Joób Réka], ötgyermekes anyaként 10 év gyes után:</b> az interjúfelkészítő anyagokkal visszatért a szakmájába, építészmérnöki állásba. [engedély ellenőrizendő]
+<b>Gyes után – [Pólya-Makovics Adrienn], külföldről hazatérve:</b> Power BI-t tanult a Klubban, két hét alatt napi 2–3 interjúja volt, végül egy multinál német nyelvű beszerző lett, bruttó 900 000 Ft-os fizetéssel. [engedély ellenőrizendő]
+<b>Nyelv – [Fekete Nándor], Bécsben:</b> Bakos Zita német képzése és az álláskeresési modul segítségével 15 interjúig és 3 ajánlatig jutott. [engedély ellenőrizendő]
+<b>Bértárgyalás – [Mándi Viktor], 45 évesen projektmenedzser:</b> a Klubban tanult technikával a második fordulóban további bruttó 100 000 Ft-ot alkudott ki. [engedély ellenőrizendő]
+Forrás: Referenciák 2023.08. után (Drive). A szögletes zárójel a közzétételi engedély állapotát jelzi; élesítés előtt minden szereplőtől írásos hozzájárulás kell.
+<b>Google-vélemények (rotáló sáv):</b>
+„Nagyon jó lehetőség azoknak, akik átmenetben vannak… Ennél jobb befektetést egy álláskeresés vagy karrierváltás során nem tudok elképzelni.” – [Fodor Zsuzsanna]
+„A modulok önmagukban megérnének ennyit, így együtt meg pláne… rendbe tettem az önéletrajzomat, LinkedIn-profilomat.” – [Krizsán Csaba]
+„Sokat segítettek abban, hogy találjak egy olyan állást, ami számomra megfelel.” – [Kovács Zita]
+„Köszönöm, hogy a munkaerőpiaci váltáshoz tényleg nem életkorfüggően megtanították, hogyan kell sikeresen pályázni (50 év felett!)… Külön kiemelendő, hogy előfizetőként szakvégzettséget nyújtó képzések is elérhetők!” – [Derecskei Anita], Google-vélemény, 2026. október
+<b>[Összes Google-vélemény →]</b> (közvetlenül a vélemények listájára mutasson)
+10. Kik állnak a Klub mögött?
+<b>Cím:</b> 18 éve segítünk embereknek jobb állást találni.
+Baráth András vagyok, karrier-tanácsadó, a Gerilla Önéletrajz és a Mentor Klub alapítója. Csapatommal több tízezer álláskeresőnek tanítottuk meg, hogyan pályázzon, és több mint [12 000] ügyfelünk helyezkedett el. Évente [450] személyes tanácsadást tartunk, így közelről látjuk, mit keresnek most a cégek.
+A Mentor Klubot 2020-ban azért hoztuk létre, mert a jó képzések túl drágák és túl elméletiek voltak, a cégek pedig egyre ritkábban képzik a munkatársaikat. Egy 15–20 fős céges tréning ára naponta [1 millió Ft] körül indul, ezért a legtöbb ember ma már maga felel a saját fejlődéséért. Ezt szeretnénk megfizethetővé tenni.
+<b>Számsor:</b> [9000+] tag · [50+] gyakorló tréner · 480+ élő tréning és képzés 2027-ben · [4,9]/5 Google-értékelés
+<b>Aktív közösség:</b> havonta kb. 3–4 ezren végeznek el nálunk tréninget vagy képzést, és több száz kérdés és válasz születik a csoportos konzultációkon és a zárt Facebook-csoportban. A szakmai kérdéseidet az élő tréningeken és képzéseken közvetlenül a trénereknek teheted fel.
+Trénerkártyák: 6–8 arc névvel és egy mondatnyi szakmai háttérrel. Javasolt arcok, akiket a tagok a sikertörténeteikben név szerint kiemelnek: Tihanyi Gabriella (karrier-tanácsadó), Molnár Tamás, Jámbor István, Perjési Zoltán és Grünwald Péter (adatelemzés), Limpár Imre (személyiségfejlesztés), Bakos Zita (német).
+11. Így indulsz el
+<b>Cím:</b> Mi történik, miután csatlakoztál?
+<b>Csatlakozol</b> – kitöltöd az űrlapot, és bankkártyával fizetsz az OTP Simple biztonságos felületén.
+<b>Megkapod a hozzáférést</b> – e-mailben azonnal; telefonon a mobilappban is eléred a Klubot.
+<b>Kiválasztod az útvonaladat</b> – menj el az első pályaorientációs tréningre, megmutatjuk, melyik két-három képzéssel érdemes kezdeni, beszéld át az élő csoportos konzultáción a te irányodat a karrier tanácsadó kollégánkkal 
+<b>Tanulsz a saját tempódban</b> – heti 2–3 óra már elég az elinduláshoz; az élő órák munka után vannak, a tréningek 10 napig, a képzések 1 hónapig visszanézhetőek, becsatlakozási lehetőség van menet közben is. 
+<b>Kérdezel, amikor elakadsz</b> – a csoportos konzultáción, a trénereknél és a zárt közösségben.
+12. Ezt kapod a tagságoddal
+<b>Cím:</b> Mennyit érne mindez külön-külön?
+Tételes ajánlatdoboz valós, ellenőrizhető összevetésekkel; felösszegzett „összérték” sor nélkül.
+Mit kapsz
+Mennyibe kerülne máshol
+AI Iskola – 56 élő AI-tréning és -képzés 2027-ben
+Egy 4 hónapos AI-képzés önmagában [350 000 Ft + áfa]
+Adatelemzői útvonal Exceltől Pythonig
+Egyetlen jó Excel-tanfolyam [50–60 000 Ft]
+SAP-képzések saját tesztrendszerrel
+Magánszemélyként jellemzően nem elérhető
+Angol és német A1–C1, élő órákkal
+Egy nyelviskolai félév [X Ft]
+Álláskeresési modul és kéthetente élő konzultáció
+Egy személyes karrier-tanácsadás [X Ft]
+Államilag elismert szakképesítések a tagdíjért (vizsgadíj külön)
+Beiratkozási és tandíjjal [X Ft]
+Minden új képzés, ami a tagságod alatt érkezik
+–
+13. Ár és garancia
+UX: az árdoboz fölött a kulisszák mögötti videó kisebb előnézete (bélyegkép és „Nézd meg 3 percben, mit kapsz” felirat), hogy a döntés pillanatában is egy kattintásra legyen.
+<b>Cím:</b> Egy tanfolyam árából egy egész évnyi tanulás.
+<b>Árdoboz:</b>
+Teljes ár: 50 000 Ft/hó
+Most féláron: <b>24 950 Ft/hó</b> [bruttó – ellenőrizendő] – ez napi kb. 830 Ft (24 950 Ft ÷ 30 nap ≈ 832 Ft)
+Hozzáférés minden képzéshez, a most induló és az ezután érkező anyagokhoz is
+<b>Garancia-doboz (külön, jól látható):</b>
+<b>Bármikor lemondható</b> – egy kattintással a belső felületen; nincs hűségidő, nincs minimumidő.
+<b>2 év árgarancia</b> – a féláras havidíjad 2 évig nem változik, akárhány új képzés érkezik.
+ha nem neked való, egy kattintással lemondod, és többet nem vonunk le.
+A féláras ajánlattal most érdemes élned. 
+<b>[Csatlakozom féláron, 24 950 Ft/hó →]</b>
+14. Kinek való?
+<b>Neked szól, ha:</b>
+jobban fizető állást keresel, és szeretnéd, hogy végre válaszoljanak a pályázataidra;
+pályát módosítanál, de nem akarsz nulláról kezdeni;
+a saját szakmádban szeretnéd használni az AI-t;
+40 fölött vagy gyes után térnél vissza, és naprakész szeretnél lenni;
+munka mellett, rugalmasan szeretnél tanulni.
+<b>Nem neked szól, ha:</b>
+garantált állást vársz saját munka nélkül – a tanulást és a pályázást nem tudjuk elvégezni helyetted;
+már haladó fejlesztő vagy AI-mérnök vagy, és mélyfejlesztői képzést keresel;
+heti egy-két órát sem tudsz most a fejlődésedre szánni.
+15. Államilag elismert szakképesítések (külön blokk)
+Vizuálisan elkülönítve, saját gombbal – ez más döntés, mint a havi tagság.
+<b>Cím:</b> Szakmát szereznél, államilag elismert bizonyítvánnyal?
+A Mentor Klub nyilvántartott felnőttképzőként szakképesítést adó képzéseket is indít, akár középfokú végzettséggel. A képzés ideje alatt csak a havi tagdíjat fizeted, beiratkozási díj nincs; a vizsgadíjat (jellemzően 40–70 ezer Ft) a független vizsgaközpontnak kell rendezni.
+Online tartalomgyártó – [9 hónap], 15 gyakorló oktatóval, AI-eszközökkel frissítve
+Junior szoftvertesztelő – [8 hónap]
+Junior rendszerüzemeltető – [8 hónap]
+Logisztikus - [7 hónap]
+Munkaerő-gazdálkodási és TB-ügyintéző - [10 hónap]
+„Az AI elveszi a programozói állásokat?” A több kód több tesztelést és üzemeltetést kíván, ezért a tesztelés és a rendszerüzemeltetés jó belépő az IT-ba.
+<b>Bizonyíték:</b> egyik hallgatónk 20 év helpdesk-munka után még a Junior rendszerüzemeltető képzés közben pályázott. A gyakorlati interjúfeladatok éppen azok voltak, amiket a képzés első részében gyakoroltak, és még aznap megkapta az állást egy TOP 35-ös hazai nagyvállalatnál. [név nélkül; közzétételi engedély ellenőrizendő]
+<b>[Feliratkozom a következő indulás várólistájára →]</b> (a jelentkezési időszakban: „Jelentkezem – még [X] hely”)
+16. Gyakori kérdések
+<b>Nincs időm munka és család mellett. Érdemes belevágni?</b>
+Igen. Az élő órák munka után vannak, és minden felvételről visszanézhető. Heti 2–3 óra már elég az elinduláshoz; a nyelvtanuláshoz napi 30 perc.
+<b>Elmúltam 45. Nem késő?</b>
+Nem. A cégeknek most a tapasztalt szakemberekre van szükségük, akik a meglévő tudásukra építik az AI-t. Megtanítjuk, hogyan legyen a CV-d „kortalan”, hogy eljuss az interjúig. Tagjaink 54, 56, 60 és 62 évesen is új állást találtak, a történetüket a 9. blokkban olvashatod.
+<b>Nincs diplomám vagy nyelvvizsgám. Van esélyem?</b>
+Van. A munkáltatók egyre inkább azt nézik, mit tudsz. Az egyik tagunk lean specialista mérnökként dolgozik gyógypedagógus diplomával. Egy másik tagunk 13 év raktári munka után előbb beszerző, majd termelési kontroller lett, közben 50 Mentor Klub-tanúsítványt szerzett.
+<b>Nem vagyok „tech-es”. Az AI-képzések nekem is valók?</b>
+Igen. Az alapozó képzések a nulláról indulnak, programozói tudás nem kell.
+<b>Túl sok a képzés, nem tudom, hol kezdjem.</b>
+Válaszd ki az útvonaladat a 6. blokkban, vagy kérdezz a csoportos konzultáción; segítünk összeállítani az első lépéseket.
+<b>Mit szól a párom, ha a családi kasszából fizetem?</b>
+Egy havidíj, amit bármikor lemondhatsz, és ami egyetlen külön tanfolyam árának töredéke. Ha egy jobban fizető állás felé visz, a befektetés a családnak is megtérül.
+<b>Mit érnek a tanúsítványok?</b>
+Minden képzésről háromnyelvű tanúsítványt kapsz a CV-be és a LinkedInre. Államilag elismert bizonyítványt a szakképesítést adó képzések adnak.
+<b>Mi marad meg, ha lemondom?</b>
+A megszerzett tanúsítványaid megmaradnak. A tananyagokhoz a kifizetett időszak végéig férsz hozzá. <b>Hogyan mondhatom le?</b>
+A belső felületen egy kattintással, bármikor. A lemondás a következő levonás előtt érvényes.
+<b>Kérhetek céges vagy áfás számlát?</b>
+Igen, céges előfizetésre is van lehetőség, és céges csomagjaink is vannak. Ezzel kapcsolatban írj nekünk az info@gerillamentorklub.hu címre. Van olyan tagunk is, akinek a munkáltatója fizeti a Mentor Klub-tagságát.
+<b>Hogyan érem el az SAP-tesztrendszert és a mobilappot?</b>
+Válasz
+<b>Miért csak bankkártyával lehet fizetni?</b>
+Az automatikus havi levonás miatt azonnal hozzáférsz, és így tudjuk ilyen alacsonyan tartani a díjat.
+<b>Mitől más ez, mint egy online kurzusplatform?</b>
+A Klubot karrier-tanácsadók építették: a képzéseket aszerint válogatjuk, mit keresnek a cégek, és a tudás mellé azt is megtanítjuk, hogyan szerezz vele állást.
+17. Záró CTA
+<b>Cím:</b> Ugrás előtt kell felvenni az ejtőernyőt.
+Több interjú, jobb állás vagy új szakma: ehhez a tudást, az álláskeresési módszert és a nyelvet egy helyen kapod meg, munka mellett, a saját tempódban. Most havi 50 000 Ft helyett féláron, 24 950 Ft-ért csatlakozhatsz, 2 év árgaranciával, és bármikor lemondhatod.
+<b>[Csatlakozom a Gerilla Mentor Klubhoz féláron – 24 950 Ft/hó →]</b>
+<b>Lábléc:</b> info@gerillamentorklub.hu · +36 20 779 3373 · ÁSZF · Adatvédelem · Programkövetelmények · Felnőttképzési nyilvántartási szám: B/2021/000560 · Engedélyszám: E/2022/000028
+Szerkesztői jegyzetek
+<b>Döntendő:</b> a három bónusz vállalhatósága; 14 napos pénzvisszafizetés vagy a B változat; a féláras kampány záródátuma; a hero A/B változata.
+<b>Élesítés előtt ellenőrizendő:</b> a tréning- és képzésszámok forrása az Oktatási naptár 2027 (Havi összesítő), a terv módosulásakor ezeket frissíteni kell; az 50 000 Ft-os teljes ár igazolhatósága (áthúzott árnál a korábban ténylegesen alkalmazott árat kell feltüntetni); a havidíj bruttó vagy nettó volta; Google-értékelés és véleményszám; tagszám; videós oktatóanyagok száma; tanácsadók száma; évi 450 tanácsadás; 12 000 elhelyezkedett ügyfél; szakképesítések időtartama; az összevető táblázat és az ajánlatdoboz piaci árai; a 2027-es tréningtábla és az útvonalak a végleges naptár szerint (időpontok, EKJ kategória megjelenő neve); a sikertörténetek közzétételi engedélyei.
+<b>Bekérendő:</b> a sikertörténetek szereplőinek engedélye és nevei, a Google-véleményekből idézett tagok hozzájárulása, trénerfotók, appképernyő, a képzési terv a 90 napos naptárhoz.
+<b>Csapatdöntés:</b> a szeptember 18-i megbeszélésen az „50 000 Ft helyett” narratívát kivették; az új ajánlat ezt visszahozza, erről a csapatot tájékoztatni kell.
+<b>CTA-terv:</b> négy fő csatlakozási pont (hero, a pillérek után, az árdoboz, a záró blokk); hideg kampányoldalon a hero gombja „Megnézem, mit kapok”; mobilon rögzített alsó gomb; a szakképesítésnek saját gombja van.
+<b>Mérés és finomhangolás:</b> A/B teszt a hero két változatára; mérendő a CTA-kattintás, az útvonalválasztás és a fizetési konverzió; az ügyfélszolgálati kérdésekből havonta frissítendő a GYIK.
+Tervezői jegyzetek a designernek
+<b>Egységes képzéskártya:</b> minden képzés ugyanabból a sablonból készül, így több száz kártya is rendezett marad. A kártya elemei felülről lefelé:
+Borítókép fix 16:9-es arányban, a modul színkódjával (például AI Iskola, Adatelemzés, SAP, Digitális marketing, Nyelv, Karrierépítés) és egységes betűtípussal. A borítón a tréner fotója vagy egy valódi képernyőrészlet szerepeljen, ne stockfotó.
+Cím eredményként megfogalmazva, ahol lehet (például „Power BI-riport az első munkanapodra”), legfeljebb két sorban.
+Tréner neve kis portréval.
+Formátum, hossz és szint szövegesen is: élő többhetes (például 6 hét, kedd 17:30) · egynapos vagy félnapos élő · videós; kezdő vagy haladó. Az információ ne csak színnel legyen jelölve.
+Állapotcímke, ha releváns: Új a Klubban · Regisztrálható · Már indult – még becsatlakozhatsz.
+<b>Borítósablon:</b> modulonként egy alapszín és egy ikon; a cím mindig ugyanott és ugyanakkora; a trénerfotó egységes kivágással (kör vagy lekerekített négyzet). Érdemes Canva- vagy Figma-sablonként elkészíteni, hogy a meglévő borítók tömegesen átállíthatók legyenek. Ugyanez a sablon kerüljön a tréningfalra, a 90 napos naptárba, a katalógusoldalra és a Klub belső felületére is.
+<b>Bento-elrendezés (vizsgálandó ötlet, nem kötelező):</b> a bento különböző méretű, lekerekített csempékből álló rács, ahol a legfontosabb elem kapja a nagyobb csempét. A 7. blokk pilléreinél például egy nagy csempe jutna a Tudás pillérnek (képzésszám és modulikonok), két kisebb az Állás és a Nyelv pillérnek, további kis csempék pedig a mobilappnak, a tanúsítványnak és az élő óráknak. Mobilon egyoszlopos listává alakul. Ha a fülek vagy a kártyák egyszerűbbek és jobban működnek, maradjanak azok.
+<b>[</b>Ezek a bónuszok a jövőben vállalhatóak fel:
+<b>Bónuszok a most csatlakozóknak [DÖNTENDŐ]</b> (mindegyik egy-egy konkrét kifogást old fel)
+<b>„Az első lépésem” tanulási útvonal</b> – az első héten összeállítjuk, melyik két-három képzéssel kezdj. Kifogás: „Nem tudom, hol kezdjem.”
+<b>30 napos kezdő menetrend</b> – heti teendőlista és emlékeztető, hogy végig is menj rajta. Kifogás: „Úgysem fogok végigmenni.”
+<b>Önéletrajz-visszajelzés az első hónapban</b> – [formája és kapacitása egyeztetendő]. Kifogás: „Rossz a CV-m, úgysem hívnak vissza.”<b>]</b>
+Útmutató a Lovable-nek
+Ez az útmutató a fenti teljes szöveghez készült. Leírja, hogyan építse fel belőle a Lovable a sales oldalt úgy, hogy minden tartalom megmaradjon, de az oldal ne hasson hosszúnak: alapból csak a lényeg látszik, a részletek kattintásra nyílnak meg. A rövid változathoz külön útmutató tartozik („GMK sales oldal 2027 – rövid, vizuális változat és Lovable-útmutató”).
+Mi kerül az oldalra, és mi nem
+A forrásdokumentum egyszerre oldalszöveg és munkaanyag. A Lovable csak az oldalszöveget jelenítse meg.
+<b>Megjelenik:</b> a blokkok címei, alcímei, bekezdései, felsorolásai, táblázatai és gombjai.
+<b>A címkék nem jelennek meg:</b> a „Főcím:”, „Alcím:”, „Cím:”, „Bevezető:”, „Számsor:”, „Bizalmi sáv:”, „Ajánlat:” és hasonló címkék csak azt jelzik, melyik mezőbe kerül a szöveg.
+<b>Gombként jelenik meg</b> minden szögletes zárójeles, nyíllal végződő szöveg, például „[Csatlakozom féláron →]”. A zárójel nem látszik.
+<b>Nem jelenik meg:</b> minden dőlt sor (UX-, szerkesztői és tervezői jegyzet), a „Minták:” linkek, az „Alternatív kártyák” sor, a „Forrás:” sorok, a „Szerkesztői jegyzetek” és a „Tervezői jegyzetek” fejezet. A dőlt UX-jegyzeteket és a tervezői jegyzeteket viszont utasításként kövesd.
+<b>Ellenőrzendő értékek:</b> a [szögletes zárójeles] számok, nevek, dátumok a config.json fájlból töltődnek. A zárójel soha nem látszik. Ha az érték hiányzik, az elem rejtve marad, és nem jelenik meg helyette találgatott szám.
+<b>Állapotjelölések:</b> az olyan jelölések, mint [engedély ellenőrizendő], [név nélkül közzétehető] vagy [DÖNTENDŐ], nem kerülnek az oldalra. A sikertörténet csak akkor látszik, ha a testimonials.json fájlban az adott történetnél a közzétételi engedély igaz értékű.
+<b>Változatok:</b> a hero két gombja és a garancia A és B változata konfigurációs kapcsolóval jelenik meg. Alapállapotban a garancia A változata rejtve van, amíg a csapat nem dönt.
+<b>Bónuszok:</b> a dokumentum végén álló bónuszlista („Ezek a bónuszok a jövőben vállalhatóak fel”) jövőbeli terv, nem jelenik meg az oldalon.
+<b>Ez az útmutató sem jelenik meg:</b> az „Útmutató a Lovable-nek” fejezet utasítás, nem oldalszöveg.
+Hogyan ne hasson hosszúnak
+<b>Alapból a szöveg kb. harmada látszik.</b> Minden blokkból a cím, az első mondat vagy a vevői eredmény és egy vizuális elem látszik. A többi lenyíló elemben (accordion), fülekben vagy „Részletek” gomb mögött van.
+<b>Hosszú bekezdés nincs.</b> A 40 szónál hosszabb bekezdésből az első mondat látszik, a többi a „Részletek” mögé kerül.
+<b>Táblázat helyett komponens.</b> A forrás táblázatai kártyává, idővonallá, fülekké vagy pipás összevetéssé alakulnak (lásd lent).
+<b>Hosszú lista helyett címke.</b> Hat elemnél hosszabb képzéslistából az első öt címke látszik, mellette „+X további”.
+<b>Tájékozódás:</b> a hero után tapadó oldalon belüli menüsor jelenik meg öt ugróponttal: Útvonalak · Képzések · Eredmények · Ár · GYIK.
+<b>Ritmus:</b> a blokkok háttere váltakozik (fehér és nagyon világos semleges), hogy a görgetés közben is látszódjon, hol kezdődik egy új téma.
+<b>Csatlakozási pontok:</b> a szerkesztői jegyzetek CTA-terve szerint négy helyen van csatlakozó gomb (hero, a pillérek után, az árdoboz, a záró blokk), mobilon emellett alul rögzített gomb.
+Blokktérkép
+A blokkok sorrendje a forrásdokumentum sorrendje. A táblázat megmondja, mi látszik alapból, és mi kerül lenyíló elembe.
+<b>Blokk</b>
+<b>Komponens és alapból látható</b>
+<b>Lenyíló vagy rejtett</b>
+1. Hero
+Főcím, alcím, ár áthúzott eredeti árral, két gomb, bizalmi sáv. Jobb oldalon videórészlet vagy trénerfotók.
+Az alcím három pontja kis pipás sorként a gombok fölött.
+2. Sikertörténet-csík
+Három kártya nagy számmal, névvel, fél mondattal.
+Az „Alternatív kártyák” sor nem jelenik meg.
+3. Ismerős valamelyik?
+Hat ikoncsempe, csempénként a félkövér rész.
+A csempe magyarázó mondata koppintásra jelenik meg.
+4. Képzeld el három hónap múlva
+Öt pipás sor, mellette egy „3 hónap múlva” jelvény. Alatta az átvezető mondat.
+Nincs.
+5. Miért most?
+Cím, a kiemelt mondat félkövéren, az AI-ablak idővonalként.
+A bekezdés többi része „Részletek” mögött.
+6. Válaszd ki a saját útvonaladat
+Négy kártya: útvonal neve, „kinek”, „mire juthatsz”. Alatta a „40 fölött vagy gyes után?” sáv.
+Kártyánként az „Első lépések” képzés-címkékként.
+6/B. Februárban induló tematikus tanulási útvonalak
+Három kártya „Februárban indul” címkével, kártyánként vízszintes idővonal a lépésekkel és az eredménnyel. Bevezető egy mondata és a gomb.
+„Kinek”, „Mit old meg”, „Piaci háttér”, „Mindhárom útvonal így működik”, „Később induló útvonalak”. A forrásjegyzet nem jelenik meg.
+7. Három pillér
+Három fül (Tudás · Állás · Nyelv) vagy bento-rács. Fülenként a félkövér vevői eredmény és egy kép.
+Tudás: AI Iskola, Adatelemzés, Digitális marketing, SAP, További modulok külön lenyíló elemként; az AI-szintek négylépcsős skálaként; a sztori-doboz idézetként. Állás és Nyelv: részletek és nevek lenyílva.
+Képzési katalógus és tréningfal
+Cím, animált számlálók a számsorból, kétsoros tréningfal, kategóriafülek 3–4 kiemelt képzéskártyával, gomb a katalógusoldalra.
+A 2027-es tréningtábla a fülek tartalma (lásd lent). A designer-útmutató nem jelenik meg, utasításként követendő.
+Így tanulsz
+Öt ikon, ikononként a félkövér rész.
+A magyarázó mondat ikonra koppintva.
+Nézz be a Klubba: kulisszák mögött videó
+Cím és videó bélyegképpel.
+A „Mit mutasson a videó” lista nem jelenik meg, a forgatáshoz szól.
+A következő 90 nap a Klubban
+Egy lenyíló sáv a „[X] többhetes, [Y] egynapos” mondattal.
+Lenyitva: gördülő naptár hónapfülekkel és útvonalszűrővel a courses.json alapján.
+8. Miben más a Mentor Klub?
+Pipás összevetés (lásd lent) és a Karrier Hack mondat.
+Az ár sor szövegesen, ha az értékek megvannak.
+9. Akik már végigmentek rajta
+Sikertörténet-körhinta témaszűrővel, kártyánként nagy szám, név, egy mondat. Alatta forgó Google-vélemény sáv és link.
+A teljes történet a kártyára koppintva. Csak engedélyezett történetek.
+10. Kik állnak a Klub mögött?
+András fotója, a cím, a bekezdés első mondata, számsor, 6–8 trénerkártya.
+A második bekezdés és az „Aktív közösség” rész.
+11. Így indulsz el
+Öt számozott lépésikon, mindegyiken a félkövér rész.
+A lépések magyarázata.
+12. Ezt kapod a tagságoddal
+Kétoszlopos lista: „Mit kapsz” és „Mennyibe kerülne máshol”. Összérték sor nincs.
+Nincs. Bónuszok nincsenek ebben a blokkban.
+13. Ár és garancia
+Árdoboz, garancia-jelvények, határidő, gomb. Fölötte a videó kis előnézete.
+A garancia A vagy B változata a config szerint.
+14. Kinek való?
+Két oszlop: „Neked szól, ha” pipával, „Nem neked szól, ha” semleges ikonnal.
+Nincs.
+15. Államilag elismert szakképesítések
+Eltérő hátterű sáv, cím, első mondat, a képesítések címkeként, saját gomb.
+A díjak, az AI-kérdés és a bizonyíték lenyílva.
+16. Gyakori kérdések
+Az első hat kérdés lenyíló elemként.
+A többi kérdés „További kérdések” gomb mögött.
+17. Záró CTA
+Cím, egy bekezdés, gomb.
+Nincs.
+Lábléc
+Elérhetőség, jogi linkek, nyilvántartási számok.
+Nincs.
+A táblázatok átalakítása
+<b>AI-ablak (5. blokk):</b> három állomásos vízszintes idővonal. Állomásonként az év, alatta a két cella szövege. Mobilon függőleges.
+<b>Útvonaltábla (6. blokk):</b> négy kártya. A táblázat sorai a kártyák, az „Első lépések” oszlop a lenyíló tartalom.
+<b>Tréningtábla 2027 (katalógus):</b> a kategóriák vízszintesen görgethető fülek. Fülenként két csoport: „Többhetes élő képzések” és „Egynapos és félnapos tréningek”, a képzések címkeként. A „Mikor indul?” oszlop a fül tetején kis címke. A [szögletes zárójeles] időpontok helyén a courses.json dátumai állnak.
+<b>Összevető táblázat (8. blokk):</b> négyoszlopos pipás összevetés, a Mentor Klub oszlopa kiemelve. Mobilon a sorok kártyává alakulnak, és a Mentor Klub értéke mindig látszik.
+<b>Ajánlatdoboz (12. blokk):</b> kétoszlopos lista, nem táblázat. Felösszegzett összérték nem jelenhet meg.
+Szöveghűség és hosszkorlátok
+A szöveget szó szerint használd. Ne írd át, ne foglald össze, és ne írj hozzá saját mondatot, számot, nevet, véleményt vagy határidőt.
+Rövidíteni csak úgy lehet, hogy a szöveg egy része lenyíló elembe kerül. Mondatot kihagyni vagy átfogalmazni nem lehet.
+Ha egy szöveg nem fér el a komponensben, a komponenst igazítsd a szöveghez.
+Egy blokkban legfeljebb egy elsődleges gomb legyen. Kivétel a hero.
+Megjelenés
+Kövesd a dokumentum „Tervezői jegyzetek” fejezetét: egységes képzéskártya (16:9 borító modulszínnel, cím, tréner portréval, formátum, hossz, szint, állapotcímke) és egységes borítósablon. A bento-elrendezés a pillérekhez választható, nem kötelező.
+Sötét hero és sötét kiemelt blokkok, közöttük világos tartalmi blokkok (színek az „Arculat és képzési borítók” fejezetben); bőséges térköz, lekerekített kártyák, legfeljebb két betűtípus, türkiz kiemelőszín csak a csatlakozó gombokon és a cím kiemelt részén.
+Csak valódi képek: trénerfotók, a Klub felületének képernyőképei, tanúsítvány, mobilapp. Amíg nincsenek meg, szürke helyőrző álljon a helyükön felirattal. Stockfotó és generált emberarc nem használható.
+Egységes vonalas ikonkészlet (például Lucide).
+Mozgás csak a tréningfalon és a számlálóknál. Ha a látogató kikapcsolta az animációkat (prefers-reduced-motion), minden álló nézetben jelenik meg.
+Tilos: újrainduló visszaszámláló, felugró ablak, villogó elem, emoji.
+Mobil, sebesség, akadálymentesség
+Mobilon egy oszlop, alul rögzített csatlakozó gomb, ujjal húzható kártyasávok, legalább 44 px magas gombok.
+A tréningfal mobilon egy sorra csökken, a fülek vízszintesen görgethetők.
+A képek késleltetve és fix mérettel töltődnek. Minden képnek van alt szövege, a kontraszt megfelel a WCAG AA szintnek.
+A lenyíló elemek billentyűzettel is nyithatók, és a tartalmuk a keresőmotorok számára is olvasható marad (HTML-ben benne van, csak vizuálisan zárt).
+Adatforrások
+<b>config.json:</b> ár és áthúzott ár, kampányzárás dátuma, bizalmi számok (értékelés, véleményszám, tagszám, trénerszám, elhelyezkedett ügyfelek), hero-változat, garancia-változat (A vagy B), piaci árak az összevetéshez és az ajánlatdobozhoz.
+<b>courses.json:</b> az Oktatási naptár 2027 alapján minden képzés: cím, kategória, formátum, hossz, nap és időpont, kezdés, szint, tréner, borítókép, állapotcímke, rövid leírás, link. Ebből épül a tréningfal, a kategóriafülek, a februári idővonalak, a 90 napos naptár és a katalógusoldal.
+<b>testimonials.json:</b> név vagy monogram, fotó, kiemelt szám, egy mondat, teljes történet, téma, közzétételi engedély (igaz vagy hamis).
+<b>trainers.json:</b> név, fotó, szakterület, képzései.
+<b>reviews.json:</b> Google-vélemények szövege, neve, dátuma, és a link az összes véleményhez.
+Építés lépésenként
+A forrás túl hosszú egyetlen prompthoz. Az alábbi öt promptot egymás után add be, mindegyiknél csatolva a forrásdokumentumot.
+<b>1. Alap</b>
+„Készítsd el egy magyar nyelvű, egyoldalas sales oldal alapját a Gerilla Mentor Klubnak. Hozd létre a config.json, courses.json, testimonials.json, trainers.json és reviews.json fájlokat üres mintaadattal. Állítsd be a design rendszert: a dokumentum „CSS – design tokenek” részének színei (sötét hero #333b41, türkiz cím #5baeaf, gomb #63b6b7 sötét felirattal, világos tartalmi blokkok), lekerekített kártyák, Poppins-szerű betű, Lucide ikonok. Készíts újrahasználható komponenseket: képzéskártya (16:9 borító, cím, tréner portréval, formátum, hossz, szint, állapotcímke), lenyíló elem, fülsor, idővonal, számláló, sikertörténet-kártya, pipás összevetés. Készítsd el a hero utáni tapadó menüsort (Útvonalak, Képzések, Eredmények, Ár, GYIK) és a mobilon alul rögzített csatlakozó gombot. A szögletes zárójeles értékek a config.json-ból töltődnek; hiányzó értéknél az elem rejtve marad.”
+<b>2. Blokkok 1–6/B</b>
+„Építsd meg a csatolt dokumentum 1–6. és 6/B blokkját az útmutató blokktérképe szerint. A szöveget szó szerint használd, ne írd át és ne bővítsd. A dőlt sorokat, az „Alternatív kártyák” sort és a forrásjegyzeteket ne jelenítsd meg. Az AI-ablak táblázatból idővonal, az útvonaltáblából négy kártya lesz, az „Első lépések” lenyílva. A februári útvonalak három kártyán, kártyánként idővonallal jelenjenek meg.”
+<b>3. Pillérek és katalógus</b>
+„Építsd meg a 7. blokkot, a Képzési katalógus és tréningfal, az Így tanulsz, a kulisszák mögötti videó és A következő 90 nap részt. A pillérek három fülön jelenjenek meg, a modulok lenyíló elemként. A tréningtábla kategóriái legyenek a katalógus fülei, a képzések címkeként, az időpontok a courses.json-ból. A tréningfal két sor ellentétes irányba lassan úszó képzésborító, hoverre megáll, prefers-reduced-motion esetén álló rács.”
+<b>4. Blokkok 8–13</b>
+„Építsd meg a 8–13. blokkot. Az összevető táblázatból pipás összevetés lesz, a Mentor Klub oszlop kiemelve. A sikertörténetek körhintában, témaszűrővel jelenjenek meg, csak azok, amelyeknél a testimonials.json-ban engedélyezett a közzététel. Az ajánlatdoboz kétoszlopos lista összérték nélkül. A garancia A változatát a config.json kapcsolója vezérli, alapból rejtve. A dokumentum végi bónuszlistát ne jelenítsd meg. Visszaszámláló ne legyen, csak a határidő dátuma.”
+<b>5. Blokkok 14–17 és ellenőrzés</b>
+„Építsd meg a 14–17. blokkot és a láblécet. A GYIK első hat kérdése látszik lenyíló elemként, a többi a „További kérdések” gomb mögött. Ezután ellenőrizd az egész oldalt: nem látszik szögletes zárójel, dőlt szerkesztői jegyzet vagy állapotjelölés; minden csatlakozó gomb ugyanarra a fizetési oldalra mutat; mobilon minden blokk egy oszlopban, olvashatóan jelenik meg; az animációk kikapcsolhatók.”
+Átadás előtti ellenőrzőlista
+Az oldalon nincs szögletes zárójel, „DÖNTENDŐ”, engedélyjelölés vagy szerkesztői jegyzet.
+Minden szám a config.json-ból jön, és egyezik a forrásdokumentummal.
+Csak engedélyezett sikertörténetek látszanak.
+Négy csatlakozási pont van, mobilon rögzített alsó gomb is.
+Alapból a szöveg nagyjából harmada látszik, a többi lenyíló elemben van.
+Mobilon nincs vízszintes görgetés a sávokon kívül, a gombok legalább 44 px magasak.
+Animációk kikapcsolt állapotban is minden tartalom elérhető.
+Arculat és képzési borítók (a Lovable-nek)
+Ez a fejezet is utasítás, nem jelenik meg az oldalon. A színek a jelenlegi gerillamentorklub.hu oldal 2026. november 5-i képernyőképéből vannak kimérve (menüsor, hero, gombok, címkék, árkártya), és az új sales oldalon ezek az irányadók. A Drive arculati lapján szereplő #58caf0 kék a régebbi Gerilla Önéletrajz arculathoz tartozik, az új oldalon nem használjuk.
+Színek és betűk (a jelenlegi oldalról)
+<b>Oldalritmus:</b> sötét hero és sötét kiemelt blokkok (ár, februári útvonalak, záró CTA), közöttük világos tartalmi blokkok. A menüsor fehér.
+<b>Sötét alapszínek:</b> a hero és a sötét blokkok háttere #333b41, enyhe átmenettel #2c3439 és #364349 között. A sötét türkiz sáv #306364, a címkék háttere #40454b, a kiemelt kártya háttere #14262b, az alja #0c181b.
+<b>Türkiz márkaszín:</b> a nagy kiemelő cím #5baeaf, a csatlakozó gomb #63b6b7, a kiemelt szövegrészek és linkek sötét alapon #66c1c3. A sötét kártyán a kiemelő felirat #6dc6c3, az ár #84e0db, az áthúzott ár #96afb2. A logó türkiz eleme #56b2ad.
+<b>Szöveg:</b> sötét alapon a cím fehér #ffffff, az alcím #d7dddf, a törzsszöveg #dde2e3. Világos alapon (menüsor, tartalmi blokkok) a szöveg #2b302f, a logó sötét része #373736. A csillagok színe #f1a246.
+<b>Kontraszt:</b> a mostani oldalon a gomb fehér szövege a #63b6b7 alapon csak 2,4:1 kontrasztú. Az új oldalon a gombszöveg sötét #0c181b (7,7:1); ha a fehér felirat marad, legalább 19 px-es, félkövér, nagybetűs legyen. Fehér alapon türkiz szövegnek a sötétebb #2f7f80 árnyalat kell (4,7:1).
+<b>Betű:</b> a képernyőkép alapján geometrikus, kerek talpatlan betű (Poppins-szerű): a sötét hero főcíme 800-as vastagságú, csupa nagybetűs, a cím második sora türkiz; az alcím félkövér; a törzsszöveg normál vastagságú. A pontos betűtípust a weboldal CSS-éből érdemes megerősíteni.
+<b>Kiemelt kártya:</b> sötét, nagyon lekerekített (kb. 40 px) kártya vékony türkiz kerettel és enyhe türkiz ragyogással, mögötte két elforgatott, halvány türkiz körvonal. Alul elválasztó sávban a kiemelő felirat és az ár. Ez a stílus kerüljön a hero árkártyájára és a februári útvonalak kártyáira.
+<b>Logó:</b> a „GMK logók 2021 – arculati elemek” mappa MentorKlub-logo_Szines, _Feher, _Feher-Szines és _Fekete fájljai. A fehér menüsoron a színes, sötét alapon a fehér-színes változat.
+<b>Ikonok:</b> a meglévő tananyag-borítók ikonjai (tananyagok_boritokepei_eps.zip) mintaként szolgálnak; az oldalon egységes, vonalas ikonkészlet legyen (például Lucide), ugyanabban a vonalvastagságban.
+CSS – design tokenek és alapkomponensek
+/* Színek – a gerillamentorklub.hu képernyőképéből kimérve (2026.11.05.) */
+:root {
+  --gmk-dark: #333b41;          /* hero és sötét blokkok háttere */
+  --gmk-dark-from: #2c3439;     /* háttér-átmenet eleje */
+  --gmk-dark-to: #364349;       /* háttér-átmenet vége */
+  --gmk-band: #306364;          /* sötét türkiz sáv */
+  --gmk-chip: #40454b;          /* címkék sötét alapon */
+  --gmk-card: #14262b;          /* kiemelt kártya */
+  --gmk-card-deep: #0c181b;     /* kiemelt kártya alja */
+  --gmk-teal: #5baeaf;          /* nagy kiemelő cím, márkaszín */
+  --gmk-teal-btn: #63b6b7;      /* csatlakozó gomb */
+  --gmk-teal-light: #66c1c3;    /* kiemelt szöveg és link sötét alapon */
+  --gmk-teal-glow: #6dc6c3;     /* kiemelés a sötét kártyán */
+  --gmk-mint: #84e0db;          /* ár a sötét kártyán */
+  --gmk-teal-dark: #2f7f80;     /* türkiz szöveg fehér alapon (4,7:1) – javaslat */
+  --gmk-teal-tint: #e6f4f4;     /* világos türkiz háttér – javaslat */
+  --gmk-white: #ffffff;
+  --gmk-text-on-dark: #dde2e3;  /* törzsszöveg sötét alapon */
+  --gmk-sub-on-dark: #d7dddf;   /* alcím sötét alapon */
+  --gmk-strike: #96afb2;        /* áthúzott ár */
+  --gmk-ink: #2b302f;           /* szöveg világos alapon */
+  --gmk-logo-dark: #373736;
+  --gmk-black: #0c181b;         /* legsötétebb tónus, gombszöveg */
+  --gmk-line: #e3e8eb;
+  --gmk-bg: #ffffff;
+  --gmk-bg-alt: #f4f7f7;        /* világos váltakozó blokk – javaslat */
+  --gmk-star: #f1a246;
+  --font-body: "Poppins", "Open Sans", Arial, sans-serif;
+  --radius-card: 16px;
+  --radius-feature: 40px;
+  --radius-chip: 999px;
+  --shadow-card: 0 1px 2px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.06);
+  --glow-teal: 0 0 0 1px rgba(102,193,195,.6), 0 0 40px rgba(91,174,175,.25);
+  --space-section: clamp(56px, 8vw, 112px);
+}
+body { font-family: var(--font-body); color: var(--gmk-ink); background: var(--gmk-bg); line-height: 1.6; }
+.section { padding-block: var(--space-section); }
+.section--dark { background: linear-gradient(135deg, var(--gmk-dark-from), var(--gmk-dark-to)); color: var(--gmk-text-on-dark); }
+.section--band { background: var(--gmk-band); color: var(--gmk-white); }
+.section--alt { background: var(--gmk-bg-alt); }
+h1, h2 { font-weight: 800; line-height: 1.1; }
+.section--dark h1, .section--dark h2 { color: var(--gmk-white); text-transform: uppercase; }
+.section--dark .subtitle { color: var(--gmk-sub-on-dark); font-weight: 700; }
+.accent { color: var(--gmk-teal); }                       /* a cím türkiz része */
+.section--dark a, .highlight { color: var(--gmk-teal-light); font-weight: 600; }
+a { color: var(--gmk-teal-dark); }
+.btn-primary { background: var(--gmk-teal-btn); color: var(--gmk-black); font-weight: 700;
+  text-transform: uppercase; border-radius: 12px; padding: 16px 28px; min-height: 44px;
+  box-shadow: 0 8px 24px rgba(99,182,183,.35); }
+.btn-primary:hover { background: var(--gmk-teal-light); }
+.btn-link { color: var(--gmk-white); font-weight: 700; }  /* másodlagos gomb sötét alapon */
+.chip { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px;
+  border-radius: var(--radius-chip); background: var(--gmk-chip); color: var(--gmk-white); font-weight: 700; }
+.chip .stars { color: var(--gmk-star); }
+.card { background: #fff; border: 1px solid var(--gmk-line);
+  border-radius: var(--radius-card); box-shadow: var(--shadow-card); }
+.card--feature { background: linear-gradient(160deg, var(--gmk-card), var(--gmk-card-deep));
+  border-radius: var(--radius-feature); box-shadow: var(--glow-teal); color: var(--gmk-white); }
+.card--feature .label { color: var(--gmk-teal-glow); font-weight: 800; text-transform: uppercase; }
+.card--feature .price { color: var(--gmk-mint); font-weight: 800; }
+.card--feature .price-old { color: var(--gmk-strike); text-decoration: line-through; }
+Képzési borítók: modernizálási javaslat
+A jelenlegi borítók egyedi képek, eltérő stílusban. A javaslat: a borító ne külön megtervezett kép legyen, hanem egy kódból renderelt komponens, amely a courses.json adataiból áll össze (kategória, cím, tréner, formátum). Így több száz borító is egységes marad, és egy új képzéshez nem kell grafikust várni. A trénerfotók, András fotói, a Mentor Klub logó és az ikonok változatlanul felhasználhatók.
+<b>Felépítés</b> (16:9, 1600 × 900 px; négyzetes változat 1080 × 1080 px az appba és a közösségi médiába):
+<b>Bal oldal, kb. 56%:</b> kategóriaikon, a képzés címe legfeljebb 3 sorban Open Sans ExtraBold betűvel, alul formátumjelvények („Élő tréning · 1 nap”, „Többhetes · 6 hét”, „Videó”) és a szint.
+<b>Jobb oldal, kb. 44%:</b> a tréner háttér nélkül kivágott fotója egy kategóriaszínű, felül lekerekített ív előtt. Ha nincs trénerfotó, a kategóriaikon nagyban, vagy egy valódi képernyőrészlet (például Power BI-riport, n8n-folyamat) kerül a helyére.
+<b>Jobb felső sarok:</b> kis Mentor Klub logó (színes vagy fehér változat).
+<b>Háttér:</b> a kategória világos tónusa, egyszínű, színátmenet és textúra nélkül.
+<b>Kategóriaszínek (javaslat):</b> Álláskeresés márka-türkiz #5baeaf · AI / Digitális lila #7c5cff · IT / Technológia zöld #2bb673 · PM / Agilis narancs #ff9f43 · Marketing rózsaszín #ff5c8a · Szakképesítés ibolya #9b51e0 · HR sárga #f2c94c · Soft skill türkiz #00b3a6 · Angol kék #2f80ed · Német piros #eb5757 · Egyéb szürke #8a9ba8. A kategóriaszín csak a borítón és a kategóriacímkén jelenik meg, a gombok mindig márka-türkizek maradnak.
+<b>Szabályok:</b>
+A cím eredményként fogalmazódik, ahol lehet, és 360 px széles kártyán is olvasható.
+Egy borítón legfeljebb egy fotó, egy ikon és két jelvény van; nincs stockfotó, nincs AI-generált arc.
+A trénerfotók egységesen kivágva, azonos magasságban és fényerővel kerülnek a borítóra; a kivágott PNG-ket egy közös „Tréner-kivágások” mappában érdemes tárolni.
+A „Új”, „Februárban indul” és hasonló állapotcímkék nem a borítóra, hanem a kártyára kerülnek, így a borító nem avul el.
+CSS – borítókomponens
+/* Képzési borító – kódból renderelt komponens (16:9) */
+.cover { --cat: var(--gmk-teal); --cat-tint: var(--gmk-teal-tint);
+  position: relative; aspect-ratio: 16 / 9; overflow: hidden;
+  border-radius: var(--radius-card); background: var(--cat-tint);
+  display: grid; grid-template-columns: 56% 44%; font-family: var(--font-body); }
+.cover__text { padding: 7% 0 7% 7%; display: flex; flex-direction: column; gap: 4%; z-index: 1; }
+.cover__icon { width: 12%; aspect-ratio: 1; color: var(--cat); }
+.cover__title { font-weight: 800; color: var(--gmk-black); font-size: clamp(16px, 4.2cqi, 40px);
+  line-height: 1.15; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.cover__meta { margin-top: auto; display: flex; gap: 8px; flex-wrap: wrap; }
+.cover__badge { background: #fff; color: var(--gmk-black); border-radius: var(--radius-chip);
+  padding: 4px 10px; font-size: 12px; font-weight: 700; }
+.cover__photo { position: relative; }
+.cover__photo::before { content: ""; position: absolute; inset: 12% -10% -20% 8%;
+  background: var(--cat); border-radius: 50% 50% 0 0; }
+.cover__photo img { position: absolute; bottom: 0; right: 4%; height: 92%;
+  object-fit: contain; filter: grayscale(10%); }
+.cover__logo { position: absolute; top: 5%; right: 4%; width: 14%; z-index: 2; }
+.cover--video .cover__badge { background: var(--gmk-black); color: #fff; }
+/* Kategóriaszínek – javaslat */
+.cover[data-cat="allas"]   { --cat: #5baeaf; --cat-tint: #e6f4f4; }
+.cover[data-cat="ai"]      { --cat: #7c5cff; --cat-tint: #efebff; }
+.cover[data-cat="it"]      { --cat: #2bb673; --cat-tint: #e6f7ef; }
+.cover[data-cat="pm"]      { --cat: #ff9f43; --cat-tint: #fff2e5; }
+.cover[data-cat="marketing"] { --cat: #ff5c8a; --cat-tint: #ffeaf0; }
+.cover[data-cat="szakkepesites"] { --cat: #9b51e0; --cat-tint: #f3eafc; }
+.cover[data-cat="hr"]      { --cat: #f2c94c; --cat-tint: #fdf7e2; }
+.cover[data-cat="soft"]    { --cat: #00b3a6; --cat-tint: #e2f6f4; }
+.cover[data-cat="angol"]   { --cat: #2f80ed; --cat-tint: #e7f0fd; }
+.cover[data-cat="nemet"]   { --cat: #eb5757; --cat-tint: #fdeaea; }
+.cover[data-cat="egyeb"]   { --cat: #8a9ba8; --cat-tint: #eff2f4; }
+@media (prefers-reduced-motion: no-preference) {
+  .card:hover .cover { transform: scale(1.02); transition: transform .3s ease; }
+}
+Lovable-prompt a borítókhoz
+„Készíts egy CourseCover komponenst a fenti CSS szerint. Bemenet a courses.json egy eleme: title, category (allas, ai, it, pm, marketing, szakkepesites, hr, soft, angol, nemet, egyeb), format (tréning, képzés, videó), length, level, trainerName, trainerCutout (háttér nélküli PNG, opcionális), screenshot (opcionális). A kategória a data-cat attribútumon keresztül adja a színt. Ha nincs trainerCutout, a screenshot, ha az sincs, a kategóriaikon jelenjen meg nagyban. A jobb felső sarokban a Mentor Klub logó. Ugyanezt a komponenst használd a tréningfalon, a kategóriafülek kártyáin, a februári útvonalak kártyáin és a katalógusoldalon. Készíts egy 1:1 arányú változatot is (data-ratio="square"), ahol a fotó alul, a cím felül van.”
+Engedélyek bekérési folyamata ITT 
+<b>Adatelemzés és üzleti intelligencia: Excelből Power BI-ig</b>
+Hero
+<b>Fejléc gomb: CSATLAKOZOM, ÉS FEBRUÁRBAN INDULOK →</b>
+<b>Címke a H1 fölött: FEBRUÁRBAN INDUL · ADATELEMZÉSI ÚTVONAL</b>
+<b>H1: EXCELBŐL POWER BI-IG 3 HÓNAP ALATT – MUNKA MELLETT,</b>
+<b>Alcím 1:</b> Februárban indulnak a Gerilla Mentor Klub új adatelemző képzései. Gyakorló BI szakemberektől tanulod meg az Excel-dashboardokat, a Power BI-t és az AI használatát az adatelemzésben, és mellé egy 18 éve csiszolt álláskeresési módszert, amivel ezt a tudást jól fizető állásra válthatod.
+<b>Alcím 2:</b> Élő órákon munka után, egy csoporttal együtt haladva, vagy felvételről, amikor neked jó.
+Órákig tartó kézi riportgyártás helyett automatikusan frissülő dashboardokat készítesz.
+A végére lesz egy saját Power BI- vagy Excel-dashboardod, amit 10 perc alatt bemutatsz a vezetődnek vagy egy állásinterjún.
+Az Excel, a Power BI és a friss tanúsítványaid a CV-d elejére és a LinkedIn-profilodra kerülnek.
+<b>Ajánlat-sor:</b> Havi 50 000 Ft helyett most féláron: 24 950 Ft/hó. Az útvonal benne van a tagdíjban. Bármikor lemondható, nincs hűségidő.
+<b>CTA:</b> CSATLAKOZOM, ÉS FEBRUÁRBAN INDULOK → · <b>Másodlagos:</b> Megnézem az útvonal lépéseit ↓
+<b>Árkártya címke:</b> FEBRUÁRI INDULÁS – FÉLÁRON! (50 000 Ft áthúzva → 24 950 Ft/hó)
+Eredménykártyák
+Valós történetek az alap oldalról, adatelemzésre szűrve:
+<b>+66% fizetés</b> – Somogyi Zsigmond zenész végzettségű adminisztrátorból lett üzleti elemző (Power BI, SQL, Excel).
+<b>Dupla nettó fizetés</b> – Pálócziné Vitányi Alexandra két kisgyerek mellett adatelemzési képzések után lett adatelemző egy amerikai cégnél.
+<b>+51% béremelés</b> – tagunk Excel és Power BI képzések után.
+Ismerős valamelyik helyzet? Nem vagy egyedül.
+<b>Minden hónap eleje riportgyártással megy el.</b> Ugyanazokat a táblákat másolod össze kézzel, és ha valaki rákérdez egy számra, kezdheted elölről.
+<b>„Használom az Excelt, de nem igazán tudom.”</b> Elboldogulsz a képletekkel, de a kimutatás, a Power Query vagy egy dashboard már idegen terep.
+<b>A Power BI ott van a hirdetésekben.</b> Kontrolleri, elemzői, sőt HR-es és marketinges hirdetésekben is elvárás, és nem tudod, hol kezdd.
+<b>Te gyártod az adatot, más dönt belőle.</b> A munkád láthatatlan, ezért a fizetésed sem mozdul.
+<b>Egyedül nem jutsz végig.</b> Belekezdtél már videós kurzusba, de a harmadik leckénél elfogyott a lendület.
+<b>Tudásod van, bizonyítékod kevés.</b> Nincs bemutatható munkád, ezért a CV-dben sem látszik, mit tudsz.
+Milyen lenne, ha májusban már dashboarddal mennél be a vezetődhöz?
+Ehhez két dolog kell: egy jól felépített tanulási sorrend és egy csoport, amivel végigmész rajta. Az adatelemzési útvonalon mindkettőt megkapod.
+[CSATLAKOZOM, ÉS FEBRUÁRBAN INDULOK →]
+A havi riport egy kattintással frissül, a felszabaduló órákat elemzésre fordítod.
+Te vagy az, akihez a vezetők döntéstámogatásért fordulnak.
+A CV-dben és a LinkedIn-profilodon ott az Excel, a Power BI és egy saját dashboard, háromnyelvű tanúsítványokkal.
+Az interjún nem azt mondod, hogy „ismerem a Power BI-t”, hanem megmutatod, mit építettél vele.
+Bértárgyaláskor tudod, mennyit ér ez a tudás a piacon, és konkrét összeget mondasz.
+<b>Kiemelt mondat:</b> A cégek nem azt fizetik meg, ki dolgozik többet, hanem azt, amit kevesen tudnak.
+Miért most? (az AI-ablak blokk helyén)
+<b>H:</b> Az adatból döntés ma már nem extra, hanem elvárás.
+<b>Lead:</b> BI-fejlesztő, adatelemző és kontroller pozíciókban bruttó 1,1–2,0 millió Ft/hó a bérsáv. Ezekbe a szerepekbe egyre többen a saját szakterületükről lépnek át (pénzügy, HR, marketing, sales), informatikus végzettség nélkül. Az útvonalon azt is megtanulod, hogyan gyorsítja az AI az elemzői munkát.
+<b>Részletek (opcionális):</b> az alap oldal AI-ablak idővonala változatlanul maradhat alatta.
+Az útvonal lépései (új blokk)
+<b>H:</b> Így jutsz el Excelből Power BI-ig, nagyjából 3 hónap alatt
+<b>Kinek:</b> kontrollereknek, pénzügyi és üzleti elemzőknek, HR-es, marketinges és irodai munkatársaknak, akik naponta Excelben riportolnak, és adatvezéreltebb, jobban fizetett szerepbe lépnének.
+<b>1. hét – Hatékony irodai Excel</b> (egynapos tréning): az Excel-alapok rendbetétele
+<b>2. hét – Dashboardok készítése Excelben</b> (egynapos tréning): a Klub egyik legnépszerűbb képzése
+<b>3–8. hét – Power BI kezdő</b> (6 hetes élő képzés), vagy elmélyítésként a Dashboardok Excelben 8 hetes változata
+<b>3–4. hónap – Haladó Power BI</b> (6 hetes élő képzés)
+<b>Zárás – Karrier Hack 3. lépés:</b> az elvégzett képzéseket kiemeled a CV-d elején és a LinkedIn-profilodon, ebben a csoportos konzultáción segítünk.
+<b>Mellé videón:</b> Power Query, Power BI Desktop, adatvizualizáció, AI az adatelemzésben.
+<b>Amit a végén felmutatsz:</b> egy saját Power BI- vagy Excel-dashboard valós vagy minta üzleti adatokon, amit 10 percben be tudsz mutatni a vezetődnek, és feltölthetsz a LinkedIn-profilodra.
+<b>Így működik:</b> az élő órák felvételről is visszanézhetők, a többhetes képzések munka után vannak; minden képzés után háromnyelvű tanúsítványt kapsz; az útvonal benne van a tagdíjban, és mellette a Klub összes többi képzését is eléred.
+[CSATLAKOZOM, ÉS FEBRUÁRBAN INDULOK →]
+Innen az alap oldal folytatódik.
+<b>Fejléc gomb:</b> CSATLAKOZOM, ÉS FEBRUÁRBAN INDULOK →
+<b>Címke a H1 fölött:</b> FEBRUÁRBAN INDUL · PROJEKTMENEDZSMENT-ÚTVONAL
+<b>H1:</b> PROJEKTVEZETÉS ÉS AGILIS TUDÁS 3 HÓNAP ALATT – MUNKA MELLETT, ONLINE CSOPORTBAN, EGY BEMUTATHATÓ PROJEKTTERVVEL A VÉGÉN.
+<b>Alcím 1:</b> Februárban indul a Gerilla Mentor Klub projektmenedzsment-útvonala. Gyakorló projektvezetőktől tanulod meg a projekttervezést, az agilis működést és az AI-val támogatott PM-eszközöket (Asana, Monday.com, Jira), és mellé egy 18 éve csiszolt álláskeresési módszert, amivel ezt a tudást projektvezetői, Scrum Master vagy Product Owner pozícióra váltod.
+<b>Alcím 2:</b> Élő órákon munka után, online egy csoporttal együtt haladva, vagy felvételről, amikor neked jó.
+<b>3 ígéret:</b>
+Csúszó határidők és improvizáció helyett átlátható projekttervvel és ütemtervvel dolgozol.
+Megtanulod, mi van valójában az „agilis”, a Scrum és a Kanban mögött, és a megbeszéléseken is magabiztosan használod.
+A végére lesz egy teljes projektterved Asanában, Monday.com-ban vagy Jirában, amit egy interjún esettanulmányként bemutatsz.
+<b>Ajánlat-sor:</b> Havi 50 000 Ft helyett most féláron: 24 950 Ft/hó. Az útvonal benne van a tagdíjban. Bármikor lemondható, nincs hűségidő.
+<b>CTA:</b> CSATLAKOZOM, ÉS FEBRUÁRBAN INDULOK → · <b>Másodlagos:</b> Megnézem az útvonal lépéseit ↓
+<b>Árkártya címke:</b> FEBRUÁRI INDULÁS – FÉLÁRON! (50 000 Ft áthúzva → 24 950 Ft/hó)
+Eredménykártyák
+⚠️ Az alap oldalon nincs kifejezetten projektmenedzsmentes tagtörténet. Amíg nincs, az általános kártyák maradhatnak, de érdemes 1–2 valós PM-es történetre cserélni:
+<b>Új állás 22 nap alatt</b> – tagunk a Mentor Klub módszerével, +30% fizetéssel és +56%-kal több interjúmeghívással.
+<b>Új állás 5 nap alatt</b> – Otlecz Mónika 10 év közigazgatás után, nettó 120 000 Ft-tal magasabb fizetéssel.
+<b>[Helyőrző: PM-es / Scrum Master tagtörténet]</b>
+Ismerős valamelyik helyzet? Nem vagy egyedül.
+<b>Papíron nem vagy projektvezető, de valójában az vagy.</b> Te tartod össze a határidőket, a csapatot és a megrendelőt, csak ez se a titulusodban, se a fizetésedben nem látszik.
+<b>Minden projekt tűzoltás.</b> Csúsznak a határidők, a feladatok e-mailekben és táblázatokban szétszórva, és a végén mindig te maradsz bent tovább.
+<b>„Agilis”, „sprint”, „backlog”.</b> A megbeszéléseken bólogatsz, de nem vagy biztos benne, mit jelentenek a gyakorlatban.
+<b>A hirdetésekben eszközöket kérnek.</b> Jira, Asana, Monday.com, Scrum-tapasztalat, és ezek közül egyiket sem tudod beírni a CV-dbe.
+<b>Tapasztalatod van, bizonyítékod kevés.</b> Évek óta koordinálsz projekteket, de nincs mivel megmutatnod.
+Milyen lenne, ha májusban már projektvezetőként pályáznál?
+Ehhez két dolog kell: egy jól felépített tanulási sorrend és egy csoport, amivel végigmész rajta. A projektmenedzsment-útvonalon mindkettőt megkapod.
+[CSATLAKOZOM, ÉS FEBRUÁRBAN INDULOK →]
+A következő projektedet ütemtervvel, felelősökkel és mérföldkövekkel indítod, nem tűzoltással.
+A csapatod egy közös felületen látja, ki mit csinál, és a státuszmegbeszélés tíz perc alatt lezajlik.
+A CV-dben ott a projektmenedzsment, az agilis módszertan és a Jira, Asana vagy Monday.com, háromnyelvű tanúsítványokkal.
+Az interjún egy teljes projektet mutatsz be: terv, ütemterv, utóértékelés.
+Tudod, merre szakosodj tovább: Scrum Master, Product Owner vagy IT projektmenedzser.
+<b>Kiemelt mondat:</b> A cégek nem azt fizetik meg, ki dolgozik többet, hanem azt, amit kevesen tudnak.
+Miért most? (az AI-ablak blokk helyén)
+<b>H:</b> Ma mindenki projektekben dolgozik, de kevesen tudják jól vezetni őket.
+<b>Lead:</b> IT projektmenedzser, Business Analyst, Scrum Master és Product Owner pozíciókban bruttó 1,1–1,7 millió Ft/hó a bérsáv. A PM-eszközökbe már az AI is beépült: aki tudja használni, gyorsabban tervez, riportol és ütemez. Az útvonalon ezt is a gyakorlatban tanulod meg.
+<b>Részletek (opcionális):</b> az alap oldal AI-ablak idővonala változatlanul maradhat alatta.
+Az útvonal lépései (új blokk)
+<b>H:</b> Így jutsz el a projektvezetéstől a szakosodásig, nagyjából 3 hónap alatt
+<b>Kinek:</b> projektvezetőknek, csapatvezetőknek és mindenkinek, aki papíron nem projektvezető, de valójában projekteket koordinál, és piacképes projektmenedzsment- és agilis tudást szeretne.
+<b>1. hét – Projektmenedzsment hatékonyan</b> (egynapos tréning)
+<b>2. hét – Bevezetés az agilis működésbe</b> (egynapos tréning)
+<b>2–5. hét – Projektmenedzsment hatékonyan</b> (4 hetes élő képzés)
+<b>4–7. hét – Eszköztár AI-jal:</b> Projektmenedzsment AI-jal (Notion, Asana, Trello), Asana a gyakorlatban, Monday.com középhaladóknak
+<b>3–4. hónap – Szakosodás: Termékmenedzsment a Jira-ban</b> (egynapos tréning és 4 hetes képzés); a Scrum Master és az Agilis Product Owner irány a következő indulásnál
+<b>Zárás – Karrier Hack 3. lépés:</b> az elvégzett képzéseket kiemeled a CV-d elején és a LinkedIn-profilodon, ebben a csoportos konzultáción segítünk.
+<b>Mellé videón:</b> Agilis iránytű, Bevezetés a KanBan-ba, IT projektmenedzsment szerepkörök.
+<b>Amit a végén felmutatsz:</b> egy valós vagy szimulált projekt teljes projektterve, ütemterve és utóértékelése a választott eszközben (Asana, Monday.com vagy Jira). Ez az esettanulmány projektvezetői, Scrum Master vagy Product Owner pályázathoz is jó.
+<b>Így működik:</b> az élő órák felvételről is visszanézhetők, a többhetes képzések munka után vannak; minden képzés után háromnyelvű tanúsítványt kapsz; az útvonal benne van a tagdíjban, és mellette a Klub összes többi képzését is eléred.
+[CSATLAKOZOM, ÉS FEBRUÁRBAN INDULOK →]
+Innen az alap oldal folytatódik.
+AI a mindennapi munkában: az első prompttól a saját AI-asszisztensig
+Hero
+<b>Fejléc gomb:</b> CSATLAKOZOM, ÉS FEBRUÁRBAN INDULOK →
+<b>Címke a H1 fölött:</b> FEBRUÁRBAN INDUL · AI A MINDENNAPI MUNKÁBAN
+<b>H1:</b> NULLÁRÓL A SAJÁT AI-ASSZISZTENSIG – AI A MINDENNAPI MUNKÁBAN, ELŐKÉPZETTSÉG ÉS PROGRAMOZÁS NÉLKÜL, A SAJÁT FELADATAIDON
+<b>Alcím 1:</b> Februárban indul a Gerilla Mentor Klub belépő szintű AI-útvonala. Gyakorló trénerektől tanulod meg a ChatGPT, a Copilot és a Claude használatát a saját munkafeladataidon (levél, összefoglaló, kutatás, döntési anyag, prezentáció), és mellé egy 18 éve csiszolt álláskeresési módszert, amivel ezt a tudást a CV-dben és az interjún is megmutatod.
+<b>Alcím 2:</b> Élő órákon munka után, egy csoporttal együtt haladva, vagy felvételről, amikor neked jó.
+<b>3 ígéret:</b>
+Az első hetekben már a saját feladataidra írsz működő promptokat, és felépíted a saját prompt-könyvtáradat.
+Megtanulod ellenőrizni az AI válaszait, felismered a határait, és tudod, milyen adatot nem adhatsz át neki.
+A végére lesz egy saját AI-munkafüzeted: kipróbált promptok, előtte–utána összevetés a saját számaiddal és egy részben AI-ra bízott munkafolyamat.
+<b>Ajánlat-sor:</b> Havi 50 000 Ft helyett most féláron: 24 950 Ft/hó. Az útvonal benne van a tagdíjban. Bármikor lemondható, nincs hűségidő.
+<b>CTA:</b> CSATLAKOZOM, ÉS FEBRUÁRBAN INDULOK → · <b>Másodlagos:</b> Megnézem az útvonal lépéseit ↓
+<b>Árkártya címke:</b> FEBRUÁRI INDULÁS – FÉLÁRON! (50 000 Ft áthúzva → 24 950 Ft/hó)
+Eredménykártyák
+⚠️ Az alap oldalon nincs kifejezetten belépő szintű AI-s tagtörténet. Javaslat: az egyik kártya helyére András idézete a kajakegyesület elnökéről (AI-jal épített weboldal, 150 fős tagsági rendszer és évkönyv egy hónap alatt, fejlesztői háttér nélkül), a másik kettő maradhat általános, amíg nincs valós AI-s történet:
+<b>„Nem fejlesztő, mégis egy hónap alatt…”</b> – a kajakegyesületi példa röviden, András idézetéből.
+<b>+66% fizetés</b> – Somogyi Zsigmond (adatelemzés, Power Apps).
+<b>[Helyőrző: AI-t a napi munkájában használó tag története]</b>
+Ismerős valamelyik helyzet? Nem vagy egyedül.
+<b>Napi órák mennek el ugyanarra.</b> Másolás, beillesztés, e-mailek válogatása, táblázatok frissítése: munka, amit egy gép is elvégezhetne.
+<b>Mindenki az AI-ról beszél, a kollégád már használja is.</b> Te pedig nem tudod, hol kezdd, és mire érdemes egyáltalán használni a saját munkádban.
+<b>„Ehhez programozni kéne.”</b> Úgy érzed, az AI a technikai emberek terepe, pedig nem programozni kell tudni, elég jól kérdezni.
+<b>A hirdetésekben már elvárás.</b> „AI-eszközök magabiztos használata”, Copilot, ChatGPT, és nincs mit beírnod a CV-dbe.
+<b>Félsz, hogy a te munkádat is kiváltják.</b> Pedig azok járnak jól, akik a saját területükön megtanulják irányítani az AI-t.
+Milyen lenne, ha májusban már napi rutinnal használnád az AI-t a munkádban?
+Ehhez két dolog kell: egy jól felépített tanulási sorrend és egy csoport, amivel végigmész rajta. Az AI a mindennapi munkában útvonalon mindkettőt megkapod.
+[CSATLAKOZOM, ÉS FEBRUÁRBAN INDULOK →]
+A levelek, összefoglalók és jegyzőkönyvek első változatát percek alatt elkészíted, te csak átnézed és véglegesíted.
+Egy ismétlődő feladatodat, például a heti összefoglalót, részben az AI-ra bízod, emberi ellenőrzéssel.
+Te vagy a csapatban, aki tudja, mire jó az AI, mire nem, és milyen adatot nem szabad neki átadni.
+Az interjún konkrét példákkal mondod el, hogyan használod az AI-t, és mennyi időt nyersz vele.
+A CV-dben ott a ChatGPT, a Copilot, a Claude, az „ellenőrzött AI-használat a napi munkában” és a háromnyelvű tanúsítványok.
+<b>Kiemelt mondat:</b> Az AI-t azok fogják a legjobban kihasználni, akik a saját szakmájukban tanulják meg. Ehhez programozónak sem kell lenned.
+Miért most? (az AI-ablak blokk – itt szinte változatlanul maradhat)
+<b>H:</b> Az AI-ablak most van nyitva.
+<b>Lead:</b> Az AI-eszközök használata ma már a legtöbb irodai és szellemi munkakör hirdetésében elvárás [forrás bekérendő], nem csak az informatikusoknál. A cégek most vezetik be az AI-t, ezért friss gyakorlati tudással is be lehet lépni; 2028–2029-re ez alapelvárás lesz, 2030 után pedig már senior tapasztalatot keresnek.
+<b>Idővonal:</b> az alap oldal 2027 / 2028–2029 / 2030 után táblázata változatlanul.
+Az útvonal lépései (új blokk)
+<b>H:</b> Így jutsz el az első prompttól a saját AI-asszisztensig, kb. 16 hét alatt
+<b>Kinek:</b> átlagos irodai, szellemi munkát végzőknek – adminisztráció, ügyfélkapcsolat, pénzügy, HR, projektasszisztens, kisvállalkozó –, akik most ismerkednek az AI-jal. Előképzettség, AI-tapasztalat és programozói tudás nem kell; heti 2–3 óra elég.
+<b>1. hét – „Hogyan érvényesülj munkavállalóként az AI által átalakított világban?” és ChatGPT alkalmazása szakmai feladatokra – kezdő (két félnapos tréning)</b>
+<b>2–3. hét – AI és a kreativitás (félnapos tréning), majd Copilot a munkanapban (félnapos tréning, új) vagy az MS Copilot alapok videón</b>
+<b>4–5. hét – AI-alapú kutatás és elemzés (új), Érvelés, döntés-előkészítés és prezentáció AI-val (egynapos tréning, új), majd ChatGPT szakmai feladatokra – haladó</b>
+<b>6–7. hét – Claude – az AI mint munkatárs (félnapos tréning) [végleges név egyeztetendő] és Projektmenedzsment AI-jal – Notion, Asana, Trello (egynapos tréning)</b>
+<b>8–11. hét (választható) – Copilot (4×3 órás képzés) vagy AI asszisztens a PM napi munkájában (4 hetes élő képzés)</b>
+<b>12. hét – AI-rendelet (EU AI Act) és céges AI-kézikönyv (félnapos tréning, új)</b>
+<b>Zárás – Karrier Hack 3. lépés:</b> az elvégzett képzéseket kiemeled a CV-d elején és a LinkedIn-profilodon, ebben a csoportos konzultáción segítünk.
+<b>Mellé videón:</b> Prompt Engineering, AI és content, MS Copilot alapok, Lokális AI – szenzitív adatok kezelése, Mesterséges intelligencia az üzleti élet gyakorlatában.
+<b>Amit a végén felmutatsz:</b> egy saját „AI-munkafüzet”: legalább 10 saját feladaton kipróbált prompt, 3 feladat előtte–utána összevetése idő és minőség szerint, egy részben AI-ra bízott munkafolyamat emberi ellenőrzési ponttal és egy egyoldalas személyes AI-használati szabály. Ez kerül a CV-dbe, és ebből hozol példát az interjún.
+<b>Így működik:</b> az élő órák felvételről is visszanézhetők, a többhetes képzések munka után vannak; minden képzés után háromnyelvű tanúsítványt kapsz; az útvonal benne van a tagdíjban, és mellette a Klub összes többi képzését is eléred.
+[CSATLAKOZOM, ÉS FEBRUÁRBAN INDULOK →]
+Innen az alap oldal folytatódik.

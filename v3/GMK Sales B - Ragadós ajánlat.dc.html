@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="gmk-content.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="gmk-motion.js"></script>
+<style>
+body{margin:0;font-family:Poppins,"Open Sans",Arial,sans-serif;color:#2b302f;background:#f4f7f7;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:#2f7f80}a:hover{color:#1f5f60}
+*{box-sizing:border-box}
+html{scrollbar-width:thin;scrollbar-color:#63b6b7 #e9eeee}
+::-webkit-scrollbar{width:12px;height:12px}
+::-webkit-scrollbar-track{background:#e9eeee}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#5bb87a,#14b8a6 55%,#0fb5c0);border-radius:999px;border:3px solid #e9eeee}
+::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#4fa56c,#0f9f90 55%,#0b9ca6)}
+::selection{background:#84e0db;color:#0c181b}
+@keyframes gmkL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes gmkR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes gmkUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes gmkDrift{from{transform:translate(0,0) scale(1)}to{transform:translate(90px,60px) scale(1.18)}}
+@keyframes gmkShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes gmkFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@media (prefers-reduced-motion:reduce){[style*="gmkDrift"],[style*="gmkShift"],[style*="gmkFloat"]{animation:none!important}}
+@media (prefers-reduced-motion:reduce){[data-marq]{animation:none!important}}
+</style>
+</helmet>
+<sc-if value="{{ ready }}" hint-placeholder-val="{{ false }}">
+<div style="position:relative">
+
+<div style="position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;background:#f4f7f7"><div style="position:absolute;width:680px;height:680px;left:-180px;top:-160px;border-radius:50%;background:radial-gradient(circle,rgba(99,182,183,.42),transparent 65%);filter:blur(40px);animation:gmkDrift 20s ease-in-out infinite alternate"></div><div style="position:absolute;width:560px;height:560px;right:-140px;top:30%;border-radius:50%;background:radial-gradient(circle,rgba(43,182,115,.22),transparent 65%);filter:blur(40px);animation:gmkDrift 26s ease-in-out infinite alternate-reverse"></div><div style="position:absolute;width:480px;height:480px;left:30%;bottom:-200px;border-radius:50%;background:radial-gradient(circle,rgba(241,162,70,.2),transparent 65%);filter:blur(50px);animation:gmkDrift 30s ease-in-out infinite alternate"></div><div style="position:absolute;inset:0;opacity:.07;background-image:url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.8%22 numOctaves=%222%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')"></div></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+<symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+<symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+<symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></symbol>
+<symbol id="i-bot" viewBox="0 0 24 24"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></symbol>
+<symbol id="i-trending-up" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+<symbol id="i-languages" viewBox="0 0 24 24"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-graduation-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+<symbol id="i-award" viewBox="0 0 24 24"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+<symbol id="i-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+<symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+<symbol id="i-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-wallet" viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></symbol>
+<symbol id="i-file-text" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+<symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+<symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+</defs></svg>
+<!-- ANNOUNCE -->
+<div style="background:#306364;color:#fff;font:600 13px/1.4 Poppins,sans-serif;padding:10px 24px;text-align:center">{{ c.hero.oa }} <s style="color:#c9dfe0">{{ c.hero.old }}</s> {{ c.hero.ob }} <b style="color:#84e0db">{{ c.hero.price }}</b>. {{ c.hero.oc }}</div>
+
+<!-- HEADER -->
+<header style="position:sticky;top:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid #e3e8eb">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <img src="logo.png" alt="Mentor Klub" style="height:48px;width:auto;display:block"/>
+    <sc-if value="{{ showNav }}"><nav style="display:flex;gap:6px"><sc-for list="{{ navItems }}" as="n" hint-placeholder-count="5"><a onClick="{{ n.onClick }}" style="font:600 14px Poppins,sans-serif;color:#2b302f;cursor:pointer;text-decoration:none;padding:8px 14px;border-radius:999px" style-hover="background:#e6f4f4">{{ n.t }}</a></sc-for></nav></sc-if>
+    <button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 13px/1.2 Poppins,sans-serif;text-transform:uppercase;border-radius:999px;padding:10px 20px;min-height:44px;border:0;cursor:pointer;white-space:nowrap" style-hover="filter:brightness(1.15)">{{ c.hero.cta }}</button>
+  </div>
+  <div style="height:3px;background:#e3e8eb"><div style="height:3px;background:#63b6b7;width:{{ prog }}%"></div></div>
+</header>
+
+<!-- HERO STAGE -->
+<section style="max-width:1280px;margin:24px auto 0;padding:0 24px">
+  <sc-if value="{{ notes }}"><div style="margin:0 0 12px;background:#f1a246;color:#0c181b;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace;max-width:720px">UX · Felső ajánlatsáv + ragadós fejléc haladásjelzővel. A hero kártyába zárt „színpad”, nem teljes szélességű sáv; jobb oldalt a fotó-kollázs (Baráth András + egy eredménykártya). Ár már a hero-ban látszik.</div></sc-if>
+  <div style="background:linear-gradient(120deg,#2c3439,#364349,#2a4a4c,#364349);background-size:300% 300%;animation:gmkShift 18s ease infinite;border-radius:40px;padding:clamp(28px,4vw,56px);color:#dde2e3;position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(12,24,27,.25)">
+    <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none"><div style="position:absolute;inset:0;background:url(assets/brand-01.png) right center/cover;opacity:.26;filter:saturate(.7)"></div><div style="position:absolute;width:560px;height:560px;left:-140px;top:-180px;border-radius:50%;background:radial-gradient(circle,rgba(91,174,175,.55),transparent 65%);filter:blur(30px);animation:gmkDrift 16s ease-in-out infinite alternate"></div><div style="position:absolute;width:460px;height:460px;right:-100px;bottom:-140px;border-radius:50%;background:radial-gradient(circle,rgba(43,182,115,.34),transparent 65%);filter:blur(30px);animation:gmkDrift 22s ease-in-out infinite alternate-reverse"></div><div style="position:absolute;width:280px;height:280px;left:40%;top:5%;border-radius:50%;background:radial-gradient(circle,rgba(241,162,70,.24),transparent 65%);filter:blur(40px);animation:gmkDrift 26s ease-in-out infinite alternate"></div><div style="position:absolute;inset:0;opacity:.16;mix-blend-mode:overlay;background-image:url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.8%22 numOctaves=%222%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')"></div></div>
+    <div style="position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(102,193,195,.25)"></div>
+    <div style="position:absolute;right:-60px;top:-60px;width:300px;height:300px;border-radius:50%;border:1px solid rgba(102,193,195,.15)"></div>
+    <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:48px;align-items:center">
+      <div>
+        <sc-if value="{{ hasTag }}"><div style="display:inline-flex;align-items:center;gap:6px;background:#f1a246;color:#0c181b;font:800 12px Poppins,sans-serif;letter-spacing:.04em;padding:6px 12px;border-radius:999px;margin-bottom:16px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-calendar"></use></svg>{{ c.hero.tag }}</div></sc-if>
+        <h1 style="margin:0 0 22px;font:800 clamp(28px,3.8vw,48px)/1.1 Poppins,sans-serif;color:#fff;text-transform:uppercase;text-wrap:balance">{{ c.hero.h1a }}<span style="color:#5baeaf">{{ c.hero.h1b }}</span></h1>
+        <p style="margin:0 0 10px;font:600 17px/1.55 Poppins,sans-serif;color:#d7dddf">{{ c.hero.sub1 }}</p>
+        <p style="margin:0 0 24px;font-size:16px">{{ c.hero.sub2 }}</p>
+        <div style="display:grid;gap:10px;margin-bottom:28px"><sc-for list="{{ heroBullets }}" as="b" hint-placeholder-count="3"><div style="display:flex;gap:12px;font-size:15px"><span style="flex:none;color:#84e0db;font-weight:800"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="#i-check"></use></svg></span><span>{{ b.t }}</span></div></sc-for></div>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center">
+          <button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 15px/1.2 Poppins,sans-serif;text-transform:uppercase;border-radius:12px;padding:16px 28px;min-height:52px;border:0;cursor:pointer;box-shadow:0 8px 24px rgba(99,182,183,.35)" style-hover="filter:brightness(1.15)">{{ c.hero.cta }}</button>
+          <a onClick="{{ goWhat }}" style="color:#fff;font:700 15px Poppins,sans-serif;cursor:pointer;text-decoration:none;border-bottom:2px solid #66c1c3">{{ c.hero.cta2 }}</a>
+        </div>
+      </div>
+      <div style="position:relative;min-height:340px">
+        <img src="img-founder-arms.png" alt="Baráth András" style="position:absolute;left:40px;top:0;width:calc(100% - 40px);height:calc(100% - 40px);object-fit:cover;object-position:50% 20%;border-radius:32px;box-shadow:0 20px 48px rgba(0,0,0,.4)"/>
+        <div style="position:absolute;left:0;bottom:0;width:min(260px,70%);background:#fff;color:#2b302f;border-radius:20px;padding:16px 18px;box-shadow:0 12px 32px rgba(0,0,0,.3)"><div style="font:800 22px/1.15 Poppins,sans-serif;color:#2f7f80">{{ s0.big }}</div><div style="font-size:12px;line-height:1.4;margin-top:4px">{{ s0.x }}</div></div>
+        <div style="position:absolute;right:0;top:-30px;background:#f1a246;color:#0c181b;border-radius:16px;padding:10px 14px;font:800 12px/1.3 Poppins,sans-serif;text-transform:uppercase;text-align:center">{{ c.hero.badge }}<div style="font-size:16px;margin-top:2px">{{ c.hero.price }}</div></div>
+      </div>
+    </div>
+    <div style="position:relative;display:flex;flex-wrap:wrap;gap:10px;margin-top:36px"><sc-for list="{{ trust }}" as="t" hint-placeholder-count="5"><div style="background:#40454b;color:#fff;font:600 12px Poppins,sans-serif;padding:8px 16px;border-radius:999px"><span style="color:#f1a246">{{ t.star }}</span>{{ t.t }}</div></sc-for></div>
+  </div>
+</section>
+
+<!-- STORIES -->
+<section style="max-width:1280px;margin:24px auto 0;padding:0 24px">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px">
+    <sc-for list="{{ stories3 }}" as="s" hint-placeholder-count="3">
+      <div style="background:#fff;border-radius:24px;padding:20px;display:flex;gap:16px;align-items:center;border:1px solid #e3e8eb"><img src="{{ s.img }}" alt="" style="flex:none;width:64px;height:64px;border-radius:20px;object-fit:cover;background:#e3e8eb"/><div><sc-if value="{{ s.pend }}"><div style="display:inline-block;background:#f1a246;color:#0c181b;font:800 10px Poppins,sans-serif;letter-spacing:.06em;padding:3px 8px;border-radius:999px;margin-bottom:6px">{{ pendLbl }}</div></sc-if><div style="font:800 20px/1.15 Poppins,sans-serif;color:#2f7f80;margin-bottom:4px">{{ s.big }}</div><div style="font-size:13px;line-height:1.45">{{ s.x }}</div></div></div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- GRID: MAIN + STICKY OFFER -->
+<div style="max-width:1280px;margin:24px auto 0;padding:0 24px;display:grid;grid-template-columns:{{ gridCols }};gap:24px;align-items:start">
+<main style="min-width:0;display:grid;grid-template-columns:minmax(0,1fr);gap:24px">
+
+<!-- 01 -->
+<section style="background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-radius:32px;padding:clamp(24px,3.4vw,48px);border:1px solid rgba(255,255,255,.95);box-shadow:0 8px 32px rgba(48,99,100,.10)">
+  <div style="font:700 13px ui-monospace,Menlo,monospace;color:#2f7f80;margin-bottom:10px">01</div>
+  <h2 style="margin:0 0 28px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif;text-wrap:balance">{{ c.pain.h }}</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px">
+    <sc-for list="{{ pains }}" as="p" hint-placeholder-count="6"><div style="background:#f4f7f7;border-radius:24px 24px 24px 6px;padding:20px 22px"><sc-if value="{{ p.hasImg }}"><img src="{{ p.img }}" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:5/4;object-fit:cover;object-position:50% 55%;border-radius:12px;margin-bottom:16px"/></sc-if><div style="width:44px;height:44px;border-radius:14px;background:#e6f4f4;color:#2f7f80;display:flex;align-items:center;justify-content:center;margin-bottom:12px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="{{ p.ic }}"></use></svg></div><div style="font:700 17px/1.3 Poppins,sans-serif;margin-bottom:6px">{{ p.t }}</div><div style="font-size:14px">{{ p.x }}</div></div></sc-for>
+  </div>
+</section>
+
+<!-- 02 -->
+<section style="background:linear-gradient(160deg,#16292f,#0c181b);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);color:#fff;border-radius:32px;padding:clamp(24px,3.4vw,48px);box-shadow:0 0 0 1px rgba(102,193,195,.45),0 0 40px rgba(91,174,175,.15)">
+  <div style="font:700 13px ui-monospace,Menlo,monospace;color:#84e0db;margin-bottom:10px">02</div>
+  <h2 style="margin:0 0 28px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif;text-wrap:balance">{{ c.imagine.h }}</h2>
+  <sc-if value="{{ imTheme }}"><p style="margin:0 0 20px;font:600 16px/1.5 Poppins,sans-serif">{{ c.imagine.close }}</p><button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 14px/1.2 Poppins,sans-serif;text-transform:uppercase;border-radius:12px;padding:14px 22px;min-height:48px;border:0;cursor:pointer;margin:0 0 28px" style-hover="filter:brightness(1.15)">{{ c.hero.cta }}</button></sc-if>
+  <img src="assets/illu-05.png" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:24px;margin:0 0 24px"/>
+  <div style="display:grid;gap:0;margin-bottom:24px">
+    <sc-for list="{{ imagine }}" as="i" hint-placeholder-count="5"><div style="display:grid;grid-template-columns:36px 1fr;gap:14px"><div style="display:flex;flex-direction:column;align-items:center"><span style="width:36px;height:36px;border-radius:50%;background:#84e0db;color:#0c181b;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="{{ i.ic }}"></use></svg></span><span style="flex:1;width:2px;background:rgba(132,224,219,.3);min-height:12px"></span></div><div style="padding:2px 0 22px;font-size:16px"><sc-for list="{{ i.seg }}" as="g" hint-placeholder-count="1"><span style="font-weight:{{ g.w }}">{{ g.t }}</span></sc-for></div></div></sc-for>
+  </div>
+  <sc-if value="{{ imBase }}"><p style="margin:0;padding:18px 22px;background:rgba(48,99,100,.45);border-radius:18px;font:600 16px/1.5 Poppins,sans-serif">{{ c.imagine.close }}</p></sc-if>
+  <sc-if value="{{ hasQuote }}"><blockquote style="margin:0;padding:20px 24px;background:#84e0db;color:#0c181b;border-radius:18px;font:700 clamp(17px,1.8vw,20px)/1.45 Poppins,sans-serif">„{{ c.imagine.quote }}”</blockquote></sc-if>
+</section>
+
+<!-- 03 -->
+<section style="background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-radius:32px;padding:clamp(24px,3.4vw,48px);border:1px solid rgba(255,255,255,.95);box-shadow:0 8px 32px rgba(48,99,100,.10)">
+  <sc-if value="{{ notes }}"><div style="margin:0 0 16px;background:#fff;border:2px dashed #f1a246;color:#2b302f;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace">ELTÉRÉS · Az utolsó mondat („A cégek nem azt fizetik meg…”) kiemelve, a bekezdés többi része „Részletek” mögött. Szó nem változott. AI-ablak: élő oldalról átvett szöveg (a dokumentumból hiányzott).</div></sc-if>
+  <div style="font:700 13px ui-monospace,Menlo,monospace;color:#2f7f80;margin-bottom:10px">03</div>
+  <h2 style="margin:0 0 20px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif;text-wrap:balance">{{ c.now.h }}</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px;margin:0 0 24px"><img src="assets/illu-06.png" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:24px"/><img src="assets/illu-07.png" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:24px"/></div>
+  <p style="margin:0 0 14px;font:700 clamp(18px,2vw,22px)/1.45 Poppins,sans-serif;color:#2f7f80">{{ c.now.lead }}</p>
+  <sc-if value="{{ nowBtn }}"><button onClick="{{ toggleNow }}" style="background:none;border:0;padding:0;font:700 14px Poppins,sans-serif;color:#2b302f;cursor:pointer;border-bottom:2px solid #63b6b7">Részletek <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-3px"><use href="{{ nowIco }}"></use></svg></button></sc-if>
+  <p style="display:{{ nowDisp }};margin:14px 0 0">{{ c.now.detail }}</p>
+  <div style="display:{{ tlDisp }}">
+  <h3 style="margin:32px 0 16px;font:800 13px Poppins,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80">{{ c.now.boxH }}</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px">
+    <sc-for list="{{ nowSteps }}" as="t" hint-placeholder-count="3"><div style="background:{{ t.bg }};color:{{ t.fg }};border-radius:20px;padding:20px;position:relative"><div style="font:800 26px/1 Poppins,sans-serif;color:{{ t.yc }};margin-bottom:12px">{{ t.y }}</div><div style="font-size:12px;opacity:.75;margin-bottom:2px">Mi történik a cégeknél:</div><div style="font:600 14px/1.4 Poppins,sans-serif;margin-bottom:10px">{{ t.a }}</div><div style="font-size:12px;opacity:.75;margin-bottom:2px">Mit jelent neked:</div><div style="font:700 14px/1.4 Poppins,sans-serif">{{ t.b }}</div></div></sc-for>
+  </div>
+  <p style="margin:20px 0 0;padding:16px 20px;background:#f1a246;color:#0c181b;border-radius:16px;font:600 15px/1.5 Poppins,sans-serif">{{ c.now.box }}</p>
+  </div>
+</section>
+
+<!-- 03/B AZ ÚTVONAL LÉPÉSEI (tematikus) -->
+<sc-if value="{{ hasPath }}">
+<section id="utvonal-lepesei" style="background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-radius:32px;padding:clamp(24px,3.4vw,48px);border:1px solid rgba(255,255,255,.95);box-shadow:0 8px 32px rgba(48,99,100,.10)">
+  <div style="display:inline-flex;align-items:center;gap:6px;background:#f1a246;color:#0c181b;font:800 12px Poppins,sans-serif;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-calendar"></use></svg>{{ c.feb.tag }}</div>
+  <h2 style="margin:0 0 20px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif;text-wrap:balance">{{ path.h }}</h2>
+  <div style="font:700 12px Poppins,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:6px">{{ path.kinekL }}</div>
+  <p style="margin:0 0 28px;font:600 17px/1.45 Poppins,sans-serif">{{ path.kinek }}</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:28px">
+    <div>
+      <sc-for list="{{ path.s }}" as="s" hint-placeholder-count="5"><div style="display:grid;grid-template-columns:34px 1fr;gap:14px"><div style="display:flex;flex-direction:column;align-items:center"><span style="width:12px;height:12px;border-radius:50%;background:#2f7f80;margin-top:6px"></span><span style="flex:1;width:2px;background:rgba(47,127,128,.25)"></span></div><div style="padding-bottom:16px"><div style="font:700 13px Poppins,sans-serif;color:#2f7f80">{{ s.a }}</div><div style="font-size:15px"><b style="font-family:Poppins,sans-serif">{{ s.b }}</b> {{ s.c }}</div></div></div></sc-for>
+      <div style="background:#f4f7f7;border-radius:18px;padding:14px 18px;font-size:14px"><b style="font-family:Poppins,sans-serif">{{ path.vidL }}:</b> {{ path.vid }}</div>
+    </div>
+    <div style="display:grid;gap:14px;align-content:start">
+      <div style="background:linear-gradient(160deg,#16292f,#0c181b);color:#fff;border-radius:24px;padding:22px 24px;box-shadow:0 0 0 1px rgba(102,193,195,.45),0 0 40px rgba(91,174,175,.15)"><div style="display:flex;gap:8px;align-items:center;font:700 12px Poppins,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#84e0db;margin-bottom:8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-award"></use></svg>{{ path.finL }}</div><div style="font:600 16px/1.5 Poppins,sans-serif">{{ path.fin }}</div></div>
+      <div style="font-size:14px"><div style="font:700 12px Poppins,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:4px">{{ path.howL }}</div>{{ path.how }}</div>
+      <div><button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 14px/1.2 Poppins,sans-serif;text-transform:uppercase;border-radius:12px;padding:14px 22px;min-height:48px;border:0;cursor:pointer" style-hover="filter:brightness(1.15)">{{ path.cta }}</button></div>
+    </div>
+  </div>
+</section>
+</sc-if>
+
+<!-- 04 ÚTVONALAK -->
+<section id="utvonalak" style="background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-radius:32px;padding:clamp(24px,3.4vw,48px);border:1px solid rgba(255,255,255,.95);box-shadow:0 8px 32px rgba(48,99,100,.10)">
+  <sc-if value="{{ notes }}"><div style="margin:0 0 16px;background:#f1a246;color:#0c181b;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace">UX · Négy sor, nyitható: a csukott sor már mutatja a „kinek”-et, így a látogató olvasás nélkül is önmagára ismer. Szöveg az élő oldalról (a táblázat hiányzott a dokumentumból).</div></sc-if>
+  <div style="font:700 13px ui-monospace,Menlo,monospace;color:#2f7f80;margin-bottom:10px">04</div>
+  <h2 style="margin:0 0 24px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif;text-wrap:balance">{{ c.routes.h }}</h2>
+  <img src="assets/illu-08.png" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:16/8;object-fit:cover;object-position:50% 60%;border-radius:24px;margin:0 0 24px"/>
+  <div style="display:grid;gap:12px">
+    <sc-for list="{{ routes }}" as="r" hint-placeholder-count="4">
+      <div style="border:2px solid {{ r.bd }};border-top:6px solid {{ r.col }};border-radius:24px;overflow:hidden;background:#fff">
+        <button onClick="{{ r.onClick }}" style="width:100%;display:grid;grid-template-columns:48px 1fr 28px;gap:14px;align-items:center;text-align:left;background:{{ r.bg }};border:0;padding:18px 20px;cursor:pointer;font-family:Poppins,sans-serif;color:#2b302f"><span style="width:44px;height:44px;border-radius:14px;background:#14262b;color:{{ r.col }};display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="{{ r.ic }}"></use></svg></span><span><span style="display:block;font:600 13px/1.35 Poppins,sans-serif;color:{{ r.colD }};margin-bottom:2px">{{ r.kick }}</span><span style="display:block;font:700 18px/1.3 Poppins,sans-serif">{{ r.t }}</span><span style="display:block;font-size:14px;color:#5b666b">{{ r.k }}</span></span><span style="color:#2f7f80;font-size:24px;line-height:1"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="{{ r.ico }}"></use></svg></span></button>
+        <div style="display:{{ r.disp }};padding:6px 20px 22px">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:24px">
+            <div><div style="font:700 12px Poppins,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:6px">{{ c.routes.mire }}</div><div style="font:600 17px/1.45 Poppins,sans-serif;margin-bottom:18px">{{ r.m }}</div><button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 14px/1.2 Poppins,sans-serif;text-transform:uppercase;border-radius:12px;padding:14px 22px;min-height:48px;border:0;cursor:pointer" style-hover="filter:brightness(1.15)">{{ c.hero.cta }}</button></div>
+            <div><div style="font:800 15px Poppins,sans-serif;margin-bottom:10px">{{ c.routes.first }}</div>
+              <sc-for list="{{ r.g }}" as="g" hint-placeholder-count="2"><div style="margin-bottom:12px"><div style="font:600 13px Poppins,sans-serif;color:#2f7f80;margin-bottom:6px">{{ g.l }}</div><div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{ g.i }}" as="x" hint-placeholder-count="3"><span style="background:#f4f7f7;border-radius:10px;padding:6px 12px;font-size:13px">{{ x.t }}</span></sc-for></div></div></sc-for></div>
+          </div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top:20px;background:#e6f4f4;border-radius:20px;padding:18px 22px;font-size:15px"><b>{{ c.routes.age }}</b>{{ c.routes.ageX }}</div>
+</section>
+
+<!-- 05 FEBRUÁR -->
+<section style="background:linear-gradient(rgba(28,40,46,.8),rgba(28,40,46,.9)),url(assets/brand-08.png) center/cover;color:#dde2e3;border-radius:32px;padding:clamp(24px,3.4vw,48px)">
+  <sc-if value="{{ notes }}"><div style="margin:0 0 16px;background:#f1a246;color:#0c181b;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace">UX · Egy fülsor + egy nagy idővonal-panel: a három útvonal összehasonlítható, mégsem három hosszú lista. Hideg kampányoldalon ez a blokk a hero alá is előrehozható.</div></sc-if>
+  <div style="display:inline-block;background:#f1a246;color:#0c181b;font:800 12px Poppins,sans-serif;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:14px;display:inline-flex;align-items:center;gap:6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-calendar"></use></svg>{{ c.feb.tag }}</div>
+  <div style="font:700 13px ui-monospace,Menlo,monospace;color:#84e0db;margin-bottom:10px">05</div>
+  <h2 style="margin:0 0 16px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif;color:#fff;text-wrap:balance">{{ c.feb.h }}</h2>
+  <p style="margin:0 0 24px;font-size:16px">{{ c.feb.p }}</p>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px"><sc-for list="{{ febTabs }}" as="t" hint-placeholder-count="3"><button onClick="{{ t.onClick }}" style="cursor:pointer;font:700 14px Poppins,sans-serif;padding:12px 20px;min-height:46px;border-radius:999px;background:{{ t.bg }};color:{{ t.fg }};border:1px solid {{ t.bd }}">{{ t.t }}</button></sc-for></div>
+  <div style="background:linear-gradient(160deg,#16292f,#0c181b);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);border-radius:28px;border:1px solid {{ fbBd }};box-shadow:{{ fbSh }};padding:clamp(20px,3vw,32px);color:#fff">
+    <h3 style="margin:0 0 20px;font:800 clamp(18px,2vw,24px)/1.3 Poppins,sans-serif">{{ fb.t }}</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:32px">
+      <div>
+        <sc-for list="{{ fb.s }}" as="s" hint-placeholder-count="6"><div style="display:grid;grid-template-columns:34px 1fr;gap:14px"><div style="display:flex;flex-direction:column;align-items:center"><span style="width:12px;height:12px;border-radius:50%;background:#84e0db;margin-top:6px"></span><span style="flex:1;width:2px;background:rgba(132,224,219,.25)"></span></div><div style="padding-bottom:16px"><div style="font:700 13px Poppins,sans-serif;color:#84e0db">{{ s.a }}</div><div style="font:600 15px/1.4 Poppins,sans-serif">{{ s.b }}</div><sc-if value="{{ s.hasC }}"><div style="font-size:13px;color:#96afb2">{{ s.c }}</div></sc-if></div></div></sc-for>
+      </div>
+      <div style="display:grid;gap:14px;align-content:start;font-size:14px">
+        <div><div style="font:700 12px Poppins,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#6dc6c3;margin-bottom:4px">{{ c.feb.kinek }}</div>{{ fb.k }}</div>
+        <div><div style="font:700 12px Poppins,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#6dc6c3;margin-bottom:4px">{{ c.feb.old }}</div>{{ fb.o }}</div>
+        <div style="background:rgba(132,224,219,.12);border-radius:16px;padding:14px 16px"><div style="font:700 12px Poppins,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#6dc6c3;margin-bottom:4px">{{ c.feb.fin }}</div>{{ fb.f }}</div>
+        <div style="color:#96afb2"><b style="color:#dde2e3">{{ c.feb.mkt }}:</b> {{ fb.mk }}</div>
+      </div>
+    </div>
+  </div>
+  <h3 style="margin:28px 0 12px;font:800 18px Poppins,sans-serif;color:#fff">{{ c.feb.allH }}</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px"><sc-for list="{{ febAll }}" as="a" hint-placeholder-count="4"><div style="background:rgba(12,24,27,.35);border-radius:16px;padding:14px 16px;font-size:14px;display:flex;gap:10px"><span style="color:#84e0db;font-weight:800"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="#i-check"></use></svg></span><span>{{ a.t }}</span></div></sc-for></div>
+  <div style="margin-top:24px;display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center"><button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 15px/1.2 Poppins,sans-serif;text-transform:uppercase;border-radius:12px;padding:16px 28px;min-height:52px;border:0;cursor:pointer;box-shadow:0 8px 24px rgba(99,182,183,.35)" style-hover="filter:brightness(1.15)">{{ c.feb.cta }}</button><a style="color:#66c1c3;font:700 14px Poppins,sans-serif;cursor:pointer">{{ c.feb.laterBtn }}</a></div>
+  <p style="margin:16px 0 0;font-size:14px;color:#96afb2">{{ c.feb.later }}</p>
+</section>
+
+<!-- 06 BENTO -->
+<section id="mit-kapsz" style="background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-radius:32px;padding:clamp(24px,3.4vw,48px);border:1px solid rgba(255,255,255,.95);box-shadow:0 8px 32px rgba(48,99,100,.10)">
+  <sc-if value="{{ notes }}"><div style="margin:0 0 16px;background:#f1a246;color:#0c181b;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace">UX · Bento: a három pillér nagy csempe, az „Így tanulsz” öt eleme kis csempe (a doksi bento-ötlete). Csempére kattintva a részletek alatta nyílnak. Az „Így tanulsz” szöveg itt él, lent nem ismétlődik.</div></sc-if>
+  <div style="font:700 13px ui-monospace,Menlo,monospace;color:#2f7f80;margin-bottom:10px">06</div>
+  <h2 style="margin:0 0 24px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif;text-wrap:balance">{{ c.pillars.h }}</h2>
+  <div style="display:grid;grid-template-columns:{{ bentoCols }};gap:12px;margin-bottom:24px">
+    <sc-for list="{{ bento }}" as="b" hint-placeholder-count="8">
+      <div onClick="{{ b.onClick }}" style="{{ b.span }};cursor:{{ b.cur }};background:{{ b.bg }};color:{{ b.fg }};border:2px solid {{ b.bd }};border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:8px;min-height:{{ b.mh }}">
+        <div style="color:{{ b.tc }};display:flex"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="{{ b.ic }}"></use></svg></div><div style="font:800 {{ b.fs }} Poppins,sans-serif;line-height:1.2;color:{{ b.tc }}">{{ b.h }}</div>
+        <div style="font-size:13px;line-height:1.5;opacity:.9">{{ b.x }}</div>
+        <sc-if value="{{ b.hasChips }}"><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:auto"><sc-for list="{{ b.chips }}" as="c3" hint-placeholder-count="5"><span style="background:rgba(255,255,255,.14);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:600">{{ c3.t }}</span></sc-for></div></sc-if>
+        <sc-if value="{{ b.isBig }}"><div style="margin-top:8px;flex:1;min-height:90px;border-radius:16px;background:url(assets/brand-10.png) center/cover"></div></sc-if>
+      </div>
+    </sc-for>
+  </div>
+  <div style="border:1px solid #e3e8eb;border-radius:24px;padding:clamp(18px,2.6vw,32px)">
+    <h3 style="margin:0 0 20px;font:800 clamp(18px,2vw,24px)/1.3 Poppins,sans-serif;color:#2f7f80">{{ pillTitle }}</h3>
+    <sc-if value="{{ p0 }}">
+      <div style="display:grid;gap:10px">
+        <sc-for list="{{ mods }}" as="m" hint-placeholder-count="5">
+          <div style="border:1px solid #e3e8eb;border-radius:16px;overflow:hidden">
+            <button onClick="{{ m.onClick }}" style="width:100%;display:flex;justify-content:space-between;gap:16px;text-align:left;background:{{ m.bg }};border:0;padding:16px 18px;cursor:pointer;font:700 16px/1.35 Poppins,sans-serif;color:#2b302f"><span>{{ m.h }}</span><span style="color:#2f7f80;font-size:22px;line-height:1"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="{{ m.ico }}"></use></svg></span></button>
+            <div style="display:{{ m.disp }};padding:4px 18px 18px;font-size:15px">
+              <p style="margin:0 0 14px">{{ m.p }}</p>
+              <sc-if value="{{ m.hasLv }}"><div style="margin:0 0 14px"><div style="font:700 14px Poppins,sans-serif;margin-bottom:8px">{{ m.lv }}</div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:8px"><sc-for list="{{ m.levels }}" as="l" hint-placeholder-count="4"><div style="display:flex;gap:10px;background:#f4f7f7;border-radius:12px;padding:10px 14px;font-size:14px"><b style="color:#2f7f80">{{ l.n }}.</b><span>{{ l.t }}</span></div></sc-for></div></div></sc-if>
+              <sc-if value="{{ m.hasQ }}"><div style="background:#e6f4f4;border-radius:14px;padding:16px 18px;font-style:italic">{{ m.q }}<div style="font-style:normal;font-weight:700;margin-top:6px">– {{ m.qa }}</div></div></sc-if>
+              <sc-if value="{{ m.hasChips }}"><div style="font:700 14px Poppins,sans-serif;margin-bottom:8px">{{ m.cl }}</div><div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px"><sc-for list="{{ m.chipList }}" as="c2" hint-placeholder-count="6"><span style="background:#40454b;color:#fff;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600">{{ c2.t }}</span></sc-for></div><div style="background:#e6f4f4;border-radius:14px;padding:14px 18px">{{ m.pr }}</div></sc-if>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+    <sc-if value="{{ p1 }}">
+      <p style="margin:0 0 6px;font:700 18px/1.4 Poppins,sans-serif">{{ c.pillars.job.h }}</p>
+      <p style="margin:0 0 20px">{{ c.pillars.job.p }}</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:10px;margin-bottom:20px"><sc-for list="{{ jobB }}" as="b" hint-placeholder-count="4"><div style="display:flex;gap:12px;background:#f4f7f7;border-radius:16px;padding:14px 16px;font-size:14px"><span style="color:#2f7f80;font-weight:800"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="#i-check"></use></svg></span><span>{{ b.t }}</span></div></sc-for></div>
+      <p style="margin:0 0 20px;font-weight:700">{{ c.pillars.job.n }}</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px"><sc-for list="{{ jobP }}" as="q" hint-placeholder-count="2"><div style="background:#e6f4f4;border-radius:16px;padding:16px 18px;font-size:14px">{{ q.t }}</div></sc-for></div>
+    </sc-if>
+    <sc-if value="{{ p2 }}">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px"><sc-for list="{{ c.pillars.lang }}" as="l" hint-placeholder-count="2"><div style="background:#f4f7f7;border-radius:20px;padding:22px"><h4 style="margin:0 0 8px;font:800 20px Poppins,sans-serif;color:#2f7f80">{{ l.h }}</h4><p style="margin:0;font-size:14px">{{ l.p }}</p></div></sc-for></div>
+    </sc-if>
+  </div>
+  <div style="margin-top:24px"><button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 15px/1.2 Poppins,sans-serif;text-transform:uppercase;border-radius:12px;padding:16px 28px;min-height:52px;border:0;cursor:pointer;box-shadow:0 8px 24px rgba(99,182,183,.35)" style-hover="filter:brightness(1.15)">{{ c.hero.cta }}</button></div>
+</section>
+
+<!-- 07 KATALÓGUS -->
+<section id="kepzesek" style="background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-radius:32px;padding:clamp(24px,3.4vw,48px) 0;border:1px solid rgba(255,255,255,.95);box-shadow:0 8px 32px rgba(48,99,100,.10);overflow:hidden">
+  <div style="padding:0 clamp(24px,3.4vw,48px)">
+    <sc-if value="{{ notes }}"><div style="margin:0 0 16px;background:#f1a246;color:#0c181b;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace">UX · Kétsoros, ellentétes irányú tréningfal (hoverre megáll, reduced-motion: áll). Alatta kétpaneles böngésző: bal oldalt a modullista, jobbra a kiválasztott modul képzései. ELTÉRÉS: videós anyagok száma eltér (112 számsor / 219 „Így tanulsz”) – ellenőrizendő.</div></sc-if>
+    <div style="font:700 13px ui-monospace,Menlo,monospace;color:#2f7f80;margin-bottom:10px">07</div>
+    <h2 style="margin:0 0 10px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif;text-wrap:balance">{{ c.cat.h }}</h2>
+    <p style="margin:0 0 24px;font-size:16px">{{ c.cat.intro }}</p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px">
+      <sc-for list="{{ nums }}" as="n" hint-placeholder-count="7"><div style="background:#f4f7f7;border-radius:999px;padding:8px 18px;display:flex;gap:10px;align-items:center"><span style="color:#2f7f80;display:flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="{{ n.ic }}"></use></svg></span><b style="font:800 20px Poppins,sans-serif;color:#2f7f80">{{ n.a }}</b><span style="font-size:13px">{{ n.b }}</span></div></sc-for>
+      <div style="background:#40454b;color:#fff;border-radius:999px;padding:12px 18px;font:700 13px Poppins,sans-serif">{{ c.cat.lvl }}</div>
+    </div>
+  </div>
+  <div style="display:grid;gap:14px;margin-bottom:32px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)">
+    <div data-marq="1" style="display:flex;width:max-content;animation:gmkL 70s linear infinite" style-hover="animation-play-state:paused">
+      <sc-for list="{{ row1 }}" as="w" hint-placeholder-count="12"><div style="flex:none;width:230px;aspect-ratio:16/9;margin-right:14px;border-radius:16px;background:{{ w.tint }};position:relative;overflow:hidden;padding:14px;display:flex;flex-direction:column;justify-content:space-between"><div style="width:28px;height:6px;border-radius:3px;background:{{ w.col }}"></div><div style="font:800 13px/1.2 Poppins,sans-serif;color:#0c181b;flex:none;max-width:76%;overflow-wrap:anywhere;hyphens:auto">{{ w.t }}</div><div style="position:absolute;right:-8px;bottom:0;width:38%;height:72%;background:{{ w.col }};border-radius:50% 50% 0 0;opacity:.9"></div></div></sc-for>
+    </div>
+    <div data-marq="1" style="display:flex;width:max-content;animation:gmkR 80s linear infinite" style-hover="animation-play-state:paused">
+      <sc-for list="{{ row2 }}" as="w" hint-placeholder-count="12"><div style="flex:none;width:230px;aspect-ratio:16/9;margin-right:14px;border-radius:16px;background:{{ w.tint }};position:relative;overflow:hidden;padding:14px;display:flex;flex-direction:column;justify-content:space-between"><div style="width:28px;height:6px;border-radius:3px;background:{{ w.col }}"></div><div style="font:800 13px/1.2 Poppins,sans-serif;color:#0c181b;flex:none;max-width:76%;overflow-wrap:anywhere;hyphens:auto">{{ w.t }}</div><div style="position:absolute;right:-8px;bottom:0;width:38%;height:72%;background:{{ w.col }};border-radius:50% 50% 0 0;opacity:.9"></div></div></sc-for>
+    </div>
+  </div>
+  <div style="padding:0 clamp(24px,3.4vw,48px)">
+    <div style="display:grid;grid-template-columns:{{ browseCols }};gap:16px;align-items:start">
+      <div style="display:{{ catFlex }};{{ catDir }};gap:6px;overflow:auto;max-height:{{ catMax }}"><sc-for list="{{ catTabs }}" as="t" hint-placeholder-count="10"><button onClick="{{ t.onClick }}" style="flex:none;display:flex;align-items:center;gap:10px;text-align:left;cursor:pointer;font:600 14px Poppins,sans-serif;padding:10px 14px;min-height:44px;border-radius:14px;background:{{ t.bg }};color:{{ t.fg }};border:0;white-space:nowrap"><span style="width:10px;height:10px;border-radius:50%;background:{{ t.dot }}"></span>{{ t.n }}</button></sc-for></div>
+      <div style="background:{{ sel.tint }};border-radius:24px;padding:clamp(18px,2.6vw,28px);min-height:260px">
+        <div style="font:600 12px Poppins,sans-serif;color:#2b302f;margin-bottom:14px">{{ c.cat.when }}</div>
+        <sc-if value="{{ sel.hasM }}"><h3 style="margin:0 0 12px;font:800 16px Poppins,sans-serif">{{ c.cat.multiH }}</h3>
+          <div style="display:grid;gap:8px;margin-bottom:20px"><sc-for list="{{ sel.multi }}" as="m" hint-placeholder-count="3"><div style="background:#fff;border-radius:14px;padding:12px 16px;display:flex;justify-content:space-between;gap:12px;font:600 14px/1.35 Poppins,sans-serif"><span>{{ m.t }}</span><span style="flex:none;color:#2f7f80">{{ m.len }}</span></div></sc-for></div></sc-if>
+        <sc-if value="{{ sel.hasS }}"><h3 style="margin:0 0 12px;font:800 16px Poppins,sans-serif">{{ c.cat.singleH }}</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ sel.single }}" as="s" hint-placeholder-count="5"><span style="background:#fff;border-radius:999px;padding:8px 14px;font-size:13px">{{ s.t }}</span></sc-for></div></sc-if>
+      </div>
+    </div>
+    <p style="margin:20px 0 14px;font-size:15px">{{ c.cat.more }}</p>
+    <button style="display:inline-flex;align-items:center;background:#2b302f;color:#fff;font:700 14px/1.2 Poppins,sans-serif;text-transform:uppercase;border-radius:12px;padding:16px 24px;min-height:52px;border:0;cursor:pointer" style-hover="background:#0c181b">{{ c.cat.all }}</button>
+
+    <div style="margin-top:40px;position:relative;aspect-ratio:16/9;border-radius:28px;overflow:hidden;background:linear-gradient(rgba(12,24,27,.35),rgba(12,24,27,.6)),url(img-founder-wide.png) center/cover;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;color:#fff;text-align:center;padding:24px">
+      <div style="width:76px;height:76px;border-radius:50%;background:#63b6b7;color:#0c181b;display:flex;align-items:center;justify-content:center;font-size:28px;padding-left:6px"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" style="display:block"><use href="#i-play"></use></svg></div>
+      <div style="font:800 clamp(18px,2.2vw,26px)/1.25 Poppins,sans-serif;max-width:560px">{{ c.cat.vid }}</div>
+      <div style="position:absolute;bottom:14px;left:20px;color:#8fb3b6;font:500 11px ui-monospace,Menlo,monospace">Kulisszák mögött videó · feliratozva · 2–3 perc</div>
+    </div>
+
+    <div style="margin-top:28px;border:1px solid #e3e8eb;border-radius:24px;overflow:hidden">
+      <button onClick="{{ toggle90 }}" style="width:100%;display:flex;justify-content:space-between;gap:16px;align-items:center;text-align:left;background:#f4f7f7;border:0;padding:20px 24px;cursor:pointer;font:800 clamp(16px,1.8vw,21px)/1.3 Poppins,sans-serif;color:#2b302f"><span>{{ c.cat.d90 }}</span><span style="color:#2f7f80;font-size:26px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="{{ ico90 }}"></use></svg></span></button>
+      <div style="display:{{ disp90 }};padding:22px 24px 26px">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px"><sc-for list="{{ f90 }}" as="f" hint-placeholder-count="5"><button onClick="{{ f.onClick }}" style="cursor:pointer;font:600 13px Poppins,sans-serif;padding:8px 16px;min-height:40px;border-radius:999px;background:{{ f.bg }};color:{{ f.fg }};border:2px solid {{ f.bd }}">{{ f.t }}</button></sc-for></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:10px"><sc-for list="{{ cards90 }}" as="k" hint-placeholder-count="6"><div style="border:1px solid #e3e8eb;border-radius:14px;padding:14px"><span style="display:inline-block;font:700 11px Poppins,sans-serif;background:#e6f4f4;color:#2f7f80;border-radius:999px;padding:3px 10px;margin-bottom:8px">{{ k.lab }}</span><div style="font:700 14px/1.3 Poppins,sans-serif">{{ k.t }}</div><div style="font-size:12px;color:#5b666b;margin-top:4px">nap · kezdés · szint · tréner</div></div></sc-for></div>
+        <p style="margin:14px 0 18px;font-size:13px;color:#5b666b">{{ c.cat.soon }}</p>
+        <button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 14px/1.2 Poppins,sans-serif;text-transform:uppercase;border-radius:12px;padding:14px 22px;min-height:48px;border:0;cursor:pointer" style-hover="filter:brightness(1.15)">{{ c.cat.d90cta }}</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 -->
+<section style="background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-radius:32px;padding:clamp(24px,3.4vw,48px);border:1px solid rgba(255,255,255,.95);box-shadow:0 8px 32px rgba(48,99,100,.10)">
+  <div style="font:700 13px ui-monospace,Menlo,monospace;color:#2f7f80;margin-bottom:10px">08</div>
+  <h2 style="margin:0 0 24px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif">{{ c.why.h }}</h2>
+  <img src="assets/illu-10.png" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:16/8;object-fit:cover;object-position:50% 60%;border-radius:24px;margin:0 0 24px"/>
+  <sc-if value="{{ wide }}">
+    <div style="display:grid;grid-template-columns:1.1fr 1fr 1fr 1.1fr 1.5fr;font-size:13px;align-items:stretch">
+      <sc-for list="{{ whyHead }}" as="h" hint-placeholder-count="5"><div style="padding:16px 12px;font:700 13px Poppins,sans-serif;background:{{ h.bg }};color:{{ h.fg }};border-radius:{{ h.r }}">{{ h.t }}</div></sc-for>
+      <sc-for list="{{ whyCells }}" as="x" hint-placeholder-count="30"><div style="padding:14px 12px;border-top:1px solid #e3e8eb;background:{{ x.bg }};color:{{ x.fg }};font-weight:{{ x.fw }}">{{ x.t }}</div></sc-for>
+    </div>
+  </sc-if>
+  <sc-if value="{{ narrow }}">
+    <div style="display:grid;gap:12px"><sc-for list="{{ whyCards }}" as="r" hint-placeholder-count="6"><div style="background:#f4f7f7;border-radius:18px;padding:16px"><div style="font:700 14px Poppins,sans-serif;margin-bottom:10px">{{ r.lab }}</div><div style="background:#14262b;color:#fff;border-radius:12px;padding:10px 14px;margin-bottom:8px;font-size:14px;font-weight:600"><span style="color:#84e0db">Mentor Klub: </span>{{ r.mk }}</div><sc-for list="{{ r.o }}" as="o" hint-placeholder-count="3"><div style="font-size:13px;color:#5b666b"><b>{{ o.h }}:</b> {{ o.v }}</div></sc-for></div></sc-for></div>
+  </sc-if>
+  <p style="margin:28px 0 0;font:600 clamp(16px,1.6vw,19px)/1.55 Poppins,sans-serif">{{ c.why.p1 }}<span style="color:#2f7f80;font-weight:800">{{ c.why.p2 }}</span>{{ c.why.p3 }}</p>
+</section>
+
+<!-- 09 EREDMÉNYEK -->
+<section id="eredmenyek" style="background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-radius:32px;padding:clamp(24px,3.4vw,48px) 0;border:1px solid rgba(255,255,255,.95);box-shadow:0 8px 32px rgba(48,99,100,.10);overflow:hidden">
+  <div style="padding:0 clamp(24px,3.4vw,48px)">
+    <sc-if value="{{ notes }}"><div style="margin:0 0 16px;background:#f1a246;color:#0c181b;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace">UX · Körhinta (vízszintes húzás/nyilak) témaszűrővel; a kártya tetején a szám az első, amit a szem lát. Alatta a Google-vélemények rácsa.</div></sc-if>
+    <div style="font:700 13px ui-monospace,Menlo,monospace;color:#2f7f80;margin-bottom:10px">09</div>
+    <div style="display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:20px"><h2 style="margin:0;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif">{{ c.res.h }}</h2>
+      <div style="display:flex;gap:8px"><button onClick="{{ scrollL }}" style="width:48px;height:48px;border-radius:50%;border:2px solid #2b302f;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-arrow-left"></use></svg></button><button onClick="{{ scrollR }}" style="width:48px;height:48px;border-radius:50%;border:2px solid #2b302f;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-arrow-right"></use></svg></button></div></div>
+    <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:12px;margin-bottom:12px"><sc-for list="{{ resTabs }}" as="t" hint-placeholder-count="8"><button onClick="{{ t.onClick }}" style="flex:none;cursor:pointer;font:600 13px Poppins,sans-serif;padding:8px 16px;min-height:44px;border-radius:999px;background:{{ t.bg }};color:{{ t.fg }};border:2px solid {{ t.bd }}">{{ t.t }}</button></sc-for></div>
+  </div>
+  <div id="resRow" style="display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px clamp(24px,3.4vw,48px) 16px">
+    <sc-for list="{{ stories }}" as="s" hint-placeholder-count="5">
+      <div style="flex:none;width:min(84%,330px);scroll-snap-align:start;border:1px solid #e3e8eb;border-radius:24px;overflow:hidden;background:#fff;display:flex;flex-direction:column">
+        <div style="background:#14262b;color:#84e0db;padding:20px 22px;min-height:96px;display:flex;align-items:flex-end;font:800 24px/1.15 Poppins,sans-serif">{{ s.bigT }}</div>
+        <div style="padding:20px 22px;display:grid;gap:10px;flex:1">
+          <div style="display:flex;gap:12px;align-items:center"><img src="{{ s.img }}" alt="" style="flex:none;width:44px;height:44px;border-radius:50%;object-fit:cover;background:#e3e8eb"/><div><div style="font:700 14px/1.25 Poppins,sans-serif">{{ s.nm }}</div><div style="font-size:12px;color:#5b666b;line-height:1.35">{{ s.w }}</div></div></div>
+          <sc-if value="{{ s.pend }}"><div><span style="display:inline-block;background:#f1a246;color:#0c181b;font:800 10px Poppins,sans-serif;letter-spacing:.06em;padding:3px 8px;border-radius:999px">{{ pendLbl }}</span></div></sc-if>
+          <p style="margin:0;font-size:14px">{{ s.x }}</p>
+          <div><span style="display:inline-block;background:#40454b;color:#fff;font:600 11px Poppins,sans-serif;border-radius:999px;padding:3px 10px">{{ s.t }}</span></div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="padding:16px clamp(24px,3.4vw,48px) 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:14px"><sc-for list="{{ c.res.rev }}" as="r" hint-placeholder-count="4"><div style="background:#f4f7f7;border-radius:24px;padding:22px"><div style="color:#f1a246;letter-spacing:3px;margin-bottom:8px"><span style="display:inline-flex;gap:3px"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" style="display:block"><use href="#i-star"></use></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" style="display:block"><use href="#i-star"></use></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" style="display:block"><use href="#i-star"></use></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" style="display:block"><use href="#i-star"></use></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" style="display:block"><use href="#i-star"></use></svg></span></div><p style="margin:0 0 10px;font-size:14px">{{ r.x }}</p><div style="font:700 13px Poppins,sans-serif;color:#2f7f80">{{ r.n }}</div></div></sc-for></div>
+    <div style="margin-top:16px"><a style="color:#2f7f80;font:700 14px Poppins,sans-serif;cursor:pointer">{{ c.res.revAll }}</a></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section style="background:linear-gradient(160deg,#16292f,#0c181b);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);color:#fff;border-radius:32px;padding:clamp(24px,3.4vw,48px)">
+  <div style="font:700 13px ui-monospace,Menlo,monospace;color:#84e0db;margin-bottom:10px">10</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:32px;align-items:center">
+    <img src="img-founder-right.png" alt="Baráth András" style="display:block;width:100%;aspect-ratio:4/5;max-height:420px;object-fit:cover;object-position:68% 30%;border-radius:28px;box-shadow:0 20px 48px rgba(0,0,0,.4)"/>
+    <div>
+      <h2 style="margin:0 0 16px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif;text-wrap:balance">{{ c.about.h }}</h2>
+      <p style="margin:0 0 14px;font-size:16px;color:#dde2e3">{{ c.about.p1 }}</p>
+      <button onClick="{{ toggleAbout }}" style="background:none;border:0;padding:0;font:700 14px Poppins,sans-serif;color:#84e0db;cursor:pointer;border-bottom:2px solid #63b6b7">Részletek <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-3px"><use href="{{ aboutIco }}"></use></svg></button>
+      <p style="display:{{ aboutDisp }};margin:14px 0 0;color:#dde2e3">{{ c.about.p2 }}</p>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:12px;margin:32px 0"><sc-for list="{{ anums }}" as="n" hint-placeholder-count="4"><div style="background:rgba(48,99,100,.4);border-radius:20px;padding:18px"><div style="color:#84e0db;margin-bottom:10px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="{{ n.ic }}"></use></svg></div><div style="font:800 28px/1 Poppins,sans-serif;color:#84e0db">{{ n.a }}</div><div style="font-size:13px;margin-top:6px">{{ n.b }}</div></div></sc-for></div>
+  <h3 style="margin:0 0 8px;font:800 20px Poppins,sans-serif">{{ c.about.ch }}</h3>
+  <p style="margin:0 0 20px;color:#dde2e3">{{ c.about.cp }}</p>
+  <div style="display:flex;gap:14px;overflow-x:auto;padding-bottom:8px"><sc-for list="{{ trainers }}" as="t" hint-placeholder-count="7"><div style="flex:none;width:130px"><img src="{{ t.img }}" alt="{{ t.n }}" style="display:block;width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover;background:#1c2f35;margin-bottom:8px"/><div style="font:700 13px/1.25 Poppins,sans-serif;text-align:center">{{ t.n }}</div><div style="font-size:12px;color:#84e0db;text-align:center">{{ t.r }}</div></div></sc-for></div>
+</section>
+
+<!-- 11 -->
+<section style="background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-radius:32px;padding:clamp(24px,3.4vw,48px);border:1px solid rgba(255,255,255,.95);box-shadow:0 8px 32px rgba(48,99,100,.10)">
+  <div style="font:700 13px ui-monospace,Menlo,monospace;color:#2f7f80;margin-bottom:10px">11</div>
+  <h2 style="margin:0 0 28px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif">{{ c.steps.h }}</h2>
+  <img src="assets/illu-09.png" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:24px;margin:0 0 24px"/>
+  <div style="display:grid">
+    <sc-for list="{{ steps }}" as="s" hint-placeholder-count="5"><div style="display:grid;grid-template-columns:52px 1fr;gap:16px"><div style="display:flex;flex-direction:column;align-items:center"><span style="width:44px;height:44px;border-radius:50%;background:#63b6b7;color:#0c181b;display:flex;align-items:center;justify-content:center;font:800 18px Poppins,sans-serif">{{ s.n }}</span><span style="flex:1;width:2px;background:#d6e6e6;min-height:12px"></span></div><div style="padding:6px 0 24px"><div style="display:flex;align-items:center;gap:10px;font:700 18px/1.3 Poppins,sans-serif;margin-bottom:4px"><span style="color:#2f7f80;display:flex"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="{{ s.ic }}"></use></svg></span>{{ s.h }}</div><div style="font-size:15px">{{ s.x }}</div></div></div></sc-for>
+  </div>
+</section>
+
+<!-- 12 -->
+<section style="background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-radius:32px;padding:clamp(24px,3.4vw,48px);border:1px solid rgba(255,255,255,.95);box-shadow:0 8px 32px rgba(48,99,100,.10)">
+  <div style="font:700 13px ui-monospace,Menlo,monospace;color:#2f7f80;margin-bottom:10px">12</div>
+  <h2 style="margin:0 0 24px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif">{{ c.offer.h }}</h2>
+  <div style="display:grid;gap:10px">
+    <sc-for list="{{ offerRows }}" as="o" hint-placeholder-count="7"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:6px 20px;background:#f4f7f7;border-radius:16px;padding:14px 18px"><div style="display:flex;gap:10px;font:600 14px/1.4 Poppins,sans-serif"><span style="color:#2f7f80;font-weight:800"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="#i-check"></use></svg></span><span>{{ o.a }}</span></div><div style="font-size:13px;color:#5b666b"><span style="font-weight:700;color:#2b302f">{{ c.offer.c2 }}: </span>{{ o.b }}</div></div></sc-for>
+  </div>
+  <a onClick="{{ goVideo }}" style="margin-top:20px;display:flex;gap:14px;align-items:center;cursor:pointer;text-decoration:none;color:#2b302f"><span style="flex:none;width:112px;aspect-ratio:16/9;border-radius:12px;background:linear-gradient(rgba(12,24,27,.3),rgba(12,24,27,.5)),url(img-founder-wide.png) center/cover;display:flex;align-items:center;justify-content:center"><span style="width:32px;height:32px;border-radius:50%;background:#63b6b7;color:#0c181b;display:flex;align-items:center;justify-content:center;font-size:12px;padding-left:2px"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" style="display:block"><use href="#i-play"></use></svg></span></span><span style="font:700 14px Poppins,sans-serif;border-bottom:2px solid #63b6b7">{{ c.offer.vid }}</span></a>
+</section>
+
+<!-- 13 ÁR -->
+<section id="ar" style="background:linear-gradient(160deg,#16292f,#0c181b);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);color:#fff;border-radius:40px;padding:clamp(24px,3.4vw,48px);border:1px solid rgba(102,193,195,.6);box-shadow:0 0 0 1px rgba(102,193,195,.3),0 0 48px rgba(91,174,175,.22)">
+  <sc-if value="{{ notes }}"><div style="margin:0 0 16px;background:#f1a246;color:#0c181b;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace">UX · Itt a teljes ár- és garanciablokk; wide nézetben a jobb oldali ragadós panel közben végig látszik, tehát a csatlakozás végig egy kattintásra van.</div></sc-if>
+  <div style="font:700 13px ui-monospace,Menlo,monospace;color:#84e0db;margin-bottom:10px">13</div>
+  <h2 style="margin:0 0 24px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif;text-wrap:balance">{{ c.price.h }}</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:28px;align-items:start">
+    <div>
+      <div style="color:#96afb2;font-size:16px">{{ c.price.full }} <s>{{ c.price.fullV }}</s></div>
+      <div style="color:#6dc6c3;font:800 13px Poppins,sans-serif;text-transform:uppercase;letter-spacing:.06em;margin-top:10px">{{ c.price.now }}</div>
+      <div style="font:800 clamp(38px,5vw,56px)/1.1 Poppins,sans-serif;color:#84e0db">{{ c.price.nowV }}</div>
+      <div style="font:600 15px Poppins,sans-serif;margin:6px 0 16px">{{ c.price.day }}</div>
+      <p style="margin:0 0 22px;font-size:15px;color:#dde2e3">{{ c.price.acc }}</p>
+      <button onClick="{{ join }}" style="width:100%;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 15px/1.2 Poppins,sans-serif;text-transform:uppercase;border-radius:12px;padding:18px 20px;min-height:56px;border:0;cursor:pointer;box-shadow:0 8px 24px rgba(99,182,183,.35)" style-hover="filter:brightness(1.15)">{{ c.price.cta }}</button>
+    </div>
+    <div style="display:grid;gap:12px"><sc-for list="{{ guar }}" as="g" hint-placeholder-count="3"><div style="display:flex;gap:12px;background:rgba(48,99,100,.4);border-radius:16px;padding:14px 16px;font-size:14px"><span style="flex:none;color:#84e0db;font-weight:800"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="#i-check"></use></svg></span><span><b>{{ g.h }}</b> {{ g.x }}</span></div></sc-for><p style="margin:6px 0 0;font:700 15px Poppins,sans-serif;color:#f1a246">{{ c.price.now2 }}</p></div>
+  </div>
+</section>
+
+<!-- 14 -->
+<section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px">
+  <sc-if value="{{ notes }}"><div style="grid-column:1/-1;background:#fff;border:2px dashed #f1a246;color:#2b302f;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace">ELTÉRÉS · A „Kinek való?” (14.) ebben a változatban a dokumentum sorrendjében marad: az ár után, utolsó kételyoldóként a GYIK előtt.</div></sc-if>
+  <div style="background:#fff;border:2px solid #63b6b7;border-radius:28px;padding:28px"><div style="font:700 13px ui-monospace,Menlo,monospace;color:#2f7f80;margin-bottom:8px">14</div><h2 style="margin:0 0 16px;font:800 24px Poppins,sans-serif">{{ c.fit.yh }}</h2><div style="display:grid;gap:10px"><sc-for list="{{ fitY }}" as="y" hint-placeholder-count="5"><div style="display:flex;gap:12px;font-size:15px"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:#63b6b7;color:#0c181b;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="#i-check"></use></svg></span><span>{{ y.t }}</span></div></sc-for></div></div>
+  <div style="background:#e9eeee;border-radius:28px;padding:28px"><div style="height:21px;margin-bottom:8px"></div><h2 style="margin:0 0 16px;font:800 24px Poppins,sans-serif;color:#5b666b">{{ c.fit.nh }}</h2><div style="display:grid;gap:10px"><sc-for list="{{ fitN }}" as="y" hint-placeholder-count="3"><div style="display:flex;gap:12px;font-size:15px;color:#5b666b"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:#cfd7d8;color:#2b302f;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="#i-x"></use></svg></span><span>{{ y.t }}</span></div></sc-for></div></div>
+</section>
+
+<!-- 15 -->
+<section style="background:#f3eafc;border-radius:32px;padding:clamp(24px,3.4vw,48px)">
+  <div style="font:700 13px ui-monospace,Menlo,monospace;color:#9b51e0;margin-bottom:10px">15</div>
+  <h2 style="margin:0 0 14px;font:800 clamp(22px,2.8vw,34px)/1.15 Poppins,sans-serif;text-wrap:balance">{{ c.qual.h }}</h2>
+  <p style="margin:0 0 22px;font-size:15px">{{ c.qual.p }}</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px;margin-bottom:20px"><sc-for list="{{ qitems }}" as="q" hint-placeholder-count="5"><div style="background:#fff;border-radius:18px;padding:16px"><div style="font:700 15px/1.3 Poppins,sans-serif;margin-bottom:6px">{{ q.a }}</div><div style="font-size:13px;color:#9b51e0;font-weight:700">{{ q.b }}</div></div></sc-for></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:12px;margin-bottom:20px"><div style="background:#fff;border-radius:18px;padding:18px"><h3 style="margin:0 0 6px;font:800 16px/1.35 Poppins,sans-serif">{{ c.qual.qh }}</h3><p style="margin:0;font-size:14px">{{ c.qual.qa }}</p></div><div style="background:#fff;border-radius:18px;padding:18px;font-size:14px">{{ c.qual.proof }}</div></div>
+  <button style="display:inline-flex;align-items:center;background:#2b302f;color:#fff;font:700 14px/1.2 Poppins,sans-serif;text-transform:uppercase;border-radius:12px;padding:16px 24px;min-height:52px;border:0;cursor:pointer" style-hover="background:#0c181b">{{ c.qual.cta }}</button>
+</section>
+
+<!-- 16 GYIK -->
+<section id="gyik" style="background:rgba(255,255,255,.72);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-radius:32px;padding:clamp(24px,3.4vw,48px);border:1px solid rgba(255,255,255,.95);box-shadow:0 8px 32px rgba(48,99,100,.10)">
+  <sc-if value="{{ notes }}"><div style="margin:0 0 16px;background:#fff;border:2px dashed #f1a246;color:#2b302f;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace">ELTÉRÉS · A GYIK-ban a „9. blokk” / „6. blokk” hivatkozást szövegesre cseréltem. Az SAP-teszt/mobilapp kérdés válasz nélkül van a forrásban, ezért kimaradt.</div></sc-if>
+  <div style="font:700 13px ui-monospace,Menlo,monospace;color:#2f7f80;margin-bottom:10px">16</div>
+  <h2 style="margin:0 0 22px;font:800 clamp(24px,3vw,36px)/1.15 Poppins,sans-serif">{{ c.faq.h }}</h2>
+  <div style="display:grid;gap:8px">
+    <sc-for list="{{ faq }}" as="q" hint-placeholder-count="6"><div style="background:#f4f7f7;border-radius:18px;overflow:hidden"><button onClick="{{ q.onClick }}" style="width:100%;display:flex;justify-content:space-between;gap:16px;text-align:left;background:transparent;border:0;padding:16px 20px;cursor:pointer;font:700 15px/1.4 Poppins,sans-serif;color:#2b302f"><span>{{ q.q }}</span><span style="color:#2f7f80;font-size:22px;line-height:1"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="{{ q.ico }}"></use></svg></span></button><div style="display:{{ q.disp }};padding:0 20px 18px;font-size:14px">{{ q.a }}</div></div></sc-for>
+  </div>
+  <sc-if value="{{ faqLess }}"><div style="margin-top:16px"><button onClick="{{ faqShow }}" style="background:#fff;border:2px solid #2b302f;color:#2b302f;border-radius:12px;padding:12px 24px;min-height:48px;font:700 14px Poppins,sans-serif;cursor:pointer">{{ c.faq.more }}</button></div></sc-if>
+</section>
+
+</main>
+
+<!-- STICKY OFFER PANEL -->
+<sc-if value="{{ side }}">
+<aside style="position:sticky;top:92px;display:grid;gap:12px">
+  <div style="position:relative;padding:8px 6px">
+    <div style="position:absolute;inset:0;border:1px solid rgba(102,193,195,.4);border-radius:40px;transform:rotate(-2.5deg)"></div>
+    <div style="position:relative;background:linear-gradient(165deg,#14262b,#0a1417);border-radius:36px;border:1px solid rgba(102,193,195,.7);box-shadow:0 24px 56px rgba(12,24,27,.4),0 0 0 1px rgba(102,193,195,.25);padding:28px;color:#fff">
+      <img src="logo-white.png" alt="Mentor Klub" style="height:54px;width:auto;display:block;margin:0 0 16px"/>
+      <div style="display:inline-block;background:#f1a246;color:#0c181b;font:800 11px Poppins,sans-serif;text-transform:uppercase;letter-spacing:.04em;padding:5px 12px;border-radius:999px;margin-bottom:14px;display:inline-flex;align-items:center;gap:6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-tag"></use></svg>{{ c.hero.badge }}</div>
+      <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap"><s style="color:#b4c6c9;font-size:18px">{{ c.hero.old }}</s><span style="font:800 38px/1.1 Poppins,sans-serif;color:#84e0db">{{ c.hero.price }}</span></div>
+      <div style="font:600 15px Poppins,sans-serif;margin:6px 0 14px;color:#fff">{{ c.price.day }}</div>
+      <p style="margin:0 0 20px;font-size:15px;line-height:1.55;color:#fff">{{ c.price.acc }}</p>
+      <button onClick="{{ join }}" style="width:100%;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 14px/1.25 Poppins,sans-serif;text-transform:uppercase;border-radius:12px;padding:14px 16px;min-height:52px;border:0;cursor:pointer;box-shadow:0 8px 24px rgba(99,182,183,.35)" style-hover="filter:brightness(1.15)">{{ c.hero.cta }}</button>
+      <div style="margin-top:18px;display:grid;gap:10px;font-size:14px;line-height:1.5;color:#fff"><sc-for list="{{ guarMini }}" as="g" hint-placeholder-count="2"><div style="display:flex;gap:8px"><span style="color:#84e0db;font-weight:800"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="#i-check"></use></svg></span><span><b>{{ g.h }}</b> {{ g.x }}</span></div></sc-for></div>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(102,193,195,.25);font:600 14px Poppins,sans-serif;color:#fff"><span style="color:#f1a246">★</span> {{ trustFirst }}</div>
+    </div>
+  </div>
+  <a onClick="{{ goWhat }}" style="text-align:center;color:#2f7f80;font:700 13px Poppins,sans-serif;cursor:pointer">{{ c.hero.cta2 }}</a>
+</aside>
+</sc-if>
+</div>
+
+<!-- CLOSING -->
+<section style="position:relative;overflow:hidden;background:linear-gradient(120deg,#2c3439,#364349,#2a4a4c,#364349);background-size:300% 300%;animation:gmkShift 18s ease infinite;color:#dde2e3;margin-top:48px;padding:clamp(64px,9vw,120px) 0;text-align:center">
+  <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none"><div style="position:absolute;inset:0;background:linear-gradient(rgba(12,24,27,.6),rgba(12,24,27,.72)),url(assets/brand-05.png) center/cover"></div><div style="position:absolute;width:640px;height:640px;left:50%;top:-260px;margin-left:-320px;border-radius:50%;background:radial-gradient(circle,rgba(91,174,175,.5),transparent 65%);filter:blur(30px);animation:gmkDrift 18s ease-in-out infinite alternate"></div><div style="position:absolute;width:420px;height:420px;right:-100px;bottom:-140px;border-radius:50%;background:radial-gradient(circle,rgba(43,182,115,.3),transparent 65%);filter:blur(30px);animation:gmkDrift 24s ease-in-out infinite alternate-reverse"></div><div style="position:absolute;inset:0;opacity:.16;mix-blend-mode:overlay;background-image:url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.8%22 numOctaves=%222%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')"></div></div>
+  <div style="position:relative;max-width:880px;margin:0 auto;padding:0 24px">
+    <img src="logo-white.png" alt="Mentor Klub" style="height:84px;width:auto;display:block;margin:0 auto 28px;animation:gmkFloat 6s ease-in-out infinite"/>
+    <h2 style="margin:0 0 22px;font:800 clamp(30px,4.4vw,54px)/1.1 Poppins,sans-serif;color:#fff;text-transform:uppercase;text-wrap:balance">{{ c.fin.h }}</h2>
+    <p style="margin:0 0 32px;font-size:18px">{{ c.fin.p }}</p>
+    <button onClick="{{ join }}" style="display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 16px/1.25 Poppins,sans-serif;text-transform:uppercase;border-radius:14px;padding:20px 32px;min-height:60px;border:0;cursor:pointer;box-shadow:0 8px 32px rgba(99,182,183,.4)" style-hover="background:#66c1c3;transform:translateY(-2px)">{{ c.fin.cta }}</button>
+  </div>
+</section>
+<footer style="background:#0c181b;color:#96afb2;padding:36px 0 {{ footPad }};font-size:14px">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;display:grid;gap:16px">
+    <div style="display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center"><img src="logo-white.png" alt="Gerilla Mentor Klub" style="height:48px;width:auto;display:block"/><sc-for list="{{ foot }}" as="f" hint-placeholder-count="5"><span style="color:#dde2e3;display:inline-flex;align-items:center;gap:8px"><sc-if value="{{ f.hasIc }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#84e0db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="{{ f.ic }}"></use></svg></sc-if>{{ f.t }}</span></sc-for></div>
+    <div>{{ c.fin.reg }}</div><div>© 2027 Gerilla Mentor Klub</div>
+  </div>
+</footer>
+
+<!-- MOBIL / SCHMAL ALSÓ SÁV -->
+<sc-if value="{{ showBar }}">
+  <div style="position:fixed;left:0;right:0;bottom:0;z-index:55;background:rgba(20,38,43,.97);border-top:1px solid rgba(102,193,195,.5);padding:10px 16px;display:flex;align-items:center;gap:12px;animation:gmkUp .3s ease">
+    <div style="flex:none;color:#fff;line-height:1.2"><s style="color:#96afb2;font-size:12px">{{ c.hero.old }}</s><div style="font:800 17px Poppins,sans-serif;color:#84e0db">{{ c.hero.price }}</div></div>
+    <button onClick="{{ join }}" style="flex:1;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 13px/1.2 Poppins,sans-serif;text-transform:uppercase;border-radius:12px;padding:10px 12px;min-height:52px;border:0;cursor:pointer">{{ c.hero.cta }}</button>
+  </div>
+</sc-if>
+
+<!-- ÚTVONAL-VÁLASZTÓ TOAST -->
+<sc-if value="{{ toast }}">
+  <div style="position:fixed;left:16px;bottom:{{ toastBottom }};z-index:85;width:min(380px,calc(100% - 32px));background:#fff;border-radius:28px;box-shadow:0 20px 60px rgba(12,24,27,.35);border:1px solid #e3e8eb;padding:22px;animation:gmkUp .3s ease">
+    <button onClick="{{ closeToast }}" style="position:absolute;top:8px;right:8px;width:44px;height:44px;border-radius:50%;background:#f4f7f7;border:0;font-size:18px;cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:auto"><use href="#i-x"></use></svg></button>
+    <sc-if value="{{ notes }}"><div style="margin:0 40px 12px 0;background:#f1a246;color:#0c181b;border-radius:8px;padding:8px 10px;font:600 11px/1.45 ui-monospace,Menlo,monospace">ELTÉRÉS · Új elem: nem takaró, jobb alsó „útvonal-választó” kártya 35% görgetésnél (egyszer). Csak meglévő szöveg. A Lovable-útmutató tiltja a felugró ablakot – csapatdöntés kell.</div></sc-if>
+    <img src="logo.png" alt="Mentor Klub" style="height:40px;width:auto;display:block;margin:0 0 12px"/><div style="font:800 18px/1.3 Poppins,sans-serif;margin:0 36px 14px 0">{{ c.routes.h }}</div>
+    <div style="display:grid;gap:8px;margin-bottom:14px"><sc-for list="{{ toastRoutes }}" as="r" hint-placeholder-count="4"><button onClick="{{ r.onClick }}" style="text-align:left;background:#f4f7f7;border:0;border-radius:12px;padding:10px 14px;min-height:44px;font:600 14px Poppins,sans-serif;cursor:pointer;display:flex;justify-content:space-between" style-hover="background:#e6f4f4"><span>{{ r.t }}</span><span style="color:#2f7f80">→</span></button></sc-for></div>
+    <button onClick="{{ joinToast }}" style="width:100%;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 13px/1.2 Poppins,sans-serif;text-transform:uppercase;border-radius:12px;padding:12px;min-height:48px;border:0;cursor:pointer">{{ c.hero.cta }}</button>
+  </div>
+</sc-if>
+
+<!-- DEMÓ TÉMAVÁLTÓ -->
+<sc-if value="{{ demo }}"><div style="position:fixed;left:16px;bottom:{{ noteBottom }};z-index:80;display:flex;gap:4px;flex-wrap:wrap;background:#0c181b;border:2px solid #66c1c3;border-radius:999px;padding:4px;box-shadow:0 4px 16px rgba(0,0,0,.25)"><sc-for list="{{ themes }}" as="t" hint-placeholder-count="4"><button onClick="{{ t.onClick }}" style="background:{{ t.bg }};color:{{ t.fg }};border:0;border-radius:999px;padding:8px 14px;min-height:36px;font:700 12px Poppins,sans-serif;cursor:pointer">{{ t.t }}</button></sc-for></div></sc-if>
+
+<!-- JEGYZET-KAPCSOLÓ -->
+<div style="position:fixed;right:16px;bottom:{{ noteBottom }};z-index:80;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end">
+  <button onClick="{{ toggleNotes }}" style="background:{{ notesBg }};color:#0c181b;border:2px solid #f1a246;border-radius:999px;padding:10px 16px;min-height:44px;font:700 12px ui-monospace,Menlo,monospace;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.25)">Tervezői jegyzetek: {{ notesLbl }}</button>
+  <button onClick="{{ openToast }}" style="background:#fff;color:#0c181b;border:2px solid #2b302f;border-radius:999px;padding:10px 16px;min-height:44px;font:700 12px ui-monospace,Menlo,monospace;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.25)">Popup előnézet</button>
+</div>
+
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { ready: false, route: 0, feb: 0, pill: 0, mo: { 0: true }, catMod: 0, filt: 0, faq: {}, faqAll: false, nowOpen: false, aboutOpen: false, narrow: false, side: false, scrolled: false, barHide: false, prog: 0, toast: false, seen: false, notes: false, d90: false, f90: 0 };
+  go = (id) => () => {
+    const el = document.getElementById(id); if (!el) return;
+    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 84, behavior: 'smooth' });
+  };
+  componentDidMount() {
+    const init = () => { if (window.GMK) this.setState(window.GMK.febIdx >= 0 ? { ready: true, feb: window.GMK.febIdx } : { ready: true }); else setTimeout(init, 40); };
+    init();
+    setTimeout(() => window.GMKM && window.GMKM.init(), 300);
+    this._sc = () => {
+      const y = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight, ar = document.getElementById('ar'); let hide = false;
+      if (ar) { const r = ar.getBoundingClientRect(); hide = r.top < window.innerHeight * 0.8 && r.bottom > 0; }
+      const p = h > 0 ? Math.round(y / h * 100) : 0, sc = y > 560;
+      const o = { prog: p, scrolled: sc, barHide: hide };
+      if (!this.state.seen && h > 0 && y / h > 0.35) { o.toast = true; o.seen = true; }
+      this.setState(o);
+    };
+    this._rs = () => this.setState({ narrow: window.innerWidth < 760, side: window.innerWidth >= 1100 });
+    window.addEventListener('scroll', this._sc, { passive: true });
+    window.addEventListener('resize', this._rs);
+    this._rs(); this._sc();
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this._sc); window.removeEventListener('resize', this._rs); }
+  renderVals() {
+    const G = window.GMK;
+    if (!G || !this.state.ready) return { ready: false };
+    const C = G.C, s = this.state, set = (o) => this.setState(o), go = this.go;
+    const IC = { pains: ['search', 'clock', 'wallet', 'bot', 'compass', 'file-text'], imagine: ['compass', 'bot', 'graduation-cap', 'wallet', 'languages'], route: ['briefcase', 'compass', 'bot', 'trending-up'], pill: ['graduation-cap', 'briefcase', 'languages'], learn: ['video', 'users', 'calendar', 'smartphone', 'award'], steps: ['zap', 'smartphone', 'compass', 'clock', 'message-circle'], nums: ['video', 'calendar', 'graduation-cap', 'bot', 'languages', 'briefcase', 'users'], anums: ['users', 'graduation-cap', 'calendar', 'star'] };
+    const ic = (k, i) => '#i-' + (IC[k][i] || 'award');
+    const FM = [32, 45, 52, 64, 75, 12, 22, 36, 41, 58, 67, 71], FW = [44, 65, 68, 26, 33, 17, 90, 79, 5, 21, 48, 12];
+    const FEM = ['Alexandra', 'Mónika', 'Csilla', 'Zsuzsa', 'Réka', 'Adrienn', 'Zsuzsanna', 'Zita', 'Anita', 'Gabriella'];
+    const faceOld = (name, i) => { const last = (name || '').trim().split(/\s+/).pop(); const w = name ? FEM.includes(last) : i % 2 === 1; const k = i + (w ? 3 : 0), pick = (a, o) => a[(k + (o || 0)) % a.length];
+      const skin = pick(['#f3d9c4', '#efd0b8', '#f6dfcd', '#ecc9b0']), hair = w ? pick(['#4a3022', '#2d2420', '#8b5e3c', '#c9a574', '#6b4a35', '#a9794f'], 2) : pick(['#3b2a20', '#5a4030', '#2b2622', '#8a8f94', '#7a5a3a', '#c2a27a'], 1);
+      const suit = pick(['#1f2f3a', '#2b302f', '#364349', '#306364', '#a89479', '#1c3a55'], 1), tint = pick(['#e6f4f4', '#eaf0f1', '#e9f3ee', '#f2efe7'], 2);
+      const hp = w ? 'M31 46C28 22 42 17 50 17C62 17 72 24 69 48C70 58 68 66 64 72C66 56 64 38 50 34C38 36 34 56 36 72C32 66 30 56 31 46Z' : 'M33 42C31 24 42 20 50 20C60 20 69 25 67 42C64 34 60 31 50 31C41 31 36 34 33 42Z';
+      const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="' + tint + '"/>' + (w ? '<path d="M30 50C28 70 32 80 40 84L60 84C68 80 72 70 70 50Z" fill="' + hair + '"/>' : '') + '<path d="M10 100C10 79 29 71 50 71C71 71 90 79 90 100Z" fill="' + suit + '"/><path d="M42 71L50 86L58 71Z" fill="#f4f6f6"/><rect x="43" y="57" width="14" height="17" rx="6" fill="' + skin + '"/><ellipse cx="50" cy="44" rx="16" ry="19" fill="' + skin + '"/><circle cx="34" cy="46" r="3" fill="' + skin + '"/><circle cx="66" cy="46" r="3" fill="' + skin + '"/><path d="' + hp + '" fill="' + hair + '"/><circle cx="44" cy="45" r="1.6" fill="#2b302f"/><circle cx="56" cy="45" r="1.6" fill="#2b302f"/><path d="M45 54Q50 58 55 54" stroke="#b5675a" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>';
+      return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg); };
+    const face = (name, i) => { const last = (name || '').trim().split(/\s+/).pop(); const w = name ? FEM.includes(last) : i % 2 === 1; return G.face(w, i); };
+    const on = (b, a, z) => (b ? a : z);
+    const navItems = C.nav.map(x => { const [t, id] = x.split('|'); return { t, onClick: go(id) }; });
+    const routes = C.routes.items.map((r, i) => { const o = s.route === i; return { t: r.t, k: r.k, m: r.m, kick: r.kick, col: r.col, colD: r.colD, ic: ic('route', i), n: '0' + (i + 1), ico: on(o, '#i-minus', '#i-plus'), disp: on(o, 'block', 'none'), bg: on(o, '#e6f4f4', '#fff'), bd: on(o, '#63b6b7', '#e3e8eb'), g: r.g.map(g => ({ l: g.l, i: g.i.map(t => ({ t })) })), onClick: () => set({ route: o ? -1 : i }) }; });
+    const febTabs = C.feb.items.map((f, i) => { const o = i === s.feb; return { t: f.short, bg: on(o, '#63b6b7', 'transparent'), fg: on(o, '#0c181b', '#fff'), bd: on(o, '#63b6b7', 'rgba(102,193,195,.5)'), onClick: () => set({ feb: i }) }; });
+    const f0 = C.feb.items[s.feb];
+    const fb = { t: f0.t, k: f0.k, o: f0.o, f: f0.f, mk: f0.mk, s: f0.s.map(x => ({ a: x[0], b: x[1], c: x[2], hasC: !!x[2] })) };
+    const nowSteps = C.now.tl.map((t, i) => ({ ...t, bg: on(i === 0, '#14262b', '#f4f7f7'), fg: on(i === 0, '#fff', '#2b302f'), yc: on(i === 0, '#84e0db', '#2f7f80') }));
+    const mods = C.pillars.mods.map((m, i) => { const o = !!s.mo[i]; return { h: m.h, p: m.p, lv: m.lv, q: m.q, qa: m.qa, cl: m.cl, pr: m.pr, hasLv: !!m.levels, hasQ: !!m.q, hasChips: !!m.chips, levels: (m.levels || []).map((t, j) => ({ t, n: j + 1 })), chipList: (m.chips || []).map(t => ({ t })), ico: on(o, '#i-minus', '#i-plus'), disp: on(o, 'block', 'none'), bg: on(o, '#e6f4f4', '#fff'), onClick: () => set({ mo: { ...s.mo, [i]: !o } }) }; });
+    const wideB = !s.narrow;
+    const pk = (i, h, x, extra) => { const o = s.pill === i; return { h, x, ic: ic('pill', i), onClick: () => set({ pill: i }), cur: 'pointer', bg: on(o, '#14262b', '#f4f7f7'), fg: on(o, '#fff', '#2b302f'), bd: on(o, '#63b6b7', '#e3e8eb'), tc: on(o, '#84e0db', '#2f7f80'), fs: '20px', mh: '120px', chips: [], hasChips: false, isBig: false, span: '', ...extra }; };
+    const L = C.cat.learn;
+    const pt = C.pillars.tabs;
+    const bento = [
+      pk(0, pt[0], C.pillars.t1, { fs: '28px', mh: wideB ? '300px' : '200px', hasChips: true, isBig: wideB, chips: C.pillars.mods.slice(0, 5).map(m => ({ t: m.h.split(' – ')[0] })), span: wideB ? 'grid-column:span 2;grid-row:span 2' : '' }),
+      pk(1, pt[1], C.pillars.t2, { span: wideB ? 'grid-column:span 2' : '' }),
+      pk(2, pt[2], C.pillars.t3, { span: wideB ? 'grid-column:span 2' : '' }),
+      ...L.map((l, i) => ({ h: l[0], x: l[1], ic: ic('learn', i), onClick: () => { }, cur: 'default', bg: on(i === 4, '#e6f4f4', '#fff'), fg: '#2b302f', bd: '#e3e8eb', tc: '#2b302f', fs: '15px', mh: '110px', chips: [], hasChips: false, isBig: false, span: on(i === 4 && wideB, 'grid-column:span 4', '') }))];
+    const wall = C.cat.wall.map(w => ({ t: w[0], col: C.cat.col[w[1]], tint: C.cat.tint[w[1]], c: w[1] }));
+    const catTabs = C.cat.mods.map((m, i) => { const o = i === s.catMod; return { n: m.n, dot: C.cat.col[m.c], bg: on(o, '#14262b', '#f4f7f7'), fg: on(o, '#fff', '#2b302f'), onClick: () => set({ catMod: i }) }; });
+    const cm = C.cat.mods[s.catMod];
+    const sel = { tint: C.cat.tint[cm.c], hasM: cm.m.length > 0, hasS: cm.s.length > 0, multi: cm.m.map(x => ({ t: x[0], len: x[1] })), single: cm.s.map(t => ({ t })) };
+    const f90 = C.cat.filt.map((t, i) => { const o = i === s.f90; return { t, bg: on(o, '#14262b', '#fff'), fg: on(o, '#fff', '#2b302f'), bd: on(o, '#14262b', '#e3e8eb'), onClick: () => set({ f90: i }) }; });
+    const map90 = [null, ['allas'], ['it', 'pm'], ['ai'], ['soft', 'hr']][s.f90];
+    const cards90 = wall.filter(w => !map90 || map90.includes(w.c)).slice(0, 6).map((w, i) => ({ t: w.t, lab: C.cat.labels[i % 3] }));
+    const whyHead = [{ t: '', bg: '#fff', fg: '#2b302f', r: '0' }, ...C.why.cols.slice(1).map((t, i) => ({ t, bg: on(i === 3, '#63b6b7', '#f4f7f7'), fg: '#0c181b', r: on(i === 3, '20px 20px 0 0', '0') }))];
+    const whyCells = []; C.why.rows.forEach(r => r.forEach((t, i) => whyCells.push(i === 0 ? { t, bg: '#fff', fg: '#2b302f', fw: 700 } : { t: i === 4 ? t : t, bg: on(i === 4, '#e6f4f4', '#fff'), fg: '#2b302f', fw: on(i === 4, 700, 400) })));
+    const whyCards = C.why.rows.map(r => ({ lab: r[0], mk: r[4], o: [1, 2, 3].map(i => ({ h: C.why.cols[i], v: r[i] })) }));
+    const resTabs = C.res.filt.map((t, i) => { const o = i === s.filt; return { t, bg: on(o, '#14262b', '#fff'), fg: on(o, '#fff', '#2b302f'), bd: on(o, '#14262b', '#e3e8eb'), onClick: () => set({ filt: i }) }; });
+    const fl = C.res.filt[s.filt];
+    const stories = C.res.s.filter(x => s.filt === 0 || x.t === fl).map(x => ({ img: face(x.n, C.res.s.indexOf(x) + 3), pend: x.pend, nm: x.n || 'Tagunk', w: x.w, m: x.n ? x.n.split(' ').map(z => z[0]).slice(0, 2).join('') : '–', bigT: x.big || x.t, x: x.x, t: x.t }));
+    const faq = C.faq.items.map((q, i) => ({ q: q[0], a: q[1], i })).slice(0, s.faqAll ? 99 : 6).map(q => { const o = !!s.faq[q.i]; return { q: q.q, a: q.a, ico: on(o, '#i-minus', '#i-plus'), disp: on(o, 'block', 'none'), onClick: () => set({ faq: { ...s.faq, [q.i]: !o } }) }; });
+    const showBar = s.scrolled && !s.barHide && !s.side;
+    const row = (el) => document.getElementById('resRow');
+    const sideCat = !s.narrow;
+    return {
+      ready: true, c: C, s0: C.stories3[0], stories3: C.stories3.map((x, i) => ({ ...x, img: face(x.n, i) })),
+      hasTag: !!C.hero.tag, pendLbl: G.pendLbl, hasQuote: !!C.imagine.quote, imTheme: !!G.theme, imBase: !G.theme, nowBtn: C.now.fold || !!C.now.detail, tlDisp: C.now.fold ? on(s.nowOpen, 'block', 'none') : 'block',
+      hasPath: !!C.path, path: C.path || { s: [] }, demo: G.demo, themes: G.themes.map(t => ({ ...t, bg: on(t.on, '#63b6b7', 'transparent'), fg: on(t.on, '#0c181b', '#fff') })),
+      fbBd: on(s.feb === G.febIdx, '#f1a246', 'rgba(102,193,195,.5)'), fbSh: on(s.feb === G.febIdx, '0 0 0 1px #f1a246,0 0 48px rgba(241,162,70,.25)', 'none'), wide: wideB, narrow: s.narrow, notes: s.notes, side: s.side, prog: s.prog,
+      gridCols: on(s.side, 'minmax(0,1fr) 340px', 'minmax(0,1fr)'),
+      join: go('ar'), goWhat: go(C.hero.go), goVideo: go('kepzesek'),
+      showNav: s.scrolled && !s.narrow, showBar, navItems,
+      heroBullets: C.hero.bullets.map(t => ({ t })), trust: C.hero.trust.map((t, i) => ({ t: i === 0 ? t.slice(1) : t, star: i === 0 ? '★' : '' })), trustFirst: C.hero.trust[0].slice(2),
+      imagine: C.imagine.items.map((t, i) => ({ t, seg: G.seg(t), ic: ic('imagine', i) })), pains: C.pain.items.map((p, i) => ({ ...p, ic: ic('pains', i), hasImg: false, img: 'assets/illu-0' + (i + 2) + '.png' })),
+      nowDisp: on(s.nowOpen, 'block', 'none'), nowIco: on(s.nowOpen, '#i-minus', '#i-plus'), toggleNow: () => set({ nowOpen: !s.nowOpen }), nowSteps,
+      routes, febTabs, fb, febAll: C.feb.all.map(t => ({ t })),
+      bentoCols: on(wideB, 'repeat(4,minmax(0,1fr))', 'minmax(0,1fr)'), bento, p0: s.pill === 0, p1: s.pill === 1, p2: s.pill === 2, pillTitle: [C.pillars.t1, C.pillars.t2, C.pillars.t3][s.pill], mods,
+      jobB: C.pillars.job.b.map(t => ({ t })), jobP: C.pillars.job.pr.map(t => ({ t })),
+      nums: C.cat.nums.map((n, i) => ({ a: n[0], b: n[1], ic: ic('nums', i) })), anums: C.about.nums.map((n, i) => ({ a: n[0], b: n[1], ic: ic('anums', i) })), qitems: C.qual.items.map(n => ({ a: n[0], b: n[1] })),
+      row1: [...wall.slice(0, 12), ...wall.slice(0, 12)], row2: [...wall.slice(12), ...wall.slice(12)],
+      browseCols: on(sideCat, '230px minmax(0,1fr)', 'minmax(0,1fr)'), catFlex: 'flex', catDir: on(sideCat, 'flex-direction:column', 'flex-direction:row'), catMax: on(sideCat, '420px', 'none'), catTabs, sel,
+      toggle90: () => set({ d90: !s.d90 }), ico90: on(s.d90, '#i-minus', '#i-plus'), disp90: on(s.d90, 'block', 'none'), f90, cards90,
+      whyHead, whyCells, whyCards, resTabs, stories,
+      scrollL: () => { const e = document.getElementById('resRow'); if (e) e.scrollBy({ left: -340, behavior: 'smooth' }); }, scrollR: () => { const e = document.getElementById('resRow'); if (e) e.scrollBy({ left: 340, behavior: 'smooth' }); },
+      aboutDisp: on(s.aboutOpen, 'block', 'none'), aboutIco: on(s.aboutOpen, '#i-minus', '#i-plus'), toggleAbout: () => set({ aboutOpen: !s.aboutOpen }),
+      trainers: C.about.tr.map((t, i) => ({ img: face(t[0], 8 + i), n: t[0], r: t[1], m: t[0].split(' ').map(z => z[0]).join('') })),
+      steps: C.steps.items.map((x, i) => ({ n: i + 1, h: x[0], x: x[1], ic: ic('steps', i) })),
+      offerRows: C.offer.items.map(x => ({ a: x[0], b: x[1] })),
+      guar: C.price.g.map(g => ({ h: g[0], x: g[1] })), guarMini: C.price.g.slice(0, 2).map(g => ({ h: g[0], x: g[1] })),
+      fitY: C.fit.y.map(t => ({ t })), fitN: C.fit.n.map(t => ({ t })),
+      faq, faqLess: !s.faqAll, faqShow: () => set({ faqAll: true }),
+      foot: C.fin.foot.map((t, i) => ({ t, hasIc: i < 2, ic: i === 0 ? '#i-mail' : '#i-phone' })), footPad: on(showBar, '96px', '36px'),
+      toast: s.toast, closeToast: () => set({ toast: false }), openToast: () => set({ toast: true, seen: true }), joinToast: () => { set({ toast: false }); go('ar')(); },
+      toastRoutes: C.routes.items.map((r, i) => ({ t: r.t, onClick: () => { set({ toast: false, route: i }); go('utvonalak')(); } })),
+      toastBottom: on(showBar, '84px', '76px'),
+      toggleNotes: () => set({ notes: !s.notes }), notesBg: on(s.notes, '#f1a246', '#fff'), notesLbl: on(s.notes, 'be', 'ki'), noteBottom: on(showBar, '84px', '16px')
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="gmk-content.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="gmk-motion.js"></script>
+<script src="gmk-icons.js"></script>
+<style>
+body{margin:0;font-family:Inter,Arial,sans-serif;color:#2b302f;background:#f4f7f7;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:#2f7f80}a:hover{color:#1f5f60}
+*{box-sizing:border-box}
+html{scrollbar-width:thin;scrollbar-color:#63b6b7 #e9eeee}
+::-webkit-scrollbar{width:12px;height:12px}
+::-webkit-scrollbar-track{background:#e9eeee}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#5bb87a,#14b8a6 55%,#0fb5c0);border-radius:999px;border:3px solid #e9eeee}
+::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#4fa56c,#0f9f90 55%,#0b9ca6)}
+::selection{background:#84e0db;color:#0f1112}
+@keyframes gmkL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes gmkR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes gmkUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes gmkDrift{from{transform:translate(0,0) scale(1)}to{transform:translate(90px,60px) scale(1.18)}}
+@keyframes gmkPulse{0%,100%{box-shadow:0 0 0 0 rgba(99,182,183,.5)}50%{box-shadow:0 0 0 12px rgba(99,182,183,0)}}
+@media (prefers-reduced-motion:reduce){[data-marq]{animation:none!important}[style*="gmkDrift"],[style*="gmkPulse"]{animation:none!important}}
+</style>
+</helmet>
+<sc-if value="{{ ready }}" hint-placeholder-val="{{ false }}">
+<div style="position:relative">
+
+<!-- HEADER -->
+<header style="position:sticky;top:0;z-index:60;background:rgba(15,17,18,.88);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid rgba(255,255,255,.08)">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <img src="logo-white.png" alt="Mentor Klub" style="height:48px;width:auto;display:block"/>
+    <sc-if value="{{ showNav }}"><nav style="display:flex;gap:4px"><sc-for list="{{ navItems }}" as="n" hint-placeholder-count="5"><a onClick="{{ n.onClick }}" style="font:600 14px 'DM Sans',sans-serif;color:#e8eeee;cursor:pointer;text-decoration:none;padding:8px 14px;border-radius:999px" style-hover="background:rgba(20,184,166,.2);color:#fff">{{ n.t }}</a></sc-for></nav></sc-if>
+    <button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 13px/1.2 'DM Sans',sans-serif;text-transform:uppercase;border-radius:999px;padding:10px 20px;min-height:44px;border:0;cursor:pointer;white-space:nowrap" style-hover="filter:brightness(1.15)" style-active="filter:brightness(.88)" style-focus="box-shadow:0 0 0 4px rgba(20,184,166,.4)">{{ c.hero.cta }}</button>
+  </div>
+  <div style="height:3px;background:rgba(255,255,255,.08)"><div style="height:3px;background:linear-gradient(90deg,#5bba82,#14b8a6,#0fb5c0);width:{{ prog }}%"></div></div>
+</header>
+
+<!-- HERO -->
+<section style="position:relative;overflow:hidden;background:linear-gradient(90deg,#0f1112 0%,rgba(15,17,18,.93) 34%,rgba(15,17,18,.55) 62%,rgba(15,17,18,.2) 100%),url(assets/brand-01.png) right center/cover,#0f1112;color:#e8eeee;padding:clamp(40px,6vw,80px) 0 clamp(150px,16vw,190px)">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px">
+    <sc-if value="{{ notes }}"><div style="margin:0 0 20px;background:#f1a246;color:#0f1112;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace;max-width:720px">UX · D változat: az új Mentor Klub design system szerint (DM Sans + Inter, grafit/fekete felületek, türkiz–zöld színátmenet, sötét fejléc, számozott címkék). Szerkezet: a C kvíz-vezérelt váza.</div></sc-if>
+    <div style="max-width:620px">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:#f1a246;color:#0f1112;font:800 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.04em;padding:6px 14px;border-radius:999px;margin-bottom:20px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-tag"></use></svg>{{ c.hero.badge }}</div>
+      <sc-if value="{{ hasTag }}"><div style="display:inline-flex;align-items:center;gap:6px;background:#14262b;color:#84e0db;border:1px solid rgba(102,193,195,.5);font:800 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.04em;padding:6px 14px;border-radius:999px;margin-bottom:16px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-calendar"></use></svg>{{ c.hero.tag }}</div></sc-if>
+      <h1 style="margin:0 0 22px;font:800 clamp(30px,4.2vw,56px)/1.08 'DM Sans',sans-serif;color:#fff;text-transform:uppercase;text-wrap:balance">{{ c.hero.h1a }}<span style="background:linear-gradient(90deg,#5bba82,#14b8a6 55%,#0fb5c0);-webkit-background-clip:text;background-clip:text;color:transparent">{{ c.hero.h1b }}</span></h1>
+      <p style="margin:0 0 10px;font:600 18px/1.55 'DM Sans',sans-serif;color:#fff">{{ c.hero.sub1 }}</p>
+      <p style="margin:0 0 24px;font-size:17px">{{ c.hero.sub2 }}</p>
+      <div style="display:grid;gap:10px;margin-bottom:24px"><sc-for list="{{ heroBullets }}" as="b" hint-placeholder-count="3"><div style="display:flex;gap:12px;align-items:flex-start;font-size:16px"><span style="flex:none;width:24px;height:24px;border-radius:50%;background:#63b6b7;color:#0f1112;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-check"></use></svg></span><span>{{ b.t }}</span></div></sc-for></div>
+      <p style="margin:0 0 24px;font-size:17px">{{ c.hero.oa }} <s style="color:#9fb0b2">{{ c.hero.old }}</s> {{ c.hero.ob }} <b style="color:#84e0db;font-size:24px">{{ c.hero.price }}</b>. {{ c.hero.oc }}</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center">
+        <button onClick="{{ join }}" style="display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 15px/1.2 'DM Sans',sans-serif;text-transform:uppercase;border-radius:14px;padding:16px 28px;min-height:52px;border:0;cursor:pointer;box-shadow:0 8px 24px rgba(99,182,183,.4)" style-hover="filter:brightness(1.15)" style-active="filter:brightness(.88)" style-focus="box-shadow:0 0 0 4px rgba(20,184,166,.4)">{{ c.hero.cta }}</button>
+        <a onClick="{{ heroSec }}" style="color:#fff;font:700 15px 'DM Sans',sans-serif;cursor:pointer;text-decoration:none;border-bottom:2px solid #14b8a6">{{ heroSecT }}</a>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:40px"><sc-for list="{{ trust }}" as="t" hint-placeholder-count="5"><div style="background:rgba(255,255,255,.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);color:#e8eeee;font:600 13px 'DM Sans',sans-serif;padding:8px 16px;border-radius:999px"><span style="color:#f1a246">{{ t.star }}</span>{{ t.t }}</div></sc-for></div>
+  </div>
+</section>
+
+<!-- KVÍZ-CSÍK -->
+<section id="kviz" style="position:relative;z-index:2;margin-top:-120px">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px">
+    <sc-if value="{{ notes }}"><div style="margin:0 0 12px;background:#fff;border:2px dashed #f1a246;color:#2b302f;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace;max-width:760px">ELTÉRÉS · A „Négy útvonal” blokk előrehozva és interaktív kvízzé alakítva (szöveg változatlan: cím, „Kinek”, „Mire juthatsz”, „Első lépések”). Új: az útvonal → februári útvonal megfeleltetés (Karrier Hack → adatelemzés + projektmenedzsment, AI-szakértő → AI-ügynökök, Szintlépő → projektmenedzsment). Ezt tartalmilag jóvá kell hagyni.</div></sc-if>
+    <div style="background:linear-gradient(160deg,rgba(28,36,37,.9),rgba(15,17,18,.86));backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);border-radius:36px;border:1px solid rgba(102,193,195,.55);box-shadow:0 0 0 1px rgba(102,193,195,.3),0 24px 70px rgba(15,17,18,.35);padding:clamp(22px,3vw,40px);color:#fff">
+      <h2 style="margin:0 0 24px;font:800 clamp(22px,2.8vw,34px)/1.2 'DM Sans',sans-serif;text-wrap:balance">{{ c.routes.h }}</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:14px">
+        <sc-for list="{{ tiles }}" as="r" hint-placeholder-count="4">
+          <button onClick="{{ r.onClick }}" style="text-align:left;cursor:pointer;font-family:'DM Sans',sans-serif;border-radius:22px;padding:20px;background:{{ r.bg }};color:{{ r.fg }};border:2px solid {{ r.bd }};border-top:6px solid {{ r.col }};transition:all .15s;display:flex;flex-direction:column;gap:10px;min-height:150px" style-hover="border-color:#84e0db">
+            <span style="width:44px;height:44px;border-radius:14px;background:{{ r.ibg }};color:{{ r.col }};display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="{{ r.ic }}"></use></svg></span>
+            <span style="font:600 13px/1.35 'DM Sans',sans-serif;color:{{ r.kc }};margin-bottom:-6px">{{ r.kick }}</span>
+            <span style="font:700 17px/1.3 'DM Sans',sans-serif">{{ r.t }}</span>
+            <span style="font-size:13px;line-height:1.45;opacity:.85">{{ r.k }}</span>
+          </button>
+        </sc-for>
+      </div>
+      <sc-if value="{{ picked }}">
+        <div style="margin-top:22px;background:rgba(255,255,255,.07);border-radius:24px;padding:clamp(18px,2.6vw,30px);animation:gmkUp .3s ease">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:28px">
+            <div><div style="font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#6dc6c3;margin-bottom:6px">{{ c.routes.mire }}</div><div style="font:600 18px/1.45 'DM Sans',sans-serif">{{ route.m }}</div></div>
+            <div><div style="font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#6dc6c3;margin-bottom:8px">{{ c.routes.first }}</div>
+              <sc-for list="{{ route.g }}" as="g" hint-placeholder-count="2"><div style="margin-bottom:10px"><div style="font:600 13px 'DM Sans',sans-serif;color:#84e0db;margin-bottom:6px">{{ g.l }}</div><div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{ g.i }}" as="x" hint-placeholder-count="3"><span style="background:rgba(255,255,255,.12);border-radius:10px;padding:6px 12px;font-size:13px">{{ x.t }}</span></sc-for></div></div></sc-for></div>
+            <div style="display:grid;gap:12px;align-content:start">
+              <sc-if value="{{ route.hasFeb }}"><div><div style="display:inline-flex;align-items:center;gap:6px;background:#f1a246;color:#0f1112;font:800 11px 'DM Sans',sans-serif;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:8px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-calendar"></use></svg>{{ c.feb.tag }}</div>
+                <sc-for list="{{ route.feb }}" as="f" hint-placeholder-count="1"><a onClick="{{ goFeb }}" style="display:block;color:#fff;font:600 14px/1.4 'DM Sans',sans-serif;cursor:pointer;margin-bottom:6px;text-decoration:underline;text-decoration-color:#63b6b7">{{ f.t }}</a></sc-for></div></sc-if>
+              <button onClick="{{ join }}" style="display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 14px/1.25 'DM Sans',sans-serif;text-transform:uppercase;border-radius:14px;padding:14px 20px;min-height:52px;border:0;cursor:pointer;box-shadow:0 8px 24px rgba(99,182,183,.35)" style-hover="filter:brightness(1.15)" style-active="filter:brightness(.88)" style-focus="box-shadow:0 0 0 4px rgba(20,184,166,.4)">{{ c.hero.cta }}</button>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+      <div style="margin-top:18px;font-size:14px;color:#dde2e3"><b style="color:#fff">{{ c.routes.age }}</b>{{ c.routes.ageX }}</div>
+    </div>
+  </div>
+</section>
+
+<!-- STORIES -->
+<section style="padding:48px 0 0">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px">
+    <sc-for list="{{ stories3 }}" as="s" hint-placeholder-count="3"><div style="background:#fff;border:1px solid #e3e8eb;border-radius:24px;padding:20px;display:flex;gap:16px;align-items:center;box-shadow:0 8px 28px rgba(48,99,100,.1)"><img src="{{ s.img }}" alt="" style="flex:none;width:64px;height:64px;border-radius:50%;object-fit:cover;background:#e3e8eb"/><div><sc-if value="{{ s.pend }}"><div style="display:inline-block;background:#f1a246;color:#0f1112;font:800 10px 'DM Sans',sans-serif;letter-spacing:.06em;padding:3px 8px;border-radius:999px;margin-bottom:6px">{{ pendLbl }}</div></sc-if><div style="font:800 20px/1.15 'DM Sans',sans-serif;color:#2f7f80;margin-bottom:4px">{{ s.big }}</div><div style="font-size:13px;line-height:1.45">{{ s.x }}</div></div></div></sc-for>
+  </div>
+</section>
+
+<!-- 01 -->
+<section style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,104px) 24px">
+  <div style="display:grid;grid-template-columns:{{ chCols }};gap:clamp(24px,4vw,64px);align-items:start">
+    <div style="position:{{ stickyPos }};top:96px"><div style="display:inline-flex;align-items:center;font:700 12px 'DM Sans',sans-serif;letter-spacing:.1em;color:#0d7f78;background:#dff4f1;border-radius:999px;padding:5px 14px;margin-bottom:14px">01</div><h2 style="margin:0;font:800 clamp(26px,3.2vw,40px)/1.12 'DM Sans',sans-serif;text-wrap:balance">{{ c.pain.h }}</h2></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px">
+      <sc-for list="{{ pains }}" as="p" hint-placeholder-count="6"><div style="background:rgba(255,255,255,.75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid #e3e8eb;border-radius:24px;padding:22px;box-shadow:0 8px 28px rgba(48,99,100,.08)"><sc-if value="{{ p.hasImg }}"><img src="{{ p.img }}" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:5/4;object-fit:cover;object-position:50% 55%;border-radius:14px;margin-bottom:16px"/></sc-if><div style="width:46px;height:46px;border-radius:14px;background:#e6f4f4;color:#2f7f80;display:flex;align-items:center;justify-content:center;margin-bottom:12px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="{{ p.ic }}"></use></svg></div><div style="font:700 17px/1.3 'DM Sans',sans-serif;margin-bottom:6px">{{ p.t }}</div><div style="font-size:14px">{{ p.x }}</div></div></sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section style="position:relative;overflow:hidden;color:#fff;background:linear-gradient(rgba(15,17,18,.72),rgba(15,17,18,.82)),url(assets/brand-05.png) center/cover">
+  <div style="position:absolute;width:520px;height:520px;right:-120px;top:-160px;border-radius:50%;background:radial-gradient(circle,rgba(91,174,175,.45),transparent 65%);filter:blur(30px);animation:gmkDrift 18s ease-in-out infinite alternate;pointer-events:none"></div>
+  <div style="position:relative;max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,104px) 24px;display:grid;grid-template-columns:{{ chCols }};gap:clamp(24px,4vw,64px);align-items:start">
+    <div style="position:{{ stickyPos }};top:96px"><div style="display:inline-flex;align-items:center;font:700 12px 'DM Sans',sans-serif;letter-spacing:.1em;color:#84e0db;background:rgba(20,184,166,.18);border-radius:999px;padding:5px 14px;margin-bottom:14px">02</div><h2 style="margin:0 0 20px;font:800 clamp(26px,3.2vw,40px)/1.12 'DM Sans',sans-serif;text-wrap:balance">{{ c.imagine.h }}</h2><p style="margin:0 0 24px;font:600 17px/1.55 'DM Sans',sans-serif">{{ c.imagine.close }}</p><button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 15px/1.2 'DM Sans',sans-serif;text-transform:uppercase;border-radius:14px;padding:16px 28px;min-height:52px;border:0;cursor:pointer" style-hover="filter:brightness(1.15)" style-active="filter:brightness(.88)" style-focus="box-shadow:0 0 0 4px rgba(20,184,166,.4)">{{ c.hero.cta }}</button></div>
+    <div style="display:grid;gap:12px"><sc-for list="{{ imagine }}" as="i" hint-placeholder-count="5"><div style="display:flex;gap:16px;align-items:center;background:rgba(28,36,37,.6);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(102,193,195,.3);border-radius:20px;padding:16px 20px"><span style="flex:none;width:44px;height:44px;border-radius:14px;background:#84e0db;color:#0f1112;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="{{ i.ic }}"></use></svg></span><span style="font-size:16px"><sc-for list="{{ i.seg }}" as="g" hint-placeholder-count="1"><span style="font-weight:{{ g.w }}">{{ g.t }}</span></sc-for></span></div></sc-for><sc-if value="{{ hasQuote }}"><blockquote style="margin:4px 0 0;padding:20px 24px;border-radius:20px;background:#84e0db;color:#0f1112;font:700 clamp(17px,1.8vw,21px)/1.45 'DM Sans',sans-serif">„{{ c.imagine.quote }}”</blockquote></sc-if></div>
+    <img src="assets/illu-05.png" alt="" loading="lazy" style="grid-column:1/-1;display:block;width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:28px;box-shadow:0 20px 56px rgba(0,0,0,.3)"/>
+  </div>
+</section>
+
+<!-- 03 -->
+<section style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,104px) 24px">
+  <sc-if value="{{ notes }}"><div style="margin:0 0 16px;background:#fff;border:2px dashed #f1a246;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace;max-width:720px">ELTÉRÉS · Az utolsó mondat („A cégek nem azt fizetik meg…”) kiemelve, a bekezdés többi része „Részletek” mögött. Szó nem változott. Az AI-ablak szöveg az élő oldalról átvett (a dokumentumból hiányzott).</div></sc-if>
+  <div style="display:grid;grid-template-columns:{{ chCols }};gap:clamp(24px,4vw,64px);align-items:start">
+    <div style="position:{{ stickyPos }};top:96px"><div style="display:inline-flex;align-items:center;font:700 12px 'DM Sans',sans-serif;letter-spacing:.1em;color:#0d7f78;background:#dff4f1;border-radius:999px;padding:5px 14px;margin-bottom:14px">03</div><h2 style="margin:0 0 18px;font:800 clamp(26px,3.2vw,40px)/1.12 'DM Sans',sans-serif;text-wrap:balance">{{ c.now.h }}</h2>
+      <p style="margin:0 0 14px;font:700 19px/1.45 'DM Sans',sans-serif;color:#2f7f80">{{ c.now.lead }}</p>
+      <sc-if value="{{ nowBtn }}"><button onClick="{{ toggleNow }}" style="background:none;border:0;padding:0;font:700 14px 'DM Sans',sans-serif;color:#2b302f;cursor:pointer;border-bottom:2px solid #63b6b7">Részletek <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-3px"><use href="{{ nowIco }}"></use></svg></button></sc-if>
+      <p style="display:{{ nowDisp }};margin:14px 0 0;font-size:15px">{{ c.now.detail }}</p>
+      <img src="assets/illu-06.png" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:20px;margin-top:22px;box-shadow:0 12px 32px rgba(15,17,18,.14)"/></div>
+    <div style="background:linear-gradient(160deg,rgba(28,36,37,.92),rgba(15,17,18,.9));border-radius:32px;padding:28px;color:#fff;box-shadow:0 0 0 1px rgba(102,193,195,.4),0 20px 50px rgba(15,17,18,.25);display:{{ tlDisp }}">
+      <img src="assets/illu-07.png" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:20px;margin-bottom:20px"/><h3 style="margin:0 0 18px;font:800 14px 'DM Sans',sans-serif;color:#6dc6c3;text-transform:uppercase;letter-spacing:.06em">{{ c.now.boxH }}</h3>
+      <sc-for list="{{ c.now.tl }}" as="t" hint-placeholder-count="3"><div style="display:grid;grid-template-columns:96px 1fr;gap:16px;padding:16px 0;border-top:1px solid rgba(102,193,195,.25)"><div style="font:800 21px/1.2 'DM Sans',sans-serif;color:#84e0db">{{ t.y }}</div><div style="font-size:14px"><div style="margin-bottom:6px"><span style="color:#96afb2">Mi történik a cégeknél: </span>{{ t.a }}</div><div><span style="color:#96afb2">Mit jelent neked: </span><b>{{ t.b }}</b></div></div></div></sc-for>
+      <p style="margin:16px 0 0;padding:16px 18px;background:#f1a246;color:#0f1112;border-radius:16px;font:600 15px/1.5 'DM Sans',sans-serif">{{ c.now.box }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- 03/B AZ ÚTVONAL LÉPÉSEI (tematikus) -->
+<sc-if value="{{ hasPath }}">
+<section id="utvonal-lepesei" style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,104px) 24px">
+  <div style="display:grid;grid-template-columns:{{ chCols }};gap:clamp(24px,4vw,64px);align-items:start">
+    <div style="position:{{ stickyPos }};top:96px"><div style="display:inline-flex;align-items:center;gap:6px;background:#f1a246;color:#0f1112;font:800 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.04em;padding:6px 14px;border-radius:999px;margin-bottom:16px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-calendar"></use></svg>{{ c.feb.tag }}</div><h2 style="margin:0 0 20px;font:800 clamp(26px,3.2vw,40px)/1.12 'DM Sans',sans-serif;text-wrap:balance">{{ path.h }}</h2>
+      <div style="font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:6px">{{ path.kinekL }}</div><p style="margin:0 0 24px;font:600 16px/1.5 'DM Sans',sans-serif">{{ path.kinek }}</p>
+      <button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 15px/1.2 'DM Sans',sans-serif;text-transform:uppercase;border-radius:14px;padding:16px 28px;min-height:52px;border:0;cursor:pointer" style-hover="filter:brightness(1.15)">{{ path.cta }}</button></div>
+    <div style="display:grid;gap:16px">
+      <div style="background:#fff;border:1px solid #e3e8eb;border-radius:28px;padding:8px 24px;box-shadow:0 8px 28px rgba(48,99,100,.08)">
+        <sc-for list="{{ path.s }}" as="s" hint-placeholder-count="5"><div style="display:grid;grid-template-columns:104px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid #e3e8eb"><div style="font:800 14px/1.3 'DM Sans',sans-serif;color:#2f7f80">{{ s.a }}</div><div style="font-size:15px"><b style="font-family:'DM Sans',sans-serif">{{ s.b }}</b> {{ s.c }}</div></div></sc-for>
+        <div style="display:grid;grid-template-columns:104px 1fr;gap:16px;padding:16px 0"><div style="font:800 14px/1.3 'DM Sans',sans-serif;color:#2f7f80">{{ path.vidL }}</div><div style="font-size:15px">{{ path.vid }}</div></div>
+      </div>
+      <div style="background:linear-gradient(160deg,rgba(28,36,37,.92),rgba(15,17,18,.9));border-radius:32px;padding:28px;color:#fff;box-shadow:0 0 0 1px rgba(102,193,195,.4),0 20px 50px rgba(15,17,18,.25)"><div style="display:flex;gap:10px;align-items:center;font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#84e0db;margin-bottom:10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-award"></use></svg>{{ path.finL }}</div><p style="margin:0;font:600 17px/1.5 'DM Sans',sans-serif">{{ path.fin }}</p></div>
+      <div style="font-size:15px"><div style="font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#2f7f80;margin-bottom:6px">{{ path.howL }}</div>{{ path.how }}</div>
+    </div>
+  </div>
+</section>
+</sc-if>
+
+<!-- 04 FEBRUÁR -->
+<section id="februar" style="position:relative;overflow:hidden;color:#dde2e3;background:linear-gradient(rgba(28,40,46,.82),rgba(28,40,46,.92)),url(assets/brand-08.png) center/cover">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,104px) 24px">
+    <sc-if value="{{ notes }}"><div style="margin:0 0 16px;background:#f1a246;color:#0f1112;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace;max-width:720px">UX · Három fül + egy idővonal-panel; a kvízből ide ugrik az ember, ha az útvonala februárban indul.</div></sc-if>
+    <div style="display:inline-flex;align-items:center;gap:6px;background:#f1a246;color:#0f1112;font:800 12px 'DM Sans',sans-serif;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-calendar"></use></svg>{{ c.feb.tag }}</div>
+    <h2 style="margin:0 0 16px;font:800 clamp(26px,3.2vw,40px)/1.12 'DM Sans',sans-serif;color:#fff;text-wrap:balance;max-width:900px">{{ c.feb.h }}</h2>
+    <p style="margin:0 0 26px;font-size:16px;max-width:860px">{{ c.feb.p }}</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px"><sc-for list="{{ febTabs }}" as="t" hint-placeholder-count="3"><button onClick="{{ t.onClick }}" style="cursor:pointer;font:700 14px 'DM Sans',sans-serif;padding:12px 20px;min-height:46px;border-radius:999px;background:{{ t.bg }};color:{{ t.fg }};border:1px solid {{ t.bd }}">{{ t.t }}</button></sc-for></div>
+    <div style="background:linear-gradient(160deg,#1b1f20,#0f1112);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);border-radius:28px;border:1px solid {{ fbBd }};box-shadow:{{ fbSh }};padding:clamp(20px,3vw,32px);color:#fff">
+      <h3 style="margin:0 0 20px;font:800 clamp(18px,2vw,24px)/1.3 'DM Sans',sans-serif">{{ fb.t }}</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:32px">
+        <div><sc-for list="{{ fb.s }}" as="s" hint-placeholder-count="6"><div style="display:grid;grid-template-columns:34px 1fr;gap:14px"><div style="display:flex;flex-direction:column;align-items:center"><span style="width:12px;height:12px;border-radius:50%;background:#84e0db;margin-top:6px"></span><span style="flex:1;width:2px;background:rgba(132,224,219,.25)"></span></div><div style="padding-bottom:16px"><div style="font:700 13px 'DM Sans',sans-serif;color:#84e0db">{{ s.a }}</div><div style="font:600 15px/1.4 'DM Sans',sans-serif">{{ s.b }}</div><sc-if value="{{ s.hasC }}"><div style="font-size:13px;color:#96afb2">{{ s.c }}</div></sc-if></div></div></sc-for></div>
+        <div style="display:grid;gap:14px;align-content:start;font-size:14px">
+          <div><div style="font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#6dc6c3;margin-bottom:4px">{{ c.feb.kinek }}</div>{{ fb.k }}</div>
+          <div><div style="font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#6dc6c3;margin-bottom:4px">{{ c.feb.old }}</div>{{ fb.o }}</div>
+          <div style="background:rgba(132,224,219,.12);border-radius:16px;padding:14px 16px"><div style="font:700 12px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#6dc6c3;margin-bottom:4px">{{ c.feb.fin }}</div>{{ fb.f }}</div>
+          <div style="color:#96afb2"><b style="color:#dde2e3">{{ c.feb.mkt }}:</b> {{ fb.mk }}</div>
+        </div>
+      </div>
+    </div>
+    <h3 style="margin:28px 0 12px;font:800 18px 'DM Sans',sans-serif;color:#fff">{{ c.feb.allH }}</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px"><sc-for list="{{ febAll }}" as="a" hint-placeholder-count="4"><div style="background:rgba(15,17,18,.4);border-radius:16px;padding:14px 16px;font-size:14px;display:flex;gap:10px"><span style="flex:none;color:#84e0db"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin-top:4px"><use href="#i-check"></use></svg></span><span>{{ a.t }}</span></div></sc-for></div>
+    <div style="margin-top:24px;display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center"><button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 15px/1.2 'DM Sans',sans-serif;text-transform:uppercase;border-radius:14px;padding:16px 28px;min-height:52px;border:0;cursor:pointer;box-shadow:0 8px 24px rgba(99,182,183,.35)" style-hover="filter:brightness(1.15)" style-active="filter:brightness(.88)" style-focus="box-shadow:0 0 0 4px rgba(20,184,166,.4)">{{ c.feb.cta }}</button><a style="color:#66c1c3;font:700 14px 'DM Sans',sans-serif;cursor:pointer">{{ c.feb.laterBtn }}</a></div>
+    <p style="margin:16px 0 0;font-size:14px;color:#96afb2">{{ c.feb.later }}</p>
+  </div>
+</section>
+
+<!-- 05 PILLÉREK -->
+<section id="mit-kapsz" style="background:radial-gradient(55% 45% at 8% 0%,rgba(99,182,183,.22),transparent 70%),radial-gradient(45% 40% at 100% 100%,rgba(241,162,70,.1),transparent 70%),#f4f7f7">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,104px) 24px;display:grid;grid-template-columns:{{ chCols }};gap:clamp(24px,4vw,64px);align-items:start">
+    <div style="position:{{ stickyPos }};top:96px">
+      <div style="display:inline-flex;align-items:center;font:700 12px 'DM Sans',sans-serif;letter-spacing:.1em;color:#0d7f78;background:#dff4f1;border-radius:999px;padding:5px 14px;margin-bottom:14px">05</div>
+      <h2 style="margin:0 0 22px;font:800 clamp(26px,3.2vw,40px)/1.12 'DM Sans',sans-serif;text-wrap:balance">{{ c.pillars.h }}</h2>
+      <div style="display:grid;gap:8px;margin-bottom:20px"><sc-for list="{{ pillTabs }}" as="p" hint-placeholder-count="3"><button onClick="{{ p.onClick }}" style="cursor:pointer;display:flex;align-items:center;gap:12px;text-align:left;font:700 16px 'DM Sans',sans-serif;padding:14px 18px;min-height:52px;border-radius:18px;background:{{ p.bg }};color:{{ p.fg }};border:2px solid {{ p.bd }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="{{ p.ic }}"></use></svg>{{ p.t }}</button></sc-for></div>
+      <img src="{{ img1 }}" alt="" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:24px;box-shadow:0 16px 40px rgba(15,17,18,.18)"/>
+    </div>
+    <div style="background:rgba(255,255,255,.78);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid #fff;border-radius:32px;padding:clamp(18px,2.8vw,36px);box-shadow:0 8px 32px rgba(48,99,100,.1)">
+      <h3 style="margin:0 0 20px;font:800 clamp(18px,2vw,26px)/1.3 'DM Sans',sans-serif;color:#2f7f80">{{ pillTitle }}</h3>
+      <sc-if value="{{ p0 }}"><div style="display:grid;gap:10px"><sc-for list="{{ mods }}" as="m" hint-placeholder-count="5"><div style="border:1px solid #e3e8eb;border-radius:16px;overflow:hidden;background:#fff"><button onClick="{{ m.onClick }}" style="width:100%;display:flex;justify-content:space-between;gap:16px;text-align:left;background:{{ m.bg }};border:0;padding:16px 18px;cursor:pointer;font:700 16px/1.35 'DM Sans',sans-serif;color:#2b302f"><span>{{ m.h }}</span><span style="color:#2f7f80"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="{{ m.ico }}"></use></svg></span></button>
+        <div style="display:{{ m.disp }};padding:4px 18px 18px;font-size:15px"><p style="margin:0 0 14px">{{ m.p }}</p>
+          <sc-if value="{{ m.hasLv }}"><div style="margin:0 0 14px"><div style="font:700 14px 'DM Sans',sans-serif;margin-bottom:8px">{{ m.lv }}</div><div style="display:grid;gap:8px"><sc-for list="{{ m.levels }}" as="l" hint-placeholder-count="4"><div style="display:flex;gap:10px;background:#f4f7f7;border-radius:12px;padding:10px 14px;font-size:14px"><b style="color:#2f7f80">{{ l.n }}.</b><span>{{ l.t }}</span></div></sc-for></div></div></sc-if>
+          <sc-if value="{{ m.hasQ }}"><div style="background:#e6f4f4;border-radius:14px;padding:16px 18px;font-style:italic">{{ m.q }}<div style="font-style:normal;font-weight:700;margin-top:6px">– {{ m.qa }}</div></div></sc-if>
+          <sc-if value="{{ m.hasChips }}"><div style="font:700 14px 'DM Sans',sans-serif;margin-bottom:8px">{{ m.cl }}</div><div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px"><sc-for list="{{ m.chipList }}" as="c2" hint-placeholder-count="6"><span style="background:#40454b;color:#fff;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600">{{ c2.t }}</span></sc-for></div><div style="background:#e6f4f4;border-radius:14px;padding:14px 18px">{{ m.pr }}</div></sc-if>
+        </div></div></sc-for></div></sc-if>
+      <sc-if value="{{ p1 }}"><p style="margin:0 0 6px;font:700 18px/1.4 'DM Sans',sans-serif">{{ c.pillars.job.h }}</p><p style="margin:0 0 20px">{{ c.pillars.job.p }}</p>
+        <div style="display:grid;gap:10px;margin-bottom:20px"><sc-for list="{{ jobB }}" as="b" hint-placeholder-count="4"><div style="display:flex;gap:12px;background:#f4f7f7;border-radius:14px;padding:14px 16px;font-size:14px"><span style="flex:none;color:#2f7f80"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin-top:4px"><use href="#i-check"></use></svg></span><span>{{ b.t }}</span></div></sc-for></div>
+        <p style="margin:0 0 20px;font-weight:700">{{ c.pillars.job.n }}</p>
+        <div style="display:grid;gap:12px"><sc-for list="{{ jobP }}" as="q" hint-placeholder-count="2"><div style="background:#e6f4f4;border-radius:16px;padding:16px 18px;font-size:14px">{{ q.t }}</div></sc-for></div></sc-if>
+      <sc-if value="{{ p2 }}"><div style="display:grid;gap:14px"><sc-for list="{{ c.pillars.lang }}" as="l" hint-placeholder-count="2"><div style="background:#f4f7f7;border-radius:20px;padding:22px"><h4 style="margin:0 0 8px;font:800 20px 'DM Sans',sans-serif;color:#2f7f80">{{ l.h }}</h4><p style="margin:0;font-size:14px">{{ l.p }}</p></div></sc-for></div></sc-if>
+      <div style="margin-top:24px"><button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 15px/1.2 'DM Sans',sans-serif;text-transform:uppercase;border-radius:14px;padding:16px 28px;min-height:52px;border:0;cursor:pointer;box-shadow:0 8px 24px rgba(99,182,183,.35)" style-hover="filter:brightness(1.15)" style-active="filter:brightness(.88)" style-focus="box-shadow:0 0 0 4px rgba(20,184,166,.4)">{{ c.hero.cta }}</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 KATALÓGUS -->
+<section id="kepzesek" style="padding:clamp(56px,8vw,104px) 0;overflow:hidden">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px">
+    <sc-if value="{{ notes }}"><div style="margin:0 0 16px;background:#fff;border:2px dashed #f1a246;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace;max-width:760px">ELTÉRÉS · A videós anyagok száma két helyen eltér a szövegben (112 / 219) – ellenőrizendő. Az „Így tanulsz” blokk ide, a katalógus alá került. A képzésborítók a courses.json-ból jönnek majd (itt színes helyőrző).</div></sc-if>
+    <div style="display:inline-flex;align-items:center;font:700 12px 'DM Sans',sans-serif;letter-spacing:.1em;color:#0d7f78;background:#dff4f1;border-radius:999px;padding:5px 14px;margin-bottom:14px">06</div>
+    <h2 style="margin:0 0 10px;font:800 clamp(26px,3.2vw,40px)/1.12 'DM Sans',sans-serif;text-wrap:balance">{{ c.cat.h }}</h2>
+    <p style="margin:0 0 24px;font-size:16px;max-width:720px">{{ c.cat.intro }}</p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px"><sc-for list="{{ nums }}" as="n" hint-placeholder-count="7"><div style="background:#f4f7f7;border-radius:999px;padding:8px 18px;display:flex;gap:10px;align-items:center"><span style="color:#2f7f80;display:flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="{{ n.ic }}"></use></svg></span><b style="font:800 20px 'DM Sans',sans-serif;color:#2f7f80">{{ n.a }}</b><span style="font-size:13px">{{ n.b }}</span></div></sc-for><div style="background:#40454b;color:#fff;border-radius:999px;padding:12px 18px;font:700 13px 'DM Sans',sans-serif">{{ c.cat.lvl }}</div></div>
+  </div>
+  <div style="display:grid;gap:14px;margin-bottom:32px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)">
+    <div data-marq="1" style="display:flex;width:max-content;animation:gmkL 70s linear infinite" style-hover="animation-play-state:paused"><sc-for list="{{ row1 }}" as="w" hint-placeholder-count="12"><div style="flex:none;width:240px;aspect-ratio:16/9;margin-right:14px;border-radius:16px;background:{{ w.tint }};position:relative;overflow:hidden;padding:14px;display:flex;flex-direction:column;justify-content:space-between"><div style="width:28px;height:6px;border-radius:3px;background:{{ w.col }}"></div><div style="flex:none;max-width:76%;overflow-wrap:anywhere;hyphens:auto;font:800 13px/1.2 'DM Sans',sans-serif;color:#0f1112">{{ w.t }}</div><div style="position:absolute;right:-8px;bottom:0;width:36%;height:70%;background:{{ w.col }};border-radius:50% 50% 0 0;opacity:.9"></div></div></sc-for></div>
+    <div data-marq="1" style="display:flex;width:max-content;animation:gmkR 80s linear infinite" style-hover="animation-play-state:paused"><sc-for list="{{ row2 }}" as="w" hint-placeholder-count="12"><div style="flex:none;width:240px;aspect-ratio:16/9;margin-right:14px;border-radius:16px;background:{{ w.tint }};position:relative;overflow:hidden;padding:14px;display:flex;flex-direction:column;justify-content:space-between"><div style="width:28px;height:6px;border-radius:3px;background:{{ w.col }}"></div><div style="flex:none;max-width:76%;overflow-wrap:anywhere;hyphens:auto;font:800 13px/1.2 'DM Sans',sans-serif;color:#0f1112">{{ w.t }}</div><div style="position:absolute;right:-8px;bottom:0;width:36%;height:70%;background:{{ w.col }};border-radius:50% 50% 0 0;opacity:.9"></div></div></sc-for></div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px">
+    <div style="display:grid;grid-template-columns:{{ browseCols }};gap:16px;align-items:start">
+      <div style="display:flex;{{ catDir }};gap:6px;overflow:auto;max-height:{{ catMax }}"><sc-for list="{{ catTabs }}" as="t" hint-placeholder-count="10"><button onClick="{{ t.onClick }}" style="flex:none;display:flex;align-items:center;gap:10px;text-align:left;cursor:pointer;font:600 14px 'DM Sans',sans-serif;padding:10px 14px;min-height:44px;border-radius:14px;background:{{ t.bg }};color:{{ t.fg }};border:0;white-space:nowrap"><span style="width:10px;height:10px;border-radius:50%;background:{{ t.dot }}"></span>{{ t.n }}</button></sc-for></div>
+      <div style="background:{{ sel.tint }};border-radius:24px;padding:clamp(18px,2.6vw,28px);min-height:260px"><div style="font:600 12px 'DM Sans',sans-serif;margin-bottom:14px">{{ c.cat.when }}</div>
+        <sc-if value="{{ sel.hasM }}"><h3 style="margin:0 0 12px;font:800 16px 'DM Sans',sans-serif">{{ c.cat.multiH }}</h3><div style="display:grid;gap:8px;margin-bottom:20px"><sc-for list="{{ sel.multi }}" as="m" hint-placeholder-count="3"><div style="background:#fff;border-radius:14px;padding:12px 16px;display:flex;justify-content:space-between;gap:12px;font:600 14px/1.35 'DM Sans',sans-serif"><span>{{ m.t }}</span><span style="flex:none;color:#2f7f80">{{ m.len }}</span></div></sc-for></div></sc-if>
+        <sc-if value="{{ sel.hasS }}"><h3 style="margin:0 0 12px;font:800 16px 'DM Sans',sans-serif">{{ c.cat.singleH }}</h3><div style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ sel.single }}" as="s" hint-placeholder-count="5"><span style="background:#fff;border-radius:999px;padding:8px 14px;font-size:13px">{{ s.t }}</span></sc-for></div></sc-if></div>
+    </div>
+    <p style="margin:20px 0 14px;font-size:15px">{{ c.cat.more }}</p>
+    <button style="display:inline-flex;align-items:center;background:#2b302f;color:#fff;font:700 14px/1.2 'DM Sans',sans-serif;text-transform:uppercase;border-radius:12px;padding:16px 24px;min-height:52px;border:0;cursor:pointer" style-hover="background:#0f1112">{{ c.cat.all }}</button>
+
+    <h3 style="margin:64px 0 20px;font:800 clamp(22px,2.6vw,32px)/1.2 'DM Sans',sans-serif">{{ c.cat.learnH }}</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:14px"><sc-for list="{{ learn }}" as="l" hint-placeholder-count="5"><div style="background:#f4f7f7;border-radius:20px;padding:20px"><div style="color:#2f7f80;margin-bottom:12px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="{{ l.ic }}"></use></svg></div><div style="font:700 16px/1.3 'DM Sans',sans-serif;margin-bottom:6px">{{ l.h }}</div><div style="font-size:13px">{{ l.x }}</div></div></sc-for></div>
+
+    <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:32px;align-items:center">
+      <div style="aspect-ratio:16/9;border-radius:28px;overflow:hidden;background:linear-gradient(rgba(15,17,18,.3),rgba(15,17,18,.55)),url(img-founder-wide.png) center/cover;display:flex;align-items:center;justify-content:center;position:relative;color:#dde2e3;font:500 11px ui-monospace,Menlo,monospace"><div style="width:76px;height:76px;border-radius:50%;background:#63b6b7;color:#0f1112;display:flex;align-items:center;justify-content:center;padding-left:6px"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" style="display:block"><use href="#i-play"></use></svg></div><div style="position:absolute;bottom:14px;left:18px">Kulisszák mögött videó · feliratozva · 2–3 perc</div></div>
+      <div><h3 style="margin:0 0 20px;font:800 clamp(22px,2.6vw,32px)/1.2 'DM Sans',sans-serif">{{ c.cat.vid }}</h3><button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 15px/1.2 'DM Sans',sans-serif;text-transform:uppercase;border-radius:14px;padding:16px 28px;min-height:52px;border:0;cursor:pointer" style-hover="filter:brightness(1.15)" style-active="filter:brightness(.88)" style-focus="box-shadow:0 0 0 4px rgba(20,184,166,.4)">{{ c.hero.cta }}</button></div>
+    </div>
+
+    <div style="margin-top:48px;border:1px solid #e3e8eb;border-radius:24px;overflow:hidden">
+      <button onClick="{{ toggle90 }}" style="width:100%;display:flex;justify-content:space-between;gap:16px;align-items:center;text-align:left;background:#f4f7f7;border:0;padding:22px 26px;cursor:pointer;font:800 clamp(17px,1.9vw,22px)/1.3 'DM Sans',sans-serif;color:#2b302f"><span>{{ c.cat.d90 }}</span><span style="color:#2f7f80"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="{{ ico90 }}"></use></svg></span></button>
+      <div style="display:{{ disp90 }};padding:22px 26px 26px">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px"><sc-for list="{{ f90 }}" as="f" hint-placeholder-count="5"><button onClick="{{ f.onClick }}" style="cursor:pointer;font:600 13px 'DM Sans',sans-serif;padding:8px 16px;min-height:40px;border-radius:999px;background:{{ f.bg }};color:{{ f.fg }};border:2px solid {{ f.bd }}">{{ f.t }}</button></sc-for></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:10px"><sc-for list="{{ cards90 }}" as="k" hint-placeholder-count="6"><div style="border:1px solid #e3e8eb;border-radius:14px;padding:14px"><span style="display:inline-block;font:700 11px 'DM Sans',sans-serif;background:#e6f4f4;color:#2f7f80;border-radius:999px;padding:3px 10px;margin-bottom:8px">{{ k.lab }}</span><div style="font:700 14px/1.3 'DM Sans',sans-serif">{{ k.t }}</div><div style="font-size:12px;color:#5b666b;margin-top:4px">nap · kezdés · szint · tréner</div></div></sc-for></div>
+        <p style="margin:14px 0 18px;font-size:13px;color:#5b666b">{{ c.cat.soon }}</p>
+        <button onClick="{{ join }}" style="display:inline-flex;align-items:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 14px/1.2 'DM Sans',sans-serif;text-transform:uppercase;border-radius:12px;padding:14px 22px;min-height:48px;border:0;cursor:pointer" style-hover="filter:brightness(1.15)" style-active="filter:brightness(.88)" style-focus="box-shadow:0 0 0 4px rgba(20,184,166,.4)">{{ c.cat.d90cta }}</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 MIBEN MÁS -->
+<section style="background:#f4f7f7">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,104px) 24px">
+    <div style="display:inline-flex;align-items:center;font:700 12px 'DM Sans',sans-serif;letter-spacing:.1em;color:#0d7f78;background:#dff4f1;border-radius:999px;padding:5px 14px;margin-bottom:14px">07</div>
+    <h2 style="margin:0 0 28px;font:800 clamp(26px,3.2vw,40px)/1.12 'DM Sans',sans-serif">{{ c.why.h }}</h2>
+    <img src="assets/illu-10.png" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:16/8;object-fit:cover;object-position:50% 60%;border-radius:28px;box-shadow:0 16px 48px rgba(15,17,18,.12);margin:0 0 28px"/>
+    <sc-if value="{{ wide }}"><div style="display:grid;grid-template-columns:1.1fr 1fr 1fr 1.1fr 1.5fr;font-size:13px;background:#fff;border-radius:24px;overflow:hidden;border:1px solid #e3e8eb">
+      <sc-for list="{{ whyHead }}" as="h" hint-placeholder-count="5"><div style="padding:16px 12px;font:700 13px 'DM Sans',sans-serif;background:{{ h.bg }};color:{{ h.fg }}">{{ h.t }}</div></sc-for>
+      <sc-for list="{{ whyCells }}" as="x" hint-placeholder-count="30"><div style="padding:14px 12px;border-top:1px solid #e3e8eb;background:{{ x.bg }};color:#2b302f;font-weight:{{ x.fw }}">{{ x.t }}</div></sc-for></div></sc-if>
+    <sc-if value="{{ narrow }}"><div style="display:grid;gap:12px"><sc-for list="{{ whyCards }}" as="r" hint-placeholder-count="6"><div style="background:#fff;border-radius:18px;padding:16px"><div style="font:700 14px 'DM Sans',sans-serif;margin-bottom:10px">{{ r.lab }}</div><div style="background:#191c1d;color:#fff;border-radius:12px;padding:10px 14px;margin-bottom:8px;font-size:14px;font-weight:600"><span style="color:#84e0db">Mentor Klub: </span>{{ r.mk }}</div><sc-for list="{{ r.o }}" as="o" hint-placeholder-count="3"><div style="font-size:13px;color:#5b666b"><b>{{ o.h }}:</b> {{ o.v }}</div></sc-for></div></sc-for></div></sc-if>
+    <p style="margin:28px 0 0;font:600 clamp(16px,1.7vw,20px)/1.55 'DM Sans',sans-serif;max-width:880px">{{ c.why.p1 }}<span style="color:#2f7f80;font-weight:800">{{ c.why.p2 }}</span>{{ c.why.p3 }}</p>
+  </div>
+</section>
+
+<!-- 08 EREDMÉNYEK -->
+<section id="eredmenyek" style="padding:clamp(56px,8vw,104px) 0;overflow:hidden">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px">
+    <div style="display:inline-flex;align-items:center;font:700 12px 'DM Sans',sans-serif;letter-spacing:.1em;color:#0d7f78;background:#dff4f1;border-radius:999px;padding:5px 14px;margin-bottom:14px">08</div>
+    <div style="display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:20px"><h2 style="margin:0;font:800 clamp(26px,3.2vw,40px)/1.12 'DM Sans',sans-serif">{{ c.res.h }}</h2>
+      <div style="display:flex;gap:8px"><button onClick="{{ scrollL }}" style="width:48px;height:48px;border-radius:50%;border:2px solid #2b302f;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-arrow-left"></use></svg></button><button onClick="{{ scrollR }}" style="width:48px;height:48px;border-radius:50%;border:2px solid #2b302f;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-arrow-right"></use></svg></button></div></div>
+    <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:12px;margin-bottom:8px"><sc-for list="{{ resTabs }}" as="t" hint-placeholder-count="8"><button onClick="{{ t.onClick }}" style="flex:none;cursor:pointer;font:600 13px 'DM Sans',sans-serif;padding:8px 16px;min-height:44px;border-radius:999px;background:{{ t.bg }};color:{{ t.fg }};border:2px solid {{ t.bd }}">{{ t.t }}</button></sc-for></div>
+  </div>
+  <div id="resRow" style="display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px max(24px,calc((100% - 1200px)/2 + 24px)) 16px">
+    <sc-for list="{{ stories }}" as="s" hint-placeholder-count="5"><div style="flex:none;width:min(84%,330px);scroll-snap-align:start;border:1px solid #e3e8eb;border-radius:24px;overflow:hidden;background:#fff;display:flex;flex-direction:column;box-shadow:0 8px 28px rgba(48,99,100,.1)">
+      <div style="background:#191c1d;color:#84e0db;padding:20px 22px;min-height:96px;display:flex;align-items:flex-end;font:800 24px/1.15 'DM Sans',sans-serif">{{ s.bigT }}</div>
+      <div style="padding:20px 22px;display:grid;gap:10px;flex:1"><div style="display:flex;gap:12px;align-items:center"><img src="{{ s.img }}" alt="" style="flex:none;width:44px;height:44px;border-radius:50%;object-fit:cover;background:#e3e8eb"/><div><div style="font:700 14px/1.25 'DM Sans',sans-serif">{{ s.nm }}</div><div style="font-size:12px;color:#5b666b;line-height:1.35">{{ s.w }}</div></div></div><sc-if value="{{ s.pend }}"><div><span style="display:inline-block;background:#f1a246;color:#0f1112;font:800 10px 'DM Sans',sans-serif;letter-spacing:.06em;padding:3px 8px;border-radius:999px">{{ pendLbl }}</span></div></sc-if><p style="margin:0;font-size:14px">{{ s.x }}</p><div><span style="display:inline-block;background:#40454b;color:#fff;font:600 11px 'DM Sans',sans-serif;border-radius:999px;padding:3px 10px">{{ s.t }}</span></div></div></div></sc-for>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:24px 24px 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:14px"><sc-for list="{{ c.res.rev }}" as="r" hint-placeholder-count="4"><div style="background:#f4f7f7;border-radius:24px;padding:22px"><div style="color:#f1a246;display:flex;gap:3px;margin-bottom:10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" style="display:block"><use href="#i-star"></use></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" style="display:block"><use href="#i-star"></use></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" style="display:block"><use href="#i-star"></use></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" style="display:block"><use href="#i-star"></use></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" style="display:block"><use href="#i-star"></use></svg></div><p style="margin:0 0 10px;font-size:14px">{{ r.x }}</p><div style="font:700 13px 'DM Sans',sans-serif;color:#2f7f80">{{ r.n }}</div></div></sc-for></div>
+    <div style="margin-top:16px"><a style="color:#2f7f80;font:700 14px 'DM Sans',sans-serif;cursor:pointer">{{ c.res.revAll }}</a></div>
+  </div>
+</section>
+
+<!-- 09 KIK ÁLLNAK MÖGÖTT -->
+<section style="background:linear-gradient(90deg,rgba(10,20,23,.96),rgba(10,20,23,.84) 55%,rgba(10,20,23,.62)),url(assets/brand-01.png) right center/cover;color:#fff">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,104px) 24px">
+    <div style="display:inline-flex;align-items:center;font:700 12px 'DM Sans',sans-serif;letter-spacing:.1em;color:#84e0db;background:rgba(20,184,166,.18);border-radius:999px;padding:5px 14px;margin-bottom:14px">09</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:48px;align-items:center">
+      <img src="img-founder-right.png" alt="Baráth András" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:68% 30%;border-radius:32px;box-shadow:0 24px 60px rgba(0,0,0,.45)"/>
+      <div><h2 style="margin:0 0 18px;font:800 clamp(26px,3.2vw,40px)/1.12 'DM Sans',sans-serif;text-wrap:balance">{{ c.about.h }}</h2><p style="margin:0 0 14px;font-size:17px;color:#dde2e3">{{ c.about.p1 }}</p>
+        <button onClick="{{ toggleAbout }}" style="background:none;border:0;padding:0;font:700 14px 'DM Sans',sans-serif;color:#84e0db;cursor:pointer;border-bottom:2px solid #63b6b7">Részletek <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-3px"><use href="{{ aboutIco }}"></use></svg></button>
+        <p style="display:{{ aboutDisp }};margin:14px 0 0;color:#dde2e3">{{ c.about.p2 }}</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:12px;margin:40px 0"><sc-for list="{{ anums }}" as="n" hint-placeholder-count="4"><div style="background:rgba(28,36,37,.65);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(102,193,195,.3);border-radius:20px;padding:20px"><div style="color:#84e0db;margin-bottom:10px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="{{ n.ic }}"></use></svg></div><div style="font:800 30px/1 'DM Sans',sans-serif;color:#84e0db">{{ n.a }}</div><div style="font-size:13px;margin-top:6px">{{ n.b }}</div></div></sc-for></div>
+    <h3 style="margin:0 0 8px;font:800 20px 'DM Sans',sans-serif">{{ c.about.ch }}</h3><p style="margin:0 0 20px;color:#dde2e3;max-width:820px">{{ c.about.cp }}</p>
+    <div style="display:flex;gap:14px;overflow-x:auto;padding-bottom:8px"><sc-for list="{{ trainers }}" as="t" hint-placeholder-count="7"><div style="flex:none;width:130px"><img src="{{ t.img }}" alt="{{ t.n }}" style="display:block;width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover;background:#1c2f35;margin-bottom:8px"/><div style="font:700 13px/1.25 'DM Sans',sans-serif;text-align:center">{{ t.n }}</div><div style="font-size:12px;color:#84e0db;text-align:center">{{ t.r }}</div></div></sc-for></div>
+  </div>
+</section>
+
+<!-- 10 ÍGY INDULSZ -->
+<section style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,104px) 24px">
+  <div style="display:grid;grid-template-columns:{{ chCols }};gap:clamp(24px,4vw,64px);align-items:start">
+    <img src="assets/illu-09.png" alt="" loading="lazy" style="grid-column:1/-1;display:block;width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:28px;box-shadow:0 16px 48px rgba(15,17,18,.12)"/>
+    <div style="position:{{ stickyPos }};top:96px"><div style="display:inline-flex;align-items:center;font:700 12px 'DM Sans',sans-serif;letter-spacing:.1em;color:#0d7f78;background:#dff4f1;border-radius:999px;padding:5px 14px;margin-bottom:14px">10</div><h2 style="margin:0;font:800 clamp(26px,3.2vw,40px)/1.12 'DM Sans',sans-serif">{{ c.steps.h }}</h2></div>
+    <div><sc-for list="{{ steps }}" as="s" hint-placeholder-count="5"><div style="display:grid;grid-template-columns:52px 1fr;gap:16px"><div style="display:flex;flex-direction:column;align-items:center"><span style="width:44px;height:44px;border-radius:50%;background:#63b6b7;color:#0f1112;display:flex;align-items:center;justify-content:center;font:800 18px 'DM Sans',sans-serif">{{ s.n }}</span><span style="flex:1;width:2px;background:#d6e6e6;min-height:12px"></span></div><div style="padding:6px 0 24px"><div style="display:flex;align-items:center;gap:10px;font:700 18px/1.3 'DM Sans',sans-serif;margin-bottom:4px"><span style="color:#2f7f80;display:flex"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="{{ s.ic }}"></use></svg></span>{{ s.h }}</div><div style="font-size:15px">{{ s.x }}</div></div></div></sc-for></div>
+  </div>
+</section>
+
+<!-- 11 AJÁNLAT + ÁR -->
+<section id="ar" style="position:relative;overflow:hidden;color:#dde2e3;background:linear-gradient(90deg,rgba(15,17,18,.94),rgba(15,17,18,.7)),url(assets/brand-01.png) right center/cover">
+  <div style="position:absolute;width:560px;height:560px;right:-100px;top:-120px;border-radius:50%;background:radial-gradient(circle,rgba(91,174,175,.45),transparent 65%);filter:blur(30px);animation:gmkDrift 16s ease-in-out infinite alternate;pointer-events:none"></div>
+  <div style="position:relative;max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,104px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:48px;align-items:start">
+    <div>
+      <div style="display:inline-flex;align-items:center;font:700 12px 'DM Sans',sans-serif;letter-spacing:.1em;color:#84e0db;background:rgba(20,184,166,.18);border-radius:999px;padding:5px 14px;margin-bottom:14px">11</div>
+      <h2 style="margin:0 0 24px;font:800 clamp(26px,3.2vw,40px)/1.12 'DM Sans',sans-serif;color:#fff;text-wrap:balance">{{ c.offer.h }}</h2>
+      <div style="display:grid;gap:10px"><sc-for list="{{ offerRows }}" as="o" hint-placeholder-count="7"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:6px 20px;background:rgba(28,36,37,.6);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(102,193,195,.25);border-radius:16px;padding:14px 18px"><div style="display:flex;gap:10px;font:600 14px/1.4 'DM Sans',sans-serif;color:#fff"><span style="color:#84e0db"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin-top:3px"><use href="#i-check"></use></svg></span><span>{{ o.a }}</span></div><div style="font-size:13px;color:#c9d4d6"><span style="font-weight:700;color:#fff">{{ c.offer.c2 }}: </span>{{ o.b }}</div></div></sc-for></div>
+      <a onClick="{{ goVideo }}" style="margin-top:22px;display:flex;gap:14px;align-items:center;cursor:pointer;text-decoration:none;color:#fff"><span style="flex:none;width:120px;aspect-ratio:16/9;border-radius:12px;background:linear-gradient(rgba(15,17,18,.3),rgba(15,17,18,.5)),url(img-founder-wide.png) center/cover;display:flex;align-items:center;justify-content:center"><span style="width:34px;height:34px;border-radius:50%;background:#63b6b7;color:#0f1112;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" style="display:block"><use href="#i-play"></use></svg></span></span><span style="font:700 15px 'DM Sans',sans-serif;border-bottom:2px solid #66c1c3">{{ c.offer.vid }}</span></a>
+    </div>
+    <div style="position:{{ stickyPos }};top:92px;background:linear-gradient(160deg,#1b1f20,#0f1112);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);border-radius:36px;border:1px solid rgba(102,193,195,.6);box-shadow:0 0 48px rgba(91,174,175,.25);padding:clamp(24px,3vw,36px);color:#fff">
+      <img src="logo-white.png" alt="Mentor Klub" style="height:56px;width:auto;display:block;margin:0 0 18px"/>
+      <h2 style="margin:0 0 20px;font:800 clamp(22px,2.4vw,30px)/1.2 'DM Sans',sans-serif">{{ c.price.h }}</h2>
+      <div style="color:#96afb2;font-size:16px">{{ c.price.full }} <s>{{ c.price.fullV }}</s></div>
+      <div style="color:#6dc6c3;font:800 13px 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.06em;margin-top:10px">{{ c.price.now }}</div>
+      <div style="font:800 clamp(38px,4.6vw,54px)/1.1 'DM Sans',sans-serif;color:#84e0db">{{ c.price.nowV }}</div>
+      <div style="font:600 15px 'DM Sans',sans-serif;margin:6px 0 14px">{{ c.price.day }}</div>
+      <p style="margin:0 0 20px;font-size:15px;color:#dde2e3">{{ c.price.acc }}</p>
+      <button onClick="{{ join }}" style="width:100%;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 15px/1.25 'DM Sans',sans-serif;text-transform:uppercase;border-radius:14px;padding:18px 20px;min-height:56px;border:0;cursor:pointer;box-shadow:0 8px 24px rgba(99,182,183,.35);animation:gmkPulse 2.4s ease-in-out infinite" style-hover="filter:brightness(1.15)" style-active="filter:brightness(.88)" style-focus="box-shadow:0 0 0 4px rgba(20,184,166,.4)">{{ c.price.cta }}</button>
+      <div style="margin-top:22px;display:grid;gap:10px"><sc-for list="{{ guar }}" as="g" hint-placeholder-count="3"><div style="display:flex;gap:12px;background:rgba(48,99,100,.35);border-radius:14px;padding:12px 14px;font-size:14px"><span style="flex:none;color:#84e0db"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin-top:3px"><use href="#i-check"></use></svg></span><span><b>{{ g.h }}</b> {{ g.x }}</span></div></sc-for></div>
+      <p style="margin:18px 0 0;text-align:center;font:700 15px 'DM Sans',sans-serif;color:#f1a246">{{ c.price.now2 }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- 12 KINEK -->
+<section style="background:#f4f7f7">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,104px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px">
+    <div style="background:#fff;border:2px solid #63b6b7;border-radius:28px;padding:30px"><h2 style="margin:0 0 18px;font:800 26px 'DM Sans',sans-serif">{{ c.fit.yh }}</h2><div style="display:grid;gap:12px"><sc-for list="{{ fitY }}" as="y" hint-placeholder-count="5"><div style="display:flex;gap:12px"><span style="flex:none;width:24px;height:24px;border-radius:50%;background:#63b6b7;color:#0f1112;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-check"></use></svg></span><span>{{ y.t }}</span></div></sc-for></div></div>
+    <div style="background:#e9eeee;border-radius:28px;padding:30px"><h2 style="margin:0 0 18px;font:800 26px 'DM Sans',sans-serif;color:#5b666b">{{ c.fit.nh }}</h2><div style="display:grid;gap:12px"><sc-for list="{{ fitN }}" as="y" hint-placeholder-count="3"><div style="display:flex;gap:12px;color:#5b666b"><span style="flex:none;width:24px;height:24px;border-radius:50%;background:#cfd7d8;color:#2b302f;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-x"></use></svg></span><span>{{ y.t }}</span></div></sc-for></div></div>
+  </div>
+</section>
+
+<!-- 13 SZAKKÉPESÍTÉS -->
+<section style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,104px) 24px">
+  <div style="background:#f3eafc;border-radius:36px;padding:clamp(24px,4vw,52px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:36px;align-items:start">
+    <div><h2 style="margin:0 0 14px;font:800 clamp(24px,3vw,36px)/1.15 'DM Sans',sans-serif;text-wrap:balance">{{ c.qual.h }}</h2><p style="margin:0 0 22px">{{ c.qual.p }}</p><div style="display:grid;gap:10px"><sc-for list="{{ qitems }}" as="q" hint-placeholder-count="5"><div style="background:#fff;border-radius:14px;padding:14px 18px;display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:15px"><b>{{ q.a }}</b><span style="color:#9b51e0;font-weight:700;text-align:right">{{ q.b }}</span></div></sc-for></div></div>
+    <div style="display:grid;gap:14px"><div style="background:#fff;border-radius:20px;padding:22px"><h3 style="margin:0 0 8px;font:800 17px/1.35 'DM Sans',sans-serif">{{ c.qual.qh }}</h3><p style="margin:0;font-size:15px">{{ c.qual.qa }}</p></div><div style="background:#fff;border-radius:20px;padding:22px;font-size:15px">{{ c.qual.proof }}</div><div><button style="display:inline-flex;align-items:center;background:#2b302f;color:#fff;font:700 14px/1.2 'DM Sans',sans-serif;text-transform:uppercase;border-radius:12px;padding:16px 24px;min-height:52px;border:0;cursor:pointer" style-hover="background:#0f1112">{{ c.qual.cta }}</button></div></div>
+  </div>
+</section>
+
+<!-- 14 GYIK -->
+<section id="gyik" style="background:#f4f7f7">
+  <div style="max-width:900px;margin:0 auto;padding:clamp(56px,8vw,104px) 24px">
+    <sc-if value="{{ notes }}"><div style="margin:0 0 16px;background:#fff;border:2px dashed #f1a246;border-radius:8px;padding:8px 12px;font:600 12px/1.45 ui-monospace,Menlo,monospace">ELTÉRÉS · A GYIK „9. blokk”/„6. blokk” hivatkozásait szövegesre cseréltem. Az SAP-teszt/mobilapp kérdés válasz nélkül van a forrásban, ezért kimaradt.</div></sc-if>
+    <h2 style="margin:0 0 24px;font:800 clamp(26px,3.2vw,40px)/1.12 'DM Sans',sans-serif">{{ c.faq.h }}</h2>
+    <div style="display:grid;gap:10px"><sc-for list="{{ faq }}" as="q" hint-placeholder-count="6"><div style="background:#fff;border:1px solid #e3e8eb;border-radius:18px;overflow:hidden"><button onClick="{{ q.onClick }}" style="width:100%;display:flex;justify-content:space-between;gap:16px;text-align:left;background:#fff;border:0;padding:18px 22px;cursor:pointer;font:700 16px/1.4 'DM Sans',sans-serif;color:#2b302f"><span>{{ q.q }}</span><span style="color:#2f7f80"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="{{ q.ico }}"></use></svg></span></button><div style="display:{{ q.disp }};padding:0 22px 20px;font-size:15px">{{ q.a }}</div></div></sc-for></div>
+    <sc-if value="{{ faqLess }}"><div style="text-align:center;margin-top:18px"><button onClick="{{ faqShow }}" style="background:#fff;border:2px solid #2b302f;color:#2b302f;border-radius:12px;padding:12px 24px;min-height:48px;font:700 14px 'DM Sans',sans-serif;cursor:pointer">{{ c.faq.more }}</button></div></sc-if>
+  </div>
+</section>
+
+<!-- ZÁRÓ -->
+<section style="position:relative;overflow:hidden;text-align:center;color:#dde2e3;background:linear-gradient(rgba(15,17,18,.6),rgba(15,17,18,.74)),url(assets/brand-05.png) center/cover">
+  <div style="position:relative;max-width:880px;margin:0 auto;padding:clamp(72px,10vw,136px) 24px">
+    <img src="logo-white.png" alt="Mentor Klub" style="height:84px;width:auto;display:block;margin:0 auto 28px"/>
+    <h2 style="margin:0 0 22px;font:800 clamp(30px,4.4vw,54px)/1.1 'DM Sans',sans-serif;color:#fff;text-transform:uppercase;text-wrap:balance">{{ c.fin.h }}</h2>
+    <p style="margin:0 0 32px;font-size:18px">{{ c.fin.p }}</p>
+    <button onClick="{{ join }}" style="display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 16px/1.25 'DM Sans',sans-serif;text-transform:uppercase;border-radius:14px;padding:20px 32px;min-height:60px;border:0;cursor:pointer;box-shadow:0 8px 32px rgba(99,182,183,.4)" style-hover="filter:brightness(1.15)" style-active="filter:brightness(.88)" style-focus="box-shadow:0 0 0 4px rgba(20,184,166,.4)">{{ c.fin.cta }}</button>
+  </div>
+</section>
+<footer style="background:#0f1112;color:#96afb2;padding:36px 0 {{ footPad }};font-size:14px"><div style="max-width:1200px;margin:0 auto;padding:0 24px;display:grid;gap:16px"><div style="display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center"><img src="logo-white.png" alt="Gerilla Mentor Klub" style="height:48px;width:auto;display:block"/><sc-for list="{{ foot }}" as="f" hint-placeholder-count="5"><span style="color:#dde2e3;display:inline-flex;align-items:center;gap:8px"><sc-if value="{{ f.hasIc }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#84e0db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><use href="{{ f.ic }}"></use></svg></sc-if>{{ f.t }}</span></sc-for></div><div>{{ c.fin.reg }}</div><div>© 2027 Gerilla Mentor Klub</div></div></footer>
+
+<!-- STICKY: ALSÓ SÁV -->
+<sc-if value="{{ showBar }}"><div style="position:fixed;left:0;right:0;bottom:0;z-index:55;background:rgba(20,38,43,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(102,193,195,.5);padding:10px 16px;animation:gmkUp .3s ease"><div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px"><div style="flex:none;color:#fff;line-height:1.2"><s style="color:#96afb2;font-size:12px">{{ c.hero.old }}</s><div style="font:800 17px 'DM Sans',sans-serif;color:#84e0db">{{ c.hero.price }}</div></div><button onClick="{{ join }}" style="flex:1;max-width:420px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 13px/1.2 'DM Sans',sans-serif;text-transform:uppercase;border-radius:12px;padding:10px 14px;min-height:52px;border:0;cursor:pointer">{{ c.hero.cta }}</button></div></div></sc-if>
+
+<!-- STICKY: KVÍZ-PILL -->
+<sc-if value="{{ showPill }}"><button onClick="{{ goQuiz }}" style="position:fixed;right:16px;bottom:{{ pillBottom }};z-index:54;display:flex;align-items:center;gap:10px;background:#191c1d;color:#fff;border:1px solid rgba(102,193,195,.6);border-radius:999px;padding:12px 20px 12px 16px;min-height:48px;font:700 13px 'DM Sans',sans-serif;cursor:pointer;box-shadow:0 12px 32px rgba(15,17,18,.4);animation:gmkUp .3s ease"><span style="width:28px;height:28px;border-radius:50%;background:#63b6b7;color:#0f1112;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"><use href="#i-compass"></use></svg></span>{{ c.routes.h }}</button></sc-if>
+
+<!-- POPUP -->
+<sc-if value="{{ popup }}"><div style="position:fixed;inset:0;z-index:90;background:rgba(15,17,18,.7);display:flex;align-items:center;justify-content:center;padding:20px;animation:gmkUp .25s ease"><div style="position:relative;max-width:520px;width:100%;background:linear-gradient(160deg,rgba(28,36,37,.95),rgba(15,17,18,.92));backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:36px;border:1px solid rgba(102,193,195,.6);box-shadow:0 0 60px rgba(91,174,175,.3);padding:34px;color:#fff;text-align:center"><button onClick="{{ closePopup }}" style="position:absolute;top:14px;right:16px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);border:0;color:#fff;cursor:pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:auto"><use href="#i-x"></use></svg></button>
+  <sc-if value="{{ notes }}"><div style="margin:0 0 14px;background:#f1a246;color:#0f1112;border-radius:8px;padding:8px 12px;font:600 11px/1.45 ui-monospace,Menlo,monospace;text-align:left">ELTÉRÉS · Új elem: kilépési szándéknál (mobilon 60% görgetésnél) jelenik meg, egyszer; ha a kvíz még nincs kitöltve, a kvízre is visz. A Lovable-útmutató tiltja a felugró ablakot – csapatdöntés kell.</div></sc-if>
+  <img src="logo-white.png" alt="Mentor Klub" style="height:60px;width:auto;display:block;margin:0 auto 16px"/>
+  <div style="font-size:17px;margin-bottom:6px">{{ c.hero.oa }} <s style="color:#96afb2">{{ c.hero.old }}</s> {{ c.hero.ob }}</div>
+  <div style="font:800 46px/1.1 'DM Sans',sans-serif;color:#84e0db;margin-bottom:10px">{{ c.hero.price }}</div>
+  <p style="margin:0 0 22px;color:#dde2e3">{{ c.hero.oc }}</p>
+  <button onClick="{{ joinPop }}" style="width:100%;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#12908d,#0b7a80);color:#fff;font:700 15px/1.2 'DM Sans',sans-serif;text-transform:uppercase;border-radius:14px;padding:18px 20px;min-height:56px;border:0;cursor:pointer" style-hover="filter:brightness(1.15)" style-active="filter:brightness(.88)" style-focus="box-shadow:0 0 0 4px rgba(20,184,166,.4)">{{ c.hero.cta }}</button>
+  <a onClick="{{ quizPop }}" style="display:inline-block;margin-top:16px;color:#66c1c3;font:700 14px 'DM Sans',sans-serif;cursor:pointer">{{ c.routes.h }}</a></div></div></sc-if>
+
+<!-- JEGYZET-KAPCSOLÓ -->
+<div style="position:fixed;left:16px;bottom:{{ noteBottom }};z-index:80;display:flex;gap:8px;flex-wrap:wrap"><sc-if value="{{ demo }}"><div style="display:flex;gap:4px;flex-wrap:wrap;background:#14262b;border:2px solid #66c1c3;border-radius:999px;padding:4px;box-shadow:0 4px 16px rgba(0,0,0,.25)"><sc-for list="{{ themes }}" as="t" hint-placeholder-count="4"><button onClick="{{ t.onClick }}" style="background:{{ t.bg }};color:{{ t.fg }};border:0;border-radius:999px;padding:8px 14px;min-height:36px;font:700 12px 'DM Sans',sans-serif;cursor:pointer">{{ t.t }}</button></sc-for></div></sc-if><button onClick="{{ toggleNotes }}" style="background:{{ notesBg }};color:#0f1112;border:2px solid #f1a246;border-radius:999px;padding:10px 16px;min-height:44px;font:700 12px ui-monospace,Menlo,monospace;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.25)">Tervezői jegyzetek: {{ notesLbl }}</button><button onClick="{{ openPopup }}" style="background:#fff;color:#0f1112;border:2px solid #2b302f;border-radius:999px;padding:10px 16px;min-height:44px;font:700 12px ui-monospace,Menlo,monospace;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.25)">Popup előnézet</button></div>
+
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { ready: false, route: -1, feb: 0, pill: 0, mo: { 0: true }, catMod: 0, filt: 0, faq: {}, faqAll: false, nowOpen: false, aboutOpen: false, narrow: false, mid: false, scrolled: false, barHide: false, prog: 0, popup: false, seen: false, notes: false, d90: false, f90: 0 };
+  go = (id) => () => { const el = document.getElementById(id); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 84, behavior: 'smooth' }); };
+  componentDidMount() {
+    const init = () => { if (window.GMK && window.GMKI_mount) { window.GMKI_mount(); this.setState(window.GMK.febIdx >= 0 ? { ready: true, feb: window.GMK.febIdx } : { ready: true }); } else setTimeout(init, 40); };
+    init();
+    setTimeout(() => window.GMKM && window.GMKM.init(), 300);
+    this._sc = () => {
+      const y = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight, ar = document.getElementById('ar'); let hide = false;
+      if (ar) { const r = ar.getBoundingClientRect(); hide = r.top < window.innerHeight * 0.8 && r.bottom > 0; }
+      const o = { prog: h > 0 ? Math.round(y / h * 100) : 0, scrolled: y > 620, barHide: hide };
+      if (this.state.narrow && !this.state.seen && h > 0 && y / h > 0.6) { o.popup = true; o.seen = true; }
+      this.setState(o);
+    };
+    this._rs = () => this.setState({ narrow: window.innerWidth < 760, mid: window.innerWidth < 960 });
+    this._ml = (e) => { if (e.clientY <= 0 && !this.state.seen && !this.state.narrow && window.scrollY > 400) this.setState({ popup: true, seen: true }); };
+    window.addEventListener('scroll', this._sc, { passive: true }); window.addEventListener('resize', this._rs); document.addEventListener('mouseleave', this._ml);
+    this._rs(); this._sc();
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this._sc); window.removeEventListener('resize', this._rs); document.removeEventListener('mouseleave', this._ml); }
+  renderVals() {
+    const G = window.GMK;
+    if (!G || !this.state.ready) return { ready: false };
+    const C = G.C, s = this.state, set = (o) => this.setState(o), go = this.go;
+    const on = (b, a, z) => (b ? a : z);
+    const IC = { pains: ['search', 'clock', 'wallet', 'bot', 'compass', 'file-text'], imagine: ['compass', 'bot', 'graduation-cap', 'wallet', 'languages'], route: ['briefcase', 'compass', 'bot', 'trending-up'], pill: ['graduation-cap', 'briefcase', 'languages'], learn: ['video', 'users', 'calendar', 'smartphone', 'award'], steps: ['zap', 'smartphone', 'compass', 'clock', 'message-circle'], nums: ['video', 'calendar', 'graduation-cap', 'bot', 'languages', 'briefcase', 'users'], anums: ['users', 'graduation-cap', 'calendar', 'star'] };
+    const ic = (k, i) => '#i-' + (IC[k][i] || 'award');
+    const FEM = ['Alexandra', 'Mónika', 'Csilla', 'Zsuzsa', 'Réka', 'Adrienn', 'Zsuzsanna', 'Zita', 'Anita', 'Gabriella'];
+    const face = (name, i) => { const last = (name || '').trim().split(/\s+/).pop(); const w = name ? FEM.includes(last) : i % 2 === 1; return G.face(w, i); };
+    const navItems = C.nav.map(x => { const [t, id] = x.split('|'); return { t, onClick: go(id) }; });
+    const wide = !s.narrow, one = s.mid;
+    const tiles = C.routes.items.map((r, i) => { const o = i === s.route; return { t: r.t, k: r.k, kick: r.kick, col: r.col, kc: on(o, '#0f1112', r.col), ic: ic('route', i), bg: on(o, '#63b6b7', 'rgba(255,255,255,.08)'), fg: on(o, '#0c181b', '#fff'), bd: on(o, '#84e0db', 'rgba(255,255,255,.18)'), ibg: on(o, '#0c181b', 'rgba(132,224,219,.18)'), ifg: on(o, '#84e0db', '#84e0db'), onClick: () => set({ route: i }) }; });
+    const rt = C.routes.items[Math.max(s.route, 0)];
+    const febMap = [[], [0, 1], [2], [1]][Math.max(s.route, 0)];
+    const route = { m: rt.m, g: rt.g.map(g => ({ l: g.l, i: g.i.map(t => ({ t })) })), hasFeb: febMap.length > 0, feb: febMap.map(i => ({ t: C.feb.items[i].t })) };
+    const febTabs = C.feb.items.map((f, i) => { const o = i === s.feb; return { t: f.short, bg: on(o, '#63b6b7', 'transparent'), fg: on(o, '#0c181b', '#fff'), bd: on(o, '#63b6b7', 'rgba(102,193,195,.5)'), onClick: () => set({ feb: i }) }; });
+    const f0 = C.feb.items[s.feb];
+    const fb = { t: f0.t, k: f0.k, o: f0.o, f: f0.f, mk: f0.mk, s: f0.s.map(x => ({ a: x[0], b: x[1], c: x[2], hasC: !!x[2] })) };
+    const pillTabs = C.pillars.tabs.map((t, i) => { const o = i === s.pill; return { t, ic: ic('pill', i), bg: on(o, '#14262b', '#fff'), fg: on(o, '#fff', '#2b302f'), bd: on(o, '#63b6b7', '#e3e8eb'), onClick: () => set({ pill: i }) }; });
+    const mods = C.pillars.mods.map((m, i) => { const o = !!s.mo[i]; return { h: m.h, p: m.p, lv: m.lv, q: m.q, qa: m.qa, cl: m.cl, pr: m.pr, hasLv: !!m.levels, hasQ: !!m.q, hasChips: !!m.chips, levels: (m.levels || []).map((t, j) => ({ t, n: j + 1 })), chipList: (m.chips || []).map(t => ({ t })), ico: on(o, '#i-minus', '#i-plus'), disp: on(o, 'block', 'none'), bg: on(o, '#e6f4f4', '#fff'), onClick: () => set({ mo: { ...s.mo, [i]: !o } }) }; });
+    const P = [['assets/brand-09.png'], ['img-founder-wide.png'], ['assets/brand-04.png']][s.pill][0];
+    const wall = C.cat.wall.map(w => ({ t: w[0], col: C.cat.col[w[1]], tint: C.cat.tint[w[1]], c: w[1] }));
+    const catTabs = C.cat.mods.map((m, i) => { const o = i === s.catMod; return { n: m.n, dot: C.cat.col[m.c], bg: on(o, '#14262b', '#f4f7f7'), fg: on(o, '#fff', '#2b302f'), onClick: () => set({ catMod: i }) }; });
+    const cm = C.cat.mods[s.catMod];
+    const sel = { tint: C.cat.tint[cm.c], hasM: cm.m.length > 0, hasS: cm.s.length > 0, multi: cm.m.map(x => ({ t: x[0], len: x[1] })), single: cm.s.map(t => ({ t })) };
+    const f90 = C.cat.filt.map((t, i) => { const o = i === s.f90; return { t, bg: on(o, '#14262b', '#fff'), fg: on(o, '#fff', '#2b302f'), bd: on(o, '#14262b', '#e3e8eb'), onClick: () => set({ f90: i }) }; });
+    const map90 = [null, ['allas'], ['it', 'pm'], ['ai'], ['soft', 'hr']][s.f90];
+    const cards90 = wall.filter(w => !map90 || map90.includes(w.c)).slice(0, 6).map((w, i) => ({ t: w.t, lab: C.cat.labels[i % 3] }));
+    const whyHead = [{ t: '', bg: '#fff', fg: '#2b302f' }, ...C.why.cols.slice(1).map((t, i) => ({ t, bg: on(i === 3, '#63b6b7', '#f4f7f7'), fg: '#0c181b' }))];
+    const whyCells = []; C.why.rows.forEach(r => r.forEach((t, i) => whyCells.push(i === 0 ? { t, bg: '#fff', fw: 700 } : { t, bg: on(i === 4, '#e6f4f4', '#fff'), fw: on(i === 4, 700, 400) })));
+    const whyCards = C.why.rows.map(r => ({ lab: r[0], mk: r[4], o: [1, 2, 3].map(i => ({ h: C.why.cols[i], v: r[i] })) }));
+    const resTabs = C.res.filt.map((t, i) => { const o = i === s.filt; return { t, bg: on(o, '#14262b', '#fff'), fg: on(o, '#fff', '#2b302f'), bd: on(o, '#14262b', '#e3e8eb'), onClick: () => set({ filt: i }) }; });
+    const fl = C.res.filt[s.filt];
+    const stories = C.res.s.filter(x => s.filt === 0 || x.t === fl).map(x => ({ img: face(x.n, C.res.s.indexOf(x) + 3), pend: x.pend, nm: x.n || 'Tagunk', w: x.w, bigT: x.big || x.t, x: x.x, t: x.t }));
+    const faq = C.faq.items.map((q, i) => ({ q: q[0], a: q[1], i })).slice(0, s.faqAll ? 99 : 6).map(q => { const o = !!s.faq[q.i]; return { q: q.q, a: q.a, ico: on(o, '#i-minus', '#i-plus'), disp: on(o, 'block', 'none'), onClick: () => set({ faq: { ...s.faq, [q.i]: !o } }) }; });
+    const showBar = s.scrolled && !s.barHide;
+    const showPill = s.scrolled && s.route < 0 && !s.barHide;
+    const scrollRow = (d) => () => { const e = document.getElementById('resRow'); if (e) e.scrollBy({ left: d, behavior: 'smooth' }); };
+    return {
+      ready: true, c: C,
+      hasTag: !!C.hero.tag, pendLbl: G.pendLbl, hasQuote: !!C.imagine.quote, nowBtn: C.now.fold || !!C.now.detail, tlDisp: C.now.fold ? on(s.nowOpen, 'block', 'none') : 'block',
+      hasPath: !!C.path, path: C.path || { s: [] }, demo: G.demo, themes: G.themes.map(t => ({ ...t, bg: on(t.on, '#63b6b7', 'transparent'), fg: on(t.on, '#0f1112', '#fff') })),
+      heroSec: go(C.path ? 'utvonal-lepesei' : 'kviz'), heroSecT: C.path ? C.hero.cta2 : C.routes.h,
+      fbBd: on(s.feb === G.febIdx, '#f1a246', 'rgba(102,193,195,.5)'), fbSh: on(s.feb === G.febIdx, '0 0 0 1px #f1a246,0 0 48px rgba(241,162,70,.25)', 'none'), wide, narrow: s.narrow, notes: s.notes, prog: s.prog,
+      chCols: on(one, 'minmax(0,1fr)', '300px minmax(0,1fr)'), stickyPos: on(one, 'static', 'sticky'),
+      join: go('ar'), goQuiz: go('kviz'), goFeb: go('februar'), goVideo: go('kepzesek'),
+      showNav: s.scrolled && wide, showBar, showPill, pillBottom: on(showBar, '88px', '16px'), navItems,
+      heroBullets: C.hero.bullets.map(t => ({ t })), trust: C.hero.trust.map((t, i) => ({ t: i === 0 ? t.slice(1) : t, star: i === 0 ? '★' : '' })),
+      tiles, picked: s.route >= 0, route,
+      stories3: C.stories3.map((x, i) => ({ ...x, img: face(x.n, i) })),
+      pains: C.pain.items.map((p, i) => ({ ...p, ic: ic('pains', i), hasImg: false, img: 'assets/illu-0' + (i + 2) + '.png' })), imagine: C.imagine.items.map((t, i) => ({ t, seg: G.seg(t), ic: ic('imagine', i) })),
+      nowDisp: on(s.nowOpen, 'block', 'none'), nowIco: on(s.nowOpen, '#i-minus', '#i-plus'), toggleNow: () => set({ nowOpen: !s.nowOpen }),
+      febTabs, fb, febAll: C.feb.all.map(t => ({ t })),
+      pillTabs, p0: s.pill === 0, p1: s.pill === 1, p2: s.pill === 2, pillTitle: [C.pillars.t1, C.pillars.t2, C.pillars.t3][s.pill], mods, img1: P,
+      jobB: C.pillars.job.b.map(t => ({ t })), jobP: C.pillars.job.pr.map(t => ({ t })),
+      nums: C.cat.nums.map((n, i) => ({ a: n[0], b: n[1], ic: ic('nums', i) })), anums: C.about.nums.map((n, i) => ({ a: n[0], b: n[1], ic: ic('anums', i) })), qitems: C.qual.items.map(n => ({ a: n[0], b: n[1] })),
+      row1: [...wall.slice(0, 12), ...wall.slice(0, 12)], row2: [...wall.slice(12), ...wall.slice(12)],
+      browseCols: on(one, 'minmax(0,1fr)', '230px minmax(0,1fr)'), catDir: on(one, 'flex-direction:row', 'flex-direction:column'), catMax: on(one, 'none', '420px'), catTabs, sel,
+      learn: C.cat.learn.map((l, i) => ({ h: l[0], x: l[1], ic: ic('learn', i) })),
+      toggle90: () => set({ d90: !s.d90 }), ico90: on(s.d90, '#i-minus', '#i-plus'), disp90: on(s.d90, 'block', 'none'), f90, cards90,
+      whyHead, whyCells, whyCards, resTabs, stories, scrollL: scrollRow(-340), scrollR: scrollRow(340),
+      aboutDisp: on(s.aboutOpen, 'block', 'none'), aboutIco: on(s.aboutOpen, '#i-minus', '#i-plus'), toggleAbout: () => set({ aboutOpen: !s.aboutOpen }),
+      trainers: C.about.tr.map((t, i) => ({ img: face(t[0], 8 + i), n: t[0], r: t[1] })),
+      steps: C.steps.items.map((x, i) => ({ n: i + 1, h: x[0], x: x[1], ic: ic('steps', i) })),
+      offerRows: C.offer.items.map(x => ({ a: x[0], b: x[1] })),
+      guar: C.price.g.map(g => ({ h: g[0], x: g[1] })),
+      fitY: C.fit.y.map(t => ({ t })), fitN: C.fit.n.map(t => ({ t })),
+      faq, faqLess: !s.faqAll, faqShow: () => set({ faqAll: true }),
+      foot: C.fin.foot.map((t, i) => ({ t, hasIc: i < 2, ic: i === 0 ? '#i-mail' : '#i-phone' })), footPad: on(showBar, '96px', '36px'),
+      popup: s.popup, closePopup: () => set({ popup: false }), openPopup: () => set({ popup: true, seen: true }),
+      joinPop: () => { set({ popup: false }); go('ar')(); }, quizPop: () => { set({ popup: false }); go('kviz')(); },
+      toggleNotes: () => set({ notes: !s.notes }), notesBg: on(s.notes, '#f1a246', '#fff'), notesLbl: on(s.notes, 'be', 'ki'), noteBottom: on(showBar, '84px', '16px')
+    };
+  }
+}
+</script>
+</body>
+</html>
